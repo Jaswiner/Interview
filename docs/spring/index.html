@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Spring
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/book.min.a3caa905766cf610e263c876d2f2d8477f59d64606267bcaeee26e73160f9285.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://interview.jaswine.com/">面试题</a>
+</h2>
+
+
+
+    
+
+  
+  
+
+
+
+
+
+ 
+  
+    
+
+  <ul>
+    
+    
+    <li>
+      
+
+  <a href="/docs/distributed/" >
+    
+  
+    
+    分布式系统
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/zookeeper/" >
+    
+  
+    
+    Zookeeper
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/message/" >
+    
+  
+    
+    消息队列
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/data/" >
+    
+  
+    
+    数据库
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/arch/" >
+    
+  
+    
+    架构
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/springcloud/" >
+    
+  
+    
+    Springcloud
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/springboot/" >
+    
+  
+    
+    Springboot
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/spring/"  class="active">
+    
+  
+    
+    Spring
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/cache/" >
+    
+  
+    
+    缓存
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/search/" >
+    
+  
+    
+    搜索引擎
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/mybatis/" >
+    
+  
+    
+    Mybatis
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/netty/" >
+    
+  
+    
+    Netty
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/model/" >
+    
+  
+    
+    设计模式
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/jwb/" >
+    
+  
+    
+    JavaWeb
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/algo/" >
+    
+  
+    
+    算法
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/ds/" >
+    
+  
+    
+    数据结构
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/net/" >
+    
+  
+    
+    计算机网络
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/os/" >
+    
+  
+    
+    操作系统
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/jvm/" >
+    
+  
+    
+    Java虚拟机
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
+  <a href="/docs/java/" >
+    
+  
+    
+    Java
+  
+
+  </a>
+
+
+    </li>
+    
+  </ul>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Spring
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="spring面试题">Spring面试题</h1>
+
+<h2 id="spring基础">Spring基础</h2>
+
+<h3 id="说说你对spring体系架构的理解">说说你对Spring体系架构的理解</h3>
+
+<pre><code>- spring是一个实现了依赖注入和控制反转的框架(DI/IOC)
+- spring除了核心之外，还实现了一些其他功能，如web的springmvc，data的jpa等等
+- Spring是一个友好的框架，对于其他功能不强制使用Spring自己的，例如可以使用mybatis或者别的orm框架
+</code></pre>
+
+<h3 id="依赖注入是什么意思-有哪些方式呢">依赖注入是什么意思？有哪些方式呢？</h3>
+
+<pre><code># 依赖注入
+- 完成一件事要多个配合，通常和自己没有关系
+
+# 方式
+- 构造器注入
+- set注入
+- 静态工厂
+- 实例工厂
+</code></pre>
+
+<h2 id="spring综合">spring综合</h2>
+
+<h3 id="spring中用到了什么设计模式">Spring中用到了什么设计模式</h3>
+
+<pre><code># 简单工厂(静态工厂)
+# 工厂方法
+# 单例模式
+# 适配器模式
+# 包装器模式
+# 代理模式
+# 观察者模式
+# 策略模式
+# 模板模式
+</code></pre>
+
+<h2 id="spring容器">Spring容器</h2>
+
+<h3 id="spring中ioc是怎么实现的-ioc容器初始化的过程是什么样子的">Spring中IOC是怎么实现的，IOC容器初始化的过程是什么样子的</h3>
+
+<pre><code># 初始化过程
+-1.Resource定位：
+-2.载入：使用BeanDefinition来解析bean定义
+-3.注册：使用BeanDefinitionRegistery来将定义好的bean注册到IOC容器中
+</code></pre>
+
+<h3 id="spring的单例实现原理">Spring的单例实现原理</h3>
+
+<pre><code>- 使用单例注册表的方式来管理bean
+-- 
+</code></pre>
+
+<h3 id="spring的加载流程是什么">Spring的加载流程是什么</h3>
+
+<pre><code># 主要类
+Spring加载中有以下几个重要的类：
+- BeanFactory：生产Bean
+- Resource：Bean配置文件
+- BeanDefinition：Bean定义
+
+# 流程
+- 资源定位：找到配置文件
+- BeanDefinition载入和解析
+-- 找到配置文件Resource
+-- 将配置文件解析成BeanDefinition
+- BeanDefinition注册
+-- 将BeanDefinition向Map中注册Map&lt;name,BeanDefinition&gt;
+- bean的实例化和依赖注入
+-- 通过反射或者cglib来创造bean
+
+# Tips:
+- Resource本质上就是字节流
+- BeanDefinition是bean的详细信息
+</code></pre>
+
+<h3 id="说说beanfactory和applicationcontext有什么区别">说说BeanFactory和ApplicationContext有什么区别</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left">BeanFactory</th>
+<th align="left">ApplicationContext</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">启动时不实例化Bean</td>
+<td align="left">启动时就将Bean进行实例化</td>
+</tr>
+</tbody>
+</table>
+
+<p><em>Tips：</em>
+- ApplicationContext实现了BeanFActory，所以ApplicationContext有BeanFactory的所有功能</p>
+
+<h3 id="说说你对spring中bean的理解">说说你对Spring中Bean的理解</h3>
+
+<h3 id="说说你对spring中bean的生命周期的理解-spring是怎么管理bean的生命周期的">说说你对spring中bean的生命周期的理解，spring是怎么管理bean的生命周期的</h3>
+
+<pre><code>- 1.实例化Bean
+-- 容器通过获取BeanDefinition对象来对Bean进行实例化
+-- 实例化的对象被抱在BeanWrapper对象中，这个Wrapper提供了设置对象的的接口，避免使用反射来设置属性(因为反射很慢)
+
+- 2.设置对象属性
+-- 根据BeanDefinition信息进行依赖注入
+
+- 3.注入Aware接口
+-- Spring检测对象石佛实现了xxxAware接口，如果实现了就将对应的Aware注入给Bean
+
+- 4.BeanPostProcessor预初始化Bean
+-- postProcessBeforeInitialzation( Object bean, String beanName ) 当前正在初始化的bean对象会被传递进来，我们就可以对这个bean作任何处理。 这个函数会先于InitialzationBean执行，因此称为前置处理。 所有Aware接口的注入就是在这一步完成的。-- -- postProcessAfterInitialzation( Object bean, String beanName ) 当前正在初始化的bean对象会被传递进来，我们就可以对这个bean作任何处理。 这个函数会在InitialzationBean完成后执行，因此称为后置处理。
+
+- 5.InitialzationBean
+-- 实现了InitialzationBean接口的bean在属性设置成功后执行的初始化方法
+
+======Bean可以使用了======
+
+- 6.容器关闭
+-- 调用destroy()，让Java回收bean
+</code></pre>
+
+<h2 id="spring-aop">Spring AOP</h2>
+
+<h3 id="spring中aop实现的原理是什么-实现方式是什么">Spring中AOP实现的原理是什么，实现方式是什么？</h3>
+
+<pre><code># 原理
+- 动态代理
+
+# 实现方式
+- JDK动态代理
+- cglib动态代理
+</code></pre>
+
+<h2 id="springmvc">SpringMVC</h2>
+
+<h3 id="springmvc的运行原理和启动流程是什么样子的">SpringMVC的运行原理和启动流程是什么样子的</h3>
+
+<pre><code># 启动流程
+
+# 运行原理
+- 请求到达DispatchServlet，根据请求的相关信息到HandlerMapping中查找到具体的Handler(Controller)
+
+- Controller调用具体的业务逻辑后将结果返给DispatcherServlet，最后返给客户端
+</code></pre>
+
+<h3 id="dispatchservlet初始化过程">DispatchServlet初始化过程</h3>
+
+<pre><code></code></pre>
+
+<h3 id="说说你在springmvc用到的注解-作用是什么">说说你在SpringMVC用到的注解，作用是什么</h3>
+
+<h3 id="springmvc中的controller是单例还是多例-怎么保证并发的安全">SpringMVC中的Controller是单例还是多例，怎么保证并发的安全</h3>
+
+<h2 id="spring-webflow">Spring WebFlow</h2>
+
+<h2 id="springdata">SpringData</h2>
+
+<h3 id="spring是怎么配置事务和管理事务的">Spring是怎么配置事务和管理事务的</h3>
+
+<h3 id="spring的事务隔离级别">Spring的事务隔离级别</h3>
+
+<h3 id="讲讲spring事务的传播属性">讲讲Spring事务的传播属性</h3>
+
+<h3 id="spring-resttemplate的具体实现">spring RestTemplate的具体实现</h3>
+
+<h2 id="spring-security">Spring Security</h2>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#spring面试题">Spring面试题</a>
+<ul>
+<li><a href="#spring基础">Spring基础</a>
+<ul>
+<li><a href="#说说你对spring体系架构的理解">说说你对Spring体系架构的理解</a></li>
+<li><a href="#依赖注入是什么意思-有哪些方式呢">依赖注入是什么意思？有哪些方式呢？</a></li>
+</ul></li>
+<li><a href="#spring综合">spring综合</a>
+<ul>
+<li><a href="#spring中用到了什么设计模式">Spring中用到了什么设计模式</a></li>
+</ul></li>
+<li><a href="#spring容器">Spring容器</a>
+<ul>
+<li><a href="#spring中ioc是怎么实现的-ioc容器初始化的过程是什么样子的">Spring中IOC是怎么实现的，IOC容器初始化的过程是什么样子的</a></li>
+<li><a href="#spring的单例实现原理">Spring的单例实现原理</a></li>
+<li><a href="#spring的加载流程是什么">Spring的加载流程是什么</a></li>
+<li><a href="#说说beanfactory和applicationcontext有什么区别">说说BeanFactory和ApplicationContext有什么区别</a></li>
+<li><a href="#说说你对spring中bean的理解">说说你对Spring中Bean的理解</a></li>
+<li><a href="#说说你对spring中bean的生命周期的理解-spring是怎么管理bean的生命周期的">说说你对spring中bean的生命周期的理解，spring是怎么管理bean的生命周期的</a></li>
+</ul></li>
+<li><a href="#spring-aop">Spring AOP</a>
+<ul>
+<li><a href="#spring中aop实现的原理是什么-实现方式是什么">Spring中AOP实现的原理是什么，实现方式是什么？</a></li>
+</ul></li>
+<li><a href="#springmvc">SpringMVC</a>
+<ul>
+<li><a href="#springmvc的运行原理和启动流程是什么样子的">SpringMVC的运行原理和启动流程是什么样子的</a></li>
+<li><a href="#dispatchservlet初始化过程">DispatchServlet初始化过程</a></li>
+<li><a href="#说说你在springmvc用到的注解-作用是什么">说说你在SpringMVC用到的注解，作用是什么</a></li>
+<li><a href="#springmvc中的controller是单例还是多例-怎么保证并发的安全">SpringMVC中的Controller是单例还是多例，怎么保证并发的安全</a></li>
+</ul></li>
+<li><a href="#spring-webflow">Spring WebFlow</a></li>
+<li><a href="#springdata">SpringData</a>
+<ul>
+<li><a href="#spring是怎么配置事务和管理事务的">Spring是怎么配置事务和管理事务的</a></li>
+<li><a href="#spring的事务隔离级别">Spring的事务隔离级别</a></li>
+<li><a href="#讲讲spring事务的传播属性">讲讲Spring事务的传播属性</a></li>
+<li><a href="#spring-resttemplate的具体实现">spring RestTemplate的具体实现</a></li>
+</ul></li>
+<li><a href="#spring-security">Spring Security</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+</body>
+
+</html>
