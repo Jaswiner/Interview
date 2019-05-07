@@ -17,7 +17,10 @@
       <pubDate>Sat, 04 May 2019 10:44:39 +0800</pubDate>
       
       <guid>https://interview.jaswine.com/docs/distributed/</guid>
-      <description> 分布式面试题 基础 分布式数据库 </description>
+      <description>分布式面试题 基础 说说你对分布式一致性和CAP,BASE一致性协议的理解
+分布式数据库 分布式集群下怎么做到唯一序列号
+分布式锁有哪些实现方式？(3)
+分布式事务的原理，优缺点，如何使用分布式事务，2平pc，3pc的区别，解决了哪些问题</description>
     </item>
     
     <item>
@@ -44,8 +47,12 @@
       <pubDate>Mon, 29 Apr 2019 09:51:30 +0800</pubDate>
       
       <guid>https://interview.jaswine.com/docs/data/</guid>
-      <description>数据库面试题(默认MySQL) SQL 说说你对存储过程的理解，为什么阿里的编程规范中禁用存储过程，他有什么优缺点 # 理解 - 存储过程就是一些SQL组成的代码块，可以重复使用 # 为什么禁用存储过程  说说你对SQL的连接查询(Join)的理解，他们之间的区别是什么 # inner join - 两个表交集的部分 # full out join - 两个表并集，没有匹配的为null # left join - 以左表为主，没有匹配的为null # right join - 以右表为主，没有匹配的为null  数据库 索引 ####说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？
-# 索引理解 - MySQL索引的本质是B+树 # 如何使用 - # 不能，要正确的建立索引 # Tips：索引建立的几大原则 - 最左前缀匹配原则，MySQL一直向右匹配知道遇到查询范围(&amp;gt;,&amp;lt;,between,like)停止匹配 - in和=可以乱序 - 选择区分度比较高的列作为索引 - 索引列不参加计算 - 尽量扩展索引，不新建索引  说说数据库的索引实现和非主键的二级索引 # 实现 - B+树 # 非主键二级索引 -  索引的数据结构是什么样子的 索引的存储结构是B+树  存储引擎 MySQL中有哪些存储引擎？都有什么优缺点？    存储引擎名称 优点 缺点     MyISAM 1.</description>
+      <description>数据库面试题(默认MySQL) SQL 说说你对存储过程的理解，为什么阿里的编程规范中禁用存储过程，他有什么优缺点
+# 理解 - 存储过程就是一些SQL组成的代码块，可以重复使用 # 为什么禁用存储过程  说说你对SQL的连接查询(Join)的理解，他们之间的区别是什么
+# inner join - 两个表交集的部分 # full out join - 两个表并集，没有匹配的为null # left join - 以左表为主，没有匹配的为null # right join - 以右表为主，没有匹配的为null  数据库 索引 说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？
+# 索引理解 - MySQL索引的本质是B+树 # 如何使用 - # 不能，要正确的建立索引 # Tips：索引建立的几大原则 - 最左前缀匹配原则，MySQL一直向右匹配知道遇到查询范围(&amp;gt;,&amp;lt;,between,like)停止匹配 - in和=可以乱序 - 选择区分度比较高的列作为索引 - 索引列不参加计算 - 尽量扩展索引，不新建索引  说说数据库的索引实现和非主键的二级索引
+# 实现 - B+树 # 非主键二级索引 -  索引的数据结构是什么样子的
+索引的存储结构是B+树  存储引擎 MySQL中有哪些存储引擎？都有什么优缺点？ |存储引擎名称|优点|缺点| |:&amp;ndash;|:&amp;ndash;|:&amp;ndash;| |MyISAM|1.</description>
     </item>
     
     <item>
@@ -54,7 +61,8 @@
       <pubDate>Mon, 29 Apr 2019 09:50:32 +0800</pubDate>
       
       <guid>https://interview.jaswine.com/docs/arch/</guid>
-      <description> 架构设计面试题 高并发 高可用 可伸缩 安全性 如果有人恶意创建非法链接，怎么解决 扩展性 敏捷性 细节 分布式 分布式集群下怎么做到唯一序列号 说说你对分布式一致性和CAP,BASE一致性协议的理解 分布式锁有哪些实现方式？(3) 分布式事务的原理，优缺点，如何使用分布式事务，2平pc，3pc的区别，解决了哪些问题 综合 设计一个秒杀系统，30分钟没付款就自动关闭交易 如何设计建立和保持100W的长连接 一个在线文档，文档可以被编辑，如何方式多人同时对一份文档和进行编辑更新 </description>
+      <description> 架构设计面试题 高并发 高可用 可伸缩 安全性 如果有人恶意创建非法链接，怎么解决
+扩展性 敏捷性 综合 设计一个秒杀系统，30分钟没付款就自动关闭交易 如何设计建立和保持100W的长连接 一个在线文档，文档可以被编辑，如何方式多人同时对一份文档和进行编辑更新 </description>
     </item>
     
     <item>
@@ -144,7 +152,10 @@
       <pubDate>Mon, 29 Apr 2019 09:32:16 +0800</pubDate>
       
       <guid>https://interview.jaswine.com/docs/algo/</guid>
-      <description> 算法面试题 基础算法 hash算法 说说你知道的几种hash算法 在10亿个数字中找到最小的10个 有一亿个其中有两个是重复的，快速找到它，要求空间和时间最优 2亿个随机生成的无序整数中找出中间大小的值 </description>
+      <description>算法面试题 基础算法 hash算法 说说你知道的几种hash算法
+在10亿个数字中找到最小的10个
+有一亿个其中有两个是重复的，快速找到它，要求空间和时间最优
+2亿个随机生成的无序整数中找出中间大小的值</description>
     </item>
     
     <item>
@@ -180,7 +191,15 @@
       <pubDate>Tue, 16 Apr 2019 01:20:59 +0800</pubDate>
       
       <guid>https://interview.jaswine.com/docs/jvm/</guid>
-      <description> Java虚拟机面试题 JMM(Java内存模型) 简单说说JVM中内存的分配情况吧 # 线程私有 - 程序计数器(当前线程执行字节码的行号指示器) - 虚拟机栈(局部变量，方法信息) - 本地方法栈(JNI方法) # 线程共有 - 堆内存(对象存放的地方) - 方法区(已被虚拟机加载的类信息，常量，静态变量) -- 运行时常量池(方法区的一部分) # 特别 - 直接内存(非JVM内存规范中的一部分)  什么时候会发生内存溢出(OOM) # 程序计数器 - 不会发生OOM错误 # 虚拟机栈 &amp;amp; 本地方法栈 - 虚拟机扩展栈的时候无法获取到足够的空间就会抛出OOM的错误 # 堆内存 - 对象数量达到堆内存的最大值的时候出现OOM错误 # 方法区 &amp;amp; 运行时常量池 - 产生大量的类信息大于了方法区的最大值  Java内存为什么分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor # 为什么分代 - 为了优化GC性能 # 为什么分为Eden和Survivor  在Java内存结构中，Eden和Survivor的比例 你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的 高并发 类加载 类加载的步骤是什么 加载--&amp;gt;验证--&amp;gt;准备--&amp;gt;解析--&amp;gt;初始化--&amp;gt;使用--&amp;gt;卸载  Class.forName()和classloader的区别 - Class.forName()将class文件加载到虚拟机中到初始化的工作 - classloader只是将class文件加载到jvm中  说说你了解的类加载器，可以打破双亲委派吗？是怎么打破的 对象解析 说说你对Java对象组成的理解 - Java对象内部由三个部分组成:对象头，实例数据，对齐填充字节 # 对象头 - 对象头包括如下部分: -- MarkWord:记录了对象的锁，GC等等的信息 -- 指向类的指针 -- 数组的长度(数组对象才有) # 实例数据 - 实例数据就是我们在代码中看到的属性和值 # 填充字节 - 对齐填充字节:因为JVM中对象的是8bit的整数倍，所有要有相关的字节来填充  Garbage Collection(GC) 说说你知道的GC算法 垃圾回收算法实现的原理 JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代 说说你对Minor GC和Full GC的理解 说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点) Jvm参数 说说你知道的JVM参数 工具使用 如何Java内存泄漏的问题进行调查和定位 使用jmap和jstack  </description>
+      <description>Java虚拟机面试题 JMM(Java内存模型) 简单说说JVM中内存的分配情况吧
+# 线程私有 - 程序计数器(当前线程执行字节码的行号指示器) - 虚拟机栈(局部变量，方法信息) - 本地方法栈(JNI方法) # 线程共有 - 堆内存(对象存放的地方) - 方法区(已被虚拟机加载的类信息，常量，静态变量) -- 运行时常量池(方法区的一部分) # 特别 - 直接内存(非JVM内存规范中的一部分)  什么时候会发生内存溢出(OOM)
+# 程序计数器 - 不会发生OOM错误 # 虚拟机栈 &amp;amp; 本地方法栈 - 虚拟机扩展栈的时候无法获取到足够的空间就会抛出OOM的错误 # 堆内存 - 对象数量达到堆内存的最大值的时候出现OOM错误 # 方法区 &amp;amp; 运行时常量池 - 产生大量的类信息大于了方法区的最大值  Java内存为什么分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor
+# 为什么分代 - 为了优化GC性能 # 为什么分为Eden和Survivor  在Java内存结构中，Eden和Survivor的比例
+你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的
+高并发 类加载 类加载的步骤是什么
+加载--&amp;gt;验证--&amp;gt;准备--&amp;gt;解析--&amp;gt;初始化--&amp;gt;使用--&amp;gt;卸载  Class.forName()和classloader的区别
+- Class.forName()将class文件加载到虚拟机中到初始化的工作 - classloader只是将class文件加载到jvm中  说说你了解的类加载器，可以打破双亲委派吗？是怎么打破的
+对象解析 说说你对Java对象组成的理解</description>
     </item>
     
     <item>
@@ -189,7 +208,11 @@
       <pubDate>Mon, 15 Apr 2019 23:02:57 +0800</pubDate>
       
       <guid>https://interview.jaswine.com/docs/java/</guid>
-      <description>Java面试题 Java基础 Java小知识点 说说每个版本Java的新特性 # 1.5 - 自动装箱和拆箱 - 新增枚举类型 - 新增注解类型 - 泛型的支持 - 静态导入的支持 - For-Each循环支持 # 1.6 # 1.7 - Java集合的增强，可以直接使用[]，{}来存入对象 - Switch中可以使用String(以前只可以使用基本类型变量) # 1.8 - 接口方法中可以默认实现(使用default关键字) - Lambda表达式的支持 - 函数式的接口(使用@Functionallnterface) - 使用::关键字来传递方法或者构造函数引用 - 多重注解 - 集合类的增强 - Stream流式计算  Java中try&amp;hellip;catch&amp;hellip;finally&amp;hellip;return执行的先后顺序 - 先执行try中的代码，遇到try中的return执行但是不返回到main方法中  Java关键字 final有什么用途？ - final表示不变，可以修饰变量，方法和类 -- 修饰变量的时候这个变量一旦被初始化完成就不会被改变 -- 修饰方法说明在这个方法不能被修改 -- 修饰类说明这个类不能被继承 - final一般也是一种多线程的设计模式，因为对象不变就不存在多线程并发安全的问题了  讲讲类实例化的顺序 父类静态代码块 &amp;gt; 子类静态代码块 &amp;gt; 父类代码块 &amp;gt; 子类代码块 &amp;gt; 父类构造函数 &amp;gt; 子类构造函数 # Tips： - 静态代码块执行一次  逻辑运算 a=a+b和a+=b之间的区别是什么？ 有： - 不同类型在运算的时候 a=a+b这个表达式会抛异常 - a+=b的效率更加高，但是JVM也会将a=a+b变成a+=b这种方式  说说Java中的位运算和逻辑运算的区别，位运行在Java中的应用 # 位运算和逻辑运算区别 - 位运算有 位与(&amp;amp;)、位或(|)、位非(~)、位异或(^)、左移(&amp;lt;&amp;lt;)、右移(&amp;gt;&amp;gt;)、无符号右移)(&amp;gt;&amp;gt;&amp;gt;) - 逻辑运算有 逻辑与(&amp;amp;&amp;amp;)、逻辑或(||) - 位运算是直接对二进制进行操作 - 逻辑运算存在短路现象， A &amp;amp;&amp;amp; B（A为false则直接false），A || B（A为true则为true） # 位运算的应用 - 在Java很多源码中都有使用  Object 如何在父类中为子类自动完成所有的hashcode和equals实现？这么做有何优劣势  说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的  链接:JavaSE 8 #Object</description>
+      <description>Java面试题 Java基础 Java小知识点 说说每个版本Java的新特性
+# 1.5 - 自动装箱和拆箱 - 新增枚举类型 - 新增注解类型 - 泛型的支持 - 静态导入的支持 - For-Each循环支持 # 1.6 # 1.7 - Java集合的增强，可以直接使用[]，{}来存入对象 - Switch中可以使用String(以前只可以使用基本类型变量) # 1.8 - 接口方法中可以默认实现(使用default关键字) - Lambda表达式的支持 - 函数式的接口(使用@Functionallnterface) - 使用::关键字来传递方法或者构造函数引用 - 多重注解 - 集合类的增强 - Stream流式计算  Java中try&amp;hellip;catch&amp;hellip;finally&amp;hellip;return执行的先后顺序
+- 先执行try中的代码，遇到try中的return执行但是不返回到main方法中  Java关键字 final有什么用途？
+- final表示不变，可以修饰变量，方法和类 -- 修饰变量的时候这个变量一旦被初始化完成就不会被改变 -- 修饰方法说明在这个方法不能被修改 -- 修饰类说明这个类不能被继承 - final一般也是一种多线程的设计模式，因为对象不变就不存在多线程并发安全的问题了  讲讲类实例化的顺序
+父类静态代码块 &amp;gt; 子类静态代码块 &amp;gt; 父类代码块 &amp;gt; 子类代码块 &amp;gt; 父类构造函数 &amp;gt; 子类构造函数 # Tips： - 静态代码块执行一次  逻辑运算 a=a+b和a+=b之间的区别是什么？</description>
     </item>
     
   </channel>

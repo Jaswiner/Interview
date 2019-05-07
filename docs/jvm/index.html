@@ -403,7 +403,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="jmm-java内存模型">JMM(Java内存模型)</h2>
 
-<h3 id="简单说说jvm中内存的分配情况吧">简单说说JVM中内存的分配情况吧</h3>
+<p><font color="#9932CC" size=4>简单说说JVM中内存的分配情况吧</font></p>
 
 <pre><code># 线程私有
 - 程序计数器(当前线程执行字节码的行号指示器)
@@ -419,7 +419,7 @@ https://github.com/alex-shpak/hugo-book
 - 直接内存(非JVM内存规范中的一部分)
 </code></pre>
 
-<h3 id="什么时候会发生内存溢出-oom">什么时候会发生内存溢出(OOM)</h3>
+<p><font color="#9932CC" size=4>什么时候会发生内存溢出(OOM)</font></p>
 
 <pre><code># 程序计数器
 - 不会发生OOM错误
@@ -434,7 +434,7 @@ https://github.com/alex-shpak/hugo-book
 - 产生大量的类信息大于了方法区的最大值
 </code></pre>
 
-<h3 id="java内存为什么分成新生代-老年代-持久代-新生代中为什么要分为eden和survivor">Java内存为什么分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor</h3>
+<p><font color="#9932CC" size=4>Java内存为什么分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor</font></p>
 
 <pre><code># 为什么分代
 - 为了优化GC性能
@@ -444,30 +444,30 @@ https://github.com/alex-shpak/hugo-book
 
 </code></pre>
 
-<h3 id="在java内存结构中-eden和survivor的比例">在Java内存结构中，Eden和Survivor的比例</h3>
+<p><font color="#9932CC" size=4>在Java内存结构中，Eden和Survivor的比例</font></p>
 
-<h3 id="你对jvm内存中重排序-内存屏障-happen-before-主内存-工作内存是怎么理解的">你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的</h3>
+<p><font color="#9932CC" size=4>你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的</font></p>
 
 <h2 id="高并发">高并发</h2>
 
 <h2 id="类加载">类加载</h2>
 
-<h3 id="类加载的步骤是什么">类加载的步骤是什么</h3>
+<p><font color="#9932CC" size=4>类加载的步骤是什么</font></p>
 
 <pre><code>加载--&gt;验证--&gt;准备--&gt;解析--&gt;初始化--&gt;使用--&gt;卸载
 </code></pre>
 
-<h3 id="class-forname-和classloader的区别">Class.forName()和classloader的区别</h3>
+<p><font color="#9932CC" size=4>Class.forName()和classloader的区别</font></p>
 
 <pre><code>- Class.forName()将class文件加载到虚拟机中到初始化的工作
 - classloader只是将class文件加载到jvm中
 </code></pre>
 
-<h3 id="说说你了解的类加载器-可以打破双亲委派吗-是怎么打破的">说说你了解的类加载器，可以打破双亲委派吗？是怎么打破的</h3>
+<p><font color="#9932CC" size=4>说说你了解的类加载器，可以打破双亲委派吗？是怎么打破的</font></p>
 
 <h2 id="对象解析">对象解析</h2>
 
-<h3 id="说说你对java对象组成的理解">说说你对Java对象组成的理解</h3>
+<p><font color="#9932CC" size=4>说说你对Java对象组成的理解</font></p>
 
 <pre><code>- Java对象内部由三个部分组成:对象头，实例数据，对齐填充字节
 
@@ -486,23 +486,23 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="garbage-collection-gc">Garbage Collection(GC)</h2>
 
-<h3 id="说说你知道的gc算法">说说你知道的GC算法</h3>
+<p><font color="#9932CC" size=4>说说你知道的GC算法</font></p>
 
-<h3 id="垃圾回收算法实现的原理">垃圾回收算法实现的原理</h3>
+<p><font color="#9932CC" size=4>垃圾回收算法实现的原理</font></p>
 
-<h3 id="jvm中一次完整的gc流程是怎么样的-对象如何晋升到老年代">JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代</h3>
+<p><font color="#9932CC" size=4>JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代</font></p>
 
-<h3 id="说说你对minor-gc和full-gc的理解">说说你对Minor GC和Full GC的理解</h3>
+<p><font color="#9932CC" size=4>说说你对Minor GC和Full GC的理解</font></p>
 
-<h3 id="说说你知道的集中垃圾收集器-各自的优缺点-重点说下cms和g1-从原理-流程-优缺点">说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点)</h3>
+<p><font color="#9932CC" size=4>说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点)</font></p>
 
 <h2 id="jvm参数">Jvm参数</h2>
 
-<h3 id="说说你知道的jvm参数">说说你知道的JVM参数</h3>
+<p><font color="#9932CC" size=4>说说你知道的JVM参数</font></p>
 
 <h2 id="工具使用">工具使用</h2>
 
-<h3 id="如何java内存泄漏的问题进行调查和定位">如何Java内存泄漏的问题进行调查和定位</h3>
+<p><font color="#9932CC" size=4>如何Java内存泄漏的问题进行调查和定位</font></p>
 
 <pre><code>使用jmap和jstack
 </code></pre>
@@ -521,41 +521,13 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#java虚拟机面试题">Java虚拟机面试题</a>
 <ul>
-<li><a href="#jmm-java内存模型">JMM(Java内存模型)</a>
-<ul>
-<li><a href="#简单说说jvm中内存的分配情况吧">简单说说JVM中内存的分配情况吧</a></li>
-<li><a href="#什么时候会发生内存溢出-oom">什么时候会发生内存溢出(OOM)</a></li>
-<li><a href="#java内存为什么分成新生代-老年代-持久代-新生代中为什么要分为eden和survivor">Java内存为什么分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor</a></li>
-<li><a href="#在java内存结构中-eden和survivor的比例">在Java内存结构中，Eden和Survivor的比例</a></li>
-<li><a href="#你对jvm内存中重排序-内存屏障-happen-before-主内存-工作内存是怎么理解的">你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的</a></li>
-</ul></li>
+<li><a href="#jmm-java内存模型">JMM(Java内存模型)</a></li>
 <li><a href="#高并发">高并发</a></li>
-<li><a href="#类加载">类加载</a>
-<ul>
-<li><a href="#类加载的步骤是什么">类加载的步骤是什么</a></li>
-<li><a href="#class-forname-和classloader的区别">Class.forName()和classloader的区别</a></li>
-<li><a href="#说说你了解的类加载器-可以打破双亲委派吗-是怎么打破的">说说你了解的类加载器，可以打破双亲委派吗？是怎么打破的</a></li>
-</ul></li>
-<li><a href="#对象解析">对象解析</a>
-<ul>
-<li><a href="#说说你对java对象组成的理解">说说你对Java对象组成的理解</a></li>
-</ul></li>
-<li><a href="#garbage-collection-gc">Garbage Collection(GC)</a>
-<ul>
-<li><a href="#说说你知道的gc算法">说说你知道的GC算法</a></li>
-<li><a href="#垃圾回收算法实现的原理">垃圾回收算法实现的原理</a></li>
-<li><a href="#jvm中一次完整的gc流程是怎么样的-对象如何晋升到老年代">JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代</a></li>
-<li><a href="#说说你对minor-gc和full-gc的理解">说说你对Minor GC和Full GC的理解</a></li>
-<li><a href="#说说你知道的集中垃圾收集器-各自的优缺点-重点说下cms和g1-从原理-流程-优缺点">说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点)</a></li>
-</ul></li>
-<li><a href="#jvm参数">Jvm参数</a>
-<ul>
-<li><a href="#说说你知道的jvm参数">说说你知道的JVM参数</a></li>
-</ul></li>
-<li><a href="#工具使用">工具使用</a>
-<ul>
-<li><a href="#如何java内存泄漏的问题进行调查和定位">如何Java内存泄漏的问题进行调查和定位</a></li>
-</ul></li>
+<li><a href="#类加载">类加载</a></li>
+<li><a href="#对象解析">对象解析</a></li>
+<li><a href="#garbage-collection-gc">Garbage Collection(GC)</a></li>
+<li><a href="#jvm参数">Jvm参数</a></li>
+<li><a href="#工具使用">工具使用</a></li>
 </ul></li>
 </ul>
 </nav>

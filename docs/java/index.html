@@ -405,7 +405,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="java小知识点">Java小知识点</h3>
 
-<h4 id="说说每个版本java的新特性">说说每个版本Java的新特性</h4>
+<p><font color="#9932CC" size=4>说说每个版本Java的新特性</font></p>
 
 <pre><code># 1.5
 - 自动装箱和拆箱
@@ -431,14 +431,14 @@ https://github.com/alex-shpak/hugo-book
 - Stream流式计算
 </code></pre>
 
-<h4 id="java中try-catch-finally-return执行的先后顺序">Java中try&hellip;catch&hellip;finally&hellip;return执行的先后顺序</h4>
+<p><font color="#9932CC" size=4>Java中try&hellip;catch&hellip;finally&hellip;return执行的先后顺序</font></p>
 
 <pre><code>- 先执行try中的代码，遇到try中的return执行但是不返回到main方法中
 </code></pre>
 
 <h3 id="java关键字">Java关键字</h3>
 
-<h4 id="final有什么用途">final有什么用途？</h4>
+<p><font color="#9932CC" size=4>final有什么用途？</font></p>
 
 <pre><code>- final表示不变，可以修饰变量，方法和类
 -- 修饰变量的时候这个变量一旦被初始化完成就不会被改变
@@ -448,7 +448,7 @@ https://github.com/alex-shpak/hugo-book
 - final一般也是一种多线程的设计模式，因为对象不变就不存在多线程并发安全的问题了
 </code></pre>
 
-<h4 id="讲讲类实例化的顺序">讲讲类实例化的顺序</h4>
+<p><font color="#9932CC" size=4>讲讲类实例化的顺序</font></p>
 
 <pre><code>父类静态代码块 &gt; 子类静态代码块 &gt; 父类代码块 &gt; 子类代码块 &gt; 父类构造函数 &gt; 子类构造函数
 
@@ -458,16 +458,16 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="逻辑运算">逻辑运算</h3>
 
-<h4 id="a-a-b和a-b之间的区别是什么">a=a+b和a+=b之间的区别是什么？</h4>
+<p><font color="#9932CC" size=4>a=a+b和a+=b之间的区别是什么？</font></p>
 
 <pre><code>有：
 - 不同类型在运算的时候 a=a+b这个表达式会抛异常
 - a+=b的效率更加高，但是JVM也会将a=a+b变成a+=b这种方式
 </code></pre>
 
-<h4 id="说说java中的位运算和逻辑运算的区别-位运行在java中的应用">说说Java中的位运算和逻辑运算的区别，位运行在Java中的应用</h4>
+<p><font color="#9932CC" size=4>说说Java中的位运算和逻辑运算的区别，位运行在Java中的应用</font></p>
 
-<pre><code class="language-plant"># 位运算和逻辑运算区别
+<pre><code># 位运算和逻辑运算区别
 
 - 位运算有  位与(&amp;)、位或(|)、位非(~)、位异或(^)、左移(&lt;&lt;)、右移(&gt;&gt;)、无符号右移)(&gt;&gt;&gt;)
 - 逻辑运算有  逻辑与(&amp;&amp;)、逻辑或(||)
@@ -481,20 +481,18 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="object">Object</h3>
 
-<h4 id="如何在父类中为子类自动完成所有的hashcode和equals实现-这么做有何优劣势">如何在父类中为子类自动完成所有的hashcode和equals实现？这么做有何优劣势</h4>
+<p><font color="#9932CC" size=4>如何在父类中为子类自动完成所有的hashcode和equals实现？这么做有何优劣势</font></p>
 
 <pre><code></code></pre>
 
-<h4 id="说活你对object中hashcode-和equals-方法的理解-在什么场景下需要对这两个方法进行重写-你是这么重写的">说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</h4>
-
-<blockquote>
-<p><strong>链接:</strong><a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.3.2">JavaSE 8 #Object</a></p>
+<p><font color="#9932CC" size=4>说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</font>
+&gt; <strong>链接:</strong><a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.3.2">JavaSE 8 #Object</a></p>
 
 <pre><code>- equals是基于值比较而不是引用(==是比较引用地址)
 - hashCode()主要为HashMap，HashSet这些集合服务
 </code></pre>
 
-<h4 id="深拷贝和浅拷贝的区别">深拷贝和浅拷贝的区别</h4>
+<p><font color="#9932CC" size=4>深拷贝和浅拷贝的区别</font></p>
 
 <pre><code>- 对于基本类型来说，浅拷贝和深拷贝一样，都是对值进行拷贝
 
@@ -502,16 +500,12 @@ https://github.com/alex-shpak/hugo-book
 -- 浅拷贝:只是复制了对应的引用，对象没有被拷贝，并且这个对象的其他引用还在
 -- 深拷贝:不只复制了对象的引用，对象本身也被复制了
 </code></pre>
-</blockquote>
 
 <h3 id="string">String</h3>
 
-<h4 id="string-stringbuffer和stringbuilder之间的区别-stringbuffer是怎么实现线程安全的">String,StringBuffer和StringBuilder之间的区别，StringBuffer是怎么实现线程安全的</h4>
-
-<blockquote>
-<p><strong>链接:</strong>
-<a href="https://blog.jaswine.com/2019/03/14/java6/#more">源码分析-Java中的String，StringBuilder和StringBuffer</a></p>
-</blockquote>
+<p><font color="#9932CC" size=4>String,StringBuffer和StringBuilder之间的区别，StringBuffer是怎么实现线程安全的</font>
+&gt; <strong>链接:</strong>
+&gt; <a href="https://blog.jaswine.com/2019/03/14/java6/#more">源码分析-Java中的String，StringBuilder和StringBuffer</a></p>
 
 <pre><code>- String、StringBuilder和StringBuffer的底层本质都是char[]
 - StringBuilder和StringBuffer继承了AbstractStringBuilder，很多方法都由AbstractStringBuilder完成了
@@ -523,11 +517,11 @@ https://github.com/alex-shpak/hugo-book
 - Java9开始String、StringBuilder和StringBuffer的底层改成byte[](//todo 为什么)
 </code></pre>
 
-<h4 id="string中utf-8编码和gbk编码有什么区别">String中UTF-8编码和GBK编码有什么区别</h4>
+<p><font color="#9932CC" size=4>String中UTF-8编码和GBK编码有什么区别</font></p>
 
 <h2 id="java面向对象思想">Java面向对象思想</h2>
 
-<h3 id="怎么理解继承和聚合的概念-他们之间有什么异同">怎么理解继承和聚合的概念，他们之间有什么异同</h3>
+<p><font color="#9932CC" size=4>怎么理解继承和聚合的概念，他们之间有什么异同</font></p>
 
 <pre><code># 继承
 - 继承是子类继承父类，可以对父类的内容进行扩展和修改
@@ -536,12 +530,12 @@ https://github.com/alex-shpak/hugo-book
 - 聚合是模块和模块之间的关系，是可以分离的，有自己的生命周期
 </code></pre>
 
-<h3 id="结合oo设计理念-谈谈访问修饰符public-default-protected和private在应用中设计的作用">结合OO设计理念，谈谈访问修饰符public，default，protected和private在应用中设计的作用</h3>
+<p><font color="#9932CC" size=4>结合OO设计理念，谈谈访问修饰符public，default，protected和private在应用中设计的作用</font></p>
 
 <pre><code>限定了Java中相关资源的访问权限
 </code></pre>
 
-<h3 id="java抽象类和接口的异同-说说为什么java这么设计">Java抽象类和接口的异同，说说为什么Java这么设计</h3>
+<p><font color="#9932CC" size=4>Java抽象类和接口的异同，说说为什么Java这么设计</font></p>
 
 <pre><code># 抽象类 &amp; 接口
 - 抽象类中一定有抽象方法，接口中全是抽象方法
@@ -554,7 +548,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="java-i-o">Java I/O</h2>
 
-<h3 id="io模型有哪些-在java中对应的实现是什么">IO模型有哪些？在Java中对应的实现是什么</h3>
+<p><font color="#9932CC" size=4>IO模型有哪些？在Java中对应的实现是什么</font></p>
 
 <pre><code># IO模型
 - 同步阻塞IO模型
@@ -571,7 +565,7 @@ Tips：这些都是操作系统中相关的概念
 - 异步IO叫做NIO2或者AIO，是异步非阻塞的，基于事件和回调机制来实现
 </code></pre>
 
-<h3 id="你对nio是怎么理解的-java中的nio是怎么实现的-nio和aio-bio的区别是什么">你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？</h3>
+<p><font color="#9932CC" size=4>你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？</font></p>
 
 <pre><code># NIO
 - 使用缓冲区和通道的概念来实现处理数据
@@ -594,7 +588,7 @@ Tips：这些都是操作系统中相关的概念
 
 <h3 id="list系">List系</h3>
 
-<h4 id="arraylist-linkedlist和vector之间的区别-他们线程安全吗-不安全怎么解决">ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</h4>
+<p><font color="#9932CC" size=4>ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</font></p>
 
 <pre><code># 区别
 - ArrayList和Vector的本质都是Object[]，LinkedLisk本质上是单向链表
@@ -604,24 +598,20 @@ Tips：这些都是操作系统中相关的概念
 - Vetor线程安全，使用synchronized来解决的
 </code></pre>
 
-<h4 id="arraylist是如何实现动态扩容的">ArrayList是如何实现动态扩容的</h4>
-
-<blockquote>
-<p><strong>链接：</strong><a href="https://blog.jaswine.com/2019/01/24/java18/">源码分析-Java中ArrayList是如何实现数组动态扩容的</a></p>
+<p><font color="#9932CC" size=4>ArrayList是如何实现动态扩容的</font>
+&gt; <strong>链接：</strong><a href="https://blog.jaswine.com/2019/01/24/java18/">源码分析-Java中ArrayList是如何实现数组动态扩容的</a></p>
 
 <pre><code>- ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容
 </code></pre>
-</blockquote>
 
 <h3 id="map系">Map系</h3>
 
-<h4 id="map接口的实现类">Map接口的实现类</h4>
+<p><font color="#9932CC" size=4>Map接口的实现类</font></p>
 
-<ul>
-<li>Map接口有如下的实现类:EnumMap,HashMap,Hashtable,TreeMap</li>
-</ul>
+<pre><code>- Map接口有如下的实现类:EnumMap,HashMap,Hashtable,TreeMap
+</code></pre>
 
-<h4 id="map接口实现类之间的区别">Map接口实现类之间的区别</h4>
+<p><font color="#9932CC" size=4>Map接口实现类之间的区别</font></p>
 
 <pre><code>- HashMap是无序的，LinkedHashMap是有序的
 - HashMap是线程不安全的，Hashtable是线程安全的
@@ -629,7 +619,7 @@ Tips：这些都是操作系统中相关的概念
 - TreeMap介意将键值排序输出，默认是升序输出
 </code></pre>
 
-<h4 id="有没有有顺序的map实现类-如果有-他们是怎么保证有序的">有没有有顺序的Map实现类，如果有，他们是怎么保证有序的</h4>
+<p><font color="#9932CC" size=4>有没有有顺序的Map实现类，如果有，他们是怎么保证有序的</font></p>
 
 <pre><code># 有序Map实现类
 - 实现了SortedMap接口的都是有序Map，比如LinkedHashMap，TreeMap
@@ -639,13 +629,13 @@ Tips：这些都是操作系统中相关的概念
 - TreeMap基于元素的固有顺序(由Comparator或者Comparable确定)
 </code></pre>
 
-<h4 id="hashmap和hashtable之间有什么区别">HashMap和Hashtable之间有什么区别</h4>
+<p><font color="#9932CC" size=4>HashMap和Hashtable之间有什么区别</font></p>
 
 <pre><code>- HashMap是线程不安全的，Hashtable是线程安全的
 - HashMap的k，v都可以是null，Hashtable不可以
 </code></pre>
 
-<h4 id="hashmap底层原理是什么-存储方式-默认容量是什么-怎么实现扩容的">HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</h4>
+<p><font color="#9932CC" size=4>HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</font></p>
 
 <pre><code># 底层原理
 
@@ -658,7 +648,7 @@ Tips：这些都是操作系统中相关的概念
 
 </code></pre>
 
-<h4 id="hashmap是线程安全的吗-为什么-解决办法是什么-原理是什么">HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</h4>
+<p><font color="#9932CC" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></p>
 
 <pre><code># 线程安全吗
 - 线程不安全
@@ -675,15 +665,15 @@ Tips：这些都是操作系统中相关的概念
 
 </code></pre>
 
-<h4 id="concurrenthashmap在1-7和1-8中有什么区别">ConcurrentHashMap在1.7和1.8中有什么区别？</h4>
+<p><font color="#9932CC" size=4>ConcurrentHashMap在1.7和1.8中有什么区别？</font></p>
 
 <pre><code>- 使用Synchronized+CAS+Node+Unsafe来替代Segment+HashEntry+Unsafe
 - put()初始化数组大小时1.8不用加锁(使用sizeCtl变量来标记table是不是在初始化，为-1的时候就是正在初始化)
 </code></pre>
 
-<h4 id="poll-和remove-方法的区别">poll()和remove()方法的区别？</h4>
+<p><font color="#9932CC" size=4>poll()和remove()方法的区别？</font></p>
 
-<h4 id="hashmap和hashtable之间有什么不同之处">HashMap和Hashtable之间有什么不同之处</h4>
+<p><font color="#9932CC" size=4>HashMap和Hashtable之间有什么不同之处</font></p>
 
 <pre><code>- HashMap可以接受null作为k,v;Hashtable不可以
 - HashMap是非synchronized的;Hashtable是
@@ -691,7 +681,7 @@ Tips：这些都是操作系统中相关的概念
 
 <h3 id="set系">Set系</h3>
 
-<h4 id="hashset内部是怎么工作的">HashSet内部是怎么工作的</h4>
+<p><font color="#9932CC" size=4>HashSet内部是怎么工作的</font></p>
 
 <pre><code>- HashSet内部使用HashMap来实现的
 - HashSet是对value的进行hash计算(因为set中元素不能重复)
@@ -699,13 +689,13 @@ Tips：这些都是操作系统中相关的概念
 
 <h3 id="queue系">queue系</h3>
 
-<h4 id="java中队列都有哪些-他们之间的区别是什么">Java中队列都有哪些，他们之间的区别是什么</h4>
+<p><font color="#9932CC" size=4>Java中队列都有哪些，他们之间的区别是什么</font></p>
 
 <h2 id="java并发编程">Java并发编程</h2>
 
 <h3 id="多线程基础理论">多线程基础理论</h3>
 
-<h4 id="什么是线程安全-线程不安全的根源是什么-java是怎么解决的">什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</h4>
+<p><font color="#9932CC" size=4>什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</font></p>
 
 <pre><code># 线程安全
 - 一个方法或者实例在多线程环境下使用不会出现问题，这个问题本质上就是共有数据在被并发修改的产生脏写的问题
@@ -719,7 +709,7 @@ Tips：这些都是操作系统中相关的概念
 - 使用锁来解决原子性问题
 </code></pre>
 
-<h4 id="说说死锁">说说死锁</h4>
+<p><font color="#9932CC" size=4>说说死锁</font></p>
 
 <pre><code># 死锁发生的条件
 - 互斥，共享资源x、y只能被一个线程占有
@@ -735,19 +725,19 @@ Tips：这些都是操作系统中相关的概念
 
 <h3 id="java并发方案">Java并发方案</h3>
 
-<h4 id="怎么打印出线程的栈信息">怎么打印出线程的栈信息</h4>
+<p><font color="#9932CC" size=4>怎么打印出线程的栈信息</font></p>
 
 <pre><code>- 使用jstack工具可以看到JVM中相关线程堆栈信息
 </code></pre>
 
-<h4 id="画一下线程生命周期和状态转换图">画一下线程生命周期和状态转换图</h4>
+<p><font color="#9932CC" size=4>画一下线程生命周期和状态转换图</font></p>
 
-<h4 id="一个线程两次调用start-方法会怎么样">一个线程两次调用start()方法会怎么样</h4>
+<p><font color="#9932CC" size=4>一个线程两次调用start()方法会怎么样</font></p>
 
 <pre><code>- 会抛出IllegalThreadStateException错误
 </code></pre>
 
-<h4 id="你知道停止一个线程有哪些方法-他们之间都有什么区别">你知道停止一个线程有哪些方法，他们之间都有什么区别</h4>
+<p><font color="#9932CC" size=4>你知道停止一个线程有哪些方法，他们之间都有什么区别</font></p>
 
 <pre><code># 方法
 - Thread.stop()
@@ -759,42 +749,16 @@ Tips：这些都是操作系统中相关的概念
 - interrupt()执行后不会立马终止线程，会设置一个中断标记位
 </code></pre>
 
-<h4 id="sleep-和wait-的区别">sleep()和wait()的区别</h4>
+<p><font color="#9932CC" size=4>sleep()和wait()的区别</font>
+|wait|sleep|
+|:&ndash;|:&ndash;|
+|Object的方法|Thread的方法|
+|执行的时候释放锁|执行的时候不释放锁|
+|只能在同步方法和同步块中使用|可以在任何地方使用|
+|无需捕捉异常|需要捕捉异常|
+<font color="#9932CC" size=4>讲讲Java同步机制的wait和notify</font></p>
 
-<table>
-<thead>
-<tr>
-<th align="left">wait</th>
-<th align="left">sleep</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">Object的方法</td>
-<td align="left">Thread的方法</td>
-</tr>
-
-<tr>
-<td align="left">执行的时候释放锁</td>
-<td align="left">执行的时候不释放锁</td>
-</tr>
-
-<tr>
-<td align="left">只能在同步方法和同步块中使用</td>
-<td align="left">可以在任何地方使用</td>
-</tr>
-
-<tr>
-<td align="left">无需捕捉异常</td>
-<td align="left">需要捕捉异常</td>
-</tr>
-</tbody>
-</table>
-
-<h4 id="讲讲java同步机制的wait和notify">讲讲Java同步机制的wait和notify</h4>
-
-<h4 id="volatile的原理-作用-能代替锁吗">volatile的原理，作用，能代替锁吗？</h4>
+<p><font color="#9932CC" size=4>volatile的原理，作用，能代替锁吗？</font></p>
 
 <pre><code># 作用
 - 可以保证多线程情况下的有序性和可见性，不能保证原子性
@@ -812,12 +776,12 @@ Tips：这些都是操作系统中相关的概念
 - 只保证了可见性，没有保证原子性
 </code></pre>
 
-<h4 id="jdk1-6对synchronized进行了怎么的优化">JDK1.6对synchronized进行了怎么的优化</h4>
+<p><font color="#9932CC" size=4>JDK1.6对synchronized进行了怎么的优化</font></p>
 
 <pre><code>- 
 </code></pre>
 
-<h4 id="说说reentrantlock和synchronized的异同吧">说说ReentrantLock和synchronized的异同吧</h4>
+<p><font color="#9932CC" size=4>说说ReentrantLock和synchronized的异同吧</font></p>
 
 <pre><code># 同
 - 都是协调多线程对象共享对象和变量的访问(同步锁)
@@ -833,57 +797,16 @@ Tips：这些都是操作系统中相关的概念
 - 底层实现不一样， synchronized是同步阻塞，使用的是悲观并发策略，lock是同步非阻塞，采用的是乐观并发策略
 </code></pre>
 
-<h4 id="lock和synchronized的区别">Lock和synchronized的区别</h4>
-
-<table>
-<thead>
-<tr>
-<th align="left">类别</th>
-<th align="left">Lock</th>
-<th align="left">synchronized</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">存在层次</td>
-<td align="left">API级别,程序员调用</td>
-<td align="left">JVM级别</td>
-</tr>
-
-<tr>
-<td align="left">锁的释放</td>
-<td align="left">手动释放</td>
-<td align="left">jvm自动释放</td>
-</tr>
-
-<tr>
-<td align="left">锁的获取</td>
-<td align="left">假设A线程获得锁，B线程等待。如果A线程阻塞，B线程会一直等待</td>
-<td align="left">分情况而定，Lock有多个锁获取的方式，大致就是可以尝试获得锁，线程可以不用一直等待</td>
-</tr>
-
-<tr>
-<td align="left">锁状态</td>
-<td align="left">可以判断</td>
-<td align="left">无法判断</td>
-</tr>
-
-<tr>
-<td align="left">锁类型</td>
-<td align="left">可重入、不可中断、非公平</td>
-<td align="left">可重入、可判断、可(非)公平</td>
-</tr>
-
-<tr>
-<td align="left">性能</td>
-<td align="left">大量同步</td>
-<td align="left">少量同步</td>
-</tr>
-</tbody>
-</table>
-
-<h4 id="synchronized的原理是什么-一般用在什么地方-修饰静态和非静态方法有什么区别">synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</h4>
+<p><font color="#9932CC" size=4>Lock和synchronized的区别</font>
+|类别|Lock|synchronized|
+|:&ndash;|:&ndash;|:&ndash;|
+|存在层次|API级别,程序员调用|JVM级别|
+|锁的释放|手动释放|jvm自动释放|
+|锁的获取|假设A线程获得锁，B线程等待。如果A线程阻塞，B线程会一直等待|分情况而定，Lock有多个锁获取的方式，大致就是可以尝试获得锁，线程可以不用一直等待|
+|锁状态|可以判断|无法判断|
+|锁类型|可重入、不可中断、非公平|可重入、可判断、可(非)公平|
+|性能|大量同步|少量同步|
+<font color="#9932CC" size=4>synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</font></p>
 
 <pre><code># 使用
 - 修饰实例方法，作用于当前实例加锁，进入同步代码前要获得当前实例的锁
@@ -895,7 +818,7 @@ Tips：这些都是操作系统中相关的概念
 - 在同步方法中：在字节码层面，没有特别的指令来实现被synchronized修饰的方法，而是在class文件中对该方法的access_flag字段中的synchronized标志位置1，表示该方法是同步方法，并使用调用该方法的对象或者该方法所在的class在JVM的内部对象表示class作为锁对象
 </code></pre>
 
-<h4 id="说说你对锁的相关名词的理解">说说你对锁的相关名词的理解</h4>
+<p><font color="#9932CC" size=4>说说你对锁的相关名词的理解</font></p>
 
 <pre><code># 自旋锁
 - 当线程A占用锁，线程B拿不到锁的时候就被挂起(阻塞)，自旋锁是线程B不放弃CPU的时间片，在原地一直尝试获取锁
@@ -931,20 +854,20 @@ Tips：这些都是操作系统中相关的概念
 ---使用版本号机制或者CAS算法实现
 </code></pre>
 
-<h4 id="说说降低锁竞争的方法">说说降低锁竞争的方法</h4>
+<p><font color="#9932CC" size=4>说说降低锁竞争的方法</font></p>
 
 <pre><code>- 减少锁持有时间
 - 降低锁的请求频率
 - 使用带有协调机制的独占锁
 </code></pre>
 
-<h4 id="有哪些无锁的数据结构-他们的实现原理是什么">有哪些无锁的数据结构，他们的实现原理是什么？</h4>
+<p><font color="#9932CC" size=4>有哪些无锁的数据结构，他们的实现原理是什么？</font></p>
 
-<h4 id="cas机制是什么-怎么解决aba问题">cas机制是什么？怎么解决ABA问题</h4>
+<p><font color="#9932CC" size=4>cas机制是什么？怎么解决ABA问题</font></p>
 
-<h4 id="说说java中常用的线程池模式以及不同线程池的使用场景">说说Java中常用的线程池模式以及不同线程池的使用场景</h4>
+<p><font color="#9932CC" size=4>说说Java中常用的线程池模式以及不同线程池的使用场景</font></p>
 
-<h4 id="线程池关闭的方式有哪些-各自的区别是什么">线程池关闭的方式有哪些？各自的区别是什么？</h4>
+<p><font color="#9932CC" size=4>线程池关闭的方式有哪些？各自的区别是什么？</font></p>
 
 <pre><code># 方式
 - shutdown()
@@ -956,15 +879,15 @@ Tips：这些都是操作系统中相关的概念
 
 <h3 id="实际问题">实际问题</h3>
 
-<h4 id="现在有一个第三方接口-有很多线程去调用它获得数据-如何实现每秒钟最多有10个线程同时调用它">现在有一个第三方接口，有很多线程去调用它获得数据，如何实现每秒钟最多有10个线程同时调用它</h4>
+<p><font color="#9932CC" size=4>现在有一个第三方接口，有很多线程去调用它获得数据，如何实现每秒钟最多有10个线程同时调用它</font></p>
 
-<h4 id="用三个线程按顺序打印abc-怎么做到">用三个线程按顺序打印abc，怎么做到</h4>
+<p><font color="#9932CC" size=4>用三个线程按顺序打印abc，怎么做到</font></p>
 
 <pre><code>- 使用wait，notify
 - 
 </code></pre>
 
-<h4 id="threadlocal用过吗-用途是什么-原理是什么-使用的时候有什么注意的吗">ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</h4>
+<p><font color="#9932CC" size=4>ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</font></p>
 
 <pre><code># 用途
 - 
@@ -976,45 +899,43 @@ Tips：这些都是操作系统中相关的概念
 - remove()
 </code></pre>
 
-<h3 id="现在让你实现一个并发安全的链表-你怎么实现">现在让你实现一个并发安全的链表，你怎么实现</h3>
+<p><font color="#9932CC" size=4>现在让你实现一个并发安全的链表，你怎么实现</font></p>
 
-<h3 id="多线程如果线程挂住了怎么办">多线程如果线程挂住了怎么办</h3>
+<p><font color="#9932CC" size=4>多线程如果线程挂住了怎么办</font></p>
 
-<h3 id="countdownlatch和cyclicbarrier的内部原理和用法-以及相互之间的差别">countdownlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别</h3>
+<p><font color="#9932CC" size=4>countdownlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别</font></p>
 
-<h3 id="abstractqueuedsynchronizer了解多少-讲讲加锁和解锁的流程-独占锁和公平锁加锁有什么不同">AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占锁和公平锁加锁有什么不同</h3>
+<p><font color="#9932CC" size=4>AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占锁和公平锁加锁有什么不同</font></p>
 
-<h3 id="简述concurrentlinkqueue和linkedblockingqueue的用处和不同之处">简述ConcurrentLinkQueue和LinkedBlockingQueue的用处和不同之处</h3>
+<p><font color="#9932CC" size=4>简述ConcurrentLinkQueue和LinkedBlockingQueue的用处和不同之处</font></p>
 
-<h3 id="导致线程死锁的原因-怎么解除线程死锁">导致线程死锁的原因，怎么解除线程死锁</h3>
+<p><font color="#9932CC" size=4>导致线程死锁的原因，怎么解除线程死锁</font></p>
 
-<h3 id="多线程-可能不在一台机器上-相互之间要相互等待协调完成某种工作-请问怎么设计">多线程(可能不在一台机器上)相互之间要相互等待协调完成某种工作，请问怎么设计</h3>
+<p><font color="#9932CC" size=4>多线程(可能不在一台机器上)相互之间要相互等待协调完成某种工作，请问怎么设计</font></p>
 
-<h3 id="用过读写锁吗-原理是什么-一般在什么场景下使用">用过读写锁吗？原理是什么，一般在什么场景下使用</h3>
+<p><font color="#9932CC" size=4>用过读写锁吗？原理是什么，一般在什么场景下使用</font></p>
 
-<h3 id="什么是多线程环境下的伪共享-false-sharing">什么是多线程环境下的伪共享(false sharing)？</h3>
+<p><font color="#9932CC" size=4>什么是多线程环境下的伪共享(false sharing)？</font></p>
 
-<h3 id="说说你对线程局部变量的理解">说说你对线程局部变量的理解</h3>
+<p><font color="#9932CC" size=4>说说你对线程局部变量的理解</font></p>
 
 <h2 id="java异常">Java异常</h2>
 
-<h3 id="error和exception的区别-checkedexception和runtimeexception">Error和Exception的区别，CheckedException和RuntimeException</h3>
+<p><font color="#9932CC" size=4>Error和Exception的区别，CheckedException和RuntimeException</font></p>
 
-<h3 id="说说你知道的运行时异常">说说你知道的运行时异常</h3>
+<p><font color="#9932CC" size=4>说说你知道的运行时异常</font></p>
 
 <h2 id="java注解-泛型-枚举">Java注解，泛型，枚举</h2>
 
-<h3 id="jdk1-5引入了泛型-泛型的存在是用来解决什么问题">JDK1.5引入了泛型，泛型的存在是用来解决什么问题</h3>
-
-<p>###</p>
+<p><font color="#9932CC" size=4>JDK1.5引入了泛型，泛型的存在是用来解决什么问题</font></p>
 
 <h2 id="java高级特性">Java高级特性</h2>
 
-<h3 id="反射的原理是什么-反射创建类实例的三种方式是什么">反射的原理是什么？反射创建类实例的三种方式是什么？</h3>
+<p><font color="#9932CC" size=4>反射的原理是什么？反射创建类实例的三种方式是什么？</font></p>
 
 <pre><code></code></pre>
 
-<h3 id="动态代理有哪些实现方式-你知道他们相应的优缺点吗">动态代理有哪些实现方式，你知道他们相应的优缺点吗？</h3>
+<p><font color="#9932CC" size=4>动态代理有哪些实现方式，你知道他们相应的优缺点吗？</font></p>
 
 <pre><code># 实现方式
 - JDK动态代理
@@ -1024,31 +945,11 @@ Tips：这些都是操作系统中相关的概念
 如下
 </code></pre>
 
-<h3 id="jdk的动态代理和cglib的实现有什么区别-以及相应的原理是什么呢">JDK的动态代理和cglib的实现有什么区别？以及相应的原理是什么呢？</h3>
-
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="left">JDK</th>
-<th align="left">cglib</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">区别</td>
-<td align="left">只能对实现同一接口的类进行代理</td>
-<td align="left">可以对任何类惊醒代理，但是不能对final修饰的类进行代理</td>
-</tr>
-
-<tr>
-<td align="left">原理</td>
-<td align="left">使用Java反射原理实现的</td>
-<td align="left">使用asm的开源工具将代理的类加载进来实现其子类，然后重写相关的方法</td>
-</tr>
-</tbody>
-</table>
+<p><font color="#9932CC" size=4>JDK的动态代理和cglib的实现有什么区别？以及相应的原理是什么呢？</font>
+||JDK|cglib|
+|:&ndash;|:&ndash;|:&ndash;|
+|区别|只能对实现同一接口的类进行代理|可以对任何类惊醒代理，但是不能对final修饰的类进行代理|
+|原理|使用Java反射原理实现的|使用asm的开源工具将代理的类加载进来实现其子类，然后重写相关的方法|</p>
 </article>
 
       
@@ -1066,131 +967,30 @@ Tips：这些都是操作系统中相关的概念
 <ul>
 <li><a href="#java基础">Java基础</a>
 <ul>
-<li><a href="#java小知识点">Java小知识点</a>
-<ul>
-<li><a href="#说说每个版本java的新特性">说说每个版本Java的新特性</a></li>
-<li><a href="#java中try-catch-finally-return执行的先后顺序">Java中try&hellip;catch&hellip;finally&hellip;return执行的先后顺序</a></li>
+<li><a href="#java小知识点">Java小知识点</a></li>
+<li><a href="#java关键字">Java关键字</a></li>
+<li><a href="#逻辑运算">逻辑运算</a></li>
+<li><a href="#object">Object</a></li>
+<li><a href="#string">String</a></li>
 </ul></li>
-<li><a href="#java关键字">Java关键字</a>
-<ul>
-<li><a href="#final有什么用途">final有什么用途？</a></li>
-<li><a href="#讲讲类实例化的顺序">讲讲类实例化的顺序</a></li>
-</ul></li>
-<li><a href="#逻辑运算">逻辑运算</a>
-<ul>
-<li><a href="#a-a-b和a-b之间的区别是什么">a=a+b和a+=b之间的区别是什么？</a></li>
-<li><a href="#说说java中的位运算和逻辑运算的区别-位运行在java中的应用">说说Java中的位运算和逻辑运算的区别，位运行在Java中的应用</a></li>
-</ul></li>
-<li><a href="#object">Object</a>
-<ul>
-<li><a href="#如何在父类中为子类自动完成所有的hashcode和equals实现-这么做有何优劣势">如何在父类中为子类自动完成所有的hashcode和equals实现？这么做有何优劣势</a></li>
-<li><a href="#说活你对object中hashcode-和equals-方法的理解-在什么场景下需要对这两个方法进行重写-你是这么重写的">说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</a></li>
-<li><a href="#深拷贝和浅拷贝的区别">深拷贝和浅拷贝的区别</a></li>
-</ul></li>
-<li><a href="#string">String</a>
-<ul>
-<li><a href="#string-stringbuffer和stringbuilder之间的区别-stringbuffer是怎么实现线程安全的">String,StringBuffer和StringBuilder之间的区别，StringBuffer是怎么实现线程安全的</a></li>
-<li><a href="#string中utf-8编码和gbk编码有什么区别">String中UTF-8编码和GBK编码有什么区别</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#java面向对象思想">Java面向对象思想</a>
-<ul>
-<li><a href="#怎么理解继承和聚合的概念-他们之间有什么异同">怎么理解继承和聚合的概念，他们之间有什么异同</a></li>
-<li><a href="#结合oo设计理念-谈谈访问修饰符public-default-protected和private在应用中设计的作用">结合OO设计理念，谈谈访问修饰符public，default，protected和private在应用中设计的作用</a></li>
-<li><a href="#java抽象类和接口的异同-说说为什么java这么设计">Java抽象类和接口的异同，说说为什么Java这么设计</a></li>
-</ul></li>
-<li><a href="#java-i-o">Java I/O</a>
-<ul>
-<li><a href="#io模型有哪些-在java中对应的实现是什么">IO模型有哪些？在Java中对应的实现是什么</a></li>
-<li><a href="#你对nio是怎么理解的-java中的nio是怎么实现的-nio和aio-bio的区别是什么">你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？</a></li>
-</ul></li>
+<li><a href="#java面向对象思想">Java面向对象思想</a></li>
+<li><a href="#java-i-o">Java I/O</a></li>
 <li><a href="#java集合">Java集合</a>
 <ul>
-<li><a href="#list系">List系</a>
-<ul>
-<li><a href="#arraylist-linkedlist和vector之间的区别-他们线程安全吗-不安全怎么解决">ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</a></li>
-<li><a href="#arraylist是如何实现动态扩容的">ArrayList是如何实现动态扩容的</a></li>
-</ul></li>
-<li><a href="#map系">Map系</a>
-<ul>
-<li><a href="#map接口的实现类">Map接口的实现类</a></li>
-<li><a href="#map接口实现类之间的区别">Map接口实现类之间的区别</a></li>
-<li><a href="#有没有有顺序的map实现类-如果有-他们是怎么保证有序的">有没有有顺序的Map实现类，如果有，他们是怎么保证有序的</a></li>
-<li><a href="#hashmap和hashtable之间有什么区别">HashMap和Hashtable之间有什么区别</a></li>
-<li><a href="#hashmap底层原理是什么-存储方式-默认容量是什么-怎么实现扩容的">HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</a></li>
-<li><a href="#hashmap是线程安全的吗-为什么-解决办法是什么-原理是什么">HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</a></li>
-<li><a href="#concurrenthashmap在1-7和1-8中有什么区别">ConcurrentHashMap在1.7和1.8中有什么区别？</a></li>
-<li><a href="#poll-和remove-方法的区别">poll()和remove()方法的区别？</a></li>
-<li><a href="#hashmap和hashtable之间有什么不同之处">HashMap和Hashtable之间有什么不同之处</a></li>
-</ul></li>
-<li><a href="#set系">Set系</a>
-<ul>
-<li><a href="#hashset内部是怎么工作的">HashSet内部是怎么工作的</a></li>
-</ul></li>
-<li><a href="#queue系">queue系</a>
-<ul>
-<li><a href="#java中队列都有哪些-他们之间的区别是什么">Java中队列都有哪些，他们之间的区别是什么</a></li>
-</ul></li>
+<li><a href="#list系">List系</a></li>
+<li><a href="#map系">Map系</a></li>
+<li><a href="#set系">Set系</a></li>
+<li><a href="#queue系">queue系</a></li>
 </ul></li>
 <li><a href="#java并发编程">Java并发编程</a>
 <ul>
-<li><a href="#多线程基础理论">多线程基础理论</a>
-<ul>
-<li><a href="#什么是线程安全-线程不安全的根源是什么-java是怎么解决的">什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</a></li>
-<li><a href="#说说死锁">说说死锁</a></li>
+<li><a href="#多线程基础理论">多线程基础理论</a></li>
+<li><a href="#java并发方案">Java并发方案</a></li>
+<li><a href="#实际问题">实际问题</a></li>
 </ul></li>
-<li><a href="#java并发方案">Java并发方案</a>
-<ul>
-<li><a href="#怎么打印出线程的栈信息">怎么打印出线程的栈信息</a></li>
-<li><a href="#画一下线程生命周期和状态转换图">画一下线程生命周期和状态转换图</a></li>
-<li><a href="#一个线程两次调用start-方法会怎么样">一个线程两次调用start()方法会怎么样</a></li>
-<li><a href="#你知道停止一个线程有哪些方法-他们之间都有什么区别">你知道停止一个线程有哪些方法，他们之间都有什么区别</a></li>
-<li><a href="#sleep-和wait-的区别">sleep()和wait()的区别</a></li>
-<li><a href="#讲讲java同步机制的wait和notify">讲讲Java同步机制的wait和notify</a></li>
-<li><a href="#volatile的原理-作用-能代替锁吗">volatile的原理，作用，能代替锁吗？</a></li>
-<li><a href="#jdk1-6对synchronized进行了怎么的优化">JDK1.6对synchronized进行了怎么的优化</a></li>
-<li><a href="#说说reentrantlock和synchronized的异同吧">说说ReentrantLock和synchronized的异同吧</a></li>
-<li><a href="#lock和synchronized的区别">Lock和synchronized的区别</a></li>
-<li><a href="#synchronized的原理是什么-一般用在什么地方-修饰静态和非静态方法有什么区别">synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</a></li>
-<li><a href="#说说你对锁的相关名词的理解">说说你对锁的相关名词的理解</a></li>
-<li><a href="#说说降低锁竞争的方法">说说降低锁竞争的方法</a></li>
-<li><a href="#有哪些无锁的数据结构-他们的实现原理是什么">有哪些无锁的数据结构，他们的实现原理是什么？</a></li>
-<li><a href="#cas机制是什么-怎么解决aba问题">cas机制是什么？怎么解决ABA问题</a></li>
-<li><a href="#说说java中常用的线程池模式以及不同线程池的使用场景">说说Java中常用的线程池模式以及不同线程池的使用场景</a></li>
-<li><a href="#线程池关闭的方式有哪些-各自的区别是什么">线程池关闭的方式有哪些？各自的区别是什么？</a></li>
-</ul></li>
-<li><a href="#实际问题">实际问题</a>
-<ul>
-<li><a href="#现在有一个第三方接口-有很多线程去调用它获得数据-如何实现每秒钟最多有10个线程同时调用它">现在有一个第三方接口，有很多线程去调用它获得数据，如何实现每秒钟最多有10个线程同时调用它</a></li>
-<li><a href="#用三个线程按顺序打印abc-怎么做到">用三个线程按顺序打印abc，怎么做到</a></li>
-<li><a href="#threadlocal用过吗-用途是什么-原理是什么-使用的时候有什么注意的吗">ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</a></li>
-</ul></li>
-<li><a href="#现在让你实现一个并发安全的链表-你怎么实现">现在让你实现一个并发安全的链表，你怎么实现</a></li>
-<li><a href="#多线程如果线程挂住了怎么办">多线程如果线程挂住了怎么办</a></li>
-<li><a href="#countdownlatch和cyclicbarrier的内部原理和用法-以及相互之间的差别">countdownlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别</a></li>
-<li><a href="#abstractqueuedsynchronizer了解多少-讲讲加锁和解锁的流程-独占锁和公平锁加锁有什么不同">AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占锁和公平锁加锁有什么不同</a></li>
-<li><a href="#简述concurrentlinkqueue和linkedblockingqueue的用处和不同之处">简述ConcurrentLinkQueue和LinkedBlockingQueue的用处和不同之处</a></li>
-<li><a href="#导致线程死锁的原因-怎么解除线程死锁">导致线程死锁的原因，怎么解除线程死锁</a></li>
-<li><a href="#多线程-可能不在一台机器上-相互之间要相互等待协调完成某种工作-请问怎么设计">多线程(可能不在一台机器上)相互之间要相互等待协调完成某种工作，请问怎么设计</a></li>
-<li><a href="#用过读写锁吗-原理是什么-一般在什么场景下使用">用过读写锁吗？原理是什么，一般在什么场景下使用</a></li>
-<li><a href="#什么是多线程环境下的伪共享-false-sharing">什么是多线程环境下的伪共享(false sharing)？</a></li>
-<li><a href="#说说你对线程局部变量的理解">说说你对线程局部变量的理解</a></li>
-</ul></li>
-<li><a href="#java异常">Java异常</a>
-<ul>
-<li><a href="#error和exception的区别-checkedexception和runtimeexception">Error和Exception的区别，CheckedException和RuntimeException</a></li>
-<li><a href="#说说你知道的运行时异常">说说你知道的运行时异常</a></li>
-</ul></li>
-<li><a href="#java注解-泛型-枚举">Java注解，泛型，枚举</a>
-<ul>
-<li><a href="#jdk1-5引入了泛型-泛型的存在是用来解决什么问题">JDK1.5引入了泛型，泛型的存在是用来解决什么问题</a></li>
-</ul></li>
-<li><a href="#java高级特性">Java高级特性</a>
-<ul>
-<li><a href="#反射的原理是什么-反射创建类实例的三种方式是什么">反射的原理是什么？反射创建类实例的三种方式是什么？</a></li>
-<li><a href="#动态代理有哪些实现方式-你知道他们相应的优缺点吗">动态代理有哪些实现方式，你知道他们相应的优缺点吗？</a></li>
-<li><a href="#jdk的动态代理和cglib的实现有什么区别-以及相应的原理是什么呢">JDK的动态代理和cglib的实现有什么区别？以及相应的原理是什么呢？</a></li>
-</ul></li>
+<li><a href="#java异常">Java异常</a></li>
+<li><a href="#java注解-泛型-枚举">Java注解，泛型，枚举</a></li>
+<li><a href="#java高级特性">Java高级特性</a></li>
 </ul></li>
 </ul>
 </nav>
