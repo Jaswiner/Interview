@@ -535,6 +535,52 @@ https://github.com/alex-shpak/hugo-book
 <pre><code>限定了Java中相关资源的访问权限
 </code></pre>
 
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">同类</th>
+<th align="left">同包</th>
+<th align="left">子类</th>
+<th align="left">非同包类</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">public</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+</tr>
+
+<tr>
+<td align="left">protected</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">X</td>
+</tr>
+
+<tr>
+<td align="left">default</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">X</td>
+<td align="left">X</td>
+</tr>
+
+<tr>
+<td align="left">private</td>
+<td align="left">Y</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+</tr>
+</tbody>
+</table>
+
 <p><font color="#9932CC" size=4>Java抽象类和接口的异同，说说为什么Java这么设计</font></p>
 
 <pre><code># 抽象类 &amp; 接口
@@ -551,17 +597,17 @@ https://github.com/alex-shpak/hugo-book
 <p><font color="#9932CC" size=4>IO模型有哪些？在Java中对应的实现是什么</font></p>
 
 <pre><code># IO模型
-- 同步阻塞IO模型
-- 同步非阻塞IO模型
+- 同步阻塞IO模型(BIO)
+- 同步非阻塞IO模型(NIO)
 - IO多路复用
 - 信号驱动IO
-- 异步IO(AIO)
+- 异步IO(AIO,NIO2)
 
 Tips：这些都是操作系统中相关的概念
 
 # Java中的对应实现
 - 同步阻塞IO就是传统的IO，或者叫BIO，简化的来理解就是所有的操作都在一个线程中完成
-- 非阻塞IO在Java中的实现是NIO，使用channel和Buffer来实现，底层其实使用的是操作系统中的epoll实现的
+- 非阻塞IO在Java中的实现是NIO，使用selector,channel和Buffer来实现，底层其实使用的是操作系统中的epoll实现的
 - 异步IO叫做NIO2或者AIO，是异步非阻塞的，基于事件和回调机制来实现
 </code></pre>
 
@@ -576,7 +622,7 @@ Tips：这些都是操作系统中相关的概念
 - 客户端将流写到缓冲区
 - 使用channel将数据从buffer转移
 
-# 和AIO,BIO的区别
+# NIO和AIO,BIO的区别
 - AIO是异步非阻塞的，BIO是同步阻塞的，NIO是同步非阻塞的
 - AIO也可以叫做NIO2
 
@@ -778,7 +824,7 @@ Tips：这些都是操作系统中相关的概念
 
 <p><font color="#9932CC" size=4>JDK1.6对synchronized进行了怎么的优化</font></p>
 
-<pre><code>- 
+<pre><code>- 引入四种锁状态(无锁，偏向锁，轻量级锁，重量级锁)，向上膨胀
 </code></pre>
 
 <p><font color="#9932CC" size=4>说说ReentrantLock和synchronized的异同吧</font></p>

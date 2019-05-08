@@ -403,11 +403,31 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="应用">应用</h2>
 
+<p><font color="#9932CC" size=4>Mybatis中#{}和${}区别</font>
+|#|$|
+|:&ndash;|:&ndash;|
+|预编译|直接传入值|
+|可以防止SQL注入|不能防止SQL注入|
+|不能放在order by后面|可以放在order by后面|</p>
+
+<p><font color="#9932CC" size=4>Mybatis传入多个参数</font></p>
+
+<pre><code>- #{0},#{1}
+- @param注解
+</code></pre>
+
+<p><font color="#9932CC" size=4>Mybatis分页查询的原理</font></p>
+
+<pre><code>- 使用pagehelp做分页查询
+- 本质上就是对sql进行拦截然后重写
+</code></pre>
+
 <h2 id="原理">原理</h2>
 
-<h3 id="mybatis的底层实现原理">Mybatis的底层实现原理</h3>
+<p><font color="#9932CC" size=4>Mybatis定义的接口是怎么找到实现的</font></p>
 
-<h3 id="mybatis定义的接口是怎么找到实现的">Mybatis定义的接口是怎么找到实现的</h3>
+<pre><code>使用动态代理技术
+</code></pre>
 </article>
 
       
@@ -424,11 +444,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#mybatis面试题">Mybatis面试题</a>
 <ul>
 <li><a href="#应用">应用</a></li>
-<li><a href="#原理">原理</a>
-<ul>
-<li><a href="#mybatis的底层实现原理">Mybatis的底层实现原理</a></li>
-<li><a href="#mybatis定义的接口是怎么找到实现的">Mybatis定义的接口是怎么找到实现的</a></li>
-</ul></li>
+<li><a href="#原理">原理</a></li>
 </ul></li>
 </ul>
 </nav>

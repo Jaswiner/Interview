@@ -494,6 +494,37 @@ https://github.com/alex-shpak/hugo-book
 - 认为每一次操作都会引发冲突
 </code></pre>
 
+<h3 id="分表分库">分表分库</h3>
+
+<p><font color="#9932CC" size=4>MySQL如何分表，分表后想按照条件来分页查询这么做</font></p>
+
+<pre><code># 如何分表
+- 时间分表
+- 区间分表
+- hash分表
+
+# 分表后分页查询
+- 
+</code></pre>
+
+<p><font color="#9932CC" size=4>分表之后分布式唯一id怎么实现，都有什么优缺点</font>
+||优点|缺点|
+|&mdash;|&mdash;|&mdash;|
+|UUID|全球唯一，本机生成|无序，字符串存储查询效率慢，存储空间大|
+|雪花算法|生成快，id是整体变大的，灵活|依赖本机的时钟，如果时钟回调可能会有重复id|
+|Redis原子性自增|有序|占用带宽|</p>
+
+<p><font color="#9932CC" size=4>分表后之后想让一个id多个表是自增的，如何效率实现</font></p>
+
+<pre><code># 建一个id表
+- id表中id是自增的，别的表插入的时候从这个表中取最新的id
+
+# Redis生成方案
+
+# 队列方案
+- 将批量的id放到队列中，每一次插入取队列中的，失败返还
+</code></pre>
+
 <h3 id="解决方案">解决方案</h3>
 
 <p><font color="#9932CC" size=4>高并发下，怎么做到安全的修改同一行数据</font></p>
@@ -509,28 +540,6 @@ https://github.com/alex-shpak/hugo-book
 - 读写分离
 - 使用缓存
 - 使用NoSQL(对ACID要求不是很严格的时候)
-</code></pre>
-
-<p><font color="#9932CC" size=4>MySQL如何分表，分表后想按照条件来分页查询这么做</font></p>
-
-<pre><code># 如何分表
-- 时间分表
-- 区间分表
-- hash分表
-
-# 分表后分页查询
-- 
-</code></pre>
-
-<p><font color="#9932CC" size=4>分表后之后想让一个id多个表是自增的，如何效率实现</font></p>
-
-<pre><code># 建一个id表
-- id表中id是自增的，别的表插入的时候从这个表中取最新的id
-
-# Redis生成方案
-
-# 队列方案
-- 将批量的id放到队列中，每一次插入取队列中的，失败返还
 </code></pre>
 
 <p><font color="#9932CC" size=4>MySQL的主从实时备份同步的配置，原理是什么？</font></p>
@@ -588,6 +597,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#索引">索引</a></li>
 <li><a href="#存储引擎">存储引擎</a></li>
 <li><a href="#事务">事务</a></li>
+<li><a href="#分表分库">分表分库</a></li>
 <li><a href="#解决方案">解决方案</a></li>
 </ul></li>
 </ul></li>

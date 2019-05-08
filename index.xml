@@ -116,7 +116,11 @@
       <pubDate>Mon, 29 Apr 2019 09:33:46 +0800</pubDate>
       
       <guid>https://interview.jaswine.com/docs/mybatis/</guid>
-      <description> Mybatis面试题 应用 原理 Mybatis的底层实现原理 Mybatis定义的接口是怎么找到实现的 </description>
+      <description> Mybatis面试题 应用 Mybatis中#{}和${}区别 |#|$| |:&amp;ndash;|:&amp;ndash;| |预编译|直接传入值| |可以防止SQL注入|不能防止SQL注入| |不能放在order by后面|可以放在order by后面|
+Mybatis传入多个参数
+- #{0},#{1} - @param注解  Mybatis分页查询的原理
+- 使用pagehelp做分页查询 - 本质上就是对sql进行拦截然后重写  原理 Mybatis定义的接口是怎么找到实现的
+使用动态代理技术  </description>
     </item>
     
     <item>
