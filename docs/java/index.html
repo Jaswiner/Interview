@@ -637,22 +637,33 @@ Tips：这些都是操作系统中相关的概念
 <p><font color="#9932CC" size=4>ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</font></p>
 
 <pre><code># 区别
-- ArrayList和Vector的本质都是Object[]，LinkedLisk本质上是单向链表
+- ArrayList和Vector的本质都是Object[]，LinkedLisk本质上是双向链表
 - ArrayList和LinkedList是线程不安全的，Vector是线程安全的
 
 # 线程不安全解决办法
 - Vetor线程安全，使用synchronized来解决的
+
+Tips：
+- 因为ArrayList和LinkedList的底层数据结构不同，所以ArrayList适合更多查找的场景，LinkedList底层是双向链表，所以更加适合插入，删除的场景
 </code></pre>
 
 <p><font color="#9932CC" size=4>ArrayList是如何实现动态扩容的</font>
 &gt; <strong>链接：</strong><a href="https://blog.jaswine.com/2019/01/24/java18/">源码分析-Java中ArrayList是如何实现数组动态扩容的</a></p>
 
 <pre><code>- ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容
+- Java底层的数组扩容就是通过数组拷贝完成的
 </code></pre>
 
 <h3 id="map系">Map系</h3>
 
-<p><font color="#9932CC" size=4>Map接口的实现类</font></p>
+<p><font color="#9932CC" size=4>Map接口的实现类，简单的说说他们</font>
+|类|底层数据结构|特点|是否线程安全|
+|:&ndash;|:&ndash;|:&ndash;|:&ndash;|
+|HashMap|数组+链表/红黑树|可以使用null作为Key和Value|不安全|
+|Hashtable|数组+链表/红黑树|非null的key和value|安全|
+|LinkedHashMap|继承HashMap，多维护一个双向链表|同HashMap，有序的|不安全|
+|TreeMap|红黑树|有序|不安全|
+|Properties|继承hashtable||安全|</p>
 
 <pre><code>- Map接口有如下的实现类:EnumMap,HashMap,Hashtable,TreeMap
 </code></pre>
