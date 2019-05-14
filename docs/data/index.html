@@ -436,7 +436,9 @@ https://github.com/alex-shpak/hugo-book
 - MySQL索引的本质是B+树
 
 # 如何使用
-- 
+- 不同索引类型添加方式不一样，不过都是雷同的
+
+alter table [table_name] add [index_type] [index_name] [字段名]
 
 # 不能，要正确的建立索引
 
@@ -446,6 +448,23 @@ https://github.com/alex-shpak/hugo-book
 - 选择区分度比较高的列作为索引
 - 索引列不参加计算
 - 尽量扩展索引，不新建索引
+</code></pre>
+
+<p><font color="#9932CC" size=4>说说数据库的索引都有哪些类型</font>
+|索引名|特点|
+|:&ndash;|:&ndash;|
+|UNIQUE(唯一索引)|不可以出现相同的值，可以有null|
+|INDEX(普通索引)|允许出现相同的索引内容|
+|PROMARY KEY(主键索引)|不允许出现相同的值|
+|FULLTEXT INDEX(全文索引)|对全文进行索引，效率很差|
+|组合索引|实质上是将多个字段建到一个索引里，列值的组合必须唯一|</p>
+
+<p>Tips：</p>
+
+<pre><code>CREATE INDEX 方式只能创建‘普通索引’和‘唯一索引’
+
+组合索引的创建方式为：
+ALTER TABLE [table_name] ADD INDEX [inedx_name](列1,列2,列3); 
 </code></pre>
 
 <p><font color="#9932CC" size=4>说说数据库的索引实现和非主键的二级索引</font></p>

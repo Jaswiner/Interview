@@ -682,8 +682,8 @@ Tips：
 - 实现了SortedMap接口的都是有序Map，比如LinkedHashMap，TreeMap
 
 # 保证有序
-- LinkedHashMap基于元素进入集合的顺序排序
-- TreeMap基于元素的固有顺序(由Comparator或者Comparable确定)
+- LinkedHashMap基于元素进入集合的顺序排序，底层就是多维护一个双向链表
+- TreeMap基于元素的固有顺序(由Comparator或者Comparable确定)，底层是红黑树
 </code></pre>
 
 <p><font color="#9932CC" size=4>HashMap和Hashtable之间有什么区别</font></p>
@@ -702,7 +702,7 @@ Tips：
 - 链表长度超过阈值(8)时转成红黑树(减少查找时间)
 
 # 扩容
-
+- 本质上就是数组的扩容
 </code></pre>
 
 <p><font color="#9932CC" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></p>
@@ -747,6 +747,24 @@ Tips：
 <h3 id="queue系">queue系</h3>
 
 <p><font color="#9932CC" size=4>Java中队列都有哪些，他们之间的区别是什么</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 
 <h2 id="java并发编程">Java并发编程</h2>
 
