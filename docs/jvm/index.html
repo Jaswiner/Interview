@@ -403,7 +403,8 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="jmm-java内存模型">JMM(Java内存模型)</h2>
 
-<p><font color="#9932CC" size=4>简单说说JVM中内存的分配情况吧</font></p>
+<p><font color="#9932CC" size=4>简单说说JVM中内存的分配情况吧</font>
+<img src="https://cdn.jaswine.com/interview/jvm/jvm.png" alt="" /></p>
 
 <pre><code># 线程私有
 - 程序计数器(当前线程执行字节码的行号指示器)
@@ -444,11 +445,24 @@ https://github.com/alex-shpak/hugo-book
 
 </code></pre>
 
-<p><font color="#9932CC" size=4>在Java内存结构中，Eden和Survivor的比例</font></p>
+<p><font color="#9932CC" size=4>在Java内存结构中，Eden和Survivor的比例，为什么这么分呢？</font></p>
+
+<pre><code># 比例
+一个Eden两个Survivor
+
+# 原因
+</code></pre>
 
 <p><font color="#9932CC" size=4>你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的</font></p>
 
-<h2 id="高并发">高并发</h2>
+<pre><code># 重排序
+
+# 内存屏障
+
+# happen-before原则
+
+# 主内存和工作内存
+</code></pre>
 
 <h2 id="类加载">类加载</h2>
 
@@ -463,15 +477,22 @@ https://github.com/alex-shpak/hugo-book
 - classloader只是将class文件加载到jvm中
 </code></pre>
 
-<p><font color="#9932CC" size=4>说说你了解的类加载器，可以打破双亲委派吗？是怎么打破的</font></p>
+<p><font color="#9932CC" size=4>说说你了解的类加载器，以及他们工作的原理</font></p>
 
 <pre><code># 类加载器
 - 启动类加载器(Bootstrap ClassLoader)
 - 扩展类加载器(ExtClassLoader)
 - 应用类家再起(AppClassLoader)
 
-# 双亲委派
-- 
+# 原理
+</code></pre>
+
+<p><font color="#9932CC" size=4>可以打破双亲委派吗？是怎么打破的？</font></p>
+
+<pre><code># 可以打破双亲委派双亲委派
+- SPI就是打破双亲委派
+
+# 怎么打破
 </code></pre>
 
 <h2 id="对象解析">对象解析</h2>
@@ -518,7 +539,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p><font color="#9932CC" size=4>说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点)</font>
 |名称|优点|缺点|
-|&mdash;|&mdash;|&mdash;|
+|:&ndash;|:&ndash;|:&ndash;|
 |Serial收集器|||
 |ParNew收集器|||
 |Parallel Scavenge收集器|||
@@ -551,6 +572,8 @@ https://github.com/alex-shpak/hugo-book
 
 <p><font color="#9932CC" size=4>说说你知道的JVM参数</font></p>
 
+<h2 id="高并发">高并发</h2>
+
 <h2 id="工具使用">工具使用</h2>
 
 <p><font color="#9932CC" size=4>如何Java内存泄漏的问题进行调查和定位</font></p>
@@ -573,11 +596,11 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#java虚拟机面试题">Java虚拟机面试题</a>
 <ul>
 <li><a href="#jmm-java内存模型">JMM(Java内存模型)</a></li>
-<li><a href="#高并发">高并发</a></li>
 <li><a href="#类加载">类加载</a></li>
 <li><a href="#对象解析">对象解析</a></li>
 <li><a href="#garbage-collection-gc">Garbage Collection(GC)</a></li>
 <li><a href="#jvm参数">Jvm参数</a></li>
+<li><a href="#高并发">高并发</a></li>
 <li><a href="#工具使用">工具使用</a></li>
 </ul></li>
 </ul>
