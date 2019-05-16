@@ -465,6 +465,15 @@ https://github.com/alex-shpak/hugo-book
 
 <p><font color="#9932CC" size=4>说说你了解的类加载器，可以打破双亲委派吗？是怎么打破的</font></p>
 
+<pre><code># 类加载器
+- 启动类加载器(Bootstrap ClassLoader)
+- 扩展类加载器(ExtClassLoader)
+- 应用类家再起(AppClassLoader)
+
+# 双亲委派
+- 
+</code></pre>
+
 <h2 id="对象解析">对象解析</h2>
 
 <p><font color="#9932CC" size=4>说说你对Java对象组成的理解</font></p>
@@ -486,15 +495,57 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="garbage-collection-gc">Garbage Collection(GC)</h2>
 
-<p><font color="#9932CC" size=4>说说你知道的GC算法</font></p>
+<p><font color="#9932CC" size=4>说说你知道的GC算法和对应的原理是什么？</font></p>
 
-<p><font color="#9932CC" size=4>垃圾回收算法实现的原理</font></p>
+<pre><code># 算法
+- 标记-清除算法
+- 复制算法
+- 标记-压缩算法
+- 分代收集算法
+
+# 原理
+- 先对对象进行标记然后在进行回收(标记和清除效率不高，标记后空间碎片太多)
+- 内存一分为二，一边空着另一边放对象，回收时候直接移动存活的对象就好了
+- 标记压缩就是多一层压缩
+- 对不同年龄代的对象进行回收时候用不同的算法
+</code></pre>
 
 <p><font color="#9932CC" size=4>JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代</font></p>
 
+<pre><code></code></pre>
+
 <p><font color="#9932CC" size=4>说说你对Minor GC和Full GC的理解</font></p>
 
-<p><font color="#9932CC" size=4>说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点)</font></p>
+<p><font color="#9932CC" size=4>说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点)</font>
+|名称|优点|缺点|
+|&mdash;|&mdash;|&mdash;|
+|Serial收集器|||
+|ParNew收集器|||
+|Parallel Scavenge收集器|||
+|Serial Old收集器|||
+|Parallel Old收集器|||
+|CMS收集器|||
+|G1收集器|||</p>
+
+<p><strong>CMS收集器</strong></p>
+
+<pre><code># 原理
+
+# 流程
+
+# 优缺点
+
+</code></pre>
+
+<p><strong>G1收集器</strong></p>
+
+<pre><code># 原理
+
+# 流程
+
+# 优缺点
+
+</code></pre>
 
 <h2 id="jvm参数">Jvm参数</h2>
 
