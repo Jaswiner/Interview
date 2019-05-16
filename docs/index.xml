@@ -104,7 +104,8 @@ ActiveMQ RabbitMQ </description>
       <guid>https://interview.jaswine.com/docs/cache/</guid>
       <description> 缓存面试题 Redis Redis中list结构相关的操作
 说说你在项目中使用Redis集群的用法
-综合 如何防止缓存击穿和雪崩 </description>
+Redis怎么存放热点数据？时长怎么控制的？原理呢？
+  综合 如何防止缓存击穿和雪崩 </description>
     </item>
     
     <item>
