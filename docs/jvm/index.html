@@ -403,8 +403,9 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="jmm-java内存模型">JMM(Java内存模型)</h2>
 
-<p><font color="#9932CC" size=4>简单说说JVM中内存的分配情况吧</font>
-<img src="https://cdn.jaswine.com/interview/jvm/jvm.png" alt="" /></p>
+<p><font color="#9932CC" size=4>简单说说JVM中内存的分配情况吧</font></p>
+
+<p><img src="https://cdn.jaswine.com/interview/jvm/jvm.png" alt="" /></p>
 
 <pre><code># 线程私有
 - 程序计数器(当前线程执行字节码的行号指示器)
@@ -435,10 +436,12 @@ https://github.com/alex-shpak/hugo-book
 - 产生大量的类信息大于了方法区的最大值
 </code></pre>
 
-<p><font color="#9932CC" size=4>Java内存为什么分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor</font></p>
+<p><font color="#9932CC" size=4>Java内存为什么分成新生代，老年代，持久代？是怎么划分的呢？新生代中为什么要分为Eden和Survivor</font></p>
 
 <pre><code># 为什么分代
 - 为了优化GC性能
+
+# 
 
 
 # 为什么分为Eden和Survivor
@@ -537,21 +540,41 @@ https://github.com/alex-shpak/hugo-book
 
 <p><font color="#9932CC" size=4>说说你对Minor GC和Full GC的理解</font></p>
 
-<p><strong>Minor GC</strong>
-- 定义：新生代(包括Eden和Survivor)垃圾搜集叫做 Minor GC
-- 触发条件：
-    - 新生代中Eden区满了就会出发Minor GC
-- GC过程：
-    - Eden和其中一个Survivor区中存活对象会被复制(标记-复制算法)到另一个Survivor中
-    - 交换指针</p>
+<p><strong>Minor GC</strong></p>
 
-<p><strong>Full GC</strong>
-- 定义：对整个堆进行垃圾搜集
-- 触发条件：
-    - System.gc()
-    - 触发young GC的时候，如果发现统计数据说之前young GC平均晋升大小比目前的old gen剩余空间大，则直接触发Full GC
-    - 如果有永久代，分配空间的时候发现永久代没有空间的时候会Full GC(JDK1.8之后没有永久代)
-- GC过程：</p>
+<ul>
+<li><p>定义：新生代(包括Eden和Survivor)垃圾搜集叫做 Minor GC</p></li>
+
+<li><p>触发条件：</p>
+
+<ul>
+<li>新生代中Eden区满了就会出发Minor GC</li>
+</ul></li>
+
+<li><p>GC过程：</p>
+
+<ul>
+<li>Eden和其中一个Survivor区中存活对象会被复制(标记-复制算法)到另一个Survivor中</li>
+<li>交换指针</li>
+</ul></li>
+</ul>
+
+<p><strong>Full GC</strong></p>
+
+<ul>
+<li><p>定义：对整个堆进行垃圾搜集</p></li>
+
+<li><p>触发条件：</p>
+
+<ul>
+<li>System.gc()</li>
+<li>触发young GC的时候，如果发现统计数据说之前young GC平均晋升大小比目前的old gen剩余空间大，则直接触发Full GC</li>
+<li>如果有永久代，分配空间的时候发现永久代没有空间的时候会Full GC(JDK1.8之后没有永久代)
+<br /></li>
+</ul></li>
+
+<li><p>GC过程：</p></li>
+</ul>
 
 <p><font color="#9932CC" size=4>说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点)</font></p>
 
