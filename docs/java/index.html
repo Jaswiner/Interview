@@ -770,7 +770,7 @@ Tips：
 
 <h2 id="java并发编程">Java并发编程</h2>
 
-<h3 id="多线程基础理论">多线程基础理论</h3>
+<h3 id="java多线程基础理论">Java多线程基础理论</h3>
 
 <p><font color="#9932CC" size=4>什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</font></p>
 
@@ -782,7 +782,6 @@ Tips：
 
 # Java的解决办法
 - Java使用JMM保证了多线程并发的情况下线程之间的有序性和可见性
--- 
 - 使用锁来解决原子性问题
 </code></pre>
 
@@ -798,13 +797,6 @@ Tips：
 - 一次申请所有锁资源，申请不到就不占有
 - 如果申请不到锁资源，主动释放自己身上的锁资源
 - 
-</code></pre>
-
-<h3 id="java并发方案">Java并发方案</h3>
-
-<p><font color="#9932CC" size=4>怎么打印出线程的栈信息</font></p>
-
-<pre><code>- 使用jstack工具可以看到JVM中相关线程堆栈信息
 </code></pre>
 
 <p><font color="#9932CC" size=4>画一下线程生命周期和状态转换图</font></p>
@@ -826,14 +818,56 @@ Tips：
 - interrupt()执行后不会立马终止线程，会设置一个中断标记位
 </code></pre>
 
-<p><font color="#9932CC" size=4>sleep()和wait()的区别</font>
-|wait|sleep|
-|:&ndash;|:&ndash;|
-|Object的方法|Thread的方法|
-|执行的时候释放锁|执行的时候不释放锁|
-|只能在同步方法和同步块中使用|可以在任何地方使用|
-|无需捕捉异常|需要捕捉异常|
-<font color="#9932CC" size=4>讲讲Java同步机制的wait和notify</font></p>
+<p><font color="#9932CC" size=4>sleep()和wait()的区别</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">wait</th>
+<th align="left">sleep</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Object的方法</td>
+<td align="left">Thread的方法</td>
+</tr>
+
+<tr>
+<td align="left">执行的时候释放锁</td>
+<td align="left">执行的时候不释放锁</td>
+</tr>
+
+<tr>
+<td align="left">只能在同步方法和同步块中使用</td>
+<td align="left">可以在任何地方使用</td>
+</tr>
+
+<tr>
+<td align="left">无需捕捉异常</td>
+<td align="left">需要捕捉异常</td>
+</tr>
+</tbody>
+</table>
+
+<p><font color="#9932CC" size=4>讲讲Java同步机制的wait和notify</font></p>
+
+<p><font color="#9932CC" size=4>ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</font></p>
+
+<pre><code># 用途
+- 
+
+# 原理
+
+# 注意事项
+- initialValue()是为了让子类重写的，默认是null。如果get()后又remove()则可能调用一下此方法
+- remove()
+</code></pre>
+
+<h3 id="java并发方案">Java并发方案</h3>
+
+<h4 id="jvm级别">JVM级别</h4>
 
 <p><font color="#9932CC" size=4>volatile的原理，作用，能代替锁吗？</font></p>
 
@@ -857,6 +891,20 @@ Tips：
 
 <pre><code>- 引入四种锁状态(无锁，偏向锁，轻量级锁，重量级锁)，向上膨胀
 </code></pre>
+
+<p><font color="#9932CC" size=4>synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</font></p>
+
+<pre><code># 使用
+- 修饰实例方法，作用于当前实例加锁，进入同步代码前要获得当前实例的锁
+- 修饰静态方法，作用于当前类对象加锁，进入同步代码前要获得当前类对象的锁
+- 修饰代码块，指定加锁对象，对给定对象加锁，进入同步代码库前要获得给定对象的锁
+
+# 原理
+- 在同步代码块中：在代码块开始的时候使用monitorenter来获得monitor对象锁，在代码块结束的时候使用monitorexit指令来释放monitor对象锁。
+- 在同步方法中：在字节码层面，没有特别的指令来实现被synchronized修饰的方法，而是在class文件中对该方法的access_flag字段中的synchronized标志位置1，表示该方法是同步方法，并使用调用该方法的对象或者该方法所在的class在JVM的内部对象表示class作为锁对象
+</code></pre>
+
+<h4 id="锁">锁</h4>
 
 <p><font color="#9932CC" size=4>说说ReentrantLock和synchronized的异同吧</font></p>
 
@@ -924,18 +972,6 @@ Tips：
 </tbody>
 </table>
 
-<p><font color="#9932CC" size=4>synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</font></p>
-
-<pre><code># 使用
-- 修饰实例方法，作用于当前实例加锁，进入同步代码前要获得当前实例的锁
-- 修饰静态方法，作用于当前类对象加锁，进入同步代码前要获得当前类对象的锁
-- 修饰代码块，指定加锁对象，对给定对象加锁，进入同步代码库前要获得给定对象的锁
-
-# 原理
-- 在同步代码块中：在代码块开始的时候使用monitorenter来获得monitor对象锁，在代码块结束的时候使用monitorexit指令来释放monitor对象锁。
-- 在同步方法中：在字节码层面，没有特别的指令来实现被synchronized修饰的方法，而是在class文件中对该方法的access_flag字段中的synchronized标志位置1，表示该方法是同步方法，并使用调用该方法的对象或者该方法所在的class在JVM的内部对象表示class作为锁对象
-</code></pre>
-
 <p><font color="#9932CC" size=4>说说你对锁的相关名词的理解</font></p>
 
 <pre><code># 自旋锁
@@ -996,6 +1032,15 @@ cas(compare ans swap)
 - J.U.C中原子类都是使用cas实现的
 </code></pre>
 
+<p><font color="#9932CC" size=4>用过读写锁吗？原理是什么，一般在什么场景下使用</font></p>
+
+<h4 id="工具">工具</h4>
+
+<p><font color="#9932CC" size=4>怎么打印出线程的栈信息</font></p>
+
+<pre><code>- 使用jstack工具可以看到JVM中相关线程堆栈信息
+</code></pre>
+
 <p><font color="#9932CC" size=4>说说Java中常用的线程池模式以及不同线程池的使用场景</font></p>
 
 <pre><code>
@@ -1021,18 +1066,6 @@ cas(compare ans swap)
 - 
 </code></pre>
 
-<p><font color="#9932CC" size=4>ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</font></p>
-
-<pre><code># 用途
-- 
-
-# 原理
-
-# 注意事项
-- initialValue()是为了让子类重写的，默认是null。如果get()后又remove()则可能调用一下此方法
-- remove()
-</code></pre>
-
 <p><font color="#9932CC" size=4>现在让你实现一个并发安全的链表，你怎么实现</font></p>
 
 <p><font color="#9932CC" size=4>多线程如果线程挂住了怎么办</font></p>
@@ -1046,8 +1079,6 @@ cas(compare ans swap)
 <p><font color="#9932CC" size=4>导致线程死锁的原因，怎么解除线程死锁</font></p>
 
 <p><font color="#9932CC" size=4>多线程(可能不在一台机器上)相互之间要相互等待协调完成某种工作，请问怎么设计</font></p>
-
-<p><font color="#9932CC" size=4>用过读写锁吗？原理是什么，一般在什么场景下使用</font></p>
 
 <p><font color="#9932CC" size=4>什么是多线程环境下的伪共享(false sharing)？</font></p>
 
@@ -1136,8 +1167,13 @@ cas(compare ans swap)
 </ul></li>
 <li><a href="#java并发编程">Java并发编程</a>
 <ul>
-<li><a href="#多线程基础理论">多线程基础理论</a></li>
-<li><a href="#java并发方案">Java并发方案</a></li>
+<li><a href="#java多线程基础理论">Java多线程基础理论</a></li>
+<li><a href="#java并发方案">Java并发方案</a>
+<ul>
+<li><a href="#jvm级别">JVM级别</a></li>
+<li><a href="#锁">锁</a></li>
+<li><a href="#工具">工具</a></li>
+</ul></li>
 <li><a href="#实际问题">实际问题</a></li>
 </ul></li>
 <li><a href="#java异常">Java异常</a></li>
