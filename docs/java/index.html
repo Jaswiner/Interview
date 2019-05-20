@@ -850,7 +850,7 @@ Tips：
 - JVM底层是采用内存屏障来实现的happen-before的
 
 # 结论：不能代替锁
-- 只保证了可见性，没有保证原子性
+- 只保证了可见性，没有保证原子性(多线程i++会出错)
 </code></pre>
 
 <p><font color="#9932CC" size=4>JDK1.6对synchronized进行了怎么的优化</font></p>
@@ -874,16 +874,57 @@ Tips：
 - 底层实现不一样， synchronized是同步阻塞，使用的是悲观并发策略，lock是同步非阻塞，采用的是乐观并发策略
 </code></pre>
 
-<p><font color="#9932CC" size=4>Lock和synchronized的区别</font>
-|类别|Lock|synchronized|
-|:&ndash;|:&ndash;|:&ndash;|
-|存在层次|API级别,程序员调用|JVM级别|
-|锁的释放|手动释放|jvm自动释放|
-|锁的获取|假设A线程获得锁，B线程等待。如果A线程阻塞，B线程会一直等待|分情况而定，Lock有多个锁获取的方式，大致就是可以尝试获得锁，线程可以不用一直等待|
-|锁状态|可以判断|无法判断|
-|锁类型|可重入、不可中断、非公平|可重入、可判断、可(非)公平|
-|性能|大量同步|少量同步|
-<font color="#9932CC" size=4>synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</font></p>
+<p><font color="#9932CC" size=4>Lock和synchronized的区别</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">类别</th>
+<th align="left">Lock</th>
+<th align="left">synchronized</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">存在层次</td>
+<td align="left">API级别,程序员调用</td>
+<td align="left">JVM级别</td>
+</tr>
+
+<tr>
+<td align="left">锁的释放</td>
+<td align="left">手动释放</td>
+<td align="left">jvm自动释放</td>
+</tr>
+
+<tr>
+<td align="left">锁的获取</td>
+<td align="left">假设A线程获得锁，B线程等待。如果A线程阻塞，B线程会一直等待</td>
+<td align="left">分情况而定，Lock有多个锁获取的方式，大致就是可以尝试获得锁，线程可以不用一直等待</td>
+</tr>
+
+<tr>
+<td align="left">锁状态</td>
+<td align="left">可以判断</td>
+<td align="left">无法判断</td>
+</tr>
+
+<tr>
+<td align="left">锁类型</td>
+<td align="left">可重入、不可中断、非公平</td>
+<td align="left">可重入、可判断、可(非)公平</td>
+</tr>
+
+<tr>
+<td align="left">性能</td>
+<td align="left">大量同步</td>
+<td align="left">少量同步</td>
+</tr>
+</tbody>
+</table>
+
+<p><font color="#9932CC" size=4>synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</font></p>
 
 <pre><code># 使用
 - 修饰实例方法，作用于当前实例加锁，进入同步代码前要获得当前实例的锁
@@ -942,7 +983,23 @@ Tips：
 
 <p><font color="#9932CC" size=4>cas机制是什么？怎么解决ABA问题</font></p>
 
+<pre><code># 机制
+cas(compare ans swap)
+- 三个操作数(内存位置V，预期原值A，新值B)
+- 如果内存位置和预期原值匹配，将B更新到A上
+- 如果不匹配，获取当前V和A，然后再去尝试修改
+
+# ABA问题
+- 使用版本号来解决
+
+# Tips：
+- J.U.C中原子类都是使用cas实现的
+</code></pre>
+
 <p><font color="#9932CC" size=4>说说Java中常用的线程池模式以及不同线程池的使用场景</font></p>
+
+<pre><code>
+</code></pre>
 
 <p><font color="#9932CC" size=4>线程池关闭的方式有哪些？各自的区别是什么？</font></p>
 
@@ -1022,11 +1079,29 @@ Tips：
 如下
 </code></pre>
 
-<p><font color="#9932CC" size=4>JDK的动态代理和cglib的实现有什么区别？以及相应的原理是什么呢？</font>
-||JDK|cglib|
-|:&ndash;|:&ndash;|:&ndash;|
-|区别|只能对实现同一接口的类进行代理|可以对任何类惊醒代理，但是不能对final修饰的类进行代理|
-|原理|使用Java反射原理实现的|使用asm的开源工具将代理的类加载进来实现其子类，然后重写相关的方法|</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">JDK</th>
+<th align="left">cglib</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">区别</td>
+<td align="left">只能对实现同一接口的类进行代理</td>
+<td align="left">可以对任何类惊醒代理，但是不能对final修饰的类进行代理</td>
+</tr>
+
+<tr>
+<td align="left">原理</td>
+<td align="left">使用Java反射原理实现的</td>
+<td align="left">使用asm的开源工具将代理的类加载进来实现其子类，然后重写相关的方法</td>
+</tr>
+</tbody>
+</table>
 </article>
 
       
