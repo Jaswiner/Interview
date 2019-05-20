@@ -537,16 +537,77 @@ https://github.com/alex-shpak/hugo-book
 
 <p><font color="#9932CC" size=4>说说你对Minor GC和Full GC的理解</font></p>
 
-<p><font color="#9932CC" size=4>说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点)</font>
-|名称|优点|缺点|
-|:&ndash;|:&ndash;|:&ndash;|
-|Serial收集器|||
-|ParNew收集器|||
-|Parallel Scavenge收集器|||
-|Serial Old收集器|||
-|Parallel Old收集器|||
-|CMS收集器|||
-|G1收集器|||</p>
+<p><strong>Minor GC</strong>
+- 定义：新生代(包括Eden和Survivor)垃圾搜集叫做 Minor GC
+- 触发条件：
+    - 新生代中Eden区满了就会出发Minor GC
+- GC过程：
+    - Eden和其中一个Survivor区中存活对象会被复制(标记-复制算法)到另一个Survivor中
+    - 交换指针</p>
+
+<p><strong>Full GC</strong>
+- 定义：对整个堆进行垃圾搜集
+- 触发条件：
+    - System.gc()
+    - 触发young GC的时候，如果发现统计数据说之前young GC平均晋升大小比目前的old gen剩余空间大，则直接触发Full GC
+    - 如果有永久代，分配空间的时候发现永久代没有空间的时候会Full GC(JDK1.8之后没有永久代)
+- GC过程：</p>
+
+<p><font color="#9932CC" size=4>说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点)</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">优点</th>
+<th align="left">缺点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Serial GC</td>
+<td align="left">简单</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">ParNew GC</td>
+<td align="left">本质上多线程的Serial</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">Parallel GC</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">Serial Old收集器</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">Parallel Old收集器</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">CMS收集器</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">G1收集器</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 
 <p><strong>CMS收集器</strong></p>
 
@@ -565,6 +626,9 @@ https://github.com/alex-shpak/hugo-book
 # 流程
 
 # 优缺点
+
+# Tips：
+- JDK9以后默认的GC
 
 </code></pre>
 
