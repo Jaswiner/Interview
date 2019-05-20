@@ -436,24 +436,29 @@ https://github.com/alex-shpak/hugo-book
 - 产生大量的类信息大于了方法区的最大值
 </code></pre>
 
-<p><font color="#9932CC" size=4>Java内存为什么分成新生代，老年代，持久代？是怎么划分的呢？新生代中为什么要分为Eden和Survivor</font></p>
+<p><font color="#9932CC" size=4>Java内存为什么分成新生代，老年代，持久代？是怎么划分的呢？怎么回收的呢？新生代中为什么要分为Eden和Survivor</font></p>
 
 <pre><code># 为什么分代
-- 为了优化GC性能
+- 为了优化GC性能(Java中每个对象的生命周期不一样，所以不同对象要分类以便更好的回收)
 
-# 
+# 怎么划分
+- 新生代(Young Generation)
+    - 分成三个部分：Eden，From Survivor ，To Survivor，比例是8:1:1
+    - 保持一个Survivor为空
+- 年老代(Tenured Generation)
+    - 多次GC都没有被GC的会进入年老带
+    - 新生代没有空间了会直接进入年老代
+- 永久代(Permanent Generation)
+    - 对应运行时内存的“方法区”，一般不会被GC，JVM退出才销毁
 
+# 怎么回收
+- 新生代
+    - 因为生命周期很短，GC吞吐量很高，适合使用复制算法来GC，这样保证来复制的数据量最小
+- 年老代
+    - 因为对象的存活时间很长，所以要移动大量的对象，效率很低，所以年老代适合使用标记-清除算法
 
 # 为什么分为Eden和Survivor
 
-</code></pre>
-
-<p><font color="#9932CC" size=4>在Java内存结构中，Eden和Survivor的比例，为什么这么分呢？</font></p>
-
-<pre><code># 比例
-一个Eden两个Survivor
-
-# 原因
 </code></pre>
 
 <p><font color="#9932CC" size=4>你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的</font></p>
@@ -543,7 +548,7 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>Minor GC</strong></p>
 
 <ul>
-<li><p>定义：新生代(包括Eden和Survivor)垃圾搜集叫做 Minor GC</p></li>
+<li>定义：新生代(包括Eden和Survivor)垃圾搜集叫做 Minor GC</li>
 
 <li><p>触发条件：</p>
 
@@ -569,8 +574,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>System.gc()</li>
 <li>触发young GC的时候，如果发现统计数据说之前young GC平均晋升大小比目前的old gen剩余空间大，则直接触发Full GC</li>
-<li>如果有永久代，分配空间的时候发现永久代没有空间的时候会Full GC(JDK1.8之后没有永久代)
-<br /></li>
+<li>如果有永久代，分配空间的时候发现永久代没有空间的时候会Full GC(JDK1.8之后没有永久代)</li>
 </ul></li>
 
 <li><p>GC过程：</p></li>
