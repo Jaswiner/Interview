@@ -65,6 +65,21 @@ https://github.com/alex-shpak/hugo-book
     <li>
       
 
+  <a href="/docs/nginx/" >
+    
+  
+    
+    Nginx
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
   <a href="/docs/distributed/" >
     
   
@@ -403,14 +418,14 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="spring基础">Spring基础</h2>
 
-<h3 id="说说你对spring体系架构的理解">说说你对Spring体系架构的理解</h3>
+<p><font color="#9932CC" size=4>说说你对Spring体系架构的理解</font></p>
 
 <pre><code>- spring是一个实现了依赖注入和控制反转的框架(DI/IOC)
 - spring除了核心之外，还实现了一些其他功能，如web的springmvc，data的jpa等等
 - Spring是一个友好的框架，对于其他功能不强制使用Spring自己的，例如可以使用mybatis或者别的orm框架
 </code></pre>
 
-<h3 id="依赖注入是什么意思-有哪些方式呢">依赖注入是什么意思？有哪些方式呢？</h3>
+<p><font color="#9932CC" size=4>依赖注入是什么意思？有哪些方式呢？</font></p>
 
 <pre><code># 依赖注入
 - 完成一件事要多个配合，通常和自己没有关系
@@ -424,7 +439,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="spring综合">spring综合</h2>
 
-<h3 id="spring中用到了什么设计模式">Spring中用到了什么设计模式</h3>
+<p><font color="#9932CC" size=4>Spring中用到了什么设计模式</font></p>
 
 <pre><code># 简单工厂(静态工厂)
 # 工厂方法
@@ -439,7 +454,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="spring容器">Spring容器</h2>
 
-<h3 id="spring中ioc是怎么实现的-ioc容器初始化的过程是什么样子的">Spring中IOC是怎么实现的，IOC容器初始化的过程是什么样子的</h3>
+<p><font color="#9932CC" size=4>Spring中IOC是怎么实现的，IOC容器初始化的过程是什么样子的</font></p>
 
 <pre><code># 初始化过程
 -1.Resource定位：
@@ -447,13 +462,13 @@ https://github.com/alex-shpak/hugo-book
 -3.注册：使用BeanDefinitionRegistery来将定义好的bean注册到IOC容器中
 </code></pre>
 
-<h3 id="spring的单例实现原理">Spring的单例实现原理</h3>
+<p><font color="#9932CC" size=4>Spring的单例实现原理</font></p>
 
 <pre><code>- 使用单例注册表的方式来管理bean
 -- 
 </code></pre>
 
-<h3 id="spring的加载流程是什么">Spring的加载流程是什么</h3>
+<p><font color="#9932CC" size=4>Spring的加载流程是什么</font></p>
 
 <pre><code># 主要类
 Spring加载中有以下几个重要的类：
@@ -476,7 +491,7 @@ Spring加载中有以下几个重要的类：
 - BeanDefinition是bean的详细信息
 </code></pre>
 
-<h3 id="说说beanfactory和applicationcontext有什么区别">说说BeanFactory和ApplicationContext有什么区别</h3>
+<p><font color="#9932CC" size=4>说说BeanFactory和ApplicationContext有什么区别</font></p>
 
 <table>
 <thead>
@@ -497,9 +512,9 @@ Spring加载中有以下几个重要的类：
 <p><em>Tips：</em>
 - ApplicationContext实现了BeanFActory，所以ApplicationContext有BeanFactory的所有功能</p>
 
-<h3 id="说说你对spring中bean的理解">说说你对Spring中Bean的理解</h3>
+<p><font color="#9932CC" size=4>说说你对Spring中Bean的理解</font></p>
 
-<h3 id="说说你对spring中bean的生命周期的理解-spring是怎么管理bean的生命周期的">说说你对spring中bean的生命周期的理解，spring是怎么管理bean的生命周期的</h3>
+<p><font color="#9932CC" size=4>说说你对spring中bean的生命周期的理解，spring是怎么管理bean的生命周期的</font></p>
 
 <pre><code>- 1.实例化Bean
 -- 容器通过获取BeanDefinition对象来对Bean进行实例化
@@ -525,7 +540,7 @@ Spring加载中有以下几个重要的类：
 
 <h2 id="spring-aop">Spring AOP</h2>
 
-<h3 id="spring中aop实现的原理是什么-实现方式是什么">Spring中AOP实现的原理是什么，实现方式是什么？</h3>
+<p><font color="#9932CC" size=4>Spring中AOP实现的原理是什么，实现方式是什么？</font></p>
 
 <pre><code># 原理
 - 动态代理
@@ -537,7 +552,7 @@ Spring加载中有以下几个重要的类：
 
 <h2 id="springmvc">SpringMVC</h2>
 
-<h3 id="springmvc的运行原理和启动流程是什么样子的">SpringMVC的运行原理和启动流程是什么样子的</h3>
+<p><font color="#9932CC" size=4>SpringMVC的运行原理和启动流程是什么样子的</font></p>
 
 <pre><code># 启动流程
 
@@ -547,25 +562,25 @@ Spring加载中有以下几个重要的类：
 - Controller调用具体的业务逻辑后将结果返给DispatcherServlet，最后返给客户端
 </code></pre>
 
-<h3 id="dispatchservlet初始化过程">DispatchServlet初始化过程</h3>
+<p><font color="#9932CC" size=4>DispatchServlet初始化过程</font></p>
 
 <pre><code></code></pre>
 
-<h3 id="说说你在springmvc用到的注解-作用是什么">说说你在SpringMVC用到的注解，作用是什么</h3>
+<p><font color="#9932CC" size=4>说说你在SpringMVC用到的注解，作用是什么</font></p>
 
-<h3 id="springmvc中的controller是单例还是多例-怎么保证并发的安全">SpringMVC中的Controller是单例还是多例，怎么保证并发的安全</h3>
+<p><font color="#9932CC" size=4>SpringMVC中的Controller是单例还是多例，怎么保证并发的安全</font></p>
 
 <h2 id="spring-webflow">Spring WebFlow</h2>
 
 <h2 id="springdata">SpringData</h2>
 
-<h3 id="spring是怎么配置事务和管理事务的">Spring是怎么配置事务和管理事务的</h3>
+<p><font color="#9932CC" size=4>Spring是怎么配置事务和管理事务的</font></p>
 
-<h3 id="spring的事务隔离级别">Spring的事务隔离级别</h3>
+<p><font color="#9932CC" size=4>Spring的事务隔离级别</font></p>
 
-<h3 id="讲讲spring事务的传播属性">讲讲Spring事务的传播属性</h3>
+<p><font color="#9932CC" size=4>讲讲Spring事务的传播属性</font></p>
 
-<h3 id="spring-resttemplate的具体实现">spring RestTemplate的具体实现</h3>
+<p><font color="#9932CC" size=4>spring RestTemplate的具体实现</font></p>
 
 <h2 id="spring-security">Spring Security</h2>
 </article>
@@ -583,43 +598,13 @@ Spring加载中有以下几个重要的类：
 <ul>
 <li><a href="#spring面试题">Spring面试题</a>
 <ul>
-<li><a href="#spring基础">Spring基础</a>
-<ul>
-<li><a href="#说说你对spring体系架构的理解">说说你对Spring体系架构的理解</a></li>
-<li><a href="#依赖注入是什么意思-有哪些方式呢">依赖注入是什么意思？有哪些方式呢？</a></li>
-</ul></li>
-<li><a href="#spring综合">spring综合</a>
-<ul>
-<li><a href="#spring中用到了什么设计模式">Spring中用到了什么设计模式</a></li>
-</ul></li>
-<li><a href="#spring容器">Spring容器</a>
-<ul>
-<li><a href="#spring中ioc是怎么实现的-ioc容器初始化的过程是什么样子的">Spring中IOC是怎么实现的，IOC容器初始化的过程是什么样子的</a></li>
-<li><a href="#spring的单例实现原理">Spring的单例实现原理</a></li>
-<li><a href="#spring的加载流程是什么">Spring的加载流程是什么</a></li>
-<li><a href="#说说beanfactory和applicationcontext有什么区别">说说BeanFactory和ApplicationContext有什么区别</a></li>
-<li><a href="#说说你对spring中bean的理解">说说你对Spring中Bean的理解</a></li>
-<li><a href="#说说你对spring中bean的生命周期的理解-spring是怎么管理bean的生命周期的">说说你对spring中bean的生命周期的理解，spring是怎么管理bean的生命周期的</a></li>
-</ul></li>
-<li><a href="#spring-aop">Spring AOP</a>
-<ul>
-<li><a href="#spring中aop实现的原理是什么-实现方式是什么">Spring中AOP实现的原理是什么，实现方式是什么？</a></li>
-</ul></li>
-<li><a href="#springmvc">SpringMVC</a>
-<ul>
-<li><a href="#springmvc的运行原理和启动流程是什么样子的">SpringMVC的运行原理和启动流程是什么样子的</a></li>
-<li><a href="#dispatchservlet初始化过程">DispatchServlet初始化过程</a></li>
-<li><a href="#说说你在springmvc用到的注解-作用是什么">说说你在SpringMVC用到的注解，作用是什么</a></li>
-<li><a href="#springmvc中的controller是单例还是多例-怎么保证并发的安全">SpringMVC中的Controller是单例还是多例，怎么保证并发的安全</a></li>
-</ul></li>
+<li><a href="#spring基础">Spring基础</a></li>
+<li><a href="#spring综合">spring综合</a></li>
+<li><a href="#spring容器">Spring容器</a></li>
+<li><a href="#spring-aop">Spring AOP</a></li>
+<li><a href="#springmvc">SpringMVC</a></li>
 <li><a href="#spring-webflow">Spring WebFlow</a></li>
-<li><a href="#springdata">SpringData</a>
-<ul>
-<li><a href="#spring是怎么配置事务和管理事务的">Spring是怎么配置事务和管理事务的</a></li>
-<li><a href="#spring的事务隔离级别">Spring的事务隔离级别</a></li>
-<li><a href="#讲讲spring事务的传播属性">讲讲Spring事务的传播属性</a></li>
-<li><a href="#spring-resttemplate的具体实现">spring RestTemplate的具体实现</a></li>
-</ul></li>
+<li><a href="#springdata">SpringData</a></li>
 <li><a href="#spring-security">Spring Security</a></li>
 </ul></li>
 </ul>

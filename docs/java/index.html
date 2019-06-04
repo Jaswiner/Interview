@@ -65,6 +65,21 @@ https://github.com/alex-shpak/hugo-book
     <li>
       
 
+  <a href="/docs/nginx/" >
+    
+  
+    
+    Nginx
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
   <a href="/docs/distributed/" >
     
   
@@ -450,12 +465,13 @@ https://github.com/alex-shpak/hugo-book
 - final一般也是一种多线程的设计模式，因为对象不变就不存在多线程并发安全的问题了
 </code></pre>
 
-<p><font color="#9932CC" size=4>讲讲类实例化的顺序</font></p>
+<p><font color="#9932CC" size=4>static关键字这么用</font></p>
 
-<pre><code>父类静态代码块 &gt; 子类静态代码块 &gt; 父类代码块 &gt; 子类代码块 &gt; 父类构造函数 &gt; 子类构造函数
-
-# Tips：
-- 静态代码块执行一次
+<pre><code>- static修饰方法：不需要依靠实例对象来访问
+- static修饰变量：类对象，在类加载的时候就有了
+- static修饰代码块：在类加载的时候就初始化，只初始化一次
+- static修饰内部类：就是一个内部类
+- static静态导包
 </code></pre>
 
 <h3 id="逻辑运算">逻辑运算</h3>
@@ -482,10 +498,6 @@ https://github.com/alex-shpak/hugo-book
 </code></pre>
 
 <h3 id="object">Object</h3>
-
-<p><font color="#9932CC" size=4>如何在父类中为子类自动完成所有的hashcode和equals实现？这么做有何优劣势</font></p>
-
-<pre><code></code></pre>
 
 <p><font color="#9932CC" size=4>说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</font>
 &gt; <strong>链接:</strong><a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.3.2">JavaSE 8 #Object</a></p>
@@ -696,15 +708,20 @@ Tips：
 
 <p><font color="#9932CC" size=4>HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</font></p>
 
-<pre><code># 底层原理
-
-
-# 存储方式
+<pre><code># 存储方式
 - Java8中使用位桶(数组)+链表/红黑树实现
 - 链表长度超过阈值(8)时转成红黑树(减少查找时间)
 
-# 扩容
-- 本质上就是数组的扩容
+# 底层原理与扩容
+1.作为容器，HashMap主要是实现对容器内元素的增删改查功能，这些和她的底层数据结构分不开的
+
+2.put()的时候，会先进行hash()计算
+
+3.hash()计算先进行高位计算，将hashcode无符号右移16位后和hashcode进行异或位运算(^)后，本质上保留高位，将高位和地位进行了混合
+
+4.hash()运算后生成值和数组的长度-1进行位与(&amp;)运算，然后得到在数组中的位置
+
+
 </code></pre>
 
 <p><font color="#9932CC" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></p>
@@ -713,6 +730,7 @@ Tips：
 - 线程不安全
 
 # 为什么
+- 扩容的时候破坏了数组的结构，和ArrayList的本质相同
 
 # 解决办法
 - 使用Collections.synchronizedMap(new HashMap(...))
@@ -720,8 +738,9 @@ Tips：
 - 使用Hashtable
 
 # 原理
-- 
-
+- 第一种加锁
+- 第二种分段锁
+- 点三种枷锁
 </code></pre>
 
 <p><font color="#9932CC" size=4>ConcurrentHashMap在1.7和1.8中有什么区别？</font></p>
@@ -801,6 +820,8 @@ Tips：
 
 <p><font color="#9932CC" size=4>画一下线程生命周期和状态转换图</font></p>
 
+<p><img src="https://cdn.jaswine.com/interview/java/thread.jpg" alt="" /></p>
+
 <p><font color="#9932CC" size=4>一个线程两次调用start()方法会怎么样</font></p>
 
 <pre><code>- 会抛出IllegalThreadStateException错误
@@ -852,6 +873,10 @@ Tips：
 </table>
 
 <p><font color="#9932CC" size=4>讲讲Java同步机制的wait和notify</font></p>
+
+<pre><code>- wait和notify配合synchronized使用实现线程间的同步
+- 简单的来说就是管程(或者说是监视器)
+</code></pre>
 
 <p><font color="#9932CC" size=4>ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</font></p>
 

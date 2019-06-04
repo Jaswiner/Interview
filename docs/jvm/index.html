@@ -65,6 +65,21 @@ https://github.com/alex-shpak/hugo-book
     <li>
       
 
+  <a href="/docs/nginx/" >
+    
+  
+    
+    Nginx
+  
+
+  </a>
+
+
+    </li>
+    
+    <li>
+      
+
   <a href="/docs/distributed/" >
     
   
@@ -405,7 +420,8 @@ https://github.com/alex-shpak/hugo-book
 
 <p><font color="#9932CC" size=4>简单说说JVM中内存的分配情况吧</font></p>
 
-<p><img src="https://cdn.jaswine.com/interview/jvm/jvm.png" alt="" /></p>
+<p>Java8之前：
+<img src="https://cdn.jaswine.com/interview/jvm/jmm.png" alt="" /></p>
 
 <pre><code># 线程私有
 - 程序计数器(当前线程执行字节码的行号指示器)
@@ -421,7 +437,7 @@ https://github.com/alex-shpak/hugo-book
 - 直接内存(非JVM内存规范中的一部分)
 </code></pre>
 
-<p><font color="#9932CC" size=4>什么时候会发生内存溢出(OOM)</font></p>
+<p><font color="#9932CC" size=4>什么时候会发生内存溢出(OOM)？</font></p>
 
 <pre><code># 程序计数器
 - 不会发生OOM错误
@@ -524,24 +540,65 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="garbage-collection-gc">Garbage Collection(GC)</h2>
 
-<p><font color="#9932CC" size=4>说说你知道的GC算法和对应的原理是什么？</font></p>
+<p><font color="#9932CC" size=4>说说你知道的GC算法和对应的原理是什么？都有缺点</font></p>
 
-<pre><code># 算法
-- 标记-清除算法
-- 复制算法
-- 标记-压缩算法
-- 分代收集算法
+<table>
+<thead>
+<tr>
+<th align="left">算法</th>
+<th align="left">原理</th>
+<th align="left">缺点</th>
+</tr>
+</thead>
 
-# 原理
-- 先对对象进行标记然后在进行回收(标记和清除效率不高，标记后空间碎片太多)
-- 内存一分为二，一边空着另一边放对象，回收时候直接移动存活的对象就好了
-- 标记压缩就是多一层压缩
-- 对不同年龄代的对象进行回收时候用不同的算法
-</code></pre>
+<tbody>
+<tr>
+<td align="left">标记-清除</td>
+<td align="left">先对对象进行标记然后回收</td>
+<td align="left">内存碎片太多</td>
+</tr>
+
+<tr>
+<td align="left">标记-复制-清除</td>
+<td align="left">将存活的对象复制到一块空内存上，然后清除原来的内存</td>
+<td align="left">空间浪费</td>
+</tr>
+
+<tr>
+<td align="left">标记-压缩-清除</td>
+<td align="left">将存活的对象移动到一个地方，然后指针之后的全部删除</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">分代收集</td>
+<td align="left">对对象进行分代然后不同的代使用不同的回收算法</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 
 <p><font color="#9932CC" size=4>JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代</font></p>
 
-<pre><code></code></pre>
+<pre><code># 流程
+1.触发GC
+- 内存不够使用
+- 主动触发GC，System.gc()
+
+2.标记
+- 找出所有对象的
+
+3.复制 | 压缩
+- 复制算法就是将存活的对象复制到一个空的内存块
+- 压缩(整理)算法计算出存活对象的新地址然后移动对象的地方
+
+3.清理
+- 将之前标记的dead的对象回收了
+
+# 如何晋升老年代
+- 大对象直接进入老年代
+- 几次Minor GC还存活的对象
+</code></pre>
 
 <p><font color="#9932CC" size=4>说说你对Minor GC和Full GC的理解</font></p>
 
@@ -669,7 +726,21 @@ https://github.com/alex-shpak/hugo-book
 
 <p><font color="#9932CC" size=4>如何Java内存泄漏的问题进行调查和定位</font></p>
 
-<pre><code>使用jmap和jstack
+<ul>
+<li>使用<code>jps -l</code> 查询所有的JVM进程</li>
+<li>使用<code>jstat &lt;对应进程id&gt;</code>监控当前进程的情况</li>
+<li>使用<code>jmap</code>来看内存分布快照</li>
+<li>把内存堆<code>dump</code>下来然后使用<a href="https://www.eclipse.org/mat/">MAT</a>来分析内存</li>
+</ul>
+
+<p>__</p>
+
+<pre><code># 1.
+
+     
+
+# 2.使用jstat
+使用jmap和jstack
 </code></pre>
 </article>
 

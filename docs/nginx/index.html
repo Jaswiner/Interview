@@ -11,8 +11,7 @@
 <title>
   
     
-    
-    Docs
+    Nginx
   
  | 面试题</title>
 
@@ -27,7 +26,6 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://interview.jaswine.com/docs/index.xml" title="面试题" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -67,7 +65,7 @@ https://github.com/alex-shpak/hugo-book
     <li>
       
 
-  <a href="/docs/nginx/" >
+  <a href="/docs/nginx/"  class="active">
     
   
     
@@ -408,14 +406,39 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    
-    Docs
+    Nginx
   
 </strong>
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="nginx面试题">Nginx面试题</h1>
+
+<h2 id="理论">理论</h2>
+
+<p><font color="#9932CC" size=4>使用反向代理服务器的优点是什么？</font></p>
+
+<pre><code>- 隐藏真正的服务器，安全
+</code></pre>
+
+<h2 id="原理">原理</h2>
+
+<p><font color="#9932CC" size=4>Nginx是怎么处理HTTP请求的？</font></p>
+
+<pre><code>- Nginx使用反应器模式
+</code></pre>
+
+<p><font color="#9932CC" size=4>Nginx负载均衡算法是怎么实现的？</font></p>
+
+<pre><code>- 轮询
+- 权重
+- 对ip进行hash取模
+</code></pre>
+
+<h2 id="应用">应用</h2>
+</article>
 
       
 
@@ -425,6 +448,19 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#nginx面试题">Nginx面试题</a>
+<ul>
+<li><a href="#理论">理论</a></li>
+<li><a href="#原理">原理</a></li>
+<li><a href="#应用">应用</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

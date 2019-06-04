@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://interview.jaswine.com/docs/nginx/</loc>
+  </url>
+  
+  <url>
     <loc>https://interview.jaswine.com/docs/distributed/</loc>
     <lastmod>2019-05-04T10:44:39+08:00</lastmod>
   </url>
