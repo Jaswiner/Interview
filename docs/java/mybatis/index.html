@@ -6,12 +6,12 @@
 <html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.54.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   
-    简介
+    
+    Mybatis
   
  | 面试题</title>
 
@@ -26,7 +26,6 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://interview.jaswine.com/index.xml" title="面试题" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -51,12 +50,9 @@ https://github.com/alex-shpak/hugo-book
   
   
   
-    
-    
-  
 
   <style>
-  nav ul a[href="https\3a\2f\2finterview.jaswine.com\2f "] {
+  nav ul a[href$="\2f docs\2fjava\2fmybatis\2f "] {
       color: #004ed0;
   }
   </style>
@@ -155,7 +151,8 @@ https://github.com/alex-shpak/hugo-book
   </label>
   <strong>
   
-    简介
+    
+    Mybatis
   
 </strong>
 </header>
@@ -163,35 +160,35 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="it行业面试题">IT行业面试题</h1>
+<h1 id="mybatis面试题">Mybatis面试题</h1>
 
-<blockquote>
-<p>整理IT行业相关的面试题</p>
-</blockquote>
+<h2 id="应用">应用</h2>
 
-<ul>
-<li><a href="docs/os">操作系统</a></li>
-<li><a href="docs/net">计算机网络</a></li>
-<li><a href="docs/algo">算法</a></li>
-<li><a href="docs/ds">数据结构</a></li>
-<li><a href="docs/data">数据库</a></li>
-<li><a href="docs/model">设计模式</a></li>
-<li><a href="docs/java">Java</a></li>
-<li><a href="docs/jwb">JavaWeb</a></li>
-<li><a href="docs/jvm">Java虚拟机</a></li>
-<li><a href="docs/netty">Netty</a></li>
-<li><a href="docs/mybatis">Mybatis</a></li>
-<li><a href="docs/zookeeper">Zookeeper</a></li>
-<li><a href="docs/nginx">Nginx</a></li>
-<li><a href="docs/spring">Spring</a></li>
-<li><a href="docs/springboot">SpringBoot</a></li>
-<li><a href="docs/springcloud">SpringCloud</a></li>
-<li><a href="docs/message">消息队列</a></li>
-<li><a href="docs/cache">缓存</a></li>
-<li><a href="docs/search">搜索引擎</a></li>
-<li><a href="docs/distributed">分布式</a></li>
-<li><a href="docs/arch">架构</a></li>
-</ul>
+<p><font color="#9932CC" size=4>Mybatis中#{}和${}区别</font>
+|#|$|
+|:&ndash;|:&ndash;|
+|预编译|直接传入值|
+|可以防止SQL注入|不能防止SQL注入|
+|不能放在order by后面|可以放在order by后面|</p>
+
+<p><font color="#9932CC" size=4>Mybatis传入多个参数</font></p>
+
+<pre><code>- #{0},#{1}
+- @param注解
+</code></pre>
+
+<p><font color="#9932CC" size=4>Mybatis分页查询的原理</font></p>
+
+<pre><code>- 使用pagehelp做分页查询
+- 本质上就是对sql进行拦截然后重写
+</code></pre>
+
+<h2 id="原理">原理</h2>
+
+<p><font color="#9932CC" size=4>Mybatis定义的接口是怎么找到实现的</font></p>
+
+<pre><code>使用动态代理技术
+</code></pre>
 </article>
 
       
@@ -205,7 +202,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#it行业面试题">IT行业面试题</a></li>
+<li><a href="#mybatis面试题">Mybatis面试题</a>
+<ul>
+<li><a href="#应用">应用</a></li>
+<li><a href="#原理">原理</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>

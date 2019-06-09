@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    数据库
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/book.min.a3caa905766cf610e263c876d2f2d8477f59d64606267bcaeee26e73160f9285.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://interview.jaswine.com/">面试题</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f data\2fsql\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><em>计算机基础</em></strong>
+
+<ul>
+<li><a href="#">计算机组成</a></li>
+<li><a href="/docs/base/os/">操作系统</a></li>
+<li><a href="/docs/base/net/">计算机网络</a></li>
+<li><a href="#">编译原理</a></li>
+<li><a href="/docs/base/algo/">数据结构和算法</a></li>
+</ul></li>
+<li><strong><em>Java系</em></strong>
+
+<ul>
+<li><a href="/docs/java/java/">JavaSE</a></li>
+<li><a href="/docs/java/jwb/">JavaEE</a></li>
+<li><a href="/docs/java/jvm/">JVM</a></li>
+<li><a href="/docs/java/mybatis/">MyBtais</a></li>
+<li><a href="/docs/java/netty/">Netty</a></li>
+</ul></li>
+
+<li><p><strong><em>JavaScript系</em></strong></p></li>
+
+<li><p><strong><em>Python系</em></strong></p></li>
+
+<li><p><strong><em>SpringFrame系</em></strong></p>
+
+<ul>
+<li><a href="/docs/spring/spring/">SpringFrame</a></li>
+<li><a href="/docs/spring/springboot/">SpringBoot</a></li>
+<li><a href="/docs/spring/springcloud/">SpringCloud</a></li>
+</ul></li>
+
+<li><p><strong><em>应用服务器</em></strong></p>
+
+<ul>
+<li><a href="/docs/server/nginx/">Nginx</a></li>
+<li><a href="/docs/server/tomcat/">Tomcat</a></li>
+</ul></li>
+
+<li><p><strong><em>数据存储中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/data/sql/">SQL</a></li>
+<li><a href="/docs/data/mysql/">MySQL</a></li>
+<li><a href="/docs/data/redis/">Redis</a></li>
+</ul></li>
+
+<li><p><strong><em>消息队列及其中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/message/rabbit/">RabbitMQ</a></li>
+<li><a href="/docs/message/kafka/">Kafka</a></li>
+<li><a href="/docs/message/pulsar/">Pulsar</a></li>
+</ul></li>
+
+<li><p><strong><em>搜索引擎中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/search/solr/">Solr</a></li>
+<li><a href="/docs/search/elasticsearch/">Elasticsearch</a></li>
+</ul></li>
+
+<li><p><strong><em>架构&amp;中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/arch/arch/">架构设计</a></li>
+<li><a href="/docs/arch/distributed/">分布式理论</a></li>
+<li><a href="/docs/arch/zookeeper/">Zookeeper</a></li>
+</ul></li>
+
+<li><p><strong><em>编程思想</em></strong></p>
+
+<ul>
+<li><a href="/docs/model/model/">设计模式</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    数据库
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="数据库面试题-默认mysql">数据库面试题(默认MySQL)</h1>
+
+<h2 id="sql">SQL</h2>
+
+<p><font color="#9932CC" size=4>说说你对存储过程的理解，为什么阿里的编程规范中禁用存储过程，他有什么优缺点</font></p>
+
+<pre><code># 理解
+- 存储过程就是一些SQL组成的代码块，可以重复使用
+
+# 为什么禁用存储过程
+</code></pre>
+
+<p><font color="#9932CC" size=4>说说你对SQL的连接查询(Join)的理解，他们之间的区别是什么</font></p>
+
+<pre><code># inner join
+- 两个表交集的部分
+
+# full out join
+- 两个表并集，没有匹配的为null
+
+# left join
+- 以左表为主，没有匹配的为null
+
+# right join
+- 以右表为主，没有匹配的为null
+</code></pre>
+
+<h2 id="数据库">数据库</h2>
+
+<h3 id="索引">索引</h3>
+
+<p><font color="#9932CC" size=4>说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？</font></p>
+
+<pre><code># 索引理解
+- MySQL索引的本质是B+树
+
+# 如何使用
+- 不同索引类型添加方式不一样，不过都是雷同的
+
+alter table [table_name] add [index_type] [index_name] [字段名]
+
+# 不能，要正确的建立索引
+
+# Tips：索引建立的几大原则
+- 最左前缀匹配原则，MySQL一直向右匹配知道遇到查询范围(&gt;,&lt;,between,like)停止匹配
+- in和=可以乱序
+- 选择区分度比较高的列作为索引
+- 索引列不参加计算
+- 尽量扩展索引，不新建索引
+</code></pre>
+
+<p><font color="#9932CC" size=4>说说数据库的索引都有哪些类型</font>
+|索引名|特点|
+|:&ndash;|:&ndash;|
+|UNIQUE(唯一索引)|不可以出现相同的值，可以有null|
+|INDEX(普通索引)|允许出现相同的索引内容|
+|PROMARY KEY(主键索引)|不允许出现相同的值|
+|FULLTEXT INDEX(全文索引)|对全文进行索引，效率很差|
+|组合索引|实质上是将多个字段建到一个索引里，列值的组合必须唯一|</p>
+
+<p>Tips：</p>
+
+<pre><code>CREATE INDEX 方式只能创建‘普通索引’和‘唯一索引’
+
+组合索引的创建方式为：
+ALTER TABLE [table_name] ADD INDEX [inedx_name](列1,列2,列3); 
+</code></pre>
+
+<p><font color="#9932CC" size=4>说说数据库的索引实现和非主键的二级索引</font></p>
+
+<pre><code># 实现
+- B+树
+
+# 非主键二级索引
+- 
+</code></pre>
+
+<p><font color="#9932CC" size=4>索引的数据结构是什么样子的</font></p>
+
+<pre><code>索引的存储结构是B+树
+</code></pre>
+
+<h3 id="存储引擎">存储引擎</h3>
+
+<p><font color="#9932CC" size=4>MySQL中有哪些存储引擎？都有什么优缺点？</font>
+|存储引擎名称|优点|缺点|
+|:&ndash;|:&ndash;|:&ndash;|
+|MyISAM|1.插入数据快<br>2.空间和内存使用低|1.不支持事务|
+|InnoDB|1.支持事务<br>2.||</p>
+
+<h3 id="事务">事务</h3>
+
+<p><font color="#9932CC" size=4>数据库事务隔离级别有哪些？各自含义是什么？MySQL的默认事务隔离级别是什么？</font></p>
+
+<pre><code># 事务隔离级别
+- read-uncommitted(读未提交)：未提交的事务修改可以被看到
+- read—committed(读提交)：事务提交修改后可以被另一个事务看到
+- repeatable-read(可重复复)：事务内部每次读都是一样的
+- serializable(串行化)：一个事务未提交，别的事务就不能修改关联的数据
+
+# 默认隔离级别
+- repeatable-read(可重复复)
+</code></pre>
+
+<p><font color="#9932CC" size=4>什么是乐观锁和悲观锁</font></p>
+
+<pre><code># 乐观锁
+- 不认为操作会冲突
+- 使用
+
+# 悲观锁
+- 认为每一次操作都会引发冲突
+</code></pre>
+
+<h3 id="分表分库">分表分库</h3>
+
+<p><font color="#9932CC" size=4>MySQL如何分表，分表后想按照条件来分页查询这么做</font></p>
+
+<pre><code># 如何分表
+- 时间分表
+- 区间分表
+- hash分表
+
+# 分表后分页查询
+- 
+</code></pre>
+
+<p><font color="#9932CC" size=4>分表之后分布式唯一id怎么实现，都有什么优缺点</font>
+||优点|缺点|
+|&mdash;|&mdash;|&mdash;|
+|UUID|全球唯一，本机生成|无序，字符串存储查询效率慢，存储空间大|
+|雪花算法|生成快，id是整体变大的，灵活|依赖本机的时钟，如果时钟回调可能会有重复id|
+|Redis原子性自增|有序|占用带宽|</p>
+
+<p><font color="#9932CC" size=4>分表后之后想让一个id多个表是自增的，如何效率实现</font></p>
+
+<pre><code># 建一个id表
+- id表中id是自增的，别的表插入的时候从这个表中取最新的id
+
+# Redis生成方案
+
+# 队列方案
+- 将批量的id放到队列中，每一次插入取队列中的，失败返还
+</code></pre>
+
+<h3 id="解决方案">解决方案</h3>
+
+<p><font color="#9932CC" size=4>高并发下，怎么做到安全的修改同一行数据</font></p>
+
+<pre><code>- 使用悲观锁
+- 
+</code></pre>
+
+<p><font color="#9932CC" size=4>某个表有近千万条数据，CURD比较慢，如何优化</font></p>
+
+<pre><code>- 表垂直切分，减少表字段，优化表结构
+- 水平分库分表
+- 读写分离
+- 使用缓存
+- 使用NoSQL(对ACID要求不是很严格的时候)
+</code></pre>
+
+<p><font color="#9932CC" size=4>MySQL的主从实时备份同步的配置，原理是什么？</font></p>
+
+<pre><code># 基于SQL的复制
+- 主库上执行什么语句，从库上执行对应的语句
+
+# 基于行的复制
+- 将修改的内容复制过去
+
+# 混合模式
+- 使用SQl和行混合的模式
+
+# 原理
+- 在每个事务更新数据完成之前，master在二进制日志记录这些改变。写入二进制日志完成后，master通知存储引擎提交事务。
+- Slave将master的binary log复制到其中继日志。首先slave开始一个工作线程（I/O），I/O线程在master上打开一个普通的连接，然后开始binlog dump process。binlog dump process从master的二进制日志中读取事件，如果已经跟上master，它会睡眠并等待master产生新的事件，I/O线程将这些事件写入中继日志。
+
+- Sql slave thread（sql从线程）处理该过程的最后一步，sql线程从中继日志读取事件，并重放其中的事件而更新slave数据，使其与master中的数据一致，只要该线程与I/O线程保持一致，中继日志通常会位于os缓存中，所以中继日志的开销很小
+</code></pre>
+
+<p><font color="#9932CC" size=4>MySQL如何实现读写分离</font></p>
+
+<pre><code># 应用代码
+配置对数据源，读写分开
+
+# MySQL-Proxy
+使用MySQL提供的代理方案，本质上是对SQL识别，然后分到对应的数据库上(可以负载均衡)
+</code></pre>
+
+<p><font color="#9932CC" size=4>对于数据库优化你有什么系统的想法或者方案吗？软硬件都可以</font></p>
+
+<pre><code># 数据库查询速度影响因素
+- SQL查询速度
+- 服务器硬件
+- 网卡流量
+</code></pre>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#数据库面试题-默认mysql">数据库面试题(默认MySQL)</a>
+<ul>
+<li><a href="#sql">SQL</a></li>
+<li><a href="#数据库">数据库</a>
+<ul>
+<li><a href="#索引">索引</a></li>
+<li><a href="#存储引擎">存储引擎</a></li>
+<li><a href="#事务">事务</a></li>
+<li><a href="#分表分库">分表分库</a></li>
+<li><a href="#解决方案">解决方案</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140325593-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

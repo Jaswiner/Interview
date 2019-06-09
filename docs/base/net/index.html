@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    计算机网络
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/book.min.a3caa905766cf610e263c876d2f2d8477f59d64606267bcaeee26e73160f9285.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://interview.jaswine.com/">面试题</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f base\2fnet\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><em>计算机基础</em></strong>
+
+<ul>
+<li><a href="#">计算机组成</a></li>
+<li><a href="/docs/base/os/">操作系统</a></li>
+<li><a href="/docs/base/net/">计算机网络</a></li>
+<li><a href="#">编译原理</a></li>
+<li><a href="/docs/base/algo/">数据结构和算法</a></li>
+</ul></li>
+<li><strong><em>Java系</em></strong>
+
+<ul>
+<li><a href="/docs/java/java/">JavaSE</a></li>
+<li><a href="/docs/java/jwb/">JavaEE</a></li>
+<li><a href="/docs/java/jvm/">JVM</a></li>
+<li><a href="/docs/java/mybatis/">MyBtais</a></li>
+<li><a href="/docs/java/netty/">Netty</a></li>
+</ul></li>
+
+<li><p><strong><em>JavaScript系</em></strong></p></li>
+
+<li><p><strong><em>Python系</em></strong></p></li>
+
+<li><p><strong><em>SpringFrame系</em></strong></p>
+
+<ul>
+<li><a href="/docs/spring/spring/">SpringFrame</a></li>
+<li><a href="/docs/spring/springboot/">SpringBoot</a></li>
+<li><a href="/docs/spring/springcloud/">SpringCloud</a></li>
+</ul></li>
+
+<li><p><strong><em>应用服务器</em></strong></p>
+
+<ul>
+<li><a href="/docs/server/nginx/">Nginx</a></li>
+<li><a href="/docs/server/tomcat/">Tomcat</a></li>
+</ul></li>
+
+<li><p><strong><em>数据存储中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/data/sql/">SQL</a></li>
+<li><a href="/docs/data/mysql/">MySQL</a></li>
+<li><a href="/docs/data/redis/">Redis</a></li>
+</ul></li>
+
+<li><p><strong><em>消息队列及其中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/message/rabbit/">RabbitMQ</a></li>
+<li><a href="/docs/message/kafka/">Kafka</a></li>
+<li><a href="/docs/message/pulsar/">Pulsar</a></li>
+</ul></li>
+
+<li><p><strong><em>搜索引擎中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/search/solr/">Solr</a></li>
+<li><a href="/docs/search/elasticsearch/">Elasticsearch</a></li>
+</ul></li>
+
+<li><p><strong><em>架构&amp;中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/arch/arch/">架构设计</a></li>
+<li><a href="/docs/arch/distributed/">分布式理论</a></li>
+<li><a href="/docs/arch/zookeeper/">Zookeeper</a></li>
+</ul></li>
+
+<li><p><strong><em>编程思想</em></strong></p>
+
+<ul>
+<li><a href="/docs/model/model/">设计模式</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    计算机网络
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="计算机网络">计算机网络</h1>
+
+<h2 id="http协议">HTTP协议</h2>
+
+<p><font color="#9932CC" size=4>说说你知道的HTTP响应码</font></p>
+
+<pre><code>- 1xx
+</code></pre>
+
+<p><font color="#9932CC" size=4>怎么理解HTTP协议的无连接和无状态性</font></p>
+
+<pre><code># 无连接
+客户端和服务端完成一次交互后就断开连接
+
+# 无状态
+服务端不会记录客户端的信息，不知道客户端是谁
+
+Tips：
+- 无连接使用keep-alive解决，现在的http服务器支持keep-alive
+- 无状态使用cookies-session来解决了
+</code></pre>
+
+<p><font color="#9932CC" size=4>HTTP中GET和POST的区别和数据包格式</font></p>
+
+<pre><code># 从设计角度来说
+- GET请求是幂等的，请求前后不会对数据造成变化
+- POST是向服务端提交数据，提交数据就是为了修改相关数据，所以不是幂等的
+
+# 从应用角度来说
+- GET的请求有长度限制，URL最大长度为2048byte
+- POST请求没有长度限制
+
+# 从浏览器角度来说
+- GET请求回退和刷新不会产生危害
+- POST会重新提交请求
+
+- GET可以被缓存
+- POST不能被缓存
+</code></pre>
+
+<h3 id="简单说下http报文的格式">简单说下HTTP报文的格式</h3>
+
+<p><font color="#9932CC" size=4>HTTP长连接是什么？</font></p>
+
+<pre><code>前提：HTTP长连接本质上是TCP的长连接
+HTTP1.0默认短链接
+HTTP1.1默认长连接
+
+</code></pre>
+
+<p><font color="#9932CC" size=4>HTTPS加密方式是什么？讲讲整个加密和解密的流程</font></p>
+
+<p><font color="#9932CC" size=4>HTTP和HTTPS三次握手有什么区别</font></p>
+
+<h2 id="tcp协议">TCP协议</h2>
+
+<p><font color="#9932CC" size=4>TCP三次握手和四次握手的流程，为什么断开连接要四次，如果握手只有两次会出现什么</font></p>
+
+<pre><code># 三次握手
+- 1.客户端发送SYN=1的包和seq=x的版本好信息，进入SYN_SEND状态
+- 2.服务端发回确认包SYN=1，ACK=1，将自己的ISN序列号放到seq=y中，同时发送ACKnum=x+1，服务端进入SYN_RCVD状态
+- 3.客户端收到包，SYN=0，ACK=1，ACKnum=y+1，客户端进入到ESTABLISHED阶段
+
+# 四次挥手
+- 1.客户端发送FIN=1，seq=x数据到服务端，进入FIN_WAIT_1状态
+- 2.服务端收到包，发送ACK=1，ACKnum=x+1，服务端进入CLOSE_WAIT状态，客户端接收到包进入到FIN_WAIT_2状态
+- 3.服务端发送FIN=1，seq=y给客户端，进入到LAST_ACK，等待客户端的ACK
+- 4.客户端接收到服务端的关闭请求，发送一个ACK并等待服务端确认，最后进入到CLOSED状态
+
+# 两次握手弊端
+- 不能确认第二次握手的有效性
+- 三次握手可以保证C/S两端的存活状态
+</code></pre>
+
+<p><font color="#9932CC" size=4>TIME_WAIT和CLOSE_WAIT之间的区别是什么？</font></p>
+
+<p><font color="#9932CC" size=4>TCP协议和UDP协议有什么区别？</font></p>
+
+<h2 id="ip协议">IP协议</h2>
+
+<h2 id="综合">综合</h2>
+
+<h3 id="说说你浏览器中输入一个url然后回车后计算机的工作是什么样子的">说说你浏览器中输入一个URL然后回车后计算机的工作是什么样子的</h3>
+
+<h3 id="tcp-ip是怎么保证可靠性的-说说tcp头的结构">TCP/IP是怎么保证可靠性的，说说TCP头的结构</h3>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#计算机网络">计算机网络</a>
+<ul>
+<li><a href="#http协议">HTTP协议</a>
+<ul>
+<li><a href="#简单说下http报文的格式">简单说下HTTP报文的格式</a></li>
+</ul></li>
+<li><a href="#tcp协议">TCP协议</a></li>
+<li><a href="#ip协议">IP协议</a></li>
+<li><a href="#综合">综合</a>
+<ul>
+<li><a href="#说说你浏览器中输入一个url然后回车后计算机的工作是什么样子的">说说你浏览器中输入一个URL然后回车后计算机的工作是什么样子的</a></li>
+<li><a href="#tcp-ip是怎么保证可靠性的-说说tcp头的结构">TCP/IP是怎么保证可靠性的，说说TCP头的结构</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140325593-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

@@ -13,10 +13,22 @@
     
     <item>
       <title>Nginx</title>
-      <link>https://interview.jaswine.com/docs/nginx/</link>
+      <link>https://interview.jaswine.com/docs/server/nginx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/nginx/</guid>
+      <guid>https://interview.jaswine.com/docs/server/nginx/</guid>
+      <description> Nginx面试题 理论 使用反向代理服务器的优点是什么？
+- 隐藏真正的服务器，安全  原理 Nginx是怎么处理HTTP请求的？
+- Nginx使用反应器模式  Nginx负载均衡算法是怎么实现的？
+- 轮询 - 权重 - 对ip进行hash取模  应用 </description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://interview.jaswine.com/docs/server/tomcat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://interview.jaswine.com/docs/server/tomcat/</guid>
       <description> Nginx面试题 理论 使用反向代理服务器的优点是什么？
 - 隐藏真正的服务器，安全  原理 Nginx是怎么处理HTTP请求的？
 - Nginx使用反应器模式  Nginx负载均衡算法是怎么实现的？
@@ -25,10 +37,10 @@
     
     <item>
       <title>分布式系统</title>
-      <link>https://interview.jaswine.com/docs/distributed/</link>
+      <link>https://interview.jaswine.com/docs/arch/distributed/</link>
       <pubDate>Sat, 04 May 2019 10:44:39 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/distributed/</guid>
+      <guid>https://interview.jaswine.com/docs/arch/distributed/</guid>
       <description>分布式面试题 基础 说说你对分布式一致性和CAP,BASE一致性协议的理解
 分布式数据库 分布式集群下怎么做到唯一序列号
 分布式锁有哪些实现方式？(3)
@@ -37,19 +49,49 @@
     
     <item>
       <title>Zookeeper</title>
-      <link>https://interview.jaswine.com/docs/zookeeper/</link>
+      <link>https://interview.jaswine.com/docs/arch/zookeeper/</link>
       <pubDate>Sat, 04 May 2019 10:41:12 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/zookeeper/</guid>
+      <guid>https://interview.jaswine.com/docs/arch/zookeeper/</guid>
       <description> ZooKeeper面试题 基础 如何使用zookeeper实现分布式锁？有什么区别优缺点，会有什么问题，分别适用什么场景(可以说说redlock的算法实现) 什么是paxos算法，什么是zab协议 </description>
     </item>
     
     <item>
       <title>消息队列</title>
-      <link>https://interview.jaswine.com/docs/message/</link>
+      <link>https://interview.jaswine.com/docs/message/kafka/</link>
       <pubDate>Sat, 04 May 2019 10:32:02 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/message/</guid>
+      <guid>https://interview.jaswine.com/docs/message/kafka/</guid>
+      <description> 消息队列面试题 基础 为什么使用消息队列，优缺点是什么是呢？
+你们在工作中是这么对消息队列进行选型的
+消息队列的高可用你们是这么实现的
+如何保证消息不被重复消费的
+消息传输的可靠性你们是这么做到的？
+你们是这么保证消息的顺序性的？
+ActiveMQ RabbitMQ </description>
+    </item>
+    
+    <item>
+      <title>消息队列</title>
+      <link>https://interview.jaswine.com/docs/message/pulsar/</link>
+      <pubDate>Sat, 04 May 2019 10:32:02 +0800</pubDate>
+      
+      <guid>https://interview.jaswine.com/docs/message/pulsar/</guid>
+      <description> 消息队列面试题 基础 为什么使用消息队列，优缺点是什么是呢？
+你们在工作中是这么对消息队列进行选型的
+消息队列的高可用你们是这么实现的
+如何保证消息不被重复消费的
+消息传输的可靠性你们是这么做到的？
+你们是这么保证消息的顺序性的？
+ActiveMQ RabbitMQ </description>
+    </item>
+    
+    <item>
+      <title>消息队列</title>
+      <link>https://interview.jaswine.com/docs/message/rabbit/</link>
+      <pubDate>Sat, 04 May 2019 10:32:02 +0800</pubDate>
+      
+      <guid>https://interview.jaswine.com/docs/message/rabbit/</guid>
       <description> 消息队列面试题 基础 为什么使用消息队列，优缺点是什么是呢？
 你们在工作中是这么对消息队列进行选型的
 消息队列的高可用你们是这么实现的
@@ -61,10 +103,34 @@ ActiveMQ RabbitMQ </description>
     
     <item>
       <title>数据库</title>
-      <link>https://interview.jaswine.com/docs/data/</link>
+      <link>https://interview.jaswine.com/docs/data/mysql/</link>
       <pubDate>Mon, 29 Apr 2019 09:51:30 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/data/</guid>
+      <guid>https://interview.jaswine.com/docs/data/mysql/</guid>
+      <description>数据库面试题(默认MySQL) SQL 说说你对存储过程的理解，为什么阿里的编程规范中禁用存储过程，他有什么优缺点
+# 理解 - 存储过程就是一些SQL组成的代码块，可以重复使用 # 为什么禁用存储过程  说说你对SQL的连接查询(Join)的理解，他们之间的区别是什么
+# inner join - 两个表交集的部分 # full out join - 两个表并集，没有匹配的为null # left join - 以左表为主，没有匹配的为null # right join - 以右表为主，没有匹配的为null  数据库 索引 说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？
+# 索引理解 - MySQL索引的本质是B+树 # 如何使用 - 不同索引类型添加方式不一样，不过都是雷同的 alter table [table_name] add [index_type] [index_name] [字段名] # 不能，要正确的建立索引 # Tips：索引建立的几大原则 - 最左前缀匹配原则，MySQL一直向右匹配知道遇到查询范围(&amp;gt;,&amp;lt;,between,like)停止匹配 - in和=可以乱序 - 选择区分度比较高的列作为索引 - 索引列不参加计算 - 尽量扩展索引，不新建索引  说说数据库的索引都有哪些类型 |索引名|特点| |:&amp;ndash;|:&amp;ndash;| |UNIQUE(唯一索引)|不可以出现相同的值，可以有null| |INDEX(普通索引)|允许出现相同的索引内容| |PROMARY KEY(主键索引)|不允许出现相同的值| |FULLTEXT INDEX(全文索引)|对全文进行索引，效率很差| |组合索引|实质上是将多个字段建到一个索引里，列值的组合必须唯一|</description>
+    </item>
+    
+    <item>
+      <title>数据库</title>
+      <link>https://interview.jaswine.com/docs/data/redis/</link>
+      <pubDate>Mon, 29 Apr 2019 09:51:30 +0800</pubDate>
+      
+      <guid>https://interview.jaswine.com/docs/data/redis/</guid>
+      <description>数据库面试题(默认MySQL) SQL 说说你对存储过程的理解，为什么阿里的编程规范中禁用存储过程，他有什么优缺点
+# 理解 - 存储过程就是一些SQL组成的代码块，可以重复使用 # 为什么禁用存储过程  说说你对SQL的连接查询(Join)的理解，他们之间的区别是什么
+# inner join - 两个表交集的部分 # full out join - 两个表并集，没有匹配的为null # left join - 以左表为主，没有匹配的为null # right join - 以右表为主，没有匹配的为null  数据库 索引 说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？
+# 索引理解 - MySQL索引的本质是B+树 # 如何使用 - 不同索引类型添加方式不一样，不过都是雷同的 alter table [table_name] add [index_type] [index_name] [字段名] # 不能，要正确的建立索引 # Tips：索引建立的几大原则 - 最左前缀匹配原则，MySQL一直向右匹配知道遇到查询范围(&amp;gt;,&amp;lt;,between,like)停止匹配 - in和=可以乱序 - 选择区分度比较高的列作为索引 - 索引列不参加计算 - 尽量扩展索引，不新建索引  说说数据库的索引都有哪些类型 |索引名|特点| |:&amp;ndash;|:&amp;ndash;| |UNIQUE(唯一索引)|不可以出现相同的值，可以有null| |INDEX(普通索引)|允许出现相同的索引内容| |PROMARY KEY(主键索引)|不允许出现相同的值| |FULLTEXT INDEX(全文索引)|对全文进行索引，效率很差| |组合索引|实质上是将多个字段建到一个索引里，列值的组合必须唯一|</description>
+    </item>
+    
+    <item>
+      <title>数据库</title>
+      <link>https://interview.jaswine.com/docs/data/sql/</link>
+      <pubDate>Mon, 29 Apr 2019 09:51:30 +0800</pubDate>
+      
+      <guid>https://interview.jaswine.com/docs/data/sql/</guid>
       <description>数据库面试题(默认MySQL) SQL 说说你对存储过程的理解，为什么阿里的编程规范中禁用存储过程，他有什么优缺点
 # 理解 - 存储过程就是一些SQL组成的代码块，可以重复使用 # 为什么禁用存储过程  说说你对SQL的连接查询(Join)的理解，他们之间的区别是什么
 # inner join - 两个表交集的部分 # full out join - 两个表并集，没有匹配的为null # left join - 以左表为主，没有匹配的为null # right join - 以右表为主，没有匹配的为null  数据库 索引 说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？
@@ -73,38 +139,38 @@ ActiveMQ RabbitMQ </description>
     
     <item>
       <title>架构</title>
-      <link>https://interview.jaswine.com/docs/arch/</link>
+      <link>https://interview.jaswine.com/docs/arch/arch/</link>
       <pubDate>Mon, 29 Apr 2019 09:50:32 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/arch/</guid>
+      <guid>https://interview.jaswine.com/docs/arch/arch/</guid>
       <description> 架构设计面试题 高并发 高可用 可伸缩 安全性 如果有人恶意创建非法链接，怎么解决
 扩展性 敏捷性 综合 设计一个秒杀系统，30分钟没付款就自动关闭交易 如何设计建立和保持100W的长连接 一个在线文档，文档可以被编辑，如何方式多人同时对一份文档和进行编辑更新 </description>
     </item>
     
     <item>
       <title>Springcloud</title>
-      <link>https://interview.jaswine.com/docs/springcloud/</link>
+      <link>https://interview.jaswine.com/docs/spring/springcloud/</link>
       <pubDate>Mon, 29 Apr 2019 09:34:26 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/springcloud/</guid>
+      <guid>https://interview.jaswine.com/docs/spring/springcloud/</guid>
       <description> SpringCloud面试题 SpringCloud基础 SpringCloud和Dubbo相比的一些优缺点是什么？     优点 缺点     dubbo     cloud      服务注册和发现 Eureka 服务发现组件Eureka工作原理 服务调用 什么是Netflix？他的优点是什么？ 服务容错 什么是Hystrix？他是怎么实现容错机制的 服务网关 zuul zuul的工作原理 </description>
     </item>
     
     <item>
       <title>Springboot</title>
-      <link>https://interview.jaswine.com/docs/springboot/</link>
+      <link>https://interview.jaswine.com/docs/spring/springboot/</link>
       <pubDate>Mon, 29 Apr 2019 09:34:17 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/springboot/</guid>
+      <guid>https://interview.jaswine.com/docs/spring/springboot/</guid>
       <description> SpringBoot面试题 SpringBoot基础 SpringBoot和Spring之间的区别是什么 - Spring是Spring boot的基石 - Spring boot在Spring的基础上实现了自动化配置和起步依赖等相关特性  SpringBoot有什么优点，都是怎么实现这些优点的。 SpringBoot启动执行过程是什么样子的 - 看@SpringBootApplication注解就是@SpringBootConfiguration、@EnableAutoConfiguration和@ComponentScan的组合 -- @SpringBootConfiguration开启JavaConfig的方式 -- @EnableAutoConfiguration开启自动化注解 -- @ComponentScan扫描classpath下的bean - run方法中构造一个SpringApplication实例 - 构造实例过程中调用initialize方法初始化，主要给springApplication对象赋一些初始值 -  怎么在SringBoot启动时运行一些特定的代码 - 实现CommandLineRunner接口 - 重写run方法  SpringBoot起步依赖 SpringBoot是怎么实现起步依赖的 在pom.xml中引入的各种starter是一个pom打包形式的工程，我们引入后根据Maven的依赖传递来导入相关的包  什么是SpringBoot Starter - 实现了起步依赖，starter中定义了相关的依赖  SpringBoot自动配置 说说你对SpringBoot自动配置的理解 - 使用@EnableAutoConfiguration注解开启自动注解 - 使用@condition注解来完成条件化配置  SpringBoot配置加载的顺序是什么？ properties &amp;gt; YAML &amp;gt; JavaConfig &amp;gt; 命令行参数  SpringBoot有哪几种方式读取配置 - @value，读取xxx.properties和xxx.yaml中的配置信息 - @PropertySource - @Environment - @ConfigurationProperties  SpringBoot命令行 Actuator </description>
     </item>
     
     <item>
       <title>Spring</title>
-      <link>https://interview.jaswine.com/docs/spring/</link>
+      <link>https://interview.jaswine.com/docs/spring/spring/</link>
       <pubDate>Mon, 29 Apr 2019 09:34:10 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/spring/</guid>
+      <guid>https://interview.jaswine.com/docs/spring/spring/</guid>
       <description>Spring面试题 Spring基础 说说你对Spring体系架构的理解
 - spring是一个实现了依赖注入和控制反转的框架(DI/IOC) - spring除了核心之外，还实现了一些其他功能，如web的springmvc，data的jpa等等 - Spring是一个友好的框架，对于其他功能不强制使用Spring自己的，例如可以使用mybatis或者别的orm框架  依赖注入是什么意思？有哪些方式呢？
 # 依赖注入 - 完成一件事要多个配合，通常和自己没有关系 # 方式 - 构造器注入 - set注入 - 静态工厂 - 实例工厂  spring综合 Spring中用到了什么设计模式
@@ -116,10 +182,10 @@ ActiveMQ RabbitMQ </description>
     
     <item>
       <title>缓存</title>
-      <link>https://interview.jaswine.com/docs/cache/</link>
+      <link>https://interview.jaswine.com/docs/arch/cache/</link>
       <pubDate>Mon, 29 Apr 2019 09:34:04 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/cache/</guid>
+      <guid>https://interview.jaswine.com/docs/arch/cache/</guid>
       <description> 缓存面试题 Redis Redis中list结构相关的操作
 说说你在项目中使用Redis集群的用法
 Redis怎么存放热点数据？时长怎么控制的？原理呢？
@@ -128,19 +194,19 @@ Redis怎么存放热点数据？时长怎么控制的？原理呢？
     
     <item>
       <title>搜索引擎</title>
-      <link>https://interview.jaswine.com/docs/search/</link>
+      <link>https://interview.jaswine.com/docs/search/search/</link>
       <pubDate>Mon, 29 Apr 2019 09:33:55 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/search/</guid>
+      <guid>https://interview.jaswine.com/docs/search/search/</guid>
       <description> 搜索引擎面试题 Elasticsearch 说说你们公司使用的es集群架构，索引数据大小，分片有多少，怎么调优的 es的倒排索引是什么？ es是怎么实现master选举的 </description>
     </item>
     
     <item>
       <title>Mybatis</title>
-      <link>https://interview.jaswine.com/docs/mybatis/</link>
+      <link>https://interview.jaswine.com/docs/java/mybatis/</link>
       <pubDate>Mon, 29 Apr 2019 09:33:46 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/mybatis/</guid>
+      <guid>https://interview.jaswine.com/docs/java/mybatis/</guid>
       <description> Mybatis面试题 应用 Mybatis中#{}和${}区别 |#|$| |:&amp;ndash;|:&amp;ndash;| |预编译|直接传入值| |可以防止SQL注入|不能防止SQL注入| |不能放在order by后面|可以放在order by后面|
 Mybatis传入多个参数
 - #{0},#{1} - @param注解  Mybatis分页查询的原理
@@ -150,10 +216,10 @@ Mybatis传入多个参数
     
     <item>
       <title>Netty</title>
-      <link>https://interview.jaswine.com/docs/netty/</link>
+      <link>https://interview.jaswine.com/docs/java/netty/</link>
       <pubDate>Mon, 29 Apr 2019 09:33:39 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/netty/</guid>
+      <guid>https://interview.jaswine.com/docs/java/netty/</guid>
       <description>Netty面试题 原理 为什么选择Netty
 Netty是怎么实现异步非阻塞的IO的
 Netty的线程模型是什么？如何基于Reactor模型上实现的
@@ -165,28 +231,28 @@ Netty的通讯协议是什么样的
     
     <item>
       <title>设计模式</title>
-      <link>https://interview.jaswine.com/docs/model/</link>
+      <link>https://interview.jaswine.com/docs/model/model/</link>
       <pubDate>Mon, 29 Apr 2019 09:33:29 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/model/</guid>
+      <guid>https://interview.jaswine.com/docs/model/model/</guid>
       <description> 设计模式面试题 创建型 工厂模式 建造者模式 单例模式 写出三种单例模式实现 结构型 适配器模式 桥接模式 装饰者模式 外观模式 享元模式 代理模式 行为型 命令模式 中介者模式 观察者模式 状态模式 策略模式 MVC 说说你对MVC模式的理解，你用过什么MVC框架 </description>
     </item>
     
     <item>
       <title>JavaWeb</title>
-      <link>https://interview.jaswine.com/docs/jwb/</link>
+      <link>https://interview.jaswine.com/docs/java/jwb/</link>
       <pubDate>Mon, 29 Apr 2019 09:32:24 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/jwb/</guid>
+      <guid>https://interview.jaswine.com/docs/java/jwb/</guid>
       <description> JavaWeb开发面试题 浏览器 怎么避免浏览器缓存 Servlet session和cookie的区别和联系，session的生命周期是什么样的？集群环境下怎么管理session - session是又服务端维护的，记录用户的相关信息 - cookie是服务端生成，客户端维护的，大小不能超过4KB  Servlet容器 讲讲Tomcat的结构，以及其类加载器流程，线程模型 怎么对Tomcat进行调优，涉及到什么参数呢？ </description>
     </item>
     
     <item>
       <title>算法</title>
-      <link>https://interview.jaswine.com/docs/algo/</link>
+      <link>https://interview.jaswine.com/docs/base/algo/</link>
       <pubDate>Mon, 29 Apr 2019 09:32:16 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/algo/</guid>
+      <guid>https://interview.jaswine.com/docs/base/algo/</guid>
       <description>算法面试题 基础算法 hash算法 说说你知道的几种hash算法
 在10亿个数字中找到最小的10个
 有一亿个其中有两个是重复的，快速找到它，要求空间和时间最优
@@ -195,10 +261,10 @@ Netty的通讯协议是什么样的
     
     <item>
       <title>数据结构</title>
-      <link>https://interview.jaswine.com/docs/ds/</link>
+      <link>https://interview.jaswine.com/docs/base/ds/</link>
       <pubDate>Mon, 29 Apr 2019 09:32:07 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/ds/</guid>
+      <guid>https://interview.jaswine.com/docs/base/ds/</guid>
       <description> 数据结构 数组 数组动态扩容是怎么实现的
 - 新建一个空数组(比原来的大) - 将原数组的元素拷贝到新数组中  链表 怎么使用链表实现LRU呢？
 - 1.当链表为空的时候 - 1.1.当前id为head - 2.链表不为空的时候 - 2.1.搜索插叙的id - 2.1.1.链表中有该id，将该id为head - 2.1.2.链表中没有该id - 2.1.2.1.链表满了，删除tail元素，id放在head - 2.1.2.2.链表未满，id放在head  栈 队列 散列表(hash表) 解决hash冲突都有什么办法？并简单说下实现原理是什么样的？之间的区别是什么？
@@ -207,10 +273,10 @@ Netty的通讯协议是什么样的
     
     <item>
       <title>计算机网络</title>
-      <link>https://interview.jaswine.com/docs/net/</link>
+      <link>https://interview.jaswine.com/docs/base/net/</link>
       <pubDate>Mon, 29 Apr 2019 09:31:47 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/net/</guid>
+      <guid>https://interview.jaswine.com/docs/base/net/</guid>
       <description>计算机网络 HTTP协议 说说你知道的HTTP响应码
 - 1xx  怎么理解HTTP协议的无连接和无状态性
 # 无连接 客户端和服务端完成一次交互后就断开连接 # 无状态 服务端不会记录客户端的信息，不知道客户端是谁 Tips： - 无连接使用keep-alive解决，现在的http服务器支持keep-alive - 无状态使用cookies-session来解决了  HTTP中GET和POST的区别和数据包格式
@@ -223,19 +289,19 @@ TCP协议 TCP三次握手和四次握手的流程，为什么断开连接要四�
     
     <item>
       <title>操作系统</title>
-      <link>https://interview.jaswine.com/docs/os/</link>
+      <link>https://interview.jaswine.com/docs/base/os/</link>
       <pubDate>Mon, 29 Apr 2019 09:31:37 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/os/</guid>
+      <guid>https://interview.jaswine.com/docs/base/os/</guid>
       <description>计算机操作系统 进程 文件 I/O 操作系统的io模型是什么？</description>
     </item>
     
     <item>
       <title>Java虚拟机</title>
-      <link>https://interview.jaswine.com/docs/jvm/</link>
+      <link>https://interview.jaswine.com/docs/java/jvm/</link>
       <pubDate>Tue, 16 Apr 2019 01:20:59 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/jvm/</guid>
+      <guid>https://interview.jaswine.com/docs/java/jvm/</guid>
       <description>Java虚拟机面试题 JMM(Java内存模型) 简单说说JVM中内存的分配情况吧
 Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的行号指示器) - 虚拟机栈(局部变量，方法信息) - 本地方法栈(JNI方法) # 线程共有 - 堆内存(对象存放的地方) - 方法区(已被虚拟机加载的类信息，常量，静态变量) -- 运行时常量池(方法区的一部分) # 特别 - 直接内存(非JVM内存规范中的一部分)  什么时候会发生内存溢出(OOM)？
 # 程序计数器 - 不会发生OOM错误 # 虚拟机栈 &amp;amp; 本地方法栈 - 虚拟机扩展栈的时候无法获取到足够的空间就会抛出OOM的错误 # 堆内存 - 对象数量达到堆内存的最大值的时候出现OOM错误 # 方法区 &amp;amp; 运行时常量池 - 产生大量的类信息大于了方法区的最大值  Java内存为什么分成新生代，老年代，持久代？是怎么划分的呢？怎么回收的呢？新生代中为什么要分为Eden和Survivor
@@ -244,15 +310,33 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
     
     <item>
       <title>Java</title>
-      <link>https://interview.jaswine.com/docs/java/</link>
+      <link>https://interview.jaswine.com/docs/java/java/</link>
       <pubDate>Mon, 15 Apr 2019 23:02:57 +0800</pubDate>
       
-      <guid>https://interview.jaswine.com/docs/java/</guid>
+      <guid>https://interview.jaswine.com/docs/java/java/</guid>
       <description>Java面试题 Java基础 Java小知识点 说说每个版本Java的新特性
 # 1.5 - 自动装箱和拆箱 - 新增枚举类型 - 新增注解类型 - 泛型的支持 - 静态导入的支持 - For-Each循环支持 - 可变参数 # 1.6 - 轻量级HTTP SERVER API # 1.7 - Java集合的增强，可以直接使用[]，{}来存入对象 - Switch中可以使用String(以前只可以使用基本类型变量) # 1.8 - 接口方法中可以默认实现(使用default关键字) - Lambda表达式的支持 - 函数式的接口(使用@Functionallnterface) - 使用::关键字来传递方法或者构造函数引用 - 多重注解 - 集合类的增强 - Stream流式计算  Java中try&amp;hellip;catch&amp;hellip;finally&amp;hellip;return执行的先后顺序
 - 先执行try中的代码，遇到try中的return执行但是不返回到main方法中  Java关键字 final有什么用途？
 - final表示不变，可以修饰变量，方法和类 -- 修饰变量的时候这个变量一旦被初始化完成就不会被改变 -- 修饰方法说明在这个方法不能被修改 -- 修饰类说明这个类不能被继承 - final一般也是一种多线程的设计模式，因为对象不变就不存在多线程并发安全的问题了  static关键字这么用
 - static修饰方法：不需要依靠实例对象来访问 - static修饰变量：类对象，在类加载的时候就有了 - static修饰代码块：在类加载的时候就初始化，只初始化一次 - static修饰内部类：就是一个内部类 - static静态导包  逻辑运算 a=a+b和a+=b之间的区别是什么？</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://interview.jaswine.com/docs/search/elasticsearch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://interview.jaswine.com/docs/search/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://interview.jaswine.com/docs/search/solr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://interview.jaswine.com/docs/search/solr/</guid>
+      <description></description>
     </item>
     
   </channel>

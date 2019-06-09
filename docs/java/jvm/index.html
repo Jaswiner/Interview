@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Java虚拟机
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/book.min.a3caa905766cf610e263c876d2f2d8477f59d64606267bcaeee26e73160f9285.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://interview.jaswine.com/">面试题</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fjava\2fjvm\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><em>计算机基础</em></strong>
+
+<ul>
+<li><a href="#">计算机组成</a></li>
+<li><a href="/docs/base/os/">操作系统</a></li>
+<li><a href="/docs/base/net/">计算机网络</a></li>
+<li><a href="#">编译原理</a></li>
+<li><a href="/docs/base/algo/">数据结构和算法</a></li>
+</ul></li>
+<li><strong><em>Java系</em></strong>
+
+<ul>
+<li><a href="/docs/java/java/">JavaSE</a></li>
+<li><a href="/docs/java/jwb/">JavaEE</a></li>
+<li><a href="/docs/java/jvm/">JVM</a></li>
+<li><a href="/docs/java/mybatis/">MyBtais</a></li>
+<li><a href="/docs/java/netty/">Netty</a></li>
+</ul></li>
+
+<li><p><strong><em>JavaScript系</em></strong></p></li>
+
+<li><p><strong><em>Python系</em></strong></p></li>
+
+<li><p><strong><em>SpringFrame系</em></strong></p>
+
+<ul>
+<li><a href="/docs/spring/spring/">SpringFrame</a></li>
+<li><a href="/docs/spring/springboot/">SpringBoot</a></li>
+<li><a href="/docs/spring/springcloud/">SpringCloud</a></li>
+</ul></li>
+
+<li><p><strong><em>应用服务器</em></strong></p>
+
+<ul>
+<li><a href="/docs/server/nginx/">Nginx</a></li>
+<li><a href="/docs/server/tomcat/">Tomcat</a></li>
+</ul></li>
+
+<li><p><strong><em>数据存储中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/data/sql/">SQL</a></li>
+<li><a href="/docs/data/mysql/">MySQL</a></li>
+<li><a href="/docs/data/redis/">Redis</a></li>
+</ul></li>
+
+<li><p><strong><em>消息队列及其中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/message/rabbit/">RabbitMQ</a></li>
+<li><a href="/docs/message/kafka/">Kafka</a></li>
+<li><a href="/docs/message/pulsar/">Pulsar</a></li>
+</ul></li>
+
+<li><p><strong><em>搜索引擎中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/search/solr/">Solr</a></li>
+<li><a href="/docs/search/elasticsearch/">Elasticsearch</a></li>
+</ul></li>
+
+<li><p><strong><em>架构&amp;中间件</em></strong></p>
+
+<ul>
+<li><a href="/docs/arch/arch/">架构设计</a></li>
+<li><a href="/docs/arch/distributed/">分布式理论</a></li>
+<li><a href="/docs/arch/zookeeper/">Zookeeper</a></li>
+</ul></li>
+
+<li><p><strong><em>编程思想</em></strong></p>
+
+<ul>
+<li><a href="/docs/model/model/">设计模式</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Java虚拟机
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="java虚拟机面试题">Java虚拟机面试题</h1>
+
+<h2 id="jmm-java内存模型">JMM(Java内存模型)</h2>
+
+<p><font color="#9932CC" size=4>简单说说JVM中内存的分配情况吧</font></p>
+
+<p>Java8之前：
+<img src="https://cdn.jaswine.com/interview/jvm/jmm.png" alt="" /></p>
+
+<pre><code># 线程私有
+- 程序计数器(当前线程执行字节码的行号指示器)
+- 虚拟机栈(局部变量，方法信息)
+- 本地方法栈(JNI方法)
+
+# 线程共有
+- 堆内存(对象存放的地方)
+- 方法区(已被虚拟机加载的类信息，常量，静态变量)
+-- 运行时常量池(方法区的一部分)
+
+# 特别
+- 直接内存(非JVM内存规范中的一部分)
+</code></pre>
+
+<p><font color="#9932CC" size=4>什么时候会发生内存溢出(OOM)？</font></p>
+
+<pre><code># 程序计数器
+- 不会发生OOM错误
+
+# 虚拟机栈 &amp; 本地方法栈
+- 虚拟机扩展栈的时候无法获取到足够的空间就会抛出OOM的错误
+
+# 堆内存
+- 对象数量达到堆内存的最大值的时候出现OOM错误
+
+# 方法区 &amp; 运行时常量池
+- 产生大量的类信息大于了方法区的最大值
+</code></pre>
+
+<p><font color="#9932CC" size=4>Java内存为什么分成新生代，老年代，持久代？是怎么划分的呢？怎么回收的呢？新生代中为什么要分为Eden和Survivor</font></p>
+
+<pre><code># 为什么分代
+- 为了优化GC性能(Java中每个对象的生命周期不一样，所以不同对象要分类以便更好的回收)
+
+# 怎么划分
+- 新生代(Young Generation)
+    - 分成三个部分：Eden，From Survivor ，To Survivor，比例是8:1:1
+    - 保持一个Survivor为空
+- 年老代(Tenured Generation)
+    - 多次GC都没有被GC的会进入年老带
+    - 新生代没有空间了会直接进入年老代
+- 永久代(Permanent Generation)
+    - 对应运行时内存的“方法区”，一般不会被GC，JVM退出才销毁
+
+# 怎么回收
+- 新生代
+    - 因为生命周期很短，GC吞吐量很高，适合使用复制算法来GC，这样保证来复制的数据量最小
+- 年老代
+    - 因为对象的存活时间很长，所以要移动大量的对象，效率很低，所以年老代适合使用标记-清除算法
+
+# 为什么分为Eden和Survivor
+
+</code></pre>
+
+<p><font color="#9932CC" size=4>你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的</font></p>
+
+<pre><code># 重排序
+
+# 内存屏障
+
+# happen-before原则
+
+# 主内存和工作内存
+</code></pre>
+
+<h2 id="类加载">类加载</h2>
+
+<p><font color="#9932CC" size=4>类加载的步骤是什么</font></p>
+
+<pre><code>加载--&gt;验证--&gt;准备--&gt;解析--&gt;初始化--&gt;使用--&gt;卸载
+</code></pre>
+
+<p><font color="#9932CC" size=4>Class.forName()和classloader的区别</font></p>
+
+<pre><code>- Class.forName()将class文件加载到虚拟机中到初始化的工作
+- classloader只是将class文件加载到jvm中
+</code></pre>
+
+<p><font color="#9932CC" size=4>说说你了解的类加载器，以及他们工作的原理</font></p>
+
+<pre><code># 类加载器
+- 启动类加载器(Bootstrap ClassLoader)
+- 扩展类加载器(ExtClassLoader)
+- 应用类家再起(AppClassLoader)
+
+# 原理
+</code></pre>
+
+<p><font color="#9932CC" size=4>可以打破双亲委派吗？是怎么打破的？</font></p>
+
+<pre><code># 可以打破双亲委派双亲委派
+- SPI就是打破双亲委派
+
+# 怎么打破
+</code></pre>
+
+<h2 id="对象解析">对象解析</h2>
+
+<p><font color="#9932CC" size=4>说说你对Java对象组成的理解</font></p>
+
+<pre><code>- Java对象内部由三个部分组成:对象头，实例数据，对齐填充字节
+
+# 对象头
+- 对象头包括如下部分:
+-- MarkWord:记录了对象的锁，GC等等的信息
+-- 指向类的指针
+-- 数组的长度(数组对象才有)
+
+# 实例数据
+- 实例数据就是我们在代码中看到的属性和值
+
+# 填充字节
+- 对齐填充字节:因为JVM中对象的是8bit的整数倍，所有要有相关的字节来填充
+</code></pre>
+
+<h2 id="garbage-collection-gc">Garbage Collection(GC)</h2>
+
+<p><font color="#9932CC" size=4>说说你知道的GC算法和对应的原理是什么？都有缺点</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">算法</th>
+<th align="left">原理</th>
+<th align="left">缺点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">标记-清除</td>
+<td align="left">先对对象进行标记然后回收</td>
+<td align="left">内存碎片太多</td>
+</tr>
+
+<tr>
+<td align="left">标记-复制-清除</td>
+<td align="left">将存活的对象复制到一块空内存上，然后清除原来的内存</td>
+<td align="left">空间浪费</td>
+</tr>
+
+<tr>
+<td align="left">标记-压缩-清除</td>
+<td align="left">将存活的对象移动到一个地方，然后指针之后的全部删除</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">分代收集</td>
+<td align="left">对对象进行分代然后不同的代使用不同的回收算法</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<p><font color="#9932CC" size=4>JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代</font></p>
+
+<pre><code># 流程
+1.触发GC
+- 内存不够使用
+- 主动触发GC，System.gc()
+
+2.标记
+- 找出所有对象的
+
+3.复制 | 压缩
+- 复制算法就是将存活的对象复制到一个空的内存块
+- 压缩(整理)算法计算出存活对象的新地址然后移动对象的地方
+
+3.清理
+- 将之前标记的dead的对象回收了
+
+# 如何晋升老年代
+- 大对象直接进入老年代
+- 几次Minor GC还存活的对象
+</code></pre>
+
+<p><font color="#9932CC" size=4>说说你对Minor GC和Full GC的理解</font></p>
+
+<p><strong>Minor GC</strong></p>
+
+<ul>
+<li>定义：新生代(包括Eden和Survivor)垃圾搜集叫做 Minor GC</li>
+
+<li><p>触发条件：</p>
+
+<ul>
+<li>新生代中Eden区满了就会出发Minor GC</li>
+</ul></li>
+
+<li><p>GC过程：</p>
+
+<ul>
+<li>Eden和其中一个Survivor区中存活对象会被复制(标记-复制算法)到另一个Survivor中</li>
+<li>交换指针</li>
+</ul></li>
+</ul>
+
+<p><strong>Full GC</strong></p>
+
+<ul>
+<li><p>定义：对整个堆进行垃圾搜集</p></li>
+
+<li><p>触发条件：</p>
+
+<ul>
+<li>System.gc()</li>
+<li>触发young GC的时候，如果发现统计数据说之前young GC平均晋升大小比目前的old gen剩余空间大，则直接触发Full GC</li>
+<li>如果有永久代，分配空间的时候发现永久代没有空间的时候会Full GC(JDK1.8之后没有永久代)</li>
+</ul></li>
+
+<li><p>GC过程：</p></li>
+</ul>
+
+<p><font color="#9932CC" size=4>说说你知道的集中垃圾收集器，各自的优缺点，重点说下cms和G1(从原理，流程，优缺点)</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">优点</th>
+<th align="left">缺点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Serial GC</td>
+<td align="left">简单</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">ParNew GC</td>
+<td align="left">本质上多线程的Serial</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">Parallel GC</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">Serial Old收集器</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">Parallel Old收集器</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">CMS收集器</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">G1收集器</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>CMS收集器</strong></p>
+
+<pre><code># 原理
+
+# 流程
+
+# 优缺点
+
+</code></pre>
+
+<p><strong>G1收集器</strong></p>
+
+<pre><code># 原理
+
+# 流程
+
+# 优缺点
+
+# Tips：
+- JDK9以后默认的GC
+
+</code></pre>
+
+<h2 id="jvm参数">Jvm参数</h2>
+
+<p><font color="#9932CC" size=4>说说你知道的JVM参数</font></p>
+
+<h2 id="高并发">高并发</h2>
+
+<h2 id="工具使用">工具使用</h2>
+
+<p><font color="#9932CC" size=4>如何Java内存泄漏的问题进行调查和定位</font></p>
+
+<ul>
+<li>使用<code>jps -l</code> 查询所有的JVM进程</li>
+<li>使用<code>jstat &lt;对应进程id&gt;</code>监控当前进程的情况</li>
+<li>使用<code>jmap</code>来看内存分布快照</li>
+<li>把内存堆<code>dump</code>下来然后使用<a href="https://www.eclipse.org/mat/">MAT</a>来分析内存</li>
+</ul>
+
+<p>__</p>
+
+<pre><code># 1.
+
+     
+
+# 2.使用jstat
+使用jmap和jstack
+</code></pre>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#java虚拟机面试题">Java虚拟机面试题</a>
+<ul>
+<li><a href="#jmm-java内存模型">JMM(Java内存模型)</a></li>
+<li><a href="#类加载">类加载</a></li>
+<li><a href="#对象解析">对象解析</a></li>
+<li><a href="#garbage-collection-gc">Garbage Collection(GC)</a></li>
+<li><a href="#jvm参数">Jvm参数</a></li>
+<li><a href="#高并发">高并发</a></li>
+<li><a href="#工具使用">工具使用</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140325593-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
