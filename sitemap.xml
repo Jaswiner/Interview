@@ -150,13 +150,13 @@
   </url>
   
   <url>
-    <loc>https://jaswine.com/interview/tags/</loc>
-    <priority>0</priority>
+    <loc>https://jaswine.com/interview/</loc>
+    <lastmod>2019-05-04T10:44:39+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jaswine.com/interview/</loc>
-    <lastmod>2019-05-04T10:44:39+08:00</lastmod>
+    <loc>https://jaswine.com/interview/tags/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
