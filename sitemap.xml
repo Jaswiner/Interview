@@ -41,16 +41,6 @@
   </url>
   
   <url>
-    <loc>https://jaswine.com/interview/docs/data/redis/</loc>
-    <lastmod>2019-04-29T09:51:30+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jaswine.com/interview/docs/data/sql/</loc>
-    <lastmod>2019-04-29T09:51:30+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jaswine.com/interview/docs/arch/arch/</loc>
     <lastmod>2019-04-29T09:50:32+08:00</lastmod>
   </url>
@@ -128,6 +118,26 @@
   <url>
     <loc>https://jaswine.com/interview/docs/java/java/</loc>
     <lastmod>2019-04-15T23:02:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/data/ShardingSphere/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/data/mycat/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/data/redis/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/data/sql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/message/base/</loc>
   </url>
   
   <url>

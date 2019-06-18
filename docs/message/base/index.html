@@ -11,7 +11,7 @@
 <title>
   
     
-    Solr
+    Base
   
  | 面试题</title>
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2finterview\2f docs\2fsearch\2fsolr\2f "] {
+  nav ul a[href$="\2finterview\2f docs\2fmessage\2f base\2f "] {
       color: #004ed0;
   }
   </style>
@@ -155,13 +155,75 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    Solr
+    Base
   
 </strong>
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="消息队列基础">消息队列基础</h1>
+
+<hr />
+
+<h6 id="font-color-008b45-size-4-为什么使用消息队列-优缺点-比较一下kafka-activemq-rabbitmq-rocketmq-font"><font color="#008B45" size=4>为什么使用消息队列？优缺点？比较一下Kafka，ActiveMQ，RabbitMQ，RocketMQ</font></h6>
+
+<pre><code># 为啥使用
+- 业务需要
+    - 解藕
+    - 异步
+    - 削峰
+</code></pre>
+
+<p>消息队列优缺点:</p>
+
+<hr />
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">优点</th>
+<th align="left">缺点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">MQ</td>
+<td align="left">1.解藕,异步,削峰</td>
+<td align="left">1.系统可用性降低(MQ挂了)<br>2.复杂度提高(保证消息按照想象的被消费)<br>3.最终一致性</td>
+</tr>
+</tbody>
+</table>
+
+<p>不同消息队列实现的比较</p>
+
+<hr />
+
+<table>
+<thead>
+<tr>
+<th align="left">特性</th>
+<th align="left">ActiveMQ</th>
+<th align="left">RabbitMQ</th>
+<th align="left">RocketMQ</th>
+<th align="left">Kafka</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">单机吞吐量</td>
+<td align="left">万级</td>
+<td align="left">万级</td>
+<td align="left">10万级</td>
+<td align="left">10万级</td>
+</tr>
+</tbody>
+</table>
+</article>
 
       
 
@@ -171,6 +233,29 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#消息队列基础">消息队列基础</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#font-color-008b45-size-4-为什么使用消息队列-优缺点-比较一下kafka-activemq-rabbitmq-rocketmq-font"><font color="#008B45" size=4>为什么使用消息队列？优缺点？比较一下Kafka，ActiveMQ，RabbitMQ，RocketMQ</font></a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>
