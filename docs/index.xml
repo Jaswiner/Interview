@@ -43,7 +43,7 @@
       <description>分布式面试题 基础 说说你对分布式一致性和CAP,BASE一致性协议的理解
 分布式数据库 分布式集群下怎么做到唯一序列号
 分布式锁有哪些实现方式？(3)
-分布式事务的原理，优缺点，如何使用分布式事务，2平pc，3pc的区别，解决了哪些问题</description>
+分布式事务的原理，优缺点，如何使用分布式事务，2pc，3pc的区别，解决了哪些问题</description>
     </item>
     
     <item>
@@ -161,10 +161,7 @@ ActiveMQ RabbitMQ </description>
       <pubDate>Mon, 29 Apr 2019 09:34:04 +0800</pubDate>
       
       <guid>https://jaswine.com/interview/docs/arch/cache/</guid>
-      <description> 缓存面试题 Redis Redis中list结构相关的操作
-说说你在项目中使用Redis集群的用法
-Redis怎么存放热点数据？时长怎么控制的？原理呢？
-  综合 如何防止缓存击穿和雪崩 </description>
+      <description> 缓存面试题 如何防止缓存击穿和雪崩 </description>
     </item>
     
     <item>
@@ -272,31 +269,6 @@ TCP协议 TCP三次握手和四次握手的流程，为什么断开连接要四�
     </item>
     
     <item>
-      <title>Java虚拟机</title>
-      <link>https://jaswine.com/interview/docs/java/jvm/</link>
-      <pubDate>Tue, 16 Apr 2019 01:20:59 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/jvm/</guid>
-      <description>Java虚拟机面试题 JMM(Java内存模型) 简单说说JVM中内存的分配情况吧
-Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的行号指示器) - 虚拟机栈(局部变量，方法信息) - 本地方法栈(JNI方法) # 线程共有 - 堆内存(对象存放的地方) - 方法区(已被虚拟机加载的类信息，常量，静态变量) -- 运行时常量池(方法区的一部分) # 特别 - 直接内存(非JVM内存规范中的一部分)  什么时候会发生内存溢出(OOM)？
-# 程序计数器 - 不会发生OOM错误 # 虚拟机栈 &amp;amp; 本地方法栈 - 虚拟机扩展栈的时候无法获取到足够的空间就会抛出OOM的错误 # 堆内存 - 对象数量达到堆内存的最大值的时候出现OOM错误 # 方法区 &amp;amp; 运行时常量池 - 产生大量的类信息大于了方法区的最大值  Java内存为什么分成新生代，老年代，持久代？是怎么划分的呢？怎么回收的呢？新生代中为什么要分为Eden和Survivor
-# 为什么分代 - 为了优化GC性能(Java中每个对象的生命周期不一样，所以不同对象要分类以便更好的回收) # 怎么划分 - 新生代(Young Generation) - 分成三个部分：Eden，From Survivor ，To Survivor，比例是8:1:1 - 保持一个Survivor为空 - 年老代(Tenured Generation) - 多次GC都没有被GC的会进入年老带 - 新生代没有空间了会直接进入年老代 - 永久代(Permanent Generation) - 对应运行时内存的“方法区”，一般不会被GC，JVM退出才销毁 # 怎么回收 - 新生代 - 因为生命周期很短，GC吞吐量很高，适合使用复制算法来GC，这样保证来复制的数据量最小 - 年老代 - 因为对象的存活时间很长，所以要移动大量的对象，效率很低，所以年老代适合使用标记-清除算法 # 为什么分为Eden和Survivor  你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的</description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://jaswine.com/interview/docs/java/java/</link>
-      <pubDate>Mon, 15 Apr 2019 23:02:57 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/java/</guid>
-      <description>Java面试题 Java基础 Java小知识点 说说每个版本Java的新特性
-# 1.5 - 自动装箱和拆箱 - 新增枚举类型 - 新增注解类型 - 泛型的支持 - 静态导入的支持 - For-Each循环支持 - 可变参数 # 1.6 - 轻量级HTTP SERVER API # 1.7 - Java集合的增强，可以直接使用[]，{}来存入对象 - Switch中可以使用String(以前只可以使用基本类型变量) # 1.8 - 接口方法中可以默认实现(使用default关键字) - Lambda表达式的支持 - 函数式的接口(使用@Functionallnterface) - 使用::关键字来传递方法或者构造函数引用 - 多重注解 - 集合类的增强 - Stream流式计算  Java中try&amp;hellip;catch&amp;hellip;finally&amp;hellip;return执行的先后顺序
-- 先执行try中的代码，遇到try中的return执行但是不返回到main方法中  Java关键字 final有什么用途？
-- final表示不变，可以修饰变量，方法和类 -- 修饰变量的时候这个变量一旦被初始化完成就不会被改变 -- 修饰方法说明在这个方法不能被修改 -- 修饰类说明这个类不能被继承 - final一般也是一种多线程的设计模式，因为对象不变就不存在多线程并发安全的问题了  static关键字这么用
-- static修饰方法：不需要依靠实例对象来访问 - static修饰变量：类对象，在类加载的时候就有了 - static修饰代码块：在类加载的时候就初始化，只初始化一次 - static修饰内部类：就是一个内部类 - static静态导包  逻辑运算 a=a+b和a+=b之间的区别是什么？</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>https://jaswine.com/interview/docs/data/ShardingSphere/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -320,7 +292,10 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/data/redis/</guid>
-      <description> Redis </description>
+      <description> Redis Redis中list结构相关的操作
+说说你在项目中使用Redis集群的用法
+Redis怎么存放热点数据？时长怎么控制的？原理呢？
+  </description>
     </item>
     
     <item>
@@ -332,6 +307,191 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
       <description> SQL 说说你对存储过程的理解，为什么阿里的编程规范中禁用存储过程，他有什么优缺点
 # 理解 - 存储过程就是一些SQL组成的代码块，可以重复使用 # 为什么禁用存储过程  说说你对SQL的连接查询(Join)的理解，他们之间的区别是什么
 # inner join - 两个表交集的部分 # full out join - 两个表并集，没有匹配的为null # left join - 以左表为主，没有匹配的为null # right join - 以右表为主，没有匹配的为null  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/adventage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/adventage/</guid>
+      <description> Java高级特性 Java注解，泛型，枚举 JDK1.5引入了泛型，泛型的存在是用来解决什么问题
+Java高级特性 反射的原理是什么？反射创建类实例的三种方式是什么？
+ 动态代理有哪些实现方式，你知道他们相应的优缺点吗？
+# 实现方式 - JDK动态代理 - cglib动态代理 # 优缺点 如下      JDK cglib     区别 只能对实现同一接口的类进行代理 可以对任何类惊醒代理，但是不能对final修饰的类进行代理   原理 使用Java反射原理实现的 使用asm的开源工具将代理的类加载进来实现其子类，然后重写相关的方法    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/base/</guid>
+      <description>Java基础知识 Java版本特性 说说每个版本Java的新特性
+# 1.5 - 自动装箱和拆箱 - 新增枚举类型 - 新增注解类型 - 泛型的支持 - 静态导入的支持 - For-Each循环支持 - 可变参数 # 1.6 - 轻量级HTTP SERVER API # 1.7 - Java集合的增强，可以直接使用[]，{}来存入对象 - Switch中可以使用String(以前只可以使用基本类型变量) # 1.8 - 接口方法中可以默认实现(使用default关键字) - Lambda表达式的支持 - 函数式的接口(使用@Functionallnterface) - 使用::关键字来传递方法或者构造函数引用 - 多重注解 - 集合类的增强 - Stream流式计算  Java中try&amp;hellip;catch&amp;hellip;finally&amp;hellip;return执行的先后顺序
+- 先执行try中的代码，遇到try中的return执行但是不返回到main方法中  Java关键字 final有什么用途？
+- final表示不变，可以修饰变量，方法和类 -- 修饰变量的时候这个变量一旦被初始化完成就不会被改变 -- 修饰方法说明在这个方法不能被修改 -- 修饰类说明这个类不能被继承 - final一般也是一种多线程的设计模式，因为对象不变就不存在多线程并发安全的问题了  static关键字这么用
+- static修饰方法：不需要依靠实例对象来访问 - static修饰变量：类对象，在类加载的时候就有了 - static修饰代码块：在类加载的时候就初始化，只初始化一次 - static修饰内部类：就是一个内部类 - static静态导包  逻辑运算 a=a+b和a+=b之间的区别是什么？</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/collection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/collection/</guid>
+      <description>Java集合 List系 ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决
+ 🔗链接ArrayList为什么线程不安全及解决办法 🔗连接LinkedList为什么线程不安全及解决办法     名称 数据结构 是否线程安全 原理 线程安全方法     ArrayList Object数组 不安全 / 1.使用Collections.synchronizedList(List)包装
+2.使用CopyOnWriteArrayList   LinkedList 双向链表 不安全 / 1.使用Collections.synchronizedList(List)包装
+   Vector Object数组 安全 (同步方法)synchronized /    ArrayList是如何实现动态扩容的
+ 🔗链接源码分析-Java中ArrayList是如何实现数组动态扩容的 ``` ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容 Java底层的数组扩容就是通过数组拷贝完成的 ```  Map系 Map接口的实现类，简单的说说他们
+   类 底层数据结构 特点 是否线程安全     HashMap 数组+链表/红黑树 可以使用null作为Key和Value 不安全   Hashtable 数组+链表/红黑树 非null的key和value 安全   LinkedHashMap 继承HashMap，多维护一个双向链表 同HashMap，有序的 不安全   TreeMap 红黑树 有序 不安全   Properties 继承hashtable  安全    Map接口实现类之间的区别</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/concurrent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/concurrent/</guid>
+      <description>Java多线程/并发编程 Java多线程基础理论 什么是线程安全？线程不安全的根源是什么？Java是怎么解决的
+# 线程安全 - 一个方法或者实例在多线程环境下使用不会出现问题，这个问题本质上就是共有数据在被并发修改的产生脏写的问题   不安全的根源
+ 线程并发原子性 线程并发可见性 线程并发有序性  Java的解决办法
+ Java使用JMM保证了多线程并发的情况下线程之间的有序性和可见性 使用锁来解决原子性问题   说说死锁
+# 死锁发生的条件 - 互斥，共享资源x、y只能被一个线程占有 - 占有等待，线程T1占有资源x还在等待资源y - 不可抢占，其他线程不能抢占T1的资源 - 循环等待，T1和T2互相等待对方释放资源 # 解决死锁 - 一次申请所有锁资源，申请不到就不占有 - 如果申请不到锁资源，主动释放自己身上的锁资源 -  画一下线程生命周期和状态转换图
+一个线程两次调用start()方法会怎么样
+ 会抛出IllegalThreadStateException错误  你知道停止一个线程有哪些方法，他们之间都有什么区别
+# 方法 - Thread.stop() - Thread.interrupt() - run方法结束(正常停止线程) # 区别 - stop()在JDK中已经被遗弃，执行stop方法后会立即终止线程，释放当前线程持有锁资源，破坏了对象的一致性 - interrupt()执行后不会立马终止线程，会设置一个中断标记位  sleep()和wait()的区别
+   wait sleep     Object的方法 Thread的方法   执行的时候释放锁 执行的时候不释放锁   只能在同步方法和同步块中使用 可以在任何地方使用   无需捕捉异常 需要捕捉异常    讲讲Java同步机制的wait和notify</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/exception/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/exception/</guid>
+      <description>#Java异常
+Error和Exception的区别，CheckedException和RuntimeException
+说说你知道的运行时异常</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/io/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/io/</guid>
+      <description> Java I/O 基础 IO模型有哪些？在Java中对应的实现是什么
+# IO模型 - 同步阻塞IO模型(BIO) - 同步非阻塞IO模型(NIO) - IO多路复用 - 信号驱动IO - 异步IO(AIO,NIO2) Tips：这些都是操作系统中相关的概念 # Java中的对应实现 - 同步阻塞IO就是传统的IO，或者叫BIO，简化的来理解就是所有的操作都在一个线程中完成 - 非阻塞IO在Java中的实现是NIO，使用selector,channel和Buffer来实现，底层其实使用的是操作系统中的epoll实现的 - 异步IO叫做NIO2或者AIO，是异步非阻塞的，基于事件和回调机制来实现  NIO 你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？
+# NIO - 使用缓冲区和通道的概念来实现处理数据 - NIO中通道是双向的 - 缓冲区可以分片 # 实现 - 客户端将流写到缓冲区 - 使用channel将数据从buffer转移 # NIO和AIO,BIO的区别 - AIO是异步非阻塞的，BIO是同步阻塞的，NIO是同步非阻塞的 - AIO也可以叫做NIO2 # Tips - JDK1.7中NIO中新增了4个异步通道  NIO2/AIO </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/menu/</guid>
+      <description> Java知识分类  基础 面向对象思想 I/O 集合 多线程/并发 异常 高级特性  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/oo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/oo/</guid>
+      <description> Java面向对象 怎么理解继承和聚合的概念，他们之间有什么异同
+# 继承 - 继承是子类继承父类，可以对父类的内容进行扩展和修改 # 聚合 - 聚合是模块和模块之间的关系，是可以分离的，有自己的生命周期  结合OO设计理念，谈谈访问修饰符public，default，protected和private在应用中设计的作用
+    同类 同包 子类 非同包类     public Y Y Y Y   protected Y Y Y X   default Y Y X X   private Y X X X    Java抽象类和接口的异同，说说为什么Java这么设计
+    接口 抽象类     变量     方法 全是抽象方法 可以不全是抽象方法     设计原因  避免了多继承 接口和继承存在的意义不同   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/classload/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/classload/</guid>
+      <description> 类加载 类加载的步骤是什么
+加载--&amp;gt;验证--&amp;gt;准备--&amp;gt;解析--&amp;gt;初始化--&amp;gt;使用--&amp;gt;卸载  Class.forName()和classloader的区别
+- Class.forName()将class文件加载到虚拟机中到初始化的工作 - classloader只是将class文件加载到jvm中  说说你了解的类加载器，以及他们工作的原理
+# 类加载器 - 启动类加载器(Bootstrap ClassLoader) - 扩展类加载器(ExtClassLoader) - 应用类家再起(AppClassLoader) # 原理  可以打破双亲委派吗？是怎么打破的？
+# 可以打破双亲委派双亲委派 - SPI就是打破双亲委派 # 怎么打破  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/concurrent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/concurrent/</guid>
+      <description> 高并发 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/gc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/gc/</guid>
+      <description>垃圾回收(GC) 说说你知道的GC算法和对应的原理是什么？都有缺点
+   算法 原理 缺点     标记-清除 先对对象进行标记然后回收 内存碎片太多   标记-复制-清除 将存活的对象复制到一块空内存上，然后清除原来的内存 空间浪费   标记-压缩-清除 将存活的对象移动到一个地方，然后指针之后的全部删除    分代收集 对对象进行分代然后不同的代使用不同的回收算法     JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代
+# 流程 1.触发GC - 内存不够使用 - 主动触发GC，System.gc() 2.标记 - 找出所有对象的 3.复制 | 压缩 - 复制算法就是将存活的对象复制到一个空的内存块 - 压缩(整理)算法计算出存活对象的新地址然后移动对象的地方 3.清理 - 将之前标记的dead的对象回收了 # 如何晋升老年代 - 大对象直接进入老年代 - 几次Minor GC还存活的对象  说说你对Minor GC和Full GC的理解
+Minor GC
+ 定义：新生代(包括Eden和Survivor)垃圾搜集叫做 Minor GC 触发条件：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/jmm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/jmm/</guid>
+      <description>Java虚拟机内存模型 内存模型和分代 简单说说JVM中内存的分配情况吧
+Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的行号指示器) - 虚拟机栈(局部变量，方法信息) - 本地方法栈(JNI方法) # 线程共有 - 堆内存(对象存放的地方) - 方法区(已被虚拟机加载的类信息，常量，静态变量) -- 运行时常量池(方法区的一部分) # 特别 - 直接内存(非JVM内存规范中的一部分)  OOM和排查 什么时候会发生内存溢出(OOM)？
+# 程序计数器 - 不会发生OOM错误 # 虚拟机栈 &amp;amp; 本地方法栈 - 虚拟机扩展栈的时候无法获取到足够的空间就会抛出OOM的错误 # 堆内存 - 对象数量达到堆内存的最大值的时候出现OOM错误 # 方法区 &amp;amp; 运行时常量池 - 产生大量的类信息大于了方法区的最大值  Java内存为什么分成新生代，老年代，持久代？是怎么划分的呢？怎么回收的呢？新生代中为什么要分为Eden和Survivor
+# 为什么分代 - 为了优化GC性能(Java中每个对象的生命周期不一样，所以不同对象要分类以便更好的回收) # 怎么划分 - 新生代(Young Generation) - 分成三个部分：Eden，From Survivor ，To Survivor，比例是8:1:1 - 保持一个Survivor为空 - 年老代(Tenured Generation) - 多次GC都没有被GC的会进入年老带 - 新生代没有空间了会直接进入年老代 - 永久代(Permanent Generation) - 对应运行时内存的“方法区”，一般不会被GC，JVM退出才销毁 # 怎么回收 - 新生代 - 因为生命周期很短，GC吞吐量很高，适合使用复制算法来GC，这样保证来复制的数据量最小 - 年老代 - 因为对象的存活时间很长，所以要移动大量的对象，效率很低，所以年老代适合使用标记-清除算法 # 为什么分为Eden和Survivor  你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/menu/</guid>
+      <description> JVM知识分类  Java内存模型 类加载 对象解析 垃圾回收(GC) JVM参数 高并发 实例  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/object/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/object/</guid>
+      <description> 对象解析 说说你对Java对象组成的理解
+- Java对象内部由三个部分组成:对象头，实例数据，对齐填充字节 # 对象头 - 对象头包括如下部分: -- MarkWord:记录了对象的锁，GC等等的信息 -- 指向类的指针 -- 数组的长度(数组对象才有) # 实例数据 - 实例数据就是我们在代码中看到的属性和值 # 填充字节 - 对齐填充字节:因为JVM中对象的是8bit的整数倍，所有要有相关的字节来填充  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/params/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/params/</guid>
+      <description>Jvm参数 说说你知道的JVM参数</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/tools/</guid>
+      <description> 实例 如何Java内存泄漏的问题进行调查和定位
+ 使用jps -l 查询所有的JVM进程 使用jstat &amp;lt;对应进程id&amp;gt;监控当前进程的情况 使用jmap来看内存分布快照 把内存堆dump下来然后使用MAT来分析内存  __
+# 1. # 2.使用jstat 使用jmap和jstack  </description>
     </item>
     
     <item>

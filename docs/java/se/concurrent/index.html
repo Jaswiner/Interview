@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Concurrent
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/interview/book.min.a3caa905766cf610e263c876d2f2d8477f59d64606267bcaeee26e73160f9285.css">
+
+
+<link rel="icon" href="/interview/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://jaswine.com/interview/">面试题</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2finterview\2f docs\2fjava\2fse\2f concurrent\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><em>计算机基础</em></strong>
+
+<ul>
+<li><a href="#">计算机组成</a></li>
+<li><a href="/interview/docs/base/os/">操作系统</a></li>
+<li><a href="/interview/docs/base/net/">计算机网络</a></li>
+<li><a href="#">编译原理</a></li>
+<li><a href="/interview/docs/base/algo/">数据结构和算法</a></li>
+</ul></li>
+<li><strong><em>Java系</em></strong>
+
+<ul>
+<li><a href="/interview/docs/java/se/menu/">JavaSE</a></li>
+<li><a href="/interview/docs/java/jwb/">JavaEE</a></li>
+<li><a href="/interview/docs/java/vm/menu/">JVM</a></li>
+<li><a href="/interview/docs/java/mybatis/">MyBtais</a></li>
+<li><a href="/interview/docs/java/netty/">Netty</a></li>
+</ul></li>
+
+<li><p><strong><em>JavaScript系</em></strong></p></li>
+
+<li><p><strong><em>Python系</em></strong></p></li>
+
+<li><p><strong><em>SpringFrame系</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/spring/spring/">SpringFrame</a></li>
+<li><a href="/interview/docs/spring/springboot/">SpringBoot</a></li>
+<li><a href="/interview/docs/spring/springcloud/">SpringCloud</a></li>
+</ul></li>
+
+<li><p><strong><em>应用服务器</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/server/nginx/">Nginx</a></li>
+<li><a href="/interview/docs/server/tomcat/">Tomcat</a></li>
+</ul></li>
+
+<li><p><strong><em>数据存储中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/data/sql/">SQL</a></li>
+<li><a href="/interview/docs/data/mysql/">MySQL</a></li>
+<li><a href="/interview/docs/data/ShardingSphere/">ShardingSphere</a></li>
+<li><a href="/interview/docs/data/mycat/">Mycat</a></li>
+<li><a href="/interview/docs/data/redis/">Redis</a></li>
+</ul></li>
+
+<li><p><strong><em>消息队列及其中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/message/base/">消息队列基础</a></li>
+<li><a href="/interview/docs/message/rabbit/">RabbitMQ</a></li>
+<li><a href="/interview/docs/message/kafka/">Kafka</a></li>
+<li><a href="/interview/docs/message/pulsar/">Pulsar</a></li>
+</ul></li>
+
+<li><p><strong><em>搜索引擎中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/search/solr/">Solr</a></li>
+<li><a href="/interview/docs/search/elasticsearch/">Elasticsearch</a></li>
+</ul></li>
+
+<li><p><strong><em>架构&amp;中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/arch/arch/">架构设计</a></li>
+<li><a href="/interview/docs/arch/distributed/">分布式理论</a></li>
+<li><a href="/interview/docs/arch/zookeeper/">Zookeeper</a></li>
+</ul></li>
+
+<li><p><strong><em>编程思想</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/model/model/">设计模式</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/interview/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Concurrent
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="java多线程-并发编程">Java多线程/并发编程</h1>
+
+<h2 id="java多线程基础理论">Java多线程基础理论</h2>
+
+<p><font color="#008B45" size=4>什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</font></p>
+
+<pre><code># 线程安全
+- 一个方法或者实例在多线程环境下使用不会出现问题，这个问题本质上就是共有数据在被并发修改的产生脏写的问题
+</code></pre>
+
+<ul>
+<li><p><strong>不安全的根源</strong></p>
+
+<ul>
+<li>线程并发原子性</li>
+<li>线程并发可见性</li>
+<li>线程并发有序性</li>
+</ul></li>
+
+<li><p><strong>Java的解决办法</strong></p>
+
+<ul>
+<li>Java使用JMM保证了多线程并发的情况下线程之间的有序性和可见性</li>
+<li>使用锁来解决原子性问题</li>
+</ul></li>
+</ul>
+
+<p><font color="#008B45" size=4>说说死锁</font></p>
+
+<pre><code># 死锁发生的条件
+- 互斥，共享资源x、y只能被一个线程占有
+- 占有等待，线程T1占有资源x还在等待资源y
+- 不可抢占，其他线程不能抢占T1的资源
+- 循环等待，T1和T2互相等待对方释放资源
+
+# 解决死锁
+- 一次申请所有锁资源，申请不到就不占有
+- 如果申请不到锁资源，主动释放自己身上的锁资源
+- 
+</code></pre>
+
+<p><font color="#008B45" size=4>画一下线程生命周期和状态转换图</font></p>
+
+<p><img src="https://cdn.jaswine.com/interview/java/thread.jpg" alt="" /></p>
+
+<p><font color="#008B45" size=4>一个线程两次调用start()方法会怎么样</font></p>
+
+<ul>
+<li>会抛出IllegalThreadStateException错误</li>
+</ul>
+
+<p><font color="#008B45" size=4>你知道停止一个线程有哪些方法，他们之间都有什么区别</font></p>
+
+<pre><code># 方法
+- Thread.stop()
+- Thread.interrupt()
+- run方法结束(正常停止线程)
+
+# 区别
+- stop()在JDK中已经被遗弃，执行stop方法后会立即终止线程，释放当前线程持有锁资源，破坏了对象的一致性
+- interrupt()执行后不会立马终止线程，会设置一个中断标记位
+</code></pre>
+
+<p><font color="#008B45" size=4>sleep()和wait()的区别</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">wait</th>
+<th align="left">sleep</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Object的方法</td>
+<td align="left">Thread的方法</td>
+</tr>
+
+<tr>
+<td align="left">执行的时候释放锁</td>
+<td align="left">执行的时候不释放锁</td>
+</tr>
+
+<tr>
+<td align="left">只能在同步方法和同步块中使用</td>
+<td align="left">可以在任何地方使用</td>
+</tr>
+
+<tr>
+<td align="left">无需捕捉异常</td>
+<td align="left">需要捕捉异常</td>
+</tr>
+</tbody>
+</table>
+
+<p><font color="#008B45" size=4>讲讲Java同步机制的wait和notify</font></p>
+
+<pre><code>- wait和notify配合synchronized使用实现线程间的同步
+- 简单的来说就是管程(或者说是监视器)
+</code></pre>
+
+<p><font color="#008B45" size=4>ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</font></p>
+
+<pre><code># 用途
+- 
+
+# 原理
+
+# 注意事项
+- initialValue()是为了让子类重写的，默认是null。如果get()后又remove()则可能调用一下此方法
+- remove()
+</code></pre>
+
+<h2 id="java并发方案">Java并发方案</h2>
+
+<h3 id="jvm级别">JVM级别</h3>
+
+<p><font color="#008B45" size=4>volatile的原理，作用，能代替锁吗？</font></p>
+
+<pre><code># 作用
+- 可以保证多线程情况下的有序性和可见性，不能保证原子性
+    -- 有序性是通过禁止指令重排完成的
+    -- 可见性是happen-before完成的
+- 相当于轻量级的synchronized
+- 使用volatile修饰的变量单次读写可以保持原子性，但是不能多次不能
+
+# 原理
+- volatile变量被修改的时候，必须强制刷新到主存中(保证线程之间的可见性)
+- JMM会对volatile变量限制重排序,是基于JMM的happen-before实现的(保证有序性)
+- JVM底层是采用内存屏障来实现的happen-before的
+
+# 结论：不能代替锁
+- 只保证了可见性，没有保证原子性(多线程i++会出错)
+</code></pre>
+
+<p><font color="#008B45" size=4>JDK1.6对synchronized进行了怎么的优化</font></p>
+
+<pre><code>- 引入四种锁状态(无锁，偏向锁，轻量级锁，重量级锁)，向上膨胀
+</code></pre>
+
+<p><font color="#008B45" size=4>synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</font></p>
+
+<pre><code># 使用
+- 修饰实例方法，作用于当前实例加锁，进入同步代码前要获得当前实例的锁
+- 修饰静态方法，作用于当前类对象加锁，进入同步代码前要获得当前类对象的锁
+- 修饰代码块，指定加锁对象，对给定对象加锁，进入同步代码库前要获得给定对象的锁
+
+# 原理
+- 在同步代码块中：在代码块开始的时候使用monitorenter来获得monitor对象锁，在代码块结束的时候使用monitorexit指令来释放monitor对象锁。
+- 在同步方法中：在字节码层面，没有特别的指令来实现被synchronized修饰的方法，而是在class文件中对该方法的access_flag字段中的synchronized标志位置1，表示该方法是同步方法，并使用调用该方法的对象或者该方法所在的class在JVM的内部对象表示class作为锁对象
+</code></pre>
+
+<h3 id="锁">锁</h3>
+
+<p><font color="#008B45" size=4>说说ReentrantLock和synchronized的异同吧</font></p>
+
+<pre><code># 同
+- 都是协调多线程对象共享对象和变量的访问(同步锁)
+- 可重入，同一线程可以多次获得同一个锁
+- 保证了可见性和互斥性
+
+# 异
+- ReentrantLock是显式的获得、释放锁，synchronized是隐式的
+- ReentrantLock可响应中断、可轮回，synchronized是不可以响应中断的，为处理锁的不可用性提供了更高的灵活性
+- ReentrantLock是API级别的，synchronized是JVM级别的
+- ReentrantLock可以实现公平锁
+- ReentrantLock通过Condition可以绑定多个条件
+- 底层实现不一样， synchronized是同步阻塞，使用的是悲观并发策略，lock是同步非阻塞，采用的是乐观并发策略
+</code></pre>
+
+<p><font color="#008B45" size=4>Lock和synchronized的区别</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">类别</th>
+<th align="left">Lock</th>
+<th align="left">synchronized</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">存在层次</td>
+<td align="left">API级别,程序员调用</td>
+<td align="left">JVM级别</td>
+</tr>
+
+<tr>
+<td align="left">锁的释放</td>
+<td align="left">手动释放</td>
+<td align="left">jvm自动释放</td>
+</tr>
+
+<tr>
+<td align="left">锁的获取</td>
+<td align="left">假设A线程获得锁，B线程等待。如果A线程阻塞，B线程会一直等待</td>
+<td align="left">分情况而定，Lock有多个锁获取的方式，大致就是可以尝试获得锁，线程可以不用一直等待</td>
+</tr>
+
+<tr>
+<td align="left">锁状态</td>
+<td align="left">可以判断</td>
+<td align="left">无法判断</td>
+</tr>
+
+<tr>
+<td align="left">锁类型</td>
+<td align="left">可重入、不可中断、非公平</td>
+<td align="left">可重入、可判断、可(非)公平</td>
+</tr>
+
+<tr>
+<td align="left">性能</td>
+<td align="left">大量同步</td>
+<td align="left">少量同步</td>
+</tr>
+</tbody>
+</table>
+
+<p><font color="#008B45" size=4>说说你对锁的相关名词的理解</font></p>
+
+<pre><code># 自旋锁
+- 当线程A占用锁，线程B拿不到锁的时候就被挂起(阻塞)，自旋锁是线程B不放弃CPU的时间片，在原地一直尝试获取锁
+
+# 无锁 / 偏向锁 / 轻量级锁 / 重量级锁
+- 这是锁的四种状态，在对象头中使用字段来标记
+- 四种状态随着竞争的情况升级，不可降级
+- 这四种状态都不是Java语言中的锁，而是JVM为了提高锁的获取效率而做的优化
+
+-- 无锁--&gt;对象没有被锁定
+-- 偏向锁--&gt;一段同步代码被线程所访问，那么线程自动获取锁
+-- 轻量级锁--&gt;当锁是偏向锁的时候，被另一个线程访问，偏向锁会升级为轻量级锁，其他线程通过自旋的方式尝试获取锁，不会阻塞，提高性能
+-- 重量级锁--&gt;当一个锁是轻量级锁的时候，另外一个线程通过自旋的方式到一定次数的时候还没有获得锁就会进入到阻塞的，这个轻量级锁就会膨胀为重量级锁，其他线程拿不到锁就会进入阻塞
+
+# 分段锁
+- 
+
+# 共享锁 / 独享锁
+- 共享锁--&gt;锁被多个线程共有
+- 独享锁--&gt;锁只可以同时被一个线程占用
+
+# 可重入锁 / 不可重入锁
+- 可重入锁--&gt;可重复可递归调用的锁，外层使用了内层还可以使用
+- 不可重入锁--&gt;不可重复递归调用，重复使用就会发生死锁
+
+# 公平锁 / 非公平锁
+- 公平锁--&gt;多个线程按照申请锁的顺序来获得锁
+- 非公平锁--&gt;多个线程不是按照申请锁的顺序来获得锁，可能会饥饿现象
+
+# 悲观锁 / 乐观锁
+- 悲观锁--&gt;认为每次去拿数据的时候数据都会被别人修改
+- 乐观锁--&gt;在拿数据的时候乐观的认为没有人去修改，但是在修改数据的时候会去验证一下数据有没有被修改
+---使用版本号机制或者CAS算法实现
+</code></pre>
+
+<p><font color="#008B45" size=4>说说降低锁竞争的方法</font></p>
+
+<pre><code>- 减少锁持有时间
+- 降低锁的请求频率
+- 使用带有协调机制的独占锁
+</code></pre>
+
+<p><font color="#008B45" size=4>有哪些无锁的数据结构，他们的实现原理是什么？</font></p>
+
+<p><font color="#008B45" size=4>cas机制是什么？怎么解决ABA问题</font></p>
+
+<pre><code># 机制
+cas(compare ans swap)
+- 三个操作数(内存位置V，预期原值A，新值B)
+- 如果内存位置和预期原值匹配，将B更新到A上
+- 如果不匹配，获取当前V和A，然后再去尝试修改
+- 使用了CPU的cmpxchg指令实现，这个指令是原子性的
+
+# ABA问题
+- 使用版本号来解决
+
+# Tips：
+- J.U.C中原子类都是使用cas实现的
+</code></pre>
+
+<p><font color="#008B45" size=4>用过读写锁吗？原理是什么，一般在什么场景下使用</font></p>
+
+<pre><code># 原理
+
+
+# 使用场景
+- 读多写少
+</code></pre>
+
+<h3 id="线程池">线程池</h3>
+
+<p><font color="#008B45" size=4>说说Java中常用的线程池模式以及不同线程池的使用场景</font></p>
+
+<pre><code>
+</code></pre>
+
+<p><font color="#008B45" size=4>线程池关闭的方式有哪些？各自的区别是什么？</font></p>
+
+<pre><code># 方式
+- shutdown()
+- shutdownNow()
+
+# 区别
+- 
+</code></pre>
+
+<h2 id="案例">案例</h2>
+
+<p><font color="#008B45" size=4>现在有一个第三方接口，有很多线程去调用它获得数据，如何实现每秒钟最多有10个线程同时调用它</font></p>
+
+<p><font color="#008B45" size=4>用三个线程按顺序打印abc，怎么做到</font></p>
+
+<pre><code>- 使用wait，notify
+- 
+</code></pre>
+
+<p><font color="#008B45" size=4>现在让你实现一个并发安全的链表，你怎么实现</font></p>
+
+<p><font color="#008B45" size=4>多线程如果线程挂住了怎么办</font></p>
+
+<p><font color="#008B45" size=4>countdownlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别</font></p>
+
+<p><font color="#008B45" size=4>AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占锁和公平锁加锁有什么不同</font></p>
+
+<p><font color="#008B45" size=4>简述ConcurrentLinkQueue和LinkedBlockingQueue的用处和不同之处</font></p>
+
+<p><font color="#008B45" size=4>导致线程死锁的原因，怎么解除线程死锁</font></p>
+
+<p><font color="#008B45" size=4>多线程(可能不在一台机器上)相互之间要相互等待协调完成某种工作，请问怎么设计</font></p>
+
+<p><font color="#008B45" size=4>什么是多线程环境下的伪共享(false sharing)？</font></p>
+
+<p><font color="#008B45" size=4>说说你对线程局部变量的理解</font></p>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#java多线程-并发编程">Java多线程/并发编程</a>
+<ul>
+<li><a href="#java多线程基础理论">Java多线程基础理论</a></li>
+<li><a href="#java并发方案">Java并发方案</a>
+<ul>
+<li><a href="#jvm级别">JVM级别</a></li>
+<li><a href="#锁">锁</a></li>
+<li><a href="#线程池">线程池</a></li>
+</ul></li>
+<li><a href="#案例">案例</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140325593-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

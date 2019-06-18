@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Base
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/interview/book.min.a3caa905766cf610e263c876d2f2d8477f59d64606267bcaeee26e73160f9285.css">
+
+
+<link rel="icon" href="/interview/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://jaswine.com/interview/">面试题</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2finterview\2f docs\2fjava\2fse\2f base\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><em>计算机基础</em></strong>
+
+<ul>
+<li><a href="#">计算机组成</a></li>
+<li><a href="/interview/docs/base/os/">操作系统</a></li>
+<li><a href="/interview/docs/base/net/">计算机网络</a></li>
+<li><a href="#">编译原理</a></li>
+<li><a href="/interview/docs/base/algo/">数据结构和算法</a></li>
+</ul></li>
+<li><strong><em>Java系</em></strong>
+
+<ul>
+<li><a href="/interview/docs/java/se/menu/">JavaSE</a></li>
+<li><a href="/interview/docs/java/jwb/">JavaEE</a></li>
+<li><a href="/interview/docs/java/vm/menu/">JVM</a></li>
+<li><a href="/interview/docs/java/mybatis/">MyBtais</a></li>
+<li><a href="/interview/docs/java/netty/">Netty</a></li>
+</ul></li>
+
+<li><p><strong><em>JavaScript系</em></strong></p></li>
+
+<li><p><strong><em>Python系</em></strong></p></li>
+
+<li><p><strong><em>SpringFrame系</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/spring/spring/">SpringFrame</a></li>
+<li><a href="/interview/docs/spring/springboot/">SpringBoot</a></li>
+<li><a href="/interview/docs/spring/springcloud/">SpringCloud</a></li>
+</ul></li>
+
+<li><p><strong><em>应用服务器</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/server/nginx/">Nginx</a></li>
+<li><a href="/interview/docs/server/tomcat/">Tomcat</a></li>
+</ul></li>
+
+<li><p><strong><em>数据存储中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/data/sql/">SQL</a></li>
+<li><a href="/interview/docs/data/mysql/">MySQL</a></li>
+<li><a href="/interview/docs/data/ShardingSphere/">ShardingSphere</a></li>
+<li><a href="/interview/docs/data/mycat/">Mycat</a></li>
+<li><a href="/interview/docs/data/redis/">Redis</a></li>
+</ul></li>
+
+<li><p><strong><em>消息队列及其中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/message/base/">消息队列基础</a></li>
+<li><a href="/interview/docs/message/rabbit/">RabbitMQ</a></li>
+<li><a href="/interview/docs/message/kafka/">Kafka</a></li>
+<li><a href="/interview/docs/message/pulsar/">Pulsar</a></li>
+</ul></li>
+
+<li><p><strong><em>搜索引擎中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/search/solr/">Solr</a></li>
+<li><a href="/interview/docs/search/elasticsearch/">Elasticsearch</a></li>
+</ul></li>
+
+<li><p><strong><em>架构&amp;中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/arch/arch/">架构设计</a></li>
+<li><a href="/interview/docs/arch/distributed/">分布式理论</a></li>
+<li><a href="/interview/docs/arch/zookeeper/">Zookeeper</a></li>
+</ul></li>
+
+<li><p><strong><em>编程思想</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/model/model/">设计模式</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/interview/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Base
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="java基础知识">Java基础知识</h1>
+
+<h2 id="java版本特性">Java版本特性</h2>
+
+<p><font color="#008B45" size=4>说说每个版本Java的新特性</font></p>
+
+<pre><code># 1.5
+- 自动装箱和拆箱
+- 新增枚举类型
+- 新增注解类型
+- 泛型的支持
+- 静态导入的支持
+- For-Each循环支持
+- 可变参数
+
+# 1.6
+- 轻量级HTTP SERVER API
+
+# 1.7
+- Java集合的增强，可以直接使用[]，{}来存入对象
+- Switch中可以使用String(以前只可以使用基本类型变量)
+
+# 1.8
+- 接口方法中可以默认实现(使用default关键字)
+- Lambda表达式的支持
+- 函数式的接口(使用@Functionallnterface)
+- 使用::关键字来传递方法或者构造函数引用
+- 多重注解
+- 集合类的增强
+- Stream流式计算
+</code></pre>
+
+<p><font color="#008B45" size=4>Java中try&hellip;catch&hellip;finally&hellip;return执行的先后顺序</font></p>
+
+<pre><code>- 先执行try中的代码，遇到try中的return执行但是不返回到main方法中
+</code></pre>
+
+<h2 id="java关键字">Java关键字</h2>
+
+<p><font color="#008B45" size=4>final有什么用途？</font></p>
+
+<pre><code>- final表示不变，可以修饰变量，方法和类
+-- 修饰变量的时候这个变量一旦被初始化完成就不会被改变
+-- 修饰方法说明在这个方法不能被修改
+-- 修饰类说明这个类不能被继承
+
+- final一般也是一种多线程的设计模式，因为对象不变就不存在多线程并发安全的问题了
+</code></pre>
+
+<p><font color="#008B45" size=4>static关键字这么用</font></p>
+
+<pre><code>- static修饰方法：不需要依靠实例对象来访问
+- static修饰变量：类对象，在类加载的时候就有了
+- static修饰代码块：在类加载的时候就初始化，只初始化一次
+- static修饰内部类：就是一个内部类
+- static静态导包
+</code></pre>
+
+<h2 id="逻辑运算">逻辑运算</h2>
+
+<p><font color="#008B45" size=4>a=a+b和a+=b之间的区别是什么？</font></p>
+
+<pre><code>有：
+- 不同类型在运算的时候 a=a+b这个表达式会抛异常
+- a+=b的效率更加高，但是JVM也会将a=a+b变成a+=b这种方式
+</code></pre>
+
+<p><font color="#008B45" size=4>说说Java中的位运算和逻辑运算的区别，位运行在Java中的应用</font></p>
+
+<pre><code># 位运算和逻辑运算区别
+
+- 位运算有  位与(&amp;)、位或(|)、位非(~)、位异或(^)、左移(&lt;&lt;)、右移(&gt;&gt;)、无符号右移)(&gt;&gt;&gt;)
+- 逻辑运算有  逻辑与(&amp;&amp;)、逻辑或(||)
+
+- 位运算是直接对二进制进行操作
+- 逻辑运算存在短路现象， A &amp;&amp; B（A为false则直接false），A || B（A为true则为true）
+
+# 位运算的应用
+- 在Java很多源码中都有使用
+</code></pre>
+
+<h2 id="object类">Object类</h2>
+
+<p><font color="#008B45" size=4>说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</font></p>
+
+<ul>
+<li><strong>🔗链接:</strong><a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.3.2">JavaSE 8 #Object</a></li>
+</ul>
+
+<pre><code>- equals是基于值比较而不是引用(==是比较引用地址)
+- hashCode()主要为HashMap，HashSet这些集合服务
+</code></pre>
+
+<p><font color="#008B45" size=4>深拷贝和浅拷贝的区别</font></p>
+
+<pre><code>- 对于基本类型来说，浅拷贝和深拷贝一样，都是对值进行拷贝
+
+- 对于引用类型来说:
+-- 浅拷贝:只是复制了对应的引用，对象没有被拷贝，并且这个对象的其他引用还在
+-- 深拷贝:不只复制了对象的引用，对象本身也被复制了
+</code></pre>
+
+<h2 id="string系">String系</h2>
+
+<p><font color="#008B45" size=4>String,StringBuffer和StringBuilder之间的区别，StringBuffer是怎么实现线程安全的</font></p>
+
+<ul>
+<li><strong>🔗链接:</strong><a href="https://blog.jaswine.com/2019/03/14/java6/#more">源码分析-Java中的String，StringBuilder和StringBuffer</a></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">类名</th>
+<th align="left">底层数据结构</th>
+<th align="left">是否线程安全</th>
+<th align="left">父类</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">String</td>
+<td align="left">char[]</td>
+<td align="left">是(因为是final类)</td>
+<td align="left">/</td>
+</tr>
+
+<tr>
+<td align="left">StringBuffer</td>
+<td align="left">char[]</td>
+<td align="left">是</td>
+<td align="left">AbstractStringBuilder</td>
+</tr>
+
+<tr>
+<td align="left">StringBuilder</td>
+<td align="left">char[]</td>
+<td align="left">否</td>
+<td align="left">AbstractStringBuilder</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Tips：</strong>
+
+<ul>
+<li>Java9开始String、StringBuilder和StringBuffer的底层改成byte[](//todo 为什么)</li>
+</ul></li>
+</ul>
+
+<p><font color="#008B45" size=4>String中UTF-8编码和GBK编码有什么区别</font></p>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#java基础知识">Java基础知识</a>
+<ul>
+<li><a href="#java版本特性">Java版本特性</a></li>
+<li><a href="#java关键字">Java关键字</a></li>
+<li><a href="#逻辑运算">逻辑运算</a></li>
+<li><a href="#object类">Object类</a></li>
+<li><a href="#string系">String系</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140325593-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

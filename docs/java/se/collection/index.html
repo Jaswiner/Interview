@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Collection
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/interview/book.min.a3caa905766cf610e263c876d2f2d8477f59d64606267bcaeee26e73160f9285.css">
+
+
+<link rel="icon" href="/interview/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://jaswine.com/interview/">面试题</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2finterview\2f docs\2fjava\2fse\2f collection\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><em>计算机基础</em></strong>
+
+<ul>
+<li><a href="#">计算机组成</a></li>
+<li><a href="/interview/docs/base/os/">操作系统</a></li>
+<li><a href="/interview/docs/base/net/">计算机网络</a></li>
+<li><a href="#">编译原理</a></li>
+<li><a href="/interview/docs/base/algo/">数据结构和算法</a></li>
+</ul></li>
+<li><strong><em>Java系</em></strong>
+
+<ul>
+<li><a href="/interview/docs/java/se/menu/">JavaSE</a></li>
+<li><a href="/interview/docs/java/jwb/">JavaEE</a></li>
+<li><a href="/interview/docs/java/vm/menu/">JVM</a></li>
+<li><a href="/interview/docs/java/mybatis/">MyBtais</a></li>
+<li><a href="/interview/docs/java/netty/">Netty</a></li>
+</ul></li>
+
+<li><p><strong><em>JavaScript系</em></strong></p></li>
+
+<li><p><strong><em>Python系</em></strong></p></li>
+
+<li><p><strong><em>SpringFrame系</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/spring/spring/">SpringFrame</a></li>
+<li><a href="/interview/docs/spring/springboot/">SpringBoot</a></li>
+<li><a href="/interview/docs/spring/springcloud/">SpringCloud</a></li>
+</ul></li>
+
+<li><p><strong><em>应用服务器</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/server/nginx/">Nginx</a></li>
+<li><a href="/interview/docs/server/tomcat/">Tomcat</a></li>
+</ul></li>
+
+<li><p><strong><em>数据存储中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/data/sql/">SQL</a></li>
+<li><a href="/interview/docs/data/mysql/">MySQL</a></li>
+<li><a href="/interview/docs/data/ShardingSphere/">ShardingSphere</a></li>
+<li><a href="/interview/docs/data/mycat/">Mycat</a></li>
+<li><a href="/interview/docs/data/redis/">Redis</a></li>
+</ul></li>
+
+<li><p><strong><em>消息队列及其中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/message/base/">消息队列基础</a></li>
+<li><a href="/interview/docs/message/rabbit/">RabbitMQ</a></li>
+<li><a href="/interview/docs/message/kafka/">Kafka</a></li>
+<li><a href="/interview/docs/message/pulsar/">Pulsar</a></li>
+</ul></li>
+
+<li><p><strong><em>搜索引擎中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/search/solr/">Solr</a></li>
+<li><a href="/interview/docs/search/elasticsearch/">Elasticsearch</a></li>
+</ul></li>
+
+<li><p><strong><em>架构&amp;中间件</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/arch/arch/">架构设计</a></li>
+<li><a href="/interview/docs/arch/distributed/">分布式理论</a></li>
+<li><a href="/interview/docs/arch/zookeeper/">Zookeeper</a></li>
+</ul></li>
+
+<li><p><strong><em>编程思想</em></strong></p>
+
+<ul>
+<li><a href="/interview/docs/model/model/">设计模式</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/interview/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Collection
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="java集合">Java集合</h1>
+
+<h2 id="list系">List系</h2>
+
+<p><font color="#008B45" size=4>ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</font></p>
+
+<ul>
+<li><strong>🔗链接</strong><a href="#">ArrayList为什么线程不安全及解决办法</a></li>
+<li><strong>🔗连接</strong><a href="#">LinkedList为什么线程不安全及解决办法</a></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">数据结构</th>
+<th align="left">是否线程安全</th>
+<th align="left">原理</th>
+<th align="left">线程安全方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">ArrayList</td>
+<td align="left">Object数组</td>
+<td align="left">不安全</td>
+<td align="left">/</td>
+<td align="left">1.使用Collections.synchronizedList(List)包装<br>2.使用CopyOnWriteArrayList</td>
+</tr>
+
+<tr>
+<td align="left">LinkedList</td>
+<td align="left">双向链表</td>
+<td align="left">不安全</td>
+<td align="left">/</td>
+<td align="left">1.使用Collections.synchronizedList(List)包装<br></td>
+</tr>
+
+<tr>
+<td align="left">Vector</td>
+<td align="left">Object数组</td>
+<td align="left">安全</td>
+<td align="left">(同步方法)synchronized</td>
+<td align="left">/</td>
+</tr>
+</tbody>
+</table>
+
+<p><font color="#008B45" size=4>ArrayList是如何实现动态扩容的</font></p>
+
+<ul>
+<li><strong>🔗链接</strong><a href="https://blog.jaswine.com/2019/01/24/java18/">源码分析-Java中ArrayList是如何实现数组动态扩容的</a>
+```</li>
+<li>ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容</li>
+<li>Java底层的数组扩容就是通过数组拷贝完成的
+```</li>
+</ul>
+
+<h2 id="map系">Map系</h2>
+
+<p><font color="#008B45" size=4>Map接口的实现类，简单的说说他们</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">类</th>
+<th align="left">底层数据结构</th>
+<th align="left">特点</th>
+<th align="left">是否线程安全</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">HashMap</td>
+<td align="left">数组+链表/红黑树</td>
+<td align="left">可以使用null作为Key和Value</td>
+<td align="left">不安全</td>
+</tr>
+
+<tr>
+<td align="left">Hashtable</td>
+<td align="left">数组+链表/红黑树</td>
+<td align="left">非null的key和value</td>
+<td align="left">安全</td>
+</tr>
+
+<tr>
+<td align="left">LinkedHashMap</td>
+<td align="left">继承HashMap，多维护一个双向链表</td>
+<td align="left">同HashMap，有序的</td>
+<td align="left">不安全</td>
+</tr>
+
+<tr>
+<td align="left">TreeMap</td>
+<td align="left">红黑树</td>
+<td align="left">有序</td>
+<td align="left">不安全</td>
+</tr>
+
+<tr>
+<td align="left">Properties</td>
+<td align="left">继承hashtable</td>
+<td align="left"></td>
+<td align="left">安全</td>
+</tr>
+</tbody>
+</table>
+
+<p><font color="#008B45" size=4>Map接口实现类之间的区别</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">类名</th>
+<th align="left">是否有序</th>
+<th align="left">key为null</th>
+<th align="left">value为null</th>
+<th align="left">线程安全</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">HashMap</td>
+<td align="left">N</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+
+<tr>
+<td align="left">LinkedHashMap</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">TreeMap</td>
+<td align="left">Y</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">Hashtable</td>
+<td align="left">N</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<p><font color="#008B45" size=4>有没有有顺序的Map实现类，如果有，他们是怎么保证有序的</font></p>
+
+<pre><code># 有序Map实现类
+- 实现了SortedMap接口的都是有序Map，比如LinkedHashMap，TreeMap
+
+# 保证有序
+- LinkedHashMap基于元素进入集合的顺序排序，底层就是多维护一个双向链表
+- TreeMap基于元素的固有顺序(由Comparator或者Comparable确定)，底层是红黑树
+</code></pre>
+
+<p><font color="#008B45" size=4>HashMap和Hashtable之间有什么区别</font></p>
+
+<pre><code>- HashMap是线程不安全的，Hashtable是线程安全的
+- HashMap的k，v都可以是null，Hashtable不可以
+</code></pre>
+
+<p><font color="#008B45" size=4>HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</font></p>
+
+<ul>
+<li><strong>🔗链接:</strong> <a href="https://jaswine.com/source/java/docs/collection/map/hashmap/">Hashmap#put</a></li>
+</ul>
+
+<pre><code># 存储方式
+- Java8中使用位桶(数组)+链表/红黑树实现
+- 链表长度超过阈值(8)时转成红黑树(减少查找时间)
+
+# 底层原理与扩容
+1.作为容器，HashMap主要是实现对容器内元素的增删改查功能，这些和她的底层数据结构分不开的
+
+2.put()的时候，会先进行hash()计算
+
+3.hash()计算先进行高位计算，将hashcode无符号右移16位后和hashcode进行异或位运算(^)后，本质上保留高位，将高位和地位进行了混合
+
+4.hash()运算后生成值和数组的长度-1进行位与(&amp;)运算，然后得到在数组中的位置
+
+
+</code></pre>
+
+<p><font color="#008B45" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></p>
+
+<ul>
+<li><strong>🔗链接：</strong><a href="#">「源码」Collections.synchronizedMap()</a></li>
+<li><strong>🔗链接：</strong><a href="#">「源码」Hashtable</a></li>
+<li><strong>🔗链接：</strong><a href="#">「源码」ConcurrentHashMap</a></li>
+</ul>
+
+<pre><code># 线程安全吗
+- 线程不安全
+
+# 为什么
+- 扩容的时候破坏了数组的结构，和ArrayList的本质相同
+
+# 解决办法
+- 使用Collections.synchronizedMap(new HashMap(...))
+- 使用并发包中的ConcurrentHashMap
+- 使用Hashtable
+
+# 原理(具体参见上面的链接)
+- 第一种加锁
+- 第二种分段锁
+- 点三种枷锁
+</code></pre>
+
+<p><font color="#008B45" size=4>ConcurrentHashMap在1.7和1.8中有什么区别？</font></p>
+
+<ul>
+<li><strong>🔗链接：</strong><a href="#">「源码」ConcurrentHashMap</a></li>
+</ul>
+
+<pre><code>- 使用Synchronized+CAS+Node+Unsafe来替代Segment+HashEntry+Unsafe
+- put()初始化数组大小时1.8不用加锁(使用sizeCtl变量来标记table是不是在初始化，为-1的时候就是正在初始化)
+</code></pre>
+
+<p><font color="#008B45" size=4>poll()和remove()方法的区别？</font></p>
+
+<p><font color="#008B45" size=4>HashMap和Hashtable之间有什么不同之处</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">类目</th>
+<th align="left">HashMap</th>
+<th align="left">Hashtable</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">k是否可为null</td>
+<td align="left">是</td>
+<td align="left">否</td>
+</tr>
+
+<tr>
+<td align="left">v是否可谓null</td>
+<td align="left">是</td>
+<td align="left">否</td>
+</tr>
+
+<tr>
+<td align="left">是否线程安全</td>
+<td align="left">否</td>
+<td align="left">是</td>
+</tr>
+
+<tr>
+<td align="left">父类</td>
+<td align="left">AbstractMap</td>
+<td align="left">Dictionary</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="set系">Set系</h3>
+
+<p><font color="#008B45" size=4>HashSet内部是怎么工作的</font></p>
+
+<pre><code>- HashSet内部使用HashMap来实现的
+- HashSet是对value的进行hash计算(因为set中元素不能重复)
+</code></pre>
+
+<h3 id="queue系">queue系</h3>
+
+<p><font color="#008B45" size=4>Java中队列都有哪些，他们之间的区别是什么</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#java集合">Java集合</a>
+<ul>
+<li><a href="#list系">List系</a></li>
+<li><a href="#map系">Map系</a>
+<ul>
+<li><a href="#set系">Set系</a></li>
+<li><a href="#queue系">queue系</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140325593-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
