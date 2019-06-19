@@ -56,11 +56,6 @@
   </url>
   
   <url>
-    <loc>https://jaswine.com/interview/docs/spring/spring/</loc>
-    <lastmod>2019-04-29T09:34:10+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jaswine.com/interview/docs/arch/cache/</loc>
     <lastmod>2019-04-29T09:34:04+08:00</lastmod>
   </url>
@@ -200,6 +195,26 @@
   
   <url>
     <loc>https://jaswine.com/interview/docs/search/solr/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/spring/framework/core/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/spring/framework/data/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/spring/framework/menu/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/spring/framework/model/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/spring/framework/web/</loc>
   </url>
   
   <url>

@@ -11,7 +11,7 @@
 <title>
   
     
-    Zookeeper
+    Core
   
  | 面试题</title>
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2finterview\2f docs\2f arch\2fzookeeper\2f "] {
+  nav ul a[href$="\2finterview\2f docs\2fspring\2f framework\2f core\2f "] {
       color: #004ed0;
   }
   </style>
@@ -155,7 +155,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    Zookeeper
+    Core
   
 </strong>
 </header>
@@ -163,13 +163,115 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="zookeeper面试题">ZooKeeper面试题</h1>
+<h1 id="spring-framework核心">Spring FrameWork核心</h1>
 
-<h2 id="基础">基础</h2>
+<h2 id="spring容器基础">Spring容器基础</h2>
 
-<h3 id="如何使用zookeeper实现分布式锁-有什么区别优缺点-会有什么问题-分别适用什么场景-可以说说redlock的算法实现">如何使用zookeeper实现分布式锁？有什么区别优缺点，会有什么问题，分别适用什么场景(可以说说redlock的算法实现)</h3>
+<p><font color="#9932CC" size=4>依赖注入是什么意思？有哪些方式呢？</font></p>
 
-<h3 id="什么是paxos算法-什么是zab协议">什么是paxos算法，什么是zab协议</h3>
+<pre><code># 依赖注入
+- 完成一件事要多个配合，通常和自己没有关系
+
+# 方式
+- 构造器注入
+- set注入
+- 静态工厂
+- 实例工厂
+</code></pre>
+
+<h2 id="spring容器-bean">Spring容器&amp;Bean</h2>
+
+<p><font color="#008B45" size=4>Spring中IOC是怎么实现的，IOC容器初始化的过程是什么样子的</font></p>
+
+<pre><code># 初始化过程
+-1.Resource定位：
+-2.载入：使用BeanDefinition来解析bean定义
+-3.注册：使用BeanDefinitionRegistery来将定义好的bean注册到IOC容器中
+</code></pre>
+
+<p><font color="#008B45" size=4>Spring的加载流程是什么</font></p>
+
+<pre><code># 主要类
+Spring加载中有以下几个重要的类：
+- BeanFactory：生产Bean
+- Resource：Bean配置文件
+- BeanDefinition：Bean定义
+
+# 流程
+- 资源定位：找到配置文件
+- BeanDefinition载入和解析
+-- 找到配置文件Resource
+-- 将配置文件解析成BeanDefinition
+- BeanDefinition注册
+-- 将BeanDefinition向Map中注册Map&lt;name,BeanDefinition&gt;
+- bean的实例化和依赖注入
+-- 通过反射或者cglib来创造bean
+
+# Tips:
+- Resource本质上就是字节流
+- BeanDefinition是bean的详细信息
+</code></pre>
+
+<p><font color="#008B45" size=4>说说BeanFactory和ApplicationContext有什么区别</font></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">类目</th>
+<th align="left">BeanFactory</th>
+<th align="left">ApplicationContext</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"></td>
+<td align="left">启动时不实例化Bean</td>
+<td align="left">启动时就将Bean进行实例化</td>
+</tr>
+</tbody>
+</table>
+
+<p><em>Tips：</em>
+- ApplicationContext实现了BeanFActory，所以ApplicationContext有BeanFactory的所有功能</p>
+
+<p><font color="#008B45" size=4>说说你对Spring中Bean的理解</font></p>
+
+<p><font color="#008B45" size=4>说说你对spring中bean的生命周期的理解，spring是怎么管理bean的生命周期的</font></p>
+
+<pre><code>- 1.实例化Bean
+-- 容器通过获取BeanDefinition对象来对Bean进行实例化
+-- 实例化的对象被抱在BeanWrapper对象中，这个Wrapper提供了设置对象的的接口，避免使用反射来设置属性(因为反射很慢)
+
+- 2.设置对象属性
+-- 根据BeanDefinition信息进行依赖注入
+
+- 3.注入Aware接口
+-- Spring检测对象石佛实现了xxxAware接口，如果实现了就将对应的Aware注入给Bean
+
+- 4.BeanPostProcessor预初始化Bean
+-- postProcessBeforeInitialzation( Object bean, String beanName ) 当前正在初始化的bean对象会被传递进来，我们就可以对这个bean作任何处理。 这个函数会先于InitialzationBean执行，因此称为前置处理。 所有Aware接口的注入就是在这一步完成的。-- -- postProcessAfterInitialzation( Object bean, String beanName ) 当前正在初始化的bean对象会被传递进来，我们就可以对这个bean作任何处理。 这个函数会在InitialzationBean完成后执行，因此称为后置处理。
+
+- 5.InitialzationBean
+-- 实现了InitialzationBean接口的bean在属性设置成功后执行的初始化方法
+
+======Bean可以使用了======
+
+- 6.容器关闭
+-- 调用destroy()，让Java回收bean
+</code></pre>
+
+<h2 id="spring-aop">Spring AOP</h2>
+
+<p><font color="#008B45" size=4>Spring中AOP实现的原理是什么，实现方式是什么？</font></p>
+
+<pre><code># 原理
+- 动态代理
+
+# 实现方式
+- JDK动态代理
+- cglib动态代理
+</code></pre>
 </article>
 
       
@@ -183,13 +285,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#zookeeper面试题">ZooKeeper面试题</a>
+<li><a href="#spring-framework核心">Spring FrameWork核心</a>
 <ul>
-<li><a href="#基础">基础</a>
-<ul>
-<li><a href="#如何使用zookeeper实现分布式锁-有什么区别优缺点-会有什么问题-分别适用什么场景-可以说说redlock的算法实现">如何使用zookeeper实现分布式锁？有什么区别优缺点，会有什么问题，分别适用什么场景(可以说说redlock的算法实现)</a></li>
-<li><a href="#什么是paxos算法-什么是zab协议">什么是paxos算法，什么是zab协议</a></li>
-</ul></li>
+<li><a href="#spring容器基础">Spring容器基础</a></li>
+<li><a href="#spring容器-bean">Spring容器&amp;Bean</a></li>
+<li><a href="#spring-aop">Spring AOP</a></li>
 </ul></li>
 </ul>
 </nav>

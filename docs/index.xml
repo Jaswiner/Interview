@@ -141,21 +141,6 @@ ActiveMQ RabbitMQ </description>
     </item>
     
     <item>
-      <title>Spring</title>
-      <link>https://jaswine.com/interview/docs/spring/spring/</link>
-      <pubDate>Mon, 29 Apr 2019 09:34:10 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/spring/spring/</guid>
-      <description>Spring面试题 Spring基础 说说你对Spring体系架构的理解
-- spring是一个实现了依赖注入和控制反转的框架(DI/IOC) - spring除了核心之外，还实现了一些其他功能，如web的springmvc，data的jpa等等 - Spring是一个友好的框架，对于其他功能不强制使用Spring自己的，例如可以使用mybatis或者别的orm框架  依赖注入是什么意思？有哪些方式呢？
-# 依赖注入 - 完成一件事要多个配合，通常和自己没有关系 # 方式 - 构造器注入 - set注入 - 静态工厂 - 实例工厂  spring综合 Spring中用到了什么设计模式
-# 简单工厂(静态工厂) # 工厂方法 # 单例模式 # 适配器模式 # 包装器模式 # 代理模式 # 观察者模式 # 策略模式 # 模板模式  Spring容器 Spring中IOC是怎么实现的，IOC容器初始化的过程是什么样子的
-# 初始化过程 -1.Resource定位： -2.载入：使用BeanDefinition来解析bean定义 -3.注册：使用BeanDefinitionRegistery来将定义好的bean注册到IOC容器中  Spring的单例实现原理
-- 使用单例注册表的方式来管理bean --  Spring的加载流程是什么
-# 主要类 Spring加载中有以下几个重要的类： - BeanFactory：生产Bean - Resource：Bean配置文件 - BeanDefinition：Bean定义 # 流程 - 资源定位：找到配置文件 - BeanDefinition载入和解析 -- 找到配置文件Resource -- 将配置文件解析成BeanDefinition - BeanDefinition注册 -- 将BeanDefinition向Map中注册Map&amp;lt;name,BeanDefinition&amp;gt; - bean的实例化和依赖注入 -- 通过反射或者cglib来创造bean # Tips: - Resource本质上就是字节流 - BeanDefinition是bean的详细信息  说说BeanFactory和ApplicationContext有什么区别</description>
-    </item>
-    
-    <item>
       <title>缓存</title>
       <link>https://jaswine.com/interview/docs/arch/cache/</link>
       <pubDate>Mon, 29 Apr 2019 09:34:04 +0800</pubDate>
@@ -523,6 +508,64 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
       
       <guid>https://jaswine.com/interview/docs/search/solr/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/framework/core/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/framework/core/</guid>
+      <description>Spring FrameWork核心 Spring容器基础 依赖注入是什么意思？有哪些方式呢？
+# 依赖注入 - 完成一件事要多个配合，通常和自己没有关系 # 方式 - 构造器注入 - set注入 - 静态工厂 - 实例工厂  Spring容器&amp;amp;Bean Spring中IOC是怎么实现的，IOC容器初始化的过程是什么样子的
+# 初始化过程 -1.Resource定位： -2.载入：使用BeanDefinition来解析bean定义 -3.注册：使用BeanDefinitionRegistery来将定义好的bean注册到IOC容器中  Spring的加载流程是什么
+# 主要类 Spring加载中有以下几个重要的类： - BeanFactory：生产Bean - Resource：Bean配置文件 - BeanDefinition：Bean定义 # 流程 - 资源定位：找到配置文件 - BeanDefinition载入和解析 -- 找到配置文件Resource -- 将配置文件解析成BeanDefinition - BeanDefinition注册 -- 将BeanDefinition向Map中注册Map&amp;lt;name,BeanDefinition&amp;gt; - bean的实例化和依赖注入 -- 通过反射或者cglib来创造bean # Tips: - Resource本质上就是字节流 - BeanDefinition是bean的详细信息  说说BeanFactory和ApplicationContext有什么区别
+   类目 BeanFactory ApplicationContext      启动时不实例化Bean 启动时就将Bean进行实例化    Tips： - ApplicationContext实现了BeanFActory，所以ApplicationContext有BeanFactory的所有功能</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/framework/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/framework/data/</guid>
+      <description>SpringData Spring事务 Spring是怎么配置事务和管理事务的
+# 怎么管理事务的 - Spring事务管理使用TransactionDefinition，TransactionStatus和PlatformTransactionManager来完成事务的管理工作。 # XML配置方式  Spring的事务隔离级别
+ 讲讲Spring事务的传播属性
+讲讲Spring事务失效的情况
+spring RestTemplate的具体实现</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/framework/menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/framework/menu/</guid>
+      <description> Spring FrameWork 知识点  Spring FrameWork核心 Spring Web Spring Data Spring 设计模式  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/framework/model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/framework/model/</guid>
+      <description> Spring中的设计模式 单例模式 Spring的单例实现原理
+- 使用单例注册表的方式来管理bean --  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/framework/web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/framework/web/</guid>
+      <description> Spring Web SpringMVC SpringMVC的运行原理和启动流程是什么样子的
+# 启动流程 # 运行原理 - 请求到达DispatchServlet，根据请求的相关信息到HandlerMapping中查找到具体的Handler(Controller) - Controller调用具体的业务逻辑后将结果返给DispatcherServlet，最后返给客户端  DispatchServlet初始化过程
+ 说说你在SpringMVC用到的注解，作用是什么
+SpringMVC中的Controller是单例还是多例，怎么保证并发的安全
+Spring WebFlow </description>
     </item>
     
   </channel>
