@@ -215,11 +215,11 @@ https://github.com/alex-shpak/hugo-book
 <p><font color="#008B45" size=4>ArrayList是如何实现动态扩容的</font></p>
 
 <ul>
-<li><strong>🔗链接</strong><a href="https://blog.jaswine.com/2019/01/24/java18/">源码分析-Java中ArrayList是如何实现数组动态扩容的</a>
-```</li>
-<li>ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容</li>
-<li>Java底层的数组扩容就是通过数组拷贝完成的
-```</li>
+<li><p><strong>🔗链接</strong><a href="https://blog.jaswine.com/2019/01/24/java18/">源码分析-Java中ArrayList是如何实现数组动态扩容的</a></p>
+
+<pre><code>- ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容
+- Java底层的数组扩容就是通过数组拷贝完成的
+</code></pre></li>
 </ul>
 
 <h2 id="map系">Map系</h2>
@@ -341,8 +341,7 @@ https://github.com/alex-shpak/hugo-book
 <p><font color="#008B45" size=4>HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</font></p>
 
 <ul>
-<li><strong>🔗链接:</strong> <a href="https://jaswine.com/source/java/docs/collection/map/hashmap/">Hashmap#put</a></li>
-</ul>
+<li><p><strong>🔗链接:</strong> <a href="https://jaswine.com/source/java/docs/collection/map/hashmap/">Hashmap#put</a></p>
 
 <pre><code># 存储方式
 - Java8中使用位桶(数组)+链表/红黑树实现
@@ -358,15 +357,16 @@ https://github.com/alex-shpak/hugo-book
 4.hash()运算后生成值和数组的长度-1进行位与(&amp;)运算，然后得到在数组中的位置
 
 
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p><font color="#008B45" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></p>
 
 <ul>
 <li><strong>🔗链接：</strong><a href="#">「源码」Collections.synchronizedMap()</a></li>
 <li><strong>🔗链接：</strong><a href="#">「源码」Hashtable</a></li>
-<li><strong>🔗链接：</strong><a href="#">「源码」ConcurrentHashMap</a></li>
-</ul>
+
+<li><p><strong>🔗链接：</strong><a href="#">「源码」ConcurrentHashMap</a></p>
 
 <pre><code># 线程安全吗
 - 线程不安全
@@ -383,17 +383,18 @@ https://github.com/alex-shpak/hugo-book
 - 第一种加锁
 - 第二种分段锁
 - 点三种枷锁
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p><font color="#008B45" size=4>ConcurrentHashMap在1.7和1.8中有什么区别？</font></p>
 
 <ul>
-<li><strong>🔗链接：</strong><a href="#">「源码」ConcurrentHashMap</a></li>
-</ul>
+<li><p><strong>🔗链接：</strong><a href="#">「源码」ConcurrentHashMap</a></p>
 
 <pre><code>- 使用Synchronized+CAS+Node+Unsafe来替代Segment+HashEntry+Unsafe
 - put()初始化数组大小时1.8不用加锁(使用sizeCtl变量来标记table是不是在初始化，为-1的时候就是正在初始化)
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p><font color="#008B45" size=4>poll()和remove()方法的区别？</font></p>
 

@@ -11,6 +11,17 @@
   </url>
   
   <url>
+    <loc>https://jaswine.com/interview/docs/</loc>
+    <lastmod>2019-05-04T10:44:39+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/</loc>
+    <lastmod>2019-05-04T10:44:39+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jaswine.com/interview/docs/arch/distributed/</loc>
     <lastmod>2019-05-04T10:44:39+08:00</lastmod>
   </url>
@@ -107,130 +118,147 @@
   
   <url>
     <loc>https://jaswine.com/interview/docs/data/ShardingSphere/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/data/mycat/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/data/redis/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/data/sql/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/se/adventage/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/se/base/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/se/collection/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/se/concurrent/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/se/exception/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/se/io/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/se/menu/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/se/oo/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/vm/classload/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/vm/concurrent/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/vm/gc/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/vm/jmm/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/vm/menu/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/vm/object/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/vm/params/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/vm/tools/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/message/base/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/search/elasticsearch/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/search/solr/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/spring/framework/core/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/spring/framework/data/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/spring/framework/menu/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/spring/framework/model/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/spring/framework/web/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/categories/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaswine.com/interview/docs/</loc>
-    <lastmod>2019-05-04T10:44:39+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaswine.com/interview/</loc>
-    <lastmod>2019-05-04T10:44:39+08:00</lastmod>
   </url>
   
   <url>

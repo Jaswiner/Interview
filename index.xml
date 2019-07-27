@@ -329,7 +329,8 @@ Java高级特性 反射的原理是什么？反射创建类实例的三种方式
  🔗链接ArrayList为什么线程不安全及解决办法 🔗连接LinkedList为什么线程不安全及解决办法     名称 数据结构 是否线程安全 原理 线程安全方法     ArrayList Object数组 不安全 / 1.使用Collections.synchronizedList(List)包装
 2.使用CopyOnWriteArrayList   LinkedList 双向链表 不安全 / 1.使用Collections.synchronizedList(List)包装
    Vector Object数组 安全 (同步方法)synchronized /    ArrayList是如何实现动态扩容的
- 🔗链接源码分析-Java中ArrayList是如何实现数组动态扩容的 ``` ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容 Java底层的数组扩容就是通过数组拷贝完成的 ```  Map系 Map接口的实现类，简单的说说他们
+ 🔗链接源码分析-Java中ArrayList是如何实现数组动态扩容的
+- ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容 - Java底层的数组扩容就是通过数组拷贝完成的   Map系 Map接口的实现类，简单的说说他们
    类 底层数据结构 特点 是否线程安全     HashMap 数组+链表/红黑树 可以使用null作为Key和Value 不安全   Hashtable 数组+链表/红黑树 非null的key和value 安全   LinkedHashMap 继承HashMap，多维护一个双向链表 同HashMap，有序的 不安全   TreeMap 红黑树 有序 不安全   Properties 继承hashtable  安全    Map接口实现类之间的区别</description>
     </item>
     
