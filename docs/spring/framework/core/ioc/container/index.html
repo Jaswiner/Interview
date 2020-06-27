@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Container
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/interview/book.min.c2a8efe1396f2e941dc6c08a506de23650bc50980fa885703b63d16528486df7.css">
+
+
+<link rel="icon" href="/interview/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://jaswine.com/interview/">面试题</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2finterview\2f docs\2fspring\2f framework\2f core\2fioc\2f container\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><span style="color:#FF69B4">计算机基础</span></strong>
+
+<ul>
+<li><a href="#">计算机组成</a></li>
+<li><a href="/interview/docs/base/os/">操作系统</a></li>
+<li><a href="/interview/docs/base/net/0menu/">计算机网络</a></li>
+<li><a href="#">编译原理</a></li>
+<li><a href="/interview/docs/base/algo/0menu/">数据结构和算法</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">Java系</span></strong>
+
+<ul>
+<li><a href="/interview/docs/java/se/0menu/">JavaSE</a></li>
+<li><a href="/interview/docs/java/ee/0menu/">JavaEE</a></li>
+<li><a href="/interview/docs/java/vm/0menu/">JVM</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">常用中间件</span></strong>
+
+<ul>
+<li><a href="/interview/docs/java/mybatis/">MyBtais</a></li>
+<li><a href="/interview/docs/java/netty/">Netty</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">VUE</span></strong></li>
+<li><strong><span style="color:#FF69B4">Spring系</span></strong>
+
+<ul>
+<li><a href="/interview/docs/spring/framework/0menu/">SpringFrameWork</a></li>
+<li><a href="/interview/docs/spring/boot/0menu/">SpringBoot</a></li>
+<li><a href="/interview/docs/spring/cloud/0menu/">SpringCloud</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">应用服务器</span></strong>
+
+<ul>
+<li><a href="/interview/docs/server/nginx/">Nginx</a></li>
+<li><a href="/interview/docs/server/tomcat/">Tomcat</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">数据存储</span></strong>
+
+<ul>
+<li><a href="/interview/docs/data/sql/">SQL</a></li>
+<li><a href="/interview/docs/data/mysql/">MySQL</a></li>
+<li><a href="/interview/docs/data/mysql/">Druid</a></li>
+<li><a href="/interview/docs/data/ShardingSphere/">ShardingSphere</a></li>
+<li><a href="/interview/docs/data/mycat/">Mycat</a></li>
+<li><a href="/interview/docs/data/redis/">Redis</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">消息队列及其中间件</span></strong>
+
+<ul>
+<li><a href="/interview/docs/message/base/">消息队列基础</a></li>
+<li><a href="/interview/docs/message/rabbit/">RabbitMQ</a></li>
+<li><a href="/interview/docs/message/kafka/">Kafka</a></li>
+<li><a href="/interview/docs/message/pulsar/">Pulsar</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">搜索引擎</span></strong>
+
+<ul>
+<li><a href="/interview/docs/search/solr/">Solr</a></li>
+<li><a href="/interview/docs/search/elasticsearch/">Elasticsearch</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">系统安全</span></strong></li>
+<li><strong><span style="color:#FF69B4">测试</span></strong>
+
+<ul>
+<li><a href="/interview/docs/search/solr/">测试方法论</a></li>
+<li><a href="/interview/docs/search/solr/">Jmeter</a></li>
+<li><a href="/interview/docs/search/solr/">Solr</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">分布式</span></strong>
+
+<ul>
+<li><a href="/interview/docs/arch/arch/">架构设计</a></li>
+<li><a href="/interview/docs/arch/distributed/">分布式理论</a></li>
+<li><a href="/interview/docs/arch/zookeeper/">Zookeeper</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">DevOps</span></strong><br /></li>
+<li><strong><span style="color:#FF69B4">编程思想</span></strong>
+
+<ul>
+<li><a href="/interview/docs/model/model/">设计模式</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/interview/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Container
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="spring实现ioc功能">Spring实现IOC功能</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#spring实现ioc功能">Spring实现IOC功能</a>
+
+<ul>
+<li><a href="#什么是ioc有什么优缺点">什么是IOC？有什么优缺点？</a></li>
+<li><a href="#spring是怎么实现ioc">Spring是怎么实现IOC？</a></li>
+<li><a href="#依赖注入di是什么意思如何依赖注入spring是如何实心依赖注入的为什么">依赖注入(DI)是什么意思？如何依赖注入？Spring是如何实心依赖注入的？为什么？</a></li>
+<li><a href="#beanfactory和applicationcontext之间的区别是什么">BeanFactory和ApplicationContext之间的区别是什么？</a></li>
+<li><a href="#spring容器初始化的过程是什么样子的">Spring容器初始化的过程是什么样子的？</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<h2 id="什么是ioc-有什么优缺点">什么是IOC？有什么优缺点？</h2>
+
+<h2 id="spring是怎么实现ioc">Spring是怎么实现IOC？</h2>
+
+<h2 id="依赖注入-di-是什么意思-如何依赖注入-spring是如何实心依赖注入的-为什么">依赖注入(DI)是什么意思？如何依赖注入？Spring是如何实心依赖注入的？为什么？</h2>
+
+<h2 id="beanfactory和applicationcontext之间的区别是什么">BeanFactory和ApplicationContext之间的区别是什么？</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">类目</th>
+<th align="left">BeanFactory</th>
+<th align="left">ApplicationContext</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"></td>
+<td align="left">启动时不实例化Bean</td>
+<td align="left">启动时就将Bean进行实例化</td>
+</tr>
+</tbody>
+</table>
+
+<p><em>Tips：</em>
+- ApplicationContext实现了BeanFActory，所以ApplicationContext有BeanFactory的所有功能</p>
+
+<h2 id="spring容器初始化的过程是什么样子的">Spring容器初始化的过程是什么样子的？</h2>
+
+<pre><code># 初始化过程
+-1.Resource定位：
+-2.载入：使用BeanDefinition来解析bean定义
+-3.注册：使用BeanDefinitionRegistery来将定义好的bean注册到IOC容器中
+</code></pre>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#spring实现ioc功能">Spring实现IOC功能</a>
+<ul>
+<li><a href="#什么是ioc-有什么优缺点">什么是IOC？有什么优缺点？</a></li>
+<li><a href="#spring是怎么实现ioc">Spring是怎么实现IOC？</a></li>
+<li><a href="#依赖注入-di-是什么意思-如何依赖注入-spring是如何实心依赖注入的-为什么">依赖注入(DI)是什么意思？如何依赖注入？Spring是如何实心依赖注入的？为什么？</a></li>
+<li><a href="#beanfactory和applicationcontext之间的区别是什么">BeanFactory和ApplicationContext之间的区别是什么？</a></li>
+<li><a href="#spring容器初始化的过程是什么样子的">Spring容器初始化的过程是什么样子的？</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140325593-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

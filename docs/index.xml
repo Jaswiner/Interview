@@ -205,52 +205,227 @@ Netty的通讯协议是什么样的
     </item>
     
     <item>
-      <title>算法</title>
-      <link>https://jaswine.com/interview/docs/base/algo/</link>
-      <pubDate>Mon, 29 Apr 2019 09:32:16 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/base/algo/</guid>
-      <description>算法面试题 基础算法 hash算法 说说你知道的几种hash算法
-在10亿个数字中找到最小的10个
-有一亿个其中有两个是重复的，快速找到它，要求空间和时间最优
-2亿个随机生成的无序整数中找出中间大小的值</description>
-    </item>
-    
-    <item>
-      <title>数据结构</title>
-      <link>https://jaswine.com/interview/docs/base/ds/</link>
-      <pubDate>Mon, 29 Apr 2019 09:32:07 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/base/ds/</guid>
-      <description> 数据结构 数组 数组动态扩容是怎么实现的
-- 新建一个空数组(比原来的大) - 将原数组的元素拷贝到新数组中  链表 怎么使用链表实现LRU呢？
-- 1.当链表为空的时候 - 1.1.当前id为head - 2.链表不为空的时候 - 2.1.搜索插叙的id - 2.1.1.链表中有该id，将该id为head - 2.1.2.链表中没有该id - 2.1.2.1.链表满了，删除tail元素，id放在head - 2.1.2.2.链表未满，id放在head  栈 队列 散列表(hash表) 解决hash冲突都有什么办法？并简单说下实现原理是什么样的？之间的区别是什么？
-# 开放寻址法 - 计算出对应的散列值之后如果冲突了就向下继续寻找到空位，如果没有就从表的头开始寻找 # 链表法 - hash表中存放的元素就是一个链表，当hash值相同的时候就插入到链表的对应位置上 # 区别 - 数据量小，装载因子小的时候选择开放寻址法 - 大数据量，大对象的散列表选择链表法，更加的灵活，可以使用红黑树来替代链表  树 图 </description>
-    </item>
-    
-    <item>
-      <title>计算机网络</title>
-      <link>https://jaswine.com/interview/docs/base/net/</link>
-      <pubDate>Mon, 29 Apr 2019 09:31:47 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/base/net/</guid>
-      <description>计算机网络 HTTP协议 说说你知道的HTTP响应码
-- 1xx  怎么理解HTTP协议的无连接和无状态性
-# 无连接 客户端和服务端完成一次交互后就断开连接 # 无状态 服务端不会记录客户端的信息，不知道客户端是谁 Tips： - 无连接使用keep-alive解决，现在的http服务器支持keep-alive - 无状态使用cookies-session来解决了  HTTP中GET和POST的区别和数据包格式
-# 从设计角度来说 - GET请求是幂等的，请求前后不会对数据造成变化 - POST是向服务端提交数据，提交数据就是为了修改相关数据，所以不是幂等的 # 从应用角度来说 - GET的请求有长度限制，URL最大长度为2048byte - POST请求没有长度限制 # 从浏览器角度来说 - GET请求回退和刷新不会产生危害 - POST会重新提交请求 - GET可以被缓存 - POST不能被缓存  简单说下HTTP报文的格式 HTTP长连接是什么？
-前提：HTTP长连接本质上是TCP的长连接 HTTP1.0默认短链接 HTTP1.1默认长连接  HTTPS加密方式是什么？讲讲整个加密和解密的流程
-HTTP和HTTPS三次握手有什么区别
-TCP协议 TCP三次握手和四次握手的流程，为什么断开连接要四次，如果握手只有两次会出现什么
-# 三次握手 - 1.客户端发送SYN=1的包和seq=x的版本好信息，进入SYN_SEND状态 - 2.服务端发回确认包SYN=1，ACK=1，将自己的ISN序列号放到seq=y中，同时发送ACKnum=x+1，服务端进入SYN_RCVD状态 - 3.客户端收到包，SYN=0，ACK=1，ACKnum=y+1，客户端进入到ESTABLISHED阶段 # 四次挥手 - 1.客户端发送FIN=1，seq=x数据到服务端，进入FIN_WAIT_1状态 - 2.服务端收到包，发送ACK=1，ACKnum=x+1，服务端进入CLOSE_WAIT状态，客户端接收到包进入到FIN_WAIT_2状态 - 3.服务端发送FIN=1，seq=y给客户端，进入到LAST_ACK，等待客户端的ACK - 4.</description>
-    </item>
-    
-    <item>
       <title>操作系统</title>
       <link>https://jaswine.com/interview/docs/base/os/</link>
       <pubDate>Mon, 29 Apr 2019 09:31:37 +0800</pubDate>
       
       <guid>https://jaswine.com/interview/docs/base/os/</guid>
       <description>计算机操作系统 进程 文件 I/O 操作系统的io模型是什么？</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/algo/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/algo/0menu/</guid>
+      <description> 数据结构&amp;amp;算法  线性数据结构  数组 链表 栈 队列 Hash 跳表  树形数据结构  二叉树 红黑树 B+树 Trie树  图
+ 排序算法
+ 快速排序 冒泡排序 基数排序 堆排序  查找算法
+ 二分查找 深度优先遍历 广度优先遍历  高级算法
+ 贪心算法 分治算法 回溯算法 动态规划算法   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/algo/line/array/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/algo/line/array/</guid>
+      <description> 数组面试题  数组面试题  数组动态扩容是怎么实现的?时间复杂度和空间复杂度分别为多少？   数组动态扩容是怎么实现的?时间复杂度和空间复杂度分别为多少？ ## 实现过程 - 新建一个空数组(比原来的大) - 将原数组的元素拷贝到新数组中 ## 时间复杂度 ## 空间复杂度  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/algo/line/hash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/algo/line/hash/</guid>
+      <description> Hash面试题  Hash面试题  说说你知道的几种hash算法 在10亿个数字中找到最小的10个 有一亿个其中有两个是重复的，快速找到它，要求空间和时间最优 2亿个随机生成的无序整数中找出中间大小的 解决hash冲突都有什么办法？并简单说下实现原理是什么样的？之间的区别是什么？   说说你知道的几种hash算法 在10亿个数字中找到最小的10个 有一亿个其中有两个是重复的，快速找到它，要求空间和时间最优 2亿个随机生成的无序整数中找出中间大小的 解决hash冲突都有什么办法？并简单说下实现原理是什么样的？之间的区别是什么？    名称 原理 区别     开放寻址法 计算出对应的散列值之后如果冲突了就向下继续寻找到空位，如果没有就从表的头开始寻找 数据量小，装载因子小的时候选择开放寻址法   链表法 hash表中存放的元素就是一个链表，当hash值相同的时候就插入到链表的对应位置上 大数据量，大对象的散列表选择链表法，更加的灵活，可以使用红黑树来替代链表    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/algo/line/linked_list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/algo/line/linked_list/</guid>
+      <description> 链表面试题  链表面试题  怎么使用链表实现LRU算法呢？时间和空间复杂度？   怎么使用链表实现LRU算法呢？时间和空间复杂度？ ## 实现过程 - 1.当链表为空的时候 - 1.1.当前id为head - 2.链表不为空的时候 - 2.1.搜索插叙的id - 2.1.1.链表中有该id，将该id为head - 2.1.2.链表中没有该id - 2.1.2.1.链表满了，删除tail元素，id放在head - 2.1.2.2.链表未满，id放在head ## 时间复杂度 ## 空间复杂度  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/algo/line/queue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/algo/line/queue/</guid>
+      <description> 队列面试题 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/algo/line/skip_list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/algo/line/skip_list/</guid>
+      <description> 跳表面试题 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/algo/line/stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/algo/line/stack/</guid>
+      <description> 栈面试题 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/algo/tree/b&#43;/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/algo/tree/b&#43;/</guid>
+      <description> B+树面试题 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/algo/tree/binary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/algo/tree/binary/</guid>
+      <description> 二叉树面试题 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/algo/tree/rb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/algo/tree/rb/</guid>
+      <description> 红黑树面试题 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/0menu/</guid>
+      <description> 计算机网络协议  计算机网络协议  应用层  HTTP HTTPS HTTP2 DNS DHCP RTSP RTMP  传输层  TCP UDP RTP  网络层  IP  数据链路层  ARP    应用层 HTTP HTTPS HTTP2 DNS DHCP RTSP RTMP 传输层 TCP UDP RTP 网络层 IP 数据链路层 ARP </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/application/dhcp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/application/dhcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/application/dns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/application/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/application/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/application/http/</guid>
+      <description> HTTP  HTTP  HTTP中GET和POST的区别和数据包格式   HTTP中GET和POST的区别和数据包格式 # 从设计角度来说 - GET请求是幂等的，请求前后不会对数据造成变化 - POST是向服务端提交数据，提交数据就是为了修改相关数据，所以不是幂等的 # 从应用角度来说 - GET的请求有长度限制，URL最大长度为2048byte - POST请求没有长度限制 # 从浏览器角度来说 - GET请求回退和刷新不会产生危害 - POST会重新提交请求 - GET可以被缓存 - POST不能被缓存  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/application/http2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/application/http2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/application/https/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/application/https/</guid>
+      <description> HTTPS  HTTPS  HTTPS加密方式是什么？讲讲整个加密和解密的流程   HTTPS加密方式是什么？讲讲整个加密和解密的流程 HTTP和HTTPS三次握手有什么区别 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/application/rtmp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/application/rtmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/application/rtsp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/application/rtsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/hard/arp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/hard/arp/</guid>
+      <description> TCP网络协议面试题  关于TCP的详细可以看这里 🔗TCP-计算机网络协议
+ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/network/ip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/network/ip/</guid>
+      <description> TCP网络协议面试题  关于TCP的详细可以看这里 🔗TCP-计算机网络协议
+ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/transport/rtp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/transport/rtp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/transport/tcp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/transport/tcp/</guid>
+      <description> TCP网络协议面试题  关于TCP的详细可以看这里 🔗TCP-计算机网络协议
+  TCP网络协议面试题  TCP三次握手和四次握手的流程，为什么断开连接要四次，如果握手只有两次会出现什么 TCP中KeepAlive作用是什么？是怎么实现的？怎么使用？ 什么是TCP粘包？怎么解决？   TCP三次握手和四次握手的流程，为什么断开连接要四次，如果握手只有两次会出现什么 # 三次握手 - 1.客户端发送SYN=1的包和seq=x的版本好信息，进入SYN_SEND状态 - 2.服务端发回确认包SYN=1，ACK=1，将自己的ISN序列号放到seq=y中，同时发送ACKnum=x+1，服务端进入SYN_RCVD状态 - 3.客户端收到包，SYN=0，ACK=1，ACKnum=y+1，客户端进入到ESTABLISHED阶段 # 四次挥手 - 1.客户端发送FIN=1，seq=x数据到服务端，进入FIN_WAIT_1状态 - 2.服务端收到包，发送ACK=1，ACKnum=x+1，服务端进入CLOSE_WAIT状态，客户端接收到包进入到FIN_WAIT_2状态 - 3.服务端发送FIN=1，seq=y给客户端，进入到LAST_ACK，等待客户端的ACK - 4.客户端接收到服务端的关闭请求，发送一个ACK并等待服务端确认，最后进入到CLOSED状态 # 两次握手弊端 - 不能确认第二次握手的有效性 - 三次握手可以保证C/S两端的存活状态  TCP中KeepAlive作用是什么？是怎么实现的？怎么使用？ 什么是TCP粘包？怎么解决？ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/net/transport/udp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/net/transport/udp/</guid>
+      <description> TCP网络协议面试题  关于TCP的详细可以看这里 🔗TCP-计算机网络协议
+ </description>
     </item>
     
     <item>
@@ -269,6 +444,15 @@ TCP协议 TCP三次握手和四次握手的流程，为什么断开连接要四�
       
       <guid>https://jaswine.com/interview/docs/data/mycat/</guid>
       <description> Mycat分表分库 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/data/mysql/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/data/mysql/base/</guid>
+      <description> MySQL数据库面试题  [🔗]()  </description>
     </item>
     
     <item>
@@ -292,6 +476,24 @@ Redis怎么存放热点数据？时长怎么控制的？原理呢？
       <description> SQL 说说你对存储过程的理解，为什么阿里的编程规范中禁用存储过程，他有什么优缺点
 # 理解 - 存储过程就是一些SQL组成的代码块，可以重复使用 # 为什么禁用存储过程  说说你对SQL的连接查询(Join)的理解，他们之间的区别是什么
 # inner join - 两个表交集的部分 # full out join - 两个表并集，没有匹配的为null # left join - 以左表为主，没有匹配的为null # right join - 以右表为主，没有匹配的为null  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/ee/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/ee/0menu/</guid>
+      <description> Java EE知识点  Java EE知识点  Servlet JDBC JTA JTS   Servlet JDBC JTA JTS </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/0menu/</guid>
+      <description> Java知识分类  Java知识分类  基础  运算符 Object类 String系  新特性  Java5新特性 Java6新特性 Java7新特性 Java8新特性  Lambda Stream DateTime API Optional  Java9新特性 Java10新特性 Java11新特性 Java12新特性  面向对象思想 I/O  BIO NIO AIO  集合  List  ArrayList LinkedList Vector CopyOnWriteArrayList  Set  HashSet  Queue Map  Hashmap ConcurrentHashmap   多线程/并发  多线程基础操作 线程池 JUC 锁  异常 高级特性  反射 注解 泛型    基础 运算符 Object类 String系 新特性 Java5新特性 Java6新特性 Java7新特性 Java8新特性 Lambda Stream DateTime API Optional Java9新特性 Java10新特性 Java11新特性 Java12新特性 面向对象思想 I/O BIO NIO AIO 集合 List ArrayList LinkedList Vector CopyOnWriteArrayList Set HashSet Queue Map Hashmap ConcurrentHashmap 多线程/并发 多线程基础操作 线程池 JUC 锁 异常 高级特性 反射 注解 泛型 </description>
     </item>
     
     <item>
@@ -321,17 +523,109 @@ Java高级特性 反射的原理是什么？反射创建类实例的三种方式
     
     <item>
       <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/base/object/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/base/object/</guid>
+      <description> Object超类  Object超类  为什么重写equals()方法的同时也要重写hashcode()方法？   为什么重写equals()方法的同时也要重写hashcode()方法？ - 1.equals方法本质就是==，就是比较对象的引用(即内存地址) - 2.在map集合中，使用hashcode来进行hash运算，  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/base/string/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/base/string/</guid>
+      <description> String系  String系  ## String为什么设计成final类？ String、StringBuilder和StringBuffer之间的异同   ## String为什么设计成final类？ -  String、StringBuilder和StringBuffer之间的异同 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/base/symbol/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/base/symbol/</guid>
+      <description> Java中的运算符 </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/interview/docs/java/se/collection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/se/collection/</guid>
-      <description>Java集合 List系 ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决
- 🔗链接ArrayList为什么线程不安全及解决办法 🔗连接LinkedList为什么线程不安全及解决办法     名称 数据结构 是否线程安全 原理 线程安全方法     ArrayList Object数组 不安全 / 1.使用Collections.synchronizedList(List)包装
+      <description>Java集合 List系 Map系 Map接口的实现类，简单的说说他们
+   类 底层数据结构 特点 是否线程安全     HashMap 数组+链表/红黑树 可以使用null作为Key和Value 不安全   Hashtable 数组+链表/红黑树 非null的key和value 安全   LinkedHashMap 继承HashMap，多维护一个双向链表 同HashMap，有序的 不安全   TreeMap 红黑树 有序 不安全   Properties 继承hashtable  安全    Map接口实现类之间的区别
+   类名 是否有序 key为null value为null 线程安全     HashMap N Y Y N   LinkedHashMap Y N     TreeMap Y      Hashtable N       有没有有顺序的Map实现类，如果有，他们是怎么保证有序的</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/collection/list/arraylist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/collection/list/arraylist/</guid>
+      <description> ArrayList面试题  ArrayList面试题  ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决 ArrayList是如何实现动态扩容的   ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决  🔗链接ArrayList为什么线程不安全及解决办法 🔗连接LinkedList为什么线程不安全及解决办法     名称 数据结构 是否线程安全 原理 线程安全方法     ArrayList Object数组 不安全 / 1.使用Collections.synchronizedList(List)包装
 2.使用CopyOnWriteArrayList   LinkedList 双向链表 不安全 / 1.使用Collections.synchronizedList(List)包装
-   Vector Object数组 安全 (同步方法)synchronized /    ArrayList是如何实现动态扩容的
- 🔗链接源码分析-Java中ArrayList是如何实现数组动态扩容的
-- ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容 - Java底层的数组扩容就是通过数组拷贝完成的   Map系 Map接口的实现类，简单的说说他们
-   类 底层数据结构 特点 是否线程安全     HashMap 数组+链表/红黑树 可以使用null作为Key和Value 不安全   Hashtable 数组+链表/红黑树 非null的key和value 安全   LinkedHashMap 继承HashMap，多维护一个双向链表 同HashMap，有序的 不安全   TreeMap 红黑树 有序 不安全   Properties 继承hashtable  安全    Map接口实现类之间的区别</description>
+   Vector Object数组 安全 (同步方法)synchronized /    ArrayList是如何实现动态扩容的  🔗链接源码分析-Java中ArrayList是如何实现数组动态扩容的
+- ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容 - Java底层的数组扩容就是通过数组拷贝完成的   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/collection/list/copyonwritearraylist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/collection/list/copyonwritearraylist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/collection/list/linkedlist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/collection/list/linkedlist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/collection/list/vector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/collection/list/vector/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/collection/map/concurrenthashmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/collection/map/concurrenthashmap/</guid>
+      <description> ConcurrentHashmap面试题  ConcurrentHashmap面试题  ConcurrentHashMap在1.7和1.8中有什么区别？   ConcurrentHashMap在1.7和1.8中有什么区别？  🔗链接：「源码」ConcurrentHashMap
+- 使用Synchronized+CAS+Node+Unsafe来替代Segment+HashEntry+Unsafe - put()初始化数组大小时1.8不用加锁(使用sizeCtl变量来标记table是不是在初始化，为-1的时候就是正在初始化)   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/collection/map/hashmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/collection/map/hashmap/</guid>
+      <description> Hashmap面试题  Hashmap面试题  HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？ HashMap中是如何进行hash运算的？这么做的好处有什么好处？ HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？   HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？  🔗链接: Hashmap#put-源码分析
+# 存储方式 - Java8中使用位桶(数组)+链表/红黑树实现 - 链表长度超过阈值(8)时转成红黑树(减少查找时间) # 底层原理与扩容 1.作为容器，HashMap主要是实现对容器内元素的增删改查功能，这些和她的底层数据结构分不开的 2.put()的时候，会先进行hash()计算 3.hash()计算先进行高位计算，将hashcode无符号右移16位后和hashcode进行异或位运算(^)后，本质上保留高位，将高位和地位进行了混合 4.hash()运算后生成值和数组的长度-1进行位与(&amp;amp;)运算，然后得到在数组中的位置   HashMap中是如何进行hash运算的？这么做的好处有什么好处？ HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？  🔗链接：源码分析-Collections.synchronizedMap() 🔗链接：源码分析-Hashtable 🔗链接：源码分析-ConcurrentHashMap
+# 线程安全吗 - 线程不安全 # 为什么 - 扩容的时候破坏了数组的结构，和ArrayList的本质相同 # 解决办法 - 使用Collections.synchronizedMap(new HashMap(...)) - 使用并发包中的ConcurrentHashMap - 使用Hashtable # 原理(具体参见上面的链接) - 第一种加锁 - 第二种分段锁 - 点三种加锁   HashMap和Hashtable之间有什么不同之处    类目 HashMap Hashtable     k是否可为null 是 否   v是否可谓null 是 否   是否线程安全 否 是   父类 AbstractMap Dictionary    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/collection/set/hashset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/collection/set/hashset/</guid>
+      <description> HashSet面试题  HashSet面试题  HashSet内部是怎么工作的 - HashSet内部使用HashMap来实现的 - HashSet是对value的进行hash计算(因为set中元素不能重复)  </description>
     </item>
     
     <item>
@@ -364,6 +658,42 @@ Error和Exception的区别，CheckedException和RuntimeException
     
     <item>
       <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/features/8/datetime/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/features/8/datetime/</guid>
+      <description> 新的日期时间API面试题  新的日期时间API面试题  Java8中新增了那些日期时间类？分别的作用是什么？   Java8中新增了那些日期时间类？分别的作用是什么？ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/features/8/lambda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/features/8/lambda/</guid>
+      <description> Lambda面试题  Lambda面试题  lambda底层原理是什么？   lambda底层原理是什么？ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/features/8/optional/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/features/8/optional/</guid>
+      <description> Optional面试题  Optional面试题  Optional出现的原因？用途和原理是什么？   Optional出现的原因？用途和原理是什么？ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/features/8/stream/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/features/8/stream/</guid>
+      <description> Stream面试题  Stream面试题  Stream底层原理是什么？ Stream使用场景是什么？怎么使用？ Stream相较原来的写法有什么优缺点？   Stream底层原理是什么？ Stream使用场景是什么？怎么使用？ Stream相较原来的写法有什么优缺点？ </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/interview/docs/java/se/io/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -375,11 +705,29 @@ Error和Exception的区别，CheckedException和RuntimeException
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/java/se/menu/</link>
+      <link>https://jaswine.com/interview/docs/java/se/io/aio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/java/se/menu/</guid>
-      <description> Java知识分类  基础 面向对象思想 I/O 集合 多线程/并发 异常 高级特性  </description>
+      <guid>https://jaswine.com/interview/docs/java/se/io/aio/</guid>
+      <description> AIO面试题 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/io/bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/io/bio/</guid>
+      <description> BIO面试题  BIO面试题  使用BIO中的Socket编写的服务端代码执行的逻辑是什么？ 如果使用BIO的类来编写Socket，如何进行性能优化？优缺点是什么？   使用BIO中的Socket编写的服务端代码执行的逻辑是什么？ 如果使用BIO的类来编写Socket，如何进行性能优化？优缺点是什么？ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/io/nio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/io/nio/</guid>
+      <description> NIO面试题  NIO面试题  Java是怎么实现NIO的，重要的类是那些？功能是什么？ Java中NIO的原理是什么？   Java是怎么实现NIO的，重要的类是那些？功能是什么？ Java中NIO的原理是什么？ </description>
     </item>
     
     <item>
@@ -392,6 +740,33 @@ Error和Exception的区别，CheckedException和RuntimeException
 # 继承 - 继承是子类继承父类，可以对父类的内容进行扩展和修改 # 聚合 - 聚合是模块和模块之间的关系，是可以分离的，有自己的生命周期  结合OO设计理念，谈谈访问修饰符public，default，protected和private在应用中设计的作用
     同类 同包 子类 非同包类     public Y Y Y Y   protected Y Y Y X   default Y Y X X   private Y X X X    Java抽象类和接口的异同，说说为什么Java这么设计
     接口 抽象类     变量     方法 全是抽象方法 可以不全是抽象方法     设计原因  避免了多继承 接口和继承存在的意义不同   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/0menu/</guid>
+      <description> JVM知识分类  JVM知识分类  JMM  运行时内存 对象及其生命周期  GC  GC算法 GC收集器  类文件及其加载  类文件结构 类加载  JVM调优  JVM参数  高并发  高并发    JMM 运行时内存 对象及其生命周期 GC GC算法 GC收集器 类文件及其加载 类文件结构 类加载 JVM调优 JVM参数 高并发 高并发 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/class/file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/class/file/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/class/load/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/class/load/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -431,6 +806,24 @@ Minor GC
     
     <item>
       <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/gc/algo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/gc/algo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/gc/machine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/gc/machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/interview/docs/java/vm/jmm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -443,11 +836,20 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/java/vm/menu/</link>
+      <link>https://jaswine.com/interview/docs/java/vm/jmm/mem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/java/vm/menu/</guid>
-      <description> JVM知识分类  Java内存模型 类加载 对象解析 垃圾回收(GC) JVM参数 高并发 实例  </description>
+      <guid>https://jaswine.com/interview/docs/java/vm/jmm/mem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/vm/jmm/object/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/vm/jmm/object/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -513,15 +915,81 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
     
     <item>
       <title></title>
+      <link>https://jaswine.com/interview/docs/spring/boot/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/boot/0menu/</guid>
+      <description> SpringBoot知识点  SpringBoot知识点  SpringBoot新特性  起步依赖 自动装配 Actuator    SpringBoot新特性 起步依赖 自动装配 Actuator </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/cloud/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/cloud/0menu/</guid>
+      <description> SpringCloud知识点  SpringCloud知识点  服务注册&amp;amp;发现  Nacos  负载均衡  Ribbon  网关  Spring Cloud Gateway  服务调用  Feign  服务容错  Spring Cloud Hystrix Spring Cloud Sentinel  服务监控  Spring Cloud Sleuth Spring Cloud Zipkin    服务注册&amp;amp;发现 Nacos 负载均衡 Ribbon 网关 Spring Cloud Gateway 服务调用 Feign 服务容错 Spring Cloud Hystrix Spring Cloud Sentinel 服务监控 Spring Cloud Sleuth Spring Cloud Zipkin </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/framework/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/framework/0menu/</guid>
+      <description> Spring FrameWork 知识点  Spring FrameWork 知识点  Spring 核心  IOC  IOC容器 Bean 注解  AOP  Spring WebMVC Spring WebFlux Spring Data  JDBC JMS ORM 事务  Spring Security Spring 设计模式   Spring 核心 IOC IOC容器 Bean 注解 AOP Spring WebMVC Spring WebFlux Spring Data JDBC JMS ORM 事务 Spring Security Spring 设计模式 </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/interview/docs/spring/framework/core/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/spring/framework/core/</guid>
       <description>Spring FrameWork核心 Spring容器基础 依赖注入是什么意思？有哪些方式呢？
 # 依赖注入 - 完成一件事要多个配合，通常和自己没有关系 # 方式 - 构造器注入 - set注入 - 静态工厂 - 实例工厂  Spring容器&amp;amp;Bean Spring中IOC是怎么实现的，IOC容器初始化的过程是什么样子的
-# 初始化过程 -1.Resource定位： -2.载入：使用BeanDefinition来解析bean定义 -3.注册：使用BeanDefinitionRegistery来将定义好的bean注册到IOC容器中  Spring的加载流程是什么
+Spring的加载流程是什么
 # 主要类 Spring加载中有以下几个重要的类： - BeanFactory：生产Bean - Resource：Bean配置文件 - BeanDefinition：Bean定义 # 流程 - 资源定位：找到配置文件 - BeanDefinition载入和解析 -- 找到配置文件Resource -- 将配置文件解析成BeanDefinition - BeanDefinition注册 -- 将BeanDefinition向Map中注册Map&amp;lt;name,BeanDefinition&amp;gt; - bean的实例化和依赖注入 -- 通过反射或者cglib来创造bean # Tips: - Resource本质上就是字节流 - BeanDefinition是bean的详细信息  说说BeanFactory和ApplicationContext有什么区别
-   类目 BeanFactory ApplicationContext      启动时不实例化Bean 启动时就将Bean进行实例化    Tips： - ApplicationContext实现了BeanFActory，所以ApplicationContext有BeanFactory的所有功能</description>
+说说你对Spring中Bean的理解
+说说你对spring中bean的生命周期的理解，spring是怎么管理bean的生命周期的
+Spring AOP Spring中AOP实现的原理是什么，实现方式是什么？</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/framework/core/aop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/framework/core/aop/</guid>
+      <description> Spring中AOP面试题  Spring中AOP面试题  Spring中AOP实现的原理是什么，实现方式是什么？   Spring中AOP实现的原理是什么，实现方式是什么？ # 原理 - 动态代理 # 实现方式 - JDK动态代理 - cglib动态代理  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/framework/core/ioc/annotation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/framework/core/ioc/annotation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/framework/core/ioc/bean/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/framework/core/ioc/bean/</guid>
+      <description> Spring Bean模块面试题  Spring Bean模块面试题  Spring中Bean的生命周期是什么样的？ 什么是Bean的作用域？有什么用？如何定义的? Spring中Bean为什么默认是单例的？有什么好处？为什么？ Spring中Bean的自动装配是什么意思？   Spring中Bean的生命周期是什么样的？ - 1.实例化Bean -- 容器通过获取BeanDefinition对象来对Bean进行实例化 -- 实例化的对象被抱在BeanWrapper对象中，这个Wrapper提供了设置对象的的接口，避免使用反射来设置属性(因为反射很慢) - 2.设置对象属性 -- 根据BeanDefinition信息进行依赖注入 - 3.注入Aware接口 -- Spring检测对象石佛实现了xxxAware接口，如果实现了就将对应的Aware注入给Bean - 4.BeanPostProcessor预初始化Bean -- postProcessBeforeInitialzation( Object bean, String beanName ) 当前正在初始化的bean对象会被传递进来，我们就可以对这个bean作任何处理。 这个函数会先于InitialzationBean执行，因此称为前置处理。 所有Aware接口的注入就是在这一步完成的。-- -- postProcessAfterInitialzation( Object bean, String beanName ) 当前正在初始化的bean对象会被传递进来，我们就可以对这个bean作任何处理。 这个函数会在InitialzationBean完成后执行，因此称为后置处理。 - 5.InitialzationBean -- 实现了InitialzationBean接口的bean在属性设置成功后执行的初始化方法 ======Bean可以使用了====== - 6.容器关闭 -- 调用destroy()，让Java回收bean  什么是Bean的作用域？有什么用？如何定义的? Spring中Bean为什么默认是单例的？有什么好处？为什么？ Spring中Bean的自动装配是什么意思？ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/spring/framework/core/ioc/container/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/spring/framework/core/ioc/container/</guid>
+      <description> Spring实现IOC功能  Spring实现IOC功能  什么是IOC？有什么优缺点？ Spring是怎么实现IOC？ 依赖注入(DI)是什么意思？如何依赖注入？Spring是如何实心依赖注入的？为什么？ BeanFactory和ApplicationContext之间的区别是什么？ Spring容器初始化的过程是什么样子的？   什么是IOC？有什么优缺点？ Spring是怎么实现IOC？ 依赖注入(DI)是什么意思？如何依赖注入？Spring是如何实心依赖注入的？为什么？ BeanFactory和ApplicationContext之间的区别是什么？    类目 BeanFactory ApplicationContext      启动时不实例化Bean 启动时就将Bean进行实例化    Tips： - ApplicationContext实现了BeanFActory，所以ApplicationContext有BeanFactory的所有功能
+Spring容器初始化的过程是什么样子的？ # 初始化过程 -1.Resource定位： -2.载入：使用BeanDefinition来解析bean定义 -3.注册：使用BeanDefinitionRegistery来将定义好的bean注册到IOC容器中  </description>
     </item>
     
     <item>
@@ -535,15 +1003,6 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
  讲讲Spring事务的传播属性
 讲讲Spring事务失效的情况
 spring RestTemplate的具体实现</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jaswine.com/interview/docs/spring/framework/menu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/spring/framework/menu/</guid>
-      <description> Spring FrameWork 知识点  Spring FrameWork核心 Spring Web Spring Data Spring 设计模式  </description>
     </item>
     
     <item>

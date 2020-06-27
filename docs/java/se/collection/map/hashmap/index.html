@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Hashmap
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/interview/book.min.c2a8efe1396f2e941dc6c08a506de23650bc50980fa885703b63d16528486df7.css">
+
+
+<link rel="icon" href="/interview/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://jaswine.com/interview/">面试题</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2finterview\2f docs\2fjava\2fse\2f collection\2fmap\2fhashmap\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><span style="color:#FF69B4">计算机基础</span></strong>
+
+<ul>
+<li><a href="#">计算机组成</a></li>
+<li><a href="/interview/docs/base/os/">操作系统</a></li>
+<li><a href="/interview/docs/base/net/0menu/">计算机网络</a></li>
+<li><a href="#">编译原理</a></li>
+<li><a href="/interview/docs/base/algo/0menu/">数据结构和算法</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">Java系</span></strong>
+
+<ul>
+<li><a href="/interview/docs/java/se/0menu/">JavaSE</a></li>
+<li><a href="/interview/docs/java/ee/0menu/">JavaEE</a></li>
+<li><a href="/interview/docs/java/vm/0menu/">JVM</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">常用中间件</span></strong>
+
+<ul>
+<li><a href="/interview/docs/java/mybatis/">MyBtais</a></li>
+<li><a href="/interview/docs/java/netty/">Netty</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">VUE</span></strong></li>
+<li><strong><span style="color:#FF69B4">Spring系</span></strong>
+
+<ul>
+<li><a href="/interview/docs/spring/framework/0menu/">SpringFrameWork</a></li>
+<li><a href="/interview/docs/spring/boot/0menu/">SpringBoot</a></li>
+<li><a href="/interview/docs/spring/cloud/0menu/">SpringCloud</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">应用服务器</span></strong>
+
+<ul>
+<li><a href="/interview/docs/server/nginx/">Nginx</a></li>
+<li><a href="/interview/docs/server/tomcat/">Tomcat</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">数据存储</span></strong>
+
+<ul>
+<li><a href="/interview/docs/data/sql/">SQL</a></li>
+<li><a href="/interview/docs/data/mysql/">MySQL</a></li>
+<li><a href="/interview/docs/data/mysql/">Druid</a></li>
+<li><a href="/interview/docs/data/ShardingSphere/">ShardingSphere</a></li>
+<li><a href="/interview/docs/data/mycat/">Mycat</a></li>
+<li><a href="/interview/docs/data/redis/">Redis</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">消息队列及其中间件</span></strong>
+
+<ul>
+<li><a href="/interview/docs/message/base/">消息队列基础</a></li>
+<li><a href="/interview/docs/message/rabbit/">RabbitMQ</a></li>
+<li><a href="/interview/docs/message/kafka/">Kafka</a></li>
+<li><a href="/interview/docs/message/pulsar/">Pulsar</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">搜索引擎</span></strong>
+
+<ul>
+<li><a href="/interview/docs/search/solr/">Solr</a></li>
+<li><a href="/interview/docs/search/elasticsearch/">Elasticsearch</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">系统安全</span></strong></li>
+<li><strong><span style="color:#FF69B4">测试</span></strong>
+
+<ul>
+<li><a href="/interview/docs/search/solr/">测试方法论</a></li>
+<li><a href="/interview/docs/search/solr/">Jmeter</a></li>
+<li><a href="/interview/docs/search/solr/">Solr</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">分布式</span></strong>
+
+<ul>
+<li><a href="/interview/docs/arch/arch/">架构设计</a></li>
+<li><a href="/interview/docs/arch/distributed/">分布式理论</a></li>
+<li><a href="/interview/docs/arch/zookeeper/">Zookeeper</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">DevOps</span></strong><br /></li>
+<li><strong><span style="color:#FF69B4">编程思想</span></strong>
+
+<ul>
+<li><a href="/interview/docs/model/model/">设计模式</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/interview/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Hashmap
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="hashmap面试题">Hashmap面试题</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#hashmap面试题">Hashmap面试题</a>
+
+<ul>
+<li><a href="#font-color008b45-size4hashmap底层原理是什么存储方式默认容量是什么怎么实现扩容的font"><font color="#008B45" size=4>HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</font></a></li>
+<li><a href="#font-color008b45-size4hashmap中是如何进行hash运算的这么做的好处有什么好处font"><font color="#008B45" size=4>HashMap中是如何进行hash运算的？这么做的好处有什么好处？</font></a></li>
+<li><a href="#font-color008b45-size4hashmap是线程安全的吗为什么解决办法是什么原理是什么font"><font color="#008B45" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="font-color-008b45-size-4-hashmap底层原理是什么-存储方式-默认容量是什么-怎么实现扩容的-font"><font color="#008B45" size=4>HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</font></h2>
+
+<ul>
+<li><p><strong>🔗链接:</strong> <a href="https://jaswine.com/source/java/docs/collection/map/hashmap/">Hashmap#put-源码分析</a></p>
+
+<pre><code># 存储方式
+- Java8中使用位桶(数组)+链表/红黑树实现
+- 链表长度超过阈值(8)时转成红黑树(减少查找时间)
+
+# 底层原理与扩容
+1.作为容器，HashMap主要是实现对容器内元素的增删改查功能，这些和她的底层数据结构分不开的
+
+2.put()的时候，会先进行hash()计算
+
+3.hash()计算先进行高位计算，将hashcode无符号右移16位后和hashcode进行异或位运算(^)后，本质上保留高位，将高位和地位进行了混合
+
+4.hash()运算后生成值和数组的长度-1进行位与(&amp;)运算，然后得到在数组中的位置
+
+</code></pre></li>
+</ul>
+
+<h2 id="font-color-008b45-size-4-hashmap中是如何进行hash运算的-这么做的好处有什么好处-font"><font color="#008B45" size=4>HashMap中是如何进行hash运算的？这么做的好处有什么好处？</font></h2>
+
+<h2 id="font-color-008b45-size-4-hashmap是线程安全的吗-为什么-解决办法是什么-原理是什么-font"><font color="#008B45" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></h2>
+
+<ul>
+<li><strong>🔗链接：</strong><a href="#">源码分析-Collections.synchronizedMap()</a></li>
+<li><strong>🔗链接：</strong><a href="#">源码分析-Hashtable</a></li>
+
+<li><p><strong>🔗链接：</strong><a href="#">源码分析-ConcurrentHashMap</a></p>
+
+<pre><code># 线程安全吗
+- 线程不安全
+
+# 为什么
+- 扩容的时候破坏了数组的结构，和ArrayList的本质相同
+
+# 解决办法
+- 使用Collections.synchronizedMap(new HashMap(...))
+- 使用并发包中的ConcurrentHashMap
+- 使用Hashtable
+
+# 原理(具体参见上面的链接)
+- 第一种加锁
+- 第二种分段锁
+- 点三种加锁
+</code></pre></li>
+</ul>
+
+<h2 id="font-color-008b45-size-4-hashmap和hashtable之间有什么不同之处-font"><font color="#008B45" size=4>HashMap和Hashtable之间有什么不同之处</font></h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">类目</th>
+<th align="left">HashMap</th>
+<th align="left">Hashtable</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">k是否可为null</td>
+<td align="left">是</td>
+<td align="left">否</td>
+</tr>
+
+<tr>
+<td align="left">v是否可谓null</td>
+<td align="left">是</td>
+<td align="left">否</td>
+</tr>
+
+<tr>
+<td align="left">是否线程安全</td>
+<td align="left">否</td>
+<td align="left">是</td>
+</tr>
+
+<tr>
+<td align="left">父类</td>
+<td align="left">AbstractMap</td>
+<td align="left">Dictionary</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#hashmap面试题">Hashmap面试题</a>
+<ul>
+<li><a href="#font-color-008b45-size-4-hashmap底层原理是什么-存储方式-默认容量是什么-怎么实现扩容的-font"><font color="#008B45" size=4>HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</font></a></li>
+<li><a href="#font-color-008b45-size-4-hashmap中是如何进行hash运算的-这么做的好处有什么好处-font"><font color="#008B45" size=4>HashMap中是如何进行hash运算的？这么做的好处有什么好处？</font></a></li>
+<li><a href="#font-color-008b45-size-4-hashmap是线程安全的吗-为什么-解决办法是什么-原理是什么-font"><font color="#008B45" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></a></li>
+<li><a href="#font-color-008b45-size-4-hashmap和hashtable之间有什么不同之处-font"><font color="#008B45" size=4>HashMap和Hashtable之间有什么不同之处</font></a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140325593-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
