@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Solution
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/interview/book.min.c2a8efe1396f2e941dc6c08a506de23650bc50980fa885703b63d16528486df7.css">
+
+
+<link rel="icon" href="/interview/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://jaswine.com/interview/">面试题</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2finterview\2f docs\2f db\2fmysql\2fsolution\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><span style="color:#FF69B4">计算机基础</span></strong>
+
+<ul>
+<li><a href="/interview/docs/base/computer/0menu/">计算机组成</a></li>
+<li><a href="/interview/docs/base/os/0menu/">操作系统</a></li>
+<li><a href="/interview/docs/base/net/0menu/">计算机网络</a></li>
+<li><a href="/interview/docs/base/compile/0menu/">编译原理</a></li>
+<li><a href="/interview/docs/base/algo/0menu/">数据结构和算法</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">Java系</span></strong>
+
+<ul>
+<li><a href="/interview/docs/java/se/0menu/">JavaSE</a></li>
+<li><a href="/interview/docs/java/ee/0menu/">JavaEE</a></li>
+<li><a href="/interview/docs/java/vm/0menu/">JVM</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">常用中间件</span></strong>
+
+<ul>
+<li><a href="/interview/docs/mid/mybatis/0menu/">MyBtais</a></li>
+<li><a href="/interview/docs/mid/netty/0menu/">Netty</a></li>
+<li><a href="#">Activiti</a></li>
+<li><a href="/interview/docs/mid/druid/0menu/">Druid</a></li>
+<li><a href="#">ShardingSphere</a></li>
+<li><a href="#">Mycat</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">前端</span></strong>
+
+<ul>
+<li><a href="#">webpack</a></li>
+<li><a href="#">TypeScript</a></li>
+<li><a href="#">VUE</a></li>
+<li><a href="#">React</a></li>
+<li><a href="#">Angular</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">Spring系</span></strong>
+
+<ul>
+<li><a href="/interview/docs/spring/framework/0menu/">SpringFrameWork</a></li>
+<li><a href="/interview/docs/spring/boot/0menu/">SpringBoot</a></li>
+<li><a href="/interview/docs/spring/cloud/0menu/">SpringCloud</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">应用服务器</span></strong>
+
+<ul>
+<li><a href="/interview/docs/server/nginx/">Nginx</a></li>
+<li><a href="/interview/docs/server/tomcat/">Tomcat</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">数据存储(RDBMS)</span></strong>
+
+<ul>
+<li><a href="/interview/docs/db/sql/0menu/">SQL</a></li>
+<li><a href="/interview/docs/db/mysql/0menu/">MySQL</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">数据存储(NoSQL)</span></strong>
+
+<ul>
+<li><a href="/interview/docs/nosql/redis/0menu/">Redis</a></li>
+<li><a href="/interview/docs/nosql/neo4j/0menu/">Neo4j</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">消息队列及其中间件</span></strong>
+
+<ul>
+<li><a href="/interview/docs/message/theory/0menu/">消息队列理论</a></li>
+<li><a href="/interview/docs/message/rabbitmq/0menu/">RabbitMQ</a></li>
+<li><a href="/interview/docs/message/rocketmq/0menu/">RocketMQ</a></li>
+<li><a href="/interview/docs/message/kafka/0menu/">Kafka</a></li>
+<li><a href="/interview/docs/message/pulsar/0menu/">Pulsar</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">搜索引擎</span></strong>
+
+<ul>
+<li><a href="/interview/docs/search/solr/">Solr</a></li>
+<li><a href="/interview/docs/search/elasticsearch/">Elasticsearch</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">大数据</span></strong>
+
+<ul>
+<li><a href="#">Hadoop</a></li>
+<li><a href="#">HBase</a></li>
+<li><a href="#">Spark</a></li>
+<li><a href="#">Flink</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">系统安全</span></strong>
+
+<ul>
+<li><a href="/interview/docs/security/web/0menu/">Web安全</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">测试</span></strong>
+
+<ul>
+<li><a href="/interview/docs/test/theory/0menu/">测试理论</a></li>
+<li><a href="/interview/docs/test/jmeter/0menu/">Jmeter</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">分布式</span></strong>
+
+<ul>
+<li><a href="/interview/docs/arch/distributed/">分布式理论</a></li>
+<li><a href="/interview/docs/arch/distributed/">分布式锁</a></li>
+<li><a href="/interview/docs/arch/distributed/">分布式事务</a></li>
+<li><a href="/interview/docs/arch/distributed/">CAP</a></li>
+<li><a href="/interview/docs/arch/distributed/">BASE</a></li>
+<li><a href="/interview/docs/arch/distributed/">Paxos</a></li>
+<li><a href="/interview/docs/arch/distributed/">Raft</a></li>
+<li><a href="/interview/docs/arch/zookeeper/">Zookeeper</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">DevOps</span></strong>
+
+<ul>
+<li><a href="/interview/docs/devops/theory/0menu/">DevOps理论</a></li>
+<li><a href="/interview/docs/devops/jenkins/0menu/">Jenkins</a></li>
+<li><a href="/interview/docs/devops/docker/0menu/">Docker</a></li>
+<li><a href="/interview/docs/devops/kubernetes/0menu/">Kubernetes</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">编程思想</span></strong>
+
+<ul>
+<li><a href="/interview/docs/model/model/">设计模式</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/interview/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Solution
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="mysql常见解决方案">MySQL常见解决方案</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#mysql常见解决方案">MySQL常见解决方案</a>
+
+<ul>
+<li><a href="#font-color008b45-size4数据库中的超级大表如何优化font"><font color="#008B45" size=4>数据库中的超级大表如何优化?</font></a></li>
+<li><a href="#font-color008b45-size4你们是怎么排查故障的font"><font color="#008B45" size=4>你们是怎么排查故障的?</font></a></li>
+<li><a href="#font-color008b45-size4主从数据库延迟的原因是什么怎么解决font"><font color="#008B45" size=4>主从数据库延迟的原因是什么？怎么解决？</font></a></li>
+<li><a href="#font-color008b45-size4怎么防止对数据的误删操作font"><font color="#008B45" size=4>怎么防止对数据的误删操作？</font></a></li>
+<li><a href="#font-color008b45-size4你怎么设计高性能的数据存储架构font"><font color="#008B45" size=4>你怎么设计高性能的数据存储架构?</font></a></li>
+<li><a href="#font-color008b45-size4慢查询怎么排查出来和优化font"><font color="#008B45" size=4>慢查询怎么排查出来和优化？</font></a></li>
+<li><a href="#font-color008b45-size4读写分离怎么做有什么好处font"><font color="#008B45" size=4>读写分离怎么做？有什么好处？</font></a></li>
+<li><a href="#font-color008b45-size4怎么做数据库的性能分析font"><font color="#008B45" size=4>怎么做数据库的性能分析？</font></a></li>
+<li><a href="#font-color008b45-size4分库分表怎么做的都有什么优缺点font"><font color="#008B45" size=4>分库分表怎么做的？都有什么优缺点？</font></a></li>
+<li><a href="#font-color008b45-size4对于数据库优化你有什么系统的想法或者方案吗软硬件都可以font"><font color="#008B45" size=4>对于数据库优化你有什么系统的想法或者方案吗？软硬件都可以</font></a></li>
+<li><a href="#font-color008b45-size4mysql的主从实时备份同步的配置原理是什么font"><font color="#008B45" size=4>MySQL的主从实时备份同步的配置，原理是什么？</font></a></li>
+<li><a href="#font-color008b45-size4高并发下怎么做到安全的修改同一行数据font"><font color="#008B45" size=4>高并发下，怎么做到安全的修改同一行数据</font></a></li>
+<li><a href="#font-color008b45-size4分表后之后想让一个id多个表是自增的如何效率实现font"><font color="#008B45" size=4>分表后之后想让一个id多个表是自增的，如何效率实现</font></a></li>
+<li><a href="#font-color008b45-size4分表之后分布式唯一id怎么实现都有什么优缺点font"><font color="#008B45" size=4>分表之后分布式唯一id怎么实现，都有什么优缺点</font></a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="font-color-008b45-size-4-数据库中的超级大表如何优化-font"><font color="#008B45" size=4>数据库中的超级大表如何优化?</font></h2>
+
+<h2 id="font-color-008b45-size-4-你们是怎么排查故障的-font"><font color="#008B45" size=4>你们是怎么排查故障的?</font></h2>
+
+<h2 id="font-color-008b45-size-4-主从数据库延迟的原因是什么-怎么解决-font"><font color="#008B45" size=4>主从数据库延迟的原因是什么？怎么解决？</font></h2>
+
+<h2 id="font-color-008b45-size-4-怎么防止对数据的误删操作-font"><font color="#008B45" size=4>怎么防止对数据的误删操作？</font></h2>
+
+<h2 id="font-color-008b45-size-4-你怎么设计高性能的数据存储架构-font"><font color="#008B45" size=4>你怎么设计高性能的数据存储架构?</font></h2>
+
+<h2 id="font-color-008b45-size-4-慢查询怎么排查出来和优化-font"><font color="#008B45" size=4>慢查询怎么排查出来和优化？</font></h2>
+
+<h2 id="font-color-008b45-size-4-读写分离怎么做-有什么好处-font"><font color="#008B45" size=4>读写分离怎么做？有什么好处？</font></h2>
+
+<h2 id="font-color-008b45-size-4-怎么做数据库的性能分析-font"><font color="#008B45" size=4>怎么做数据库的性能分析？</font></h2>
+
+<h2 id="font-color-008b45-size-4-分库分表怎么做的-都有什么优缺点-font"><font color="#008B45" size=4>分库分表怎么做的？都有什么优缺点？</font></h2>
+
+<h2 id="font-color-008b45-size-4-对于数据库优化你有什么系统的想法或者方案吗-软硬件都可以-font"><font color="#008B45" size=4>对于数据库优化你有什么系统的想法或者方案吗？软硬件都可以</font></h2>
+
+<pre><code># 数据库查询速度影响因素
+- SQL查询速度
+- 服务器硬件
+- 网卡流量
+</code></pre>
+
+<h2 id="font-color-008b45-size-4-mysql的主从实时备份同步的配置-原理是什么-font"><font color="#008B45" size=4>MySQL的主从实时备份同步的配置，原理是什么？</font></h2>
+
+<pre><code># 基于SQL的复制
+- 主库上执行什么语句，从库上执行对应的语句
+
+# 基于行的复制
+- 将修改的内容复制过去
+
+# 混合模式
+- 使用SQl和行混合的模式
+
+# 原理
+- 在每个事务更新数据完成之前，master在二进制日志记录这些改变。写入二进制日志完成后，master通知存储引擎提交事务。
+- Slave将master的binary log复制到其中继日志。首先slave开始一个工作线程（I/O），I/O线程在master上打开一个普通的连接，然后开始binlog dump process。binlog dump process从master的二进制日志中读取事件，如果已经跟上master，它会睡眠并等待master产生新的事件，I/O线程将这些事件写入中继日志。
+
+- Sql slave thread（sql从线程）处理该过程的最后一步，sql线程从中继日志读取事件，并重放其中的事件而更新slave数据，使其与master中的数据一致，只要该线程与I/O线程保持一致，中继日志通常会位于os缓存中，所以中继日志的开销很小
+</code></pre>
+
+<h2 id="font-color-008b45-size-4-高并发下-怎么做到安全的修改同一行数据-font"><font color="#008B45" size=4>高并发下，怎么做到安全的修改同一行数据</font></h2>
+
+<pre><code>- 使用悲观锁
+- 
+</code></pre>
+
+<h2 id="font-color-008b45-size-4-分表后之后想让一个id多个表是自增的-如何效率实现-font"><font color="#008B45" size=4>分表后之后想让一个id多个表是自增的，如何效率实现</font></h2>
+
+<pre><code># 建一个id表
+- id表中id是自增的，别的表插入的时候从这个表中取最新的id
+
+# Redis生成方案
+
+# 队列方案
+- 将批量的id放到队列中，每一次插入取队列中的，失败返还
+</code></pre>
+
+<h2 id="font-color-008b45-size-4-分表之后分布式唯一id怎么实现-都有什么优缺点-font"><font color="#008B45" size=4>分表之后分布式唯一id怎么实现，都有什么优缺点</font></h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>UUID</td>
+<td>全球唯一，本机生成</td>
+<td>无序，字符串存储查询效率慢，存储空间大</td>
+</tr>
+
+<tr>
+<td>雪花算法</td>
+<td>生成快，id是整体变大的，灵活</td>
+<td>依赖本机的时钟，如果时钟回调可能会有重复id</td>
+</tr>
+
+<tr>
+<td>Redis原子性自增</td>
+<td>有序</td>
+<td>占用带宽</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#mysql常见解决方案">MySQL常见解决方案</a>
+<ul>
+<li><a href="#font-color-008b45-size-4-数据库中的超级大表如何优化-font"><font color="#008B45" size=4>数据库中的超级大表如何优化?</font></a></li>
+<li><a href="#font-color-008b45-size-4-你们是怎么排查故障的-font"><font color="#008B45" size=4>你们是怎么排查故障的?</font></a></li>
+<li><a href="#font-color-008b45-size-4-主从数据库延迟的原因是什么-怎么解决-font"><font color="#008B45" size=4>主从数据库延迟的原因是什么？怎么解决？</font></a></li>
+<li><a href="#font-color-008b45-size-4-怎么防止对数据的误删操作-font"><font color="#008B45" size=4>怎么防止对数据的误删操作？</font></a></li>
+<li><a href="#font-color-008b45-size-4-你怎么设计高性能的数据存储架构-font"><font color="#008B45" size=4>你怎么设计高性能的数据存储架构?</font></a></li>
+<li><a href="#font-color-008b45-size-4-慢查询怎么排查出来和优化-font"><font color="#008B45" size=4>慢查询怎么排查出来和优化？</font></a></li>
+<li><a href="#font-color-008b45-size-4-读写分离怎么做-有什么好处-font"><font color="#008B45" size=4>读写分离怎么做？有什么好处？</font></a></li>
+<li><a href="#font-color-008b45-size-4-怎么做数据库的性能分析-font"><font color="#008B45" size=4>怎么做数据库的性能分析？</font></a></li>
+<li><a href="#font-color-008b45-size-4-分库分表怎么做的-都有什么优缺点-font"><font color="#008B45" size=4>分库分表怎么做的？都有什么优缺点？</font></a></li>
+<li><a href="#font-color-008b45-size-4-对于数据库优化你有什么系统的想法或者方案吗-软硬件都可以-font"><font color="#008B45" size=4>对于数据库优化你有什么系统的想法或者方案吗？软硬件都可以</font></a></li>
+<li><a href="#font-color-008b45-size-4-mysql的主从实时备份同步的配置-原理是什么-font"><font color="#008B45" size=4>MySQL的主从实时备份同步的配置，原理是什么？</font></a></li>
+<li><a href="#font-color-008b45-size-4-高并发下-怎么做到安全的修改同一行数据-font"><font color="#008B45" size=4>高并发下，怎么做到安全的修改同一行数据</font></a></li>
+<li><a href="#font-color-008b45-size-4-分表后之后想让一个id多个表是自增的-如何效率实现-font"><font color="#008B45" size=4>分表后之后想让一个id多个表是自增的，如何效率实现</font></a></li>
+<li><a href="#font-color-008b45-size-4-分表之后分布式唯一id怎么实现-都有什么优缺点-font"><font color="#008B45" size=4>分表之后分布式唯一id怎么实现，都有什么优缺点</font></a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140325593-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

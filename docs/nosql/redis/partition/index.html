@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    Partition
+  
+ | 面试题</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/interview/book.min.c2a8efe1396f2e941dc6c08a506de23650bc50980fa885703b63d16528486df7.css">
+
+
+<link rel="icon" href="/interview/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+<h2 class="book-brand">
+  <a href="https://jaswine.com/interview/">面试题</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2finterview\2f docs\2fnosql\2fredis\2fpartition\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><strong><span style="color:#FF69B4">计算机基础</span></strong>
+
+<ul>
+<li><a href="/interview/docs/base/computer/0menu/">计算机组成</a></li>
+<li><a href="/interview/docs/base/os/0menu/">操作系统</a></li>
+<li><a href="/interview/docs/base/net/0menu/">计算机网络</a></li>
+<li><a href="/interview/docs/base/compile/0menu/">编译原理</a></li>
+<li><a href="/interview/docs/base/algo/0menu/">数据结构和算法</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">Java系</span></strong>
+
+<ul>
+<li><a href="/interview/docs/java/se/0menu/">JavaSE</a></li>
+<li><a href="/interview/docs/java/ee/0menu/">JavaEE</a></li>
+<li><a href="/interview/docs/java/vm/0menu/">JVM</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">常用中间件</span></strong>
+
+<ul>
+<li><a href="/interview/docs/mid/mybatis/0menu/">MyBtais</a></li>
+<li><a href="/interview/docs/mid/netty/0menu/">Netty</a></li>
+<li><a href="#">Activiti</a></li>
+<li><a href="/interview/docs/mid/druid/0menu/">Druid</a></li>
+<li><a href="#">ShardingSphere</a></li>
+<li><a href="#">Mycat</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">前端</span></strong>
+
+<ul>
+<li><a href="#">webpack</a></li>
+<li><a href="#">TypeScript</a></li>
+<li><a href="#">VUE</a></li>
+<li><a href="#">React</a></li>
+<li><a href="#">Angular</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">Spring系</span></strong>
+
+<ul>
+<li><a href="/interview/docs/spring/framework/0menu/">SpringFrameWork</a></li>
+<li><a href="/interview/docs/spring/boot/0menu/">SpringBoot</a></li>
+<li><a href="/interview/docs/spring/cloud/0menu/">SpringCloud</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">应用服务器</span></strong>
+
+<ul>
+<li><a href="/interview/docs/server/nginx/">Nginx</a></li>
+<li><a href="/interview/docs/server/tomcat/">Tomcat</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">数据存储(RDBMS)</span></strong>
+
+<ul>
+<li><a href="/interview/docs/db/sql/0menu/">SQL</a></li>
+<li><a href="/interview/docs/db/mysql/0menu/">MySQL</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">数据存储(NoSQL)</span></strong>
+
+<ul>
+<li><a href="/interview/docs/nosql/redis/0menu/">Redis</a></li>
+<li><a href="/interview/docs/nosql/neo4j/0menu/">Neo4j</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">消息队列及其中间件</span></strong>
+
+<ul>
+<li><a href="/interview/docs/message/theory/0menu/">消息队列理论</a></li>
+<li><a href="/interview/docs/message/rabbitmq/0menu/">RabbitMQ</a></li>
+<li><a href="/interview/docs/message/rocketmq/0menu/">RocketMQ</a></li>
+<li><a href="/interview/docs/message/kafka/0menu/">Kafka</a></li>
+<li><a href="/interview/docs/message/pulsar/0menu/">Pulsar</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">搜索引擎</span></strong>
+
+<ul>
+<li><a href="/interview/docs/search/solr/">Solr</a></li>
+<li><a href="/interview/docs/search/elasticsearch/">Elasticsearch</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">大数据</span></strong>
+
+<ul>
+<li><a href="#">Hadoop</a></li>
+<li><a href="#">HBase</a></li>
+<li><a href="#">Spark</a></li>
+<li><a href="#">Flink</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">系统安全</span></strong>
+
+<ul>
+<li><a href="/interview/docs/security/web/0menu/">Web安全</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">测试</span></strong>
+
+<ul>
+<li><a href="/interview/docs/test/theory/0menu/">测试理论</a></li>
+<li><a href="/interview/docs/test/jmeter/0menu/">Jmeter</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">分布式</span></strong>
+
+<ul>
+<li><a href="/interview/docs/arch/distributed/">分布式理论</a></li>
+<li><a href="/interview/docs/arch/distributed/">分布式锁</a></li>
+<li><a href="/interview/docs/arch/distributed/">分布式事务</a></li>
+<li><a href="/interview/docs/arch/distributed/">CAP</a></li>
+<li><a href="/interview/docs/arch/distributed/">BASE</a></li>
+<li><a href="/interview/docs/arch/distributed/">Paxos</a></li>
+<li><a href="/interview/docs/arch/distributed/">Raft</a></li>
+<li><a href="/interview/docs/arch/zookeeper/">Zookeeper</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">DevOps</span></strong>
+
+<ul>
+<li><a href="/interview/docs/devops/theory/0menu/">DevOps理论</a></li>
+<li><a href="/interview/docs/devops/jenkins/0menu/">Jenkins</a></li>
+<li><a href="/interview/docs/devops/docker/0menu/">Docker</a></li>
+<li><a href="/interview/docs/devops/kubernetes/0menu/">Kubernetes</a></li>
+</ul></li>
+<li><strong><span style="color:#FF69B4">编程思想</span></strong>
+
+<ul>
+<li><a href="/interview/docs/model/model/">设计模式</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/interview/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Partition
+  
+</strong>
+</header>
+
+      
+<article class="markdown"></article>
+
+      
+
+      
+    </div>
+
+    
+  
+  
+
+
+  </main>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-140325593-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

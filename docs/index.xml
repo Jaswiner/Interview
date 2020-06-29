@@ -56,63 +56,6 @@
     </item>
     
     <item>
-      <title>消息队列</title>
-      <link>https://jaswine.com/interview/docs/message/kafka/</link>
-      <pubDate>Sat, 04 May 2019 10:32:02 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/message/kafka/</guid>
-      <description> 消息队列面试题 基础 为什么使用消息队列，优缺点是什么是呢？
-你们在工作中是这么对消息队列进行选型的
-消息队列的高可用你们是这么实现的
-如何保证消息不被重复消费的
-消息传输的可靠性你们是这么做到的？
-你们是这么保证消息的顺序性的？
-ActiveMQ RabbitMQ </description>
-    </item>
-    
-    <item>
-      <title>消息队列</title>
-      <link>https://jaswine.com/interview/docs/message/pulsar/</link>
-      <pubDate>Sat, 04 May 2019 10:32:02 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/message/pulsar/</guid>
-      <description> 消息队列面试题 基础 为什么使用消息队列，优缺点是什么是呢？
-你们在工作中是这么对消息队列进行选型的
-消息队列的高可用你们是这么实现的
-如何保证消息不被重复消费的
-消息传输的可靠性你们是这么做到的？
-你们是这么保证消息的顺序性的？
-ActiveMQ RabbitMQ </description>
-    </item>
-    
-    <item>
-      <title>消息队列</title>
-      <link>https://jaswine.com/interview/docs/message/rabbit/</link>
-      <pubDate>Sat, 04 May 2019 10:32:02 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/message/rabbit/</guid>
-      <description> 消息队列面试题 基础 为什么使用消息队列，优缺点是什么是呢？
-你们在工作中是这么对消息队列进行选型的
-消息队列的高可用你们是这么实现的
-如何保证消息不被重复消费的
-消息传输的可靠性你们是这么做到的？
-你们是这么保证消息的顺序性的？
-ActiveMQ RabbitMQ </description>
-    </item>
-    
-    <item>
-      <title>数据库</title>
-      <link>https://jaswine.com/interview/docs/data/mysql/</link>
-      <pubDate>Mon, 29 Apr 2019 09:51:30 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/data/mysql/</guid>
-      <description>数据库面试题(默认MySQL) SQL 说说你对存储过程的理解，为什么阿里的编程规范中禁用存储过程，他有什么优缺点
-# 理解 - 存储过程就是一些SQL组成的代码块，可以重复使用 # 为什么禁用存储过程  说说你对SQL的连接查询(Join)的理解，他们之间的区别是什么
-# inner join - 两个表交集的部分 # full out join - 两个表并集，没有匹配的为null # left join - 以左表为主，没有匹配的为null # right join - 以右表为主，没有匹配的为null  数据库 索引 说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？
-# 索引理解 - MySQL索引的本质是B+树 # 如何使用 - 不同索引类型添加方式不一样，不过都是雷同的 alter table [table_name] add [index_type] [index_name] [字段名] # 不能，要正确的建立索引 # Tips：索引建立的几大原则 - 最左前缀匹配原则，MySQL一直向右匹配知道遇到查询范围(&amp;gt;,&amp;lt;,between,like)停止匹配 - in和=可以乱序 - 选择区分度比较高的列作为索引 - 索引列不参加计算 - 尽量扩展索引，不新建索引  说说数据库的索引都有哪些类型 |索引名|特点| |:&amp;ndash;|:&amp;ndash;| |UNIQUE(唯一索引)|不可以出现相同的值，可以有null| |INDEX(普通索引)|允许出现相同的索引内容| |PROMARY KEY(主键索引)|不允许出现相同的值| |FULLTEXT INDEX(全文索引)|对全文进行索引，效率很差| |组合索引|实质上是将多个字段建到一个索引里，列值的组合必须唯一|</description>
-    </item>
-    
-    <item>
       <title>架构</title>
       <link>https://jaswine.com/interview/docs/arch/arch/</link>
       <pubDate>Mon, 29 Apr 2019 09:50:32 +0800</pubDate>
@@ -159,58 +102,12 @@ ActiveMQ RabbitMQ </description>
     </item>
     
     <item>
-      <title>Mybatis</title>
-      <link>https://jaswine.com/interview/docs/java/mybatis/</link>
-      <pubDate>Mon, 29 Apr 2019 09:33:46 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/mybatis/</guid>
-      <description> Mybatis面试题 应用 Mybatis中#{}和${}区别 |#|$| |:&amp;ndash;|:&amp;ndash;| |预编译|直接传入值| |可以防止SQL注入|不能防止SQL注入| |不能放在order by后面|可以放在order by后面|
-Mybatis传入多个参数
-- #{0},#{1} - @param注解  Mybatis分页查询的原理
-- 使用pagehelp做分页查询 - 本质上就是对sql进行拦截然后重写  原理 Mybatis定义的接口是怎么找到实现的
-使用动态代理技术  </description>
-    </item>
-    
-    <item>
-      <title>Netty</title>
-      <link>https://jaswine.com/interview/docs/java/netty/</link>
-      <pubDate>Mon, 29 Apr 2019 09:33:39 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/netty/</guid>
-      <description>Netty面试题 原理 为什么选择Netty
-Netty是怎么实现异步非阻塞的IO的
-Netty的线程模型是什么？如何基于Reactor模型上实现的
-Netty中fashwheeltimer的用法，实现原理，是否出现过调用不够准时，怎么解决这个问题
-Netty的通讯协议是什么样的
-应用 Netty的心跳处理在弱网下怎么办？
-为什么选择Netty</description>
-    </item>
-    
-    <item>
       <title>设计模式</title>
       <link>https://jaswine.com/interview/docs/model/model/</link>
       <pubDate>Mon, 29 Apr 2019 09:33:29 +0800</pubDate>
       
       <guid>https://jaswine.com/interview/docs/model/model/</guid>
       <description> 设计模式面试题 创建型 工厂模式 建造者模式 单例模式 写出三种单例模式实现 结构型 适配器模式 桥接模式 装饰者模式 外观模式 享元模式 代理模式 行为型 命令模式 中介者模式 观察者模式 状态模式 策略模式 MVC 说说你对MVC模式的理解，你用过什么MVC框架 </description>
-    </item>
-    
-    <item>
-      <title>JavaWeb</title>
-      <link>https://jaswine.com/interview/docs/java/jwb/</link>
-      <pubDate>Mon, 29 Apr 2019 09:32:24 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/jwb/</guid>
-      <description> JavaWeb开发面试题 浏览器 怎么避免浏览器缓存 Servlet session和cookie的区别和联系，session的生命周期是什么样的？集群环境下怎么管理session - session是又服务端维护的，记录用户的相关信息 - cookie是服务端生成，客户端维护的，大小不能超过4KB  Servlet容器 讲讲Tomcat的结构，以及其类加载器流程，线程模型 怎么对Tomcat进行调优，涉及到什么参数呢？ </description>
-    </item>
-    
-    <item>
-      <title>操作系统</title>
-      <link>https://jaswine.com/interview/docs/base/os/</link>
-      <pubDate>Mon, 29 Apr 2019 09:31:37 +0800</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/base/os/</guid>
-      <description>计算机操作系统 进程 文件 I/O 操作系统的io模型是什么？</description>
     </item>
     
     <item>
@@ -309,11 +206,30 @@ Netty的通讯协议是什么样的
     
     <item>
       <title></title>
+      <link>https://jaswine.com/interview/docs/base/compile/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/compile/0menu/</guid>
+      <description> 编译原理  编译原理  词法/语法分析器  HTTP    词法/语法分析器 HTTP </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/base/computer/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/base/computer/0menu/</guid>
+      <description> 计算机组成  计算机底层是由各种硬件组成的，认识这些硬件以及他们背后的工作原理方便我们理解程序运行的原理
+  计算机组成  CPU(运算器/控制器) 存储器 IO 数据链路层  ARP    CPU(运算器/控制器) 存储器 IO 数据链路层 ARP </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://jaswine.com/interview/docs/base/net/0menu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/base/net/0menu/</guid>
-      <description> 计算机网络协议  计算机网络协议  应用层  HTTP HTTPS HTTP2 DNS DHCP RTSP RTMP  传输层  TCP UDP RTP  网络层  IP  数据链路层  ARP    应用层 HTTP HTTPS HTTP2 DNS DHCP RTSP RTMP 传输层 TCP UDP RTP 网络层 IP 数据链路层 ARP </description>
+      <description> 计算机网络协议  计算机网络协议  应用层  HTTP HTTPS HTTP2 DNS DHCP RTSP RTMP  传输层  TCP UDP RTP  网络层  IP  数据链路层  ARP    </description>
     </item>
     
     <item>
@@ -430,52 +346,122 @@ Netty的通讯协议是什么样的
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/data/ShardingSphere/</link>
+      <link>https://jaswine.com/interview/docs/base/os/0menu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/data/ShardingSphere/</guid>
-      <description> ShardingSphere分库分表 </description>
+      <guid>https://jaswine.com/interview/docs/base/os/0menu/</guid>
+      <description> 计算机操作系统(Linux)  计算机的底层是硬件(cpu、内存&amp;hellip;)，操作系统就是管理和控制这些硬件的软件，同时给开发人员开发一些API来控制底层硬件工作
+  计算机操作系统(Linux)  进程管理  进程  内存管理 文件系统   进程管理 进程 内存管理 文件系统 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/data/mycat/</link>
+      <link>https://jaswine.com/interview/docs/base/os/process/process/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/data/mycat/</guid>
-      <description> Mycat分表分库 </description>
+      <guid>https://jaswine.com/interview/docs/base/os/process/process/</guid>
+      <description> 进程面试题 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/data/mysql/base/</link>
+      <link>https://jaswine.com/interview/docs/db/mysql/0menu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/data/mysql/base/</guid>
-      <description> MySQL数据库面试题  [🔗]()  </description>
+      <guid>https://jaswine.com/interview/docs/db/mysql/0menu/</guid>
+      <description> MySQL面试题  MySQL面试题  索引 事务 锁 日志 解决方案   </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/data/redis/</link>
+      <link>https://jaswine.com/interview/docs/db/mysql/lock/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/data/redis/</guid>
-      <description> Redis Redis中list结构相关的操作
-说说你在项目中使用Redis集群的用法
-Redis怎么存放热点数据？时长怎么控制的？原理呢？
-  </description>
+      <guid>https://jaswine.com/interview/docs/db/mysql/lock/</guid>
+      <description> MySQL锁  MySQL锁  什么是乐观锁和悲观锁   ##什么是乐观锁和悲观锁
+# 乐观锁 - 不认为操作会冲突 - 使用 # 悲观锁 - 认为每一次操作都会引发冲突  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/data/sql/</link>
+      <link>https://jaswine.com/interview/docs/db/mysql/log/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/data/sql/</guid>
-      <description> SQL 说说你对存储过程的理解，为什么阿里的编程规范中禁用存储过程，他有什么优缺点
-# 理解 - 存储过程就是一些SQL组成的代码块，可以重复使用 # 为什么禁用存储过程  说说你对SQL的连接查询(Join)的理解，他们之间的区别是什么
-# inner join - 两个表交集的部分 # full out join - 两个表并集，没有匹配的为null # left join - 以左表为主，没有匹配的为null # right join - 以右表为主，没有匹配的为null  </description>
+      <guid>https://jaswine.com/interview/docs/db/mysql/log/</guid>
+      <description> MySQL日志面试题 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/db/mysql/solution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/db/mysql/solution/</guid>
+      <description> MySQL常见解决方案  MySQL常见解决方案  数据库中的超级大表如何优化? 你们是怎么排查故障的? 主从数据库延迟的原因是什么？怎么解决？ 怎么防止对数据的误删操作？ 你怎么设计高性能的数据存储架构? 慢查询怎么排查出来和优化？ 读写分离怎么做？有什么好处？ 怎么做数据库的性能分析？ 分库分表怎么做的？都有什么优缺点？ 对于数据库优化你有什么系统的想法或者方案吗？软硬件都可以 MySQL的主从实时备份同步的配置，原理是什么？ 高并发下，怎么做到安全的修改同一行数据 分表后之后想让一个id多个表是自增的，如何效率实现 分表之后分布式唯一id怎么实现，都有什么优缺点   数据库中的超级大表如何优化? 你们是怎么排查故障的? 主从数据库延迟的原因是什么？怎么解决？ 怎么防止对数据的误删操作？ 你怎么设计高性能的数据存储架构? 慢查询怎么排查出来和优化？ 读写分离怎么做？有什么好处？ 怎么做数据库的性能分析？ 分库分表怎么做的？都有什么优缺点？ 对于数据库优化你有什么系统的想法或者方案吗？软硬件都可以 # 数据库查询速度影响因素 - SQL查询速度 - 服务器硬件 - 网卡流量  MySQL的主从实时备份同步的配置，原理是什么？ # 基于SQL的复制 - 主库上执行什么语句，从库上执行对应的语句 # 基于行的复制 - 将修改的内容复制过去 # 混合模式 - 使用SQl和行混合的模式 # 原理 - 在每个事务更新数据完成之前，master在二进制日志记录这些改变。写入二进制日志完成后，master通知存储引擎提交事务。 - Slave将master的binary log复制到其中继日志。首先slave开始一个工作线程（I/O），I/O线程在master上打开一个普通的连接，然后开始binlog dump process。binlog dump process从master的二进制日志中读取事件，如果已经跟上master，它会睡眠并等待master产生新的事件，I/O线程将这些事件写入中继日志。 - Sql slave thread（sql从线程）处理该过程的最后一步，sql线程从中继日志读取事件，并重放其中的事件而更新slave数据，使其与master中的数据一致，只要该线程与I/O线程保持一致，中继日志通常会位于os缓存中，所以中继日志的开销很小  高并发下，怎么做到安全的修改同一行数据 - 使用悲观锁 -  分表后之后想让一个id多个表是自增的，如何效率实现 # 建一个id表 - id表中id是自增的，别的表插入的时候从这个表中取最新的id # Redis生成方案 # 队列方案 - 将批量的id放到队列中，每一次插入取队列中的，失败返还  分表之后分布式唯一id怎么实现，都有什么优缺点     优点 缺点     UUID 全球唯一，本机生成 无序，字符串存储查询效率慢，存储空间大   雪花算法 生成快，id是整体变大的，灵活 依赖本机的时钟，如果时钟回调可能会有重复id   Redis原子性自增 有序 占用带宽    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/db/mysql/sy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/db/mysql/sy/</guid>
+      <description> MySQL中的索引  MySQL中的索引  MySQL索引的底层原理是什么？ MySQL中都有什么索引？有什么区别？ 如何进行索引优化？ 说说数据库的索引都有哪些类型 说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？   MySQL索引的底层原理是什么？ MySQL中都有什么索引？有什么区别？ 如何进行索引优化？ 说说数据库的索引都有哪些类型    索引名 特点     UNIQUE(唯一索引) 不可以出现相同的值，可以有null   INDEX(普通索引) 允许出现相同的索引内容   PROMARY KEY(主键索引) 不允许出现相同的值   FULLTEXT INDEX(全文索引) 对全文进行索引，效率很差   组合索引 实质上是将多个字段建到一个索引里，列值的组合必须唯一    Tips：
+CREATE INDEX 方式只能创建‘普通索引’和‘唯一索引’ 组合索引的创建方式为： ALTER TABLE [table_name] ADD INDEX [inedx_name](列1,列2,列3);  说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？ # 索引理解 - MySQL索引的本质是B+树 # 如何使用 - 不同索引类型添加方式不一样，不过都是雷同的 alter table [table_name] add [index_type] [index_name] [字段名] # 不能，要正确的建立索引 # Tips：索引建立的几大原则 - 最左前缀匹配原则，MySQL一直向右匹配知道遇到查询范围(&amp;gt;,&amp;lt;,between,like)停止匹配 - in和=可以乱序 - 选择区分度比较高的列作为索引 - 索引列不参加计算 - 尽量扩展索引，不新建索引  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/db/mysql/trans/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/db/mysql/trans/</guid>
+      <description> MySQL事务  MySQL事务  MySQL事务 数据库事务隔离级别有哪些？各自含义是什么？MySQL的默认事务隔离级别是什么？   MySQL事务 数据库事务隔离级别有哪些？各自含义是什么？MySQL的默认事务隔离级别是什么？ # 事务隔离级别 - read-uncommitted(读未提交)：未提交的事务修改可以被看到 - read—committed(读提交)：事务提交修改后可以被另一个事务看到 - repeatable-read(可重复复)：事务内部每次读都是一样的 - serializable(串行化)：一个事务未提交，别的事务就不能修改关联的数据 # 默认隔离级别 - repeatable-read(可重复复)  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/db/sql/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/db/sql/0menu/</guid>
+      <description> SQL面试题  SQL面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/devops/docker/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/devops/docker/0menu/</guid>
+      <description> Docker面试题  Docker面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/devops/jenkins/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/devops/jenkins/0menu/</guid>
+      <description> Jenkins面试题  Jmeter面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/devops/kubernetes/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/devops/kubernetes/0menu/</guid>
+      <description> Kubernetes面试题  Kubernetes面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/devops/theory/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/devops/theory/0menu/</guid>
+      <description> DevOps理论面试题  DevOps理论面试题  </description>
     </item>
     
     <item>
@@ -493,32 +479,43 @@ Redis怎么存放热点数据？时长怎么控制的？原理呢？
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/se/0menu/</guid>
-      <description> Java知识分类  Java知识分类  基础  运算符 Object类 String系  新特性  Java5新特性 Java6新特性 Java7新特性 Java8新特性  Lambda Stream DateTime API Optional  Java9新特性 Java10新特性 Java11新特性 Java12新特性  面向对象思想 I/O  BIO NIO AIO  集合  List  ArrayList LinkedList Vector CopyOnWriteArrayList  Set  HashSet  Queue Map  Hashmap ConcurrentHashmap   多线程/并发  多线程基础操作 线程池 JUC 锁  异常 高级特性  反射 注解 泛型    基础 运算符 Object类 String系 新特性 Java5新特性 Java6新特性 Java7新特性 Java8新特性 Lambda Stream DateTime API Optional Java9新特性 Java10新特性 Java11新特性 Java12新特性 面向对象思想 I/O BIO NIO AIO 集合 List ArrayList LinkedList Vector CopyOnWriteArrayList Set HashSet Queue Map Hashmap ConcurrentHashmap 多线程/并发 多线程基础操作 线程池 JUC 锁 异常 高级特性 反射 注解 泛型 </description>
+      <description> Java知识分类  Java知识分类  基础  运算符 Object类 String系  新特性  Java5新特性 Java6新特性 Java7新特性 Java8新特性  Lambda Stream DateTime API Optional  Java9新特性 Java10新特性 Java11新特性 Java12新特性  面向对象思想  抽象 继承 封装 多态  I/O  BIO NIO AIO  集合  List  ArrayList LinkedList Vector CopyOnWriteArrayList  Set  HashSet LinkedHashSet SortedSet TreeSet  Queue Map  Hashmap LinkedHashMap ConcurrentHashmap   多线程/并发  烂大街的多线程基础题 线程池 JUC 锁 多线程案例  异常 高级特性  反射 注解 泛型    基础 运算符 Object类 String系 新特性 Java5新特性 Java6新特性 Java7新特性 Java8新特性 Lambda Stream DateTime API Optional Java9新特性 Java10新特性 Java11新特性 Java12新特性 面向对象思想 抽象 继承 封装 多态 I/O BIO NIO AIO 集合 List ArrayList LinkedList Vector CopyOnWriteArrayList Set HashSet LinkedHashSet SortedSet TreeSet Queue Map Hashmap LinkedHashMap ConcurrentHashmap 多线程/并发 烂大街的多线程基础题 线程池 JUC 锁 多线程案例 异常 高级特性 反射 注解 泛型 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/java/se/adventage/</link>
+      <link>https://jaswine.com/interview/docs/java/se/adv/annotation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/java/se/adventage/</guid>
-      <description> Java高级特性 Java注解，泛型，枚举 JDK1.5引入了泛型，泛型的存在是用来解决什么问题
-Java高级特性 反射的原理是什么？反射创建类实例的三种方式是什么？
- 动态代理有哪些实现方式，你知道他们相应的优缺点吗？
-# 实现方式 - JDK动态代理 - cglib动态代理 # 优缺点 如下      JDK cglib     区别 只能对实现同一接口的类进行代理 可以对任何类惊醒代理，但是不能对final修饰的类进行代理   原理 使用Java反射原理实现的 使用asm的开源工具将代理的类加载进来实现其子类，然后重写相关的方法    </description>
+      <guid>https://jaswine.com/interview/docs/java/se/adv/annotation/</guid>
+      <description> Java注解面试题  Java注解面试题  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/java/se/base/</link>
+      <link>https://jaswine.com/interview/docs/java/se/adv/generic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/java/se/base/</guid>
-      <description>Java基础知识 Java版本特性 说说每个版本Java的新特性
-# 1.5 - 自动装箱和拆箱 - 新增枚举类型 - 新增注解类型 - 泛型的支持 - 静态导入的支持 - For-Each循环支持 - 可变参数 # 1.6 - 轻量级HTTP SERVER API # 1.7 - Java集合的增强，可以直接使用[]，{}来存入对象 - Switch中可以使用String(以前只可以使用基本类型变量) # 1.8 - 接口方法中可以默认实现(使用default关键字) - Lambda表达式的支持 - 函数式的接口(使用@Functionallnterface) - 使用::关键字来传递方法或者构造函数引用 - 多重注解 - 集合类的增强 - Stream流式计算  Java中try&amp;hellip;catch&amp;hellip;finally&amp;hellip;return执行的先后顺序
-- 先执行try中的代码，遇到try中的return执行但是不返回到main方法中  Java关键字 final有什么用途？
-- final表示不变，可以修饰变量，方法和类 -- 修饰变量的时候这个变量一旦被初始化完成就不会被改变 -- 修饰方法说明在这个方法不能被修改 -- 修饰类说明这个类不能被继承 - final一般也是一种多线程的设计模式，因为对象不变就不存在多线程并发安全的问题了  static关键字这么用
-- static修饰方法：不需要依靠实例对象来访问 - static修饰变量：类对象，在类加载的时候就有了 - static修饰代码块：在类加载的时候就初始化，只初始化一次 - static修饰内部类：就是一个内部类 - static静态导包  逻辑运算 a=a+b和a+=b之间的区别是什么？</description>
+      <guid>https://jaswine.com/interview/docs/java/se/adv/generic/</guid>
+      <description> Java泛型面试题  Java泛型面试题  JDK1.5引入了泛型，泛型的存在是用来解决什么问题 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/adv/reflect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/adv/reflect/</guid>
+      <description> Java反射面试题  Java反射面试题  反射的原理是什么？反射创建类实例的三种方式是什么？ 动态代理有哪些实现方式，你知道他们相应的优缺点吗？   反射的原理是什么？反射创建类实例的三种方式是什么？  动态代理有哪些实现方式，你知道他们相应的优缺点吗？ # 实现方式 - JDK动态代理 - cglib动态代理 # 优缺点 如下      JDK cglib     区别 只能对实现同一接口的类进行代理 可以对任何类惊醒代理，但是不能对final修饰的类进行代理   原理 使用Java反射原理实现的 使用asm的开源工具将代理的类加载进来实现其子类，然后重写相关的方法    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/base/keyword/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/base/keyword/</guid>
+      <description> Java中的关键字  Java中的关键字  Java中try&amp;hellip;catch&amp;hellip;finally&amp;hellip;return执行的先后顺序 final有什么用途？ static关键字这么用   Java中try&amp;hellip;catch&amp;hellip;finally&amp;hellip;return执行的先后顺序 - 先执行try中的代码，遇到try中的return执行但是不返回到main方法中  final有什么用途？ - final表示不变，可以修饰变量，方法和类 -- 修饰变量的时候这个变量一旦被初始化完成就不会被改变 -- 修饰方法说明在这个方法不能被修改 -- 修饰类说明这个类不能被继承 - final一般也是一种多线程的设计模式，因为对象不变就不存在多线程并发安全的问题了  static关键字这么用 - static修饰方法：不需要依靠实例对象来访问 - static修饰变量：类对象，在类加载的时候就有了 - static修饰代码块：在类加载的时候就初始化，只初始化一次 - static修饰内部类：就是一个内部类 - static静态导包  </description>
     </item>
     
     <item>
@@ -527,7 +524,9 @@ Java高级特性 反射的原理是什么？反射创建类实例的三种方式
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/se/base/object/</guid>
-      <description> Object超类  Object超类  为什么重写equals()方法的同时也要重写hashcode()方法？   为什么重写equals()方法的同时也要重写hashcode()方法？ - 1.equals方法本质就是==，就是比较对象的引用(即内存地址) - 2.在map集合中，使用hashcode来进行hash运算，  </description>
+      <description> Object超类  Object超类  为什么重写equals()方法的同时也要重写hashcode()方法？ 说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的   为什么重写equals()方法的同时也要重写hashcode()方法？ - 1.equals方法本质就是==，就是比较对象的引用(即内存地址) - 2.在map集合中，使用hashcode来进行hash运算，  说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的  🔗链接:JavaSE 8 #Object
+- equals是基于值比较而不是引用(==是比较引用地址) - hashCode()主要为HashMap，HashSet这些集合服务   深拷贝和浅拷贝的区别
+- 对于基本类型来说，浅拷贝和深拷贝一样，都是对值进行拷贝 - 对于引用类型来说: -- 浅拷贝:只是复制了对应的引用，对象没有被拷贝，并且这个对象的其他引用还在 -- 深拷贝:不只复制了对象的引用，对象本身也被复制了  </description>
     </item>
     
     <item>
@@ -536,7 +535,7 @@ Java高级特性 反射的原理是什么？反射创建类实例的三种方式
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/se/base/string/</guid>
-      <description> String系  String系  ## String为什么设计成final类？ String、StringBuilder和StringBuffer之间的异同   ## String为什么设计成final类？ -  String、StringBuilder和StringBuffer之间的异同 </description>
+      <description> String系  String系  ## String为什么设计成final类？ String、StringBuilder和StringBuffer之间的异同 String中UTF-8编码和GBK编码有什么区别   ## String为什么设计成final类？ -  String、StringBuilder和StringBuffer之间的异同  🔗链接:源码分析-Java中的String，StringBuilder和StringBuffer     类名 底层数据结构 是否线程安全 父类     String char[] 是(因为是final类) /   StringBuffer char[] 是 AbstractStringBuilder   StringBuilder char[] 否 AbstractStringBuilder     Tips：  Java9开始String、StringBuilder和StringBuffer的底层改成byte[](//todo 为什么)   String中UTF-8编码和GBK编码有什么区别 </description>
     </item>
     
     <item>
@@ -546,17 +545,6 @@ Java高级特性 反射的原理是什么？反射创建类实例的三种方式
       
       <guid>https://jaswine.com/interview/docs/java/se/base/symbol/</guid>
       <description> Java中的运算符 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jaswine.com/interview/docs/java/se/collection/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/se/collection/</guid>
-      <description>Java集合 List系 Map系 Map接口的实现类，简单的说说他们
-   类 底层数据结构 特点 是否线程安全     HashMap 数组+链表/红黑树 可以使用null作为Key和Value 不安全   Hashtable 数组+链表/红黑树 非null的key和value 安全   LinkedHashMap 继承HashMap，多维护一个双向链表 同HashMap，有序的 不安全   TreeMap 红黑树 有序 不安全   Properties 继承hashtable  安全    Map接口实现类之间的区别
-   类名 是否有序 key为null value为null 线程安全     HashMap N Y Y N   LinkedHashMap Y N     TreeMap Y      Hashtable N       有没有有顺序的Map实现类，如果有，他们是怎么保证有序的</description>
     </item>
     
     <item>
@@ -604,8 +592,9 @@ Java高级特性 反射的原理是什么？反射创建类实例的三种方式
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/se/collection/map/concurrenthashmap/</guid>
-      <description> ConcurrentHashmap面试题  ConcurrentHashmap面试题  ConcurrentHashMap在1.7和1.8中有什么区别？   ConcurrentHashMap在1.7和1.8中有什么区别？  🔗链接：「源码」ConcurrentHashMap
-- 使用Synchronized+CAS+Node+Unsafe来替代Segment+HashEntry+Unsafe - put()初始化数组大小时1.8不用加锁(使用sizeCtl变量来标记table是不是在初始化，为-1的时候就是正在初始化)   </description>
+      <description> ConcurrentHashmap面试题  ⬅️BACK-Java面试题目录
+  ConcurrentHashmap面试题  ConcurrentHashMap在1.7和1.8中有什么区别？ Java中ConcurrentHashMap的并发度是什么？   ConcurrentHashMap在1.7和1.8中有什么区别？  🔗链接：「源码」ConcurrentHashMap
+- 使用Synchronized+CAS+Node+Unsafe来替代Segment+HashEntry+Unsafe - put()初始化数组大小时1.8不用加锁(使用sizeCtl变量来标记table是不是在初始化，为-1的时候就是正在初始化)   Java中ConcurrentHashMap的并发度是什么？ </description>
     </item>
     
     <item>
@@ -630,30 +619,59 @@ Java高级特性 反射的原理是什么？反射创建类实例的三种方式
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/java/se/concurrent/</link>
+      <link>https://jaswine.com/interview/docs/java/se/concurrent/base/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/java/se/concurrent/</guid>
-      <description>Java多线程/并发编程 Java多线程基础理论 什么是线程安全？线程不安全的根源是什么？Java是怎么解决的
-# 线程安全 - 一个方法或者实例在多线程环境下使用不会出现问题，这个问题本质上就是共有数据在被并发修改的产生脏写的问题   不安全的根源
- 线程并发原子性 线程并发可见性 线程并发有序性  Java的解决办法
- Java使用JMM保证了多线程并发的情况下线程之间的有序性和可见性 使用锁来解决原子性问题   说说死锁
-# 死锁发生的条件 - 互斥，共享资源x、y只能被一个线程占有 - 占有等待，线程T1占有资源x还在等待资源y - 不可抢占，其他线程不能抢占T1的资源 - 循环等待，T1和T2互相等待对方释放资源 # 解决死锁 - 一次申请所有锁资源，申请不到就不占有 - 如果申请不到锁资源，主动释放自己身上的锁资源 -  画一下线程生命周期和状态转换图
-一个线程两次调用start()方法会怎么样
- 会抛出IllegalThreadStateException错误  你知道停止一个线程有哪些方法，他们之间都有什么区别
-# 方法 - Thread.stop() - Thread.interrupt() - run方法结束(正常停止线程) # 区别 - stop()在JDK中已经被遗弃，执行stop方法后会立即终止线程，释放当前线程持有锁资源，破坏了对象的一致性 - interrupt()执行后不会立马终止线程，会设置一个中断标记位  sleep()和wait()的区别
-   wait sleep     Object的方法 Thread的方法   执行的时候释放锁 执行的时候不释放锁   只能在同步方法和同步块中使用 可以在任何地方使用   无需捕捉异常 需要捕捉异常    讲讲Java同步机制的wait和notify</description>
+      <guid>https://jaswine.com/interview/docs/java/se/concurrent/base/</guid>
+      <description>烂大街的多线程基础题  ⬅️BACK-Java面试题目录
+  烂大街的多线程基础题  Java中开启线程的方式有哪些？ Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？ 一个线程两次调用start()方法会怎么样 Java多线程中调用wait() 和 sleep()方法有什么不同？ 讲讲Java同步机制的wait和notify Java中的fork join框架是什么？ 你知道停止一个线程有哪些方法，他们之间都有什么区别 ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？ 什么是线程安全？线程不安全的根源是什么？Java是怎么解决的 volatile的原理，作用，能代替锁吗？ JDK1.6对synchronized进行了怎么的优化 synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)   Java中开启线程的方式有哪些？ Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？ 一个线程两次调用start()方法会怎么样 - 会抛出IllegalThreadStateException错误  Java多线程中调用wait() 和 sleep()方法有什么不同？    wait sleep     Object的方法 Thread的方法   执行的时候释放锁 执行的时候不释放锁   只能在同步方法和同步块中使用 可以在任何地方使用   无需捕捉异常 需要捕捉异常    讲讲Java同步机制的wait和notify - wait和notify配合synchronized使用实现线程间的同步 - 简单的来说就是管程(或者说是监视器)  Java中的fork join框架是什么？ 47) 如果同步块内的线程抛出异常会发生什么？</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/java/se/exception/</link>
+      <link>https://jaswine.com/interview/docs/java/se/concurrent/example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/java/se/exception/</guid>
-      <description>#Java异常
-Error和Exception的区别，CheckedException和RuntimeException
-说说你知道的运行时异常</description>
+      <guid>https://jaswine.com/interview/docs/java/se/concurrent/example/</guid>
+      <description>Java多线程案例  Java多线程案例  现在有一个第三方接口，有很多线程去调用它获得数据，如何实现每秒钟最多有10个线程同时调用它 用三个线程按顺序打印abc，怎么做到   现在有一个第三方接口，有很多线程去调用它获得数据，如何实现每秒钟最多有10个线程同时调用它 用三个线程按顺序打印abc，怎么做到 - 使用wait，notify -  现在让你实现一个并发安全的链表，你怎么实现
+多线程如果线程挂住了怎么办
+countdownlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别
+AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占锁和公平锁加锁有什么不同
+简述ConcurrentLinkQueue和LinkedBlockingQueue的用处和不同之处
+导致线程死锁的原因，怎么解除线程死锁
+多线程(可能不在一台机器上)相互之间要相互等待协调完成某种工作，请问怎么设计
+什么是多线程环境下的伪共享(false sharing)？
+说说你对线程局部变量的理解</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/concurrent/juc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/concurrent/juc/</guid>
+      <description> JUC包面试题  ⬅️BACK-Java面试题目录
+  JUC包面试题  19) 什么是FutureTask？   19) 什么是FutureTask？ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/concurrent/lock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/concurrent/lock/</guid>
+      <description>Java中锁面试题  ⬅️BACK-Java面试题目录
+  Java中锁面试题  说说你对锁的相关名词的理解 单例模式的双检锁是什么? 死锁产生的条件是什么？如何避免死锁？ 说说ReentrantLock和synchronized的异同吧 Lock和synchronized的区别 说说降低锁竞争的方法 有哪些无锁的数据结构，他们的实现原理是什么？ cas机制是什么？怎么解决ABA问题 用过读写锁吗？原理是什么，一般在什么场景下使用   说说你对锁的相关名词的理解 # 自旋锁 - 当线程A占用锁，线程B拿不到锁的时候就被挂起(阻塞)，自旋锁是线程B不放弃CPU的时间片，在原地一直尝试获取锁 # 无锁 / 偏向锁 / 轻量级锁 / 重量级锁 - 这是锁的四种状态，在对象头中使用字段来标记 - 四种状态随着竞争的情况升级，不可降级 - 这四种状态都不是Java语言中的锁，而是JVM为了提高锁的获取效率而做的优化 -- 无锁--&amp;gt;对象没有被锁定 -- 偏向锁--&amp;gt;一段同步代码被线程所访问，那么线程自动获取锁 -- 轻量级锁--&amp;gt;当锁是偏向锁的时候，被另一个线程访问，偏向锁会升级为轻量级锁，其他线程通过自旋的方式尝试获取锁，不会阻塞，提高性能 -- 重量级锁--&amp;gt;当一个锁是轻量级锁的时候，另外一个线程通过自旋的方式到一定次数的时候还没有获得锁就会进入到阻塞的，这个轻量级锁就会膨胀为重量级锁，其他线程拿不到锁就会进入阻塞 # 分段锁 - # 共享锁 / 独享锁 - 共享锁--&amp;gt;锁被多个线程共有 - 独享锁--&amp;gt;锁只可以同时被一个线程占用 # 可重入锁 / 不可重入锁 - 可重入锁--&amp;gt;可重复可递归调用的锁，外层使用了内层还可以使用 - 不可重入锁--&amp;gt;不可重复递归调用，重复使用就会发生死锁 # 公平锁 / 非公平锁 - 公平锁--&amp;gt;多个线程按照申请锁的顺序来获得锁 - 非公平锁--&amp;gt;多个线程不是按照申请锁的顺序来获得锁，可能会饥饿现象 # 悲观锁 / 乐观锁 - 悲观锁--&amp;gt;认为每次去拿数据的时候数据都会被别人修改 - 乐观锁--&amp;gt;在拿数据的时候乐观的认为没有人去修改，但是在修改数据的时候会去验证一下数据有没有被修改 ---使用版本号机制或者CAS算法实现  单例模式的双检锁是什么?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/concurrent/pool/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/concurrent/pool/</guid>
+      <description> Java线程池面试题  ⬅️BACK-Java面试题目录
+  Java线程池面试题  Java线程池中submit() 和 execute()方法有什么区别？ 如果你提交任务时，线程池队列已满。会时发会生什么？ 说说Java中常用的线程池模式以及不同线程池的使用场景 线程池关闭的方式有哪些？各自的区别是什么？   Java线程池中submit() 和 execute()方法有什么区别？ 如果你提交任务时，线程池队列已满。会时发会生什么？ 说说Java中常用的线程池模式以及不同线程池的使用场景   线程池关闭的方式有哪些？各自的区别是什么？ # 方式 - shutdown() - shutdownNow() # 区别 -  </description>
     </item>
     
     <item>
@@ -694,17 +712,6 @@ Error和Exception的区别，CheckedException和RuntimeException
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/java/se/io/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/se/io/</guid>
-      <description> Java I/O 基础 IO模型有哪些？在Java中对应的实现是什么
-# IO模型 - 同步阻塞IO模型(BIO) - 同步非阻塞IO模型(NIO) - IO多路复用 - 信号驱动IO - 异步IO(AIO,NIO2) Tips：这些都是操作系统中相关的概念 # Java中的对应实现 - 同步阻塞IO就是传统的IO，或者叫BIO，简化的来理解就是所有的操作都在一个线程中完成 - 非阻塞IO在Java中的实现是NIO，使用selector,channel和Buffer来实现，底层其实使用的是操作系统中的epoll实现的 - 异步IO叫做NIO2或者AIO，是异步非阻塞的，基于事件和回调机制来实现  NIO 你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？
-# NIO - 使用缓冲区和通道的概念来实现处理数据 - NIO中通道是双向的 - 缓冲区可以分片 # 实现 - 客户端将流写到缓冲区 - 使用channel将数据从buffer转移 # NIO和AIO,BIO的区别 - AIO是异步非阻塞的，BIO是同步阻塞的，NIO是同步非阻塞的 - AIO也可以叫做NIO2 # Tips - JDK1.7中NIO中新增了4个异步通道  NIO2/AIO </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://jaswine.com/interview/docs/java/se/io/aio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -727,19 +734,43 @@ Error和Exception的区别，CheckedException和RuntimeException
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/se/io/nio/</guid>
-      <description> NIO面试题  NIO面试题  Java是怎么实现NIO的，重要的类是那些？功能是什么？ Java中NIO的原理是什么？   Java是怎么实现NIO的，重要的类是那些？功能是什么？ Java中NIO的原理是什么？ </description>
+      <description> NIO面试题  NIO面试题  Java是怎么实现NIO的，重要的类是那些？功能是什么？ Java中NIO的原理是什么？ 你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？   Java是怎么实现NIO的，重要的类是那些？功能是什么？ Java中NIO的原理是什么？ 你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？ # NIO - 使用缓冲区和通道的概念来实现处理数据 - NIO中通道是双向的 - 缓冲区可以分片 # 实现 - 客户端将流写到缓冲区 - 使用channel将数据从buffer转移 # NIO和AIO,BIO的区别 - AIO是异步非阻塞的，BIO是同步阻塞的，NIO是同步非阻塞的 - AIO也可以叫做NIO2 # Tips - JDK1.7中NIO中新增了4个异步通道  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/java/se/oo/</link>
+      <link>https://jaswine.com/interview/docs/java/se/oo/abstract/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/java/se/oo/</guid>
-      <description> Java面向对象 怎么理解继承和聚合的概念，他们之间有什么异同
-# 继承 - 继承是子类继承父类，可以对父类的内容进行扩展和修改 # 聚合 - 聚合是模块和模块之间的关系，是可以分离的，有自己的生命周期  结合OO设计理念，谈谈访问修饰符public，default，protected和private在应用中设计的作用
-    同类 同包 子类 非同包类     public Y Y Y Y   protected Y Y Y X   default Y Y X X   private Y X X X    Java抽象类和接口的异同，说说为什么Java这么设计
-    接口 抽象类     变量     方法 全是抽象方法 可以不全是抽象方法     设计原因  避免了多继承 接口和继承存在的意义不同   </description>
+      <guid>https://jaswine.com/interview/docs/java/se/oo/abstract/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/oo/extrend/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/oo/extrend/</guid>
+      <description> Java继承  Java继承  Java抽象类和接口的异同，说说为什么Java这么设计   Java抽象类和接口的异同，说说为什么Java这么设计     接口 抽象类     变量     方法 全是抽象方法 可以不全是抽象方法     设计原因  避免了多继承 接口和继承存在的意义不同   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/oo/package/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/oo/package/</guid>
+      <description> Java封装  Java封装  结合OO设计理念，谈谈访问修饰符public，default，protected和private在应用中设计的作用   结合OO设计理念，谈谈访问修饰符public，default，protected和private在应用中设计的作用     同类 同包 子类 非同包类     public Y Y Y Y   protected Y Y Y X   default Y Y X X   private Y X X X    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/oo/polymorphisn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/oo/polymorphisn/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -884,15 +915,201 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
     
     <item>
       <title></title>
-      <link>https://jaswine.com/interview/docs/message/base/</link>
+      <link>https://jaswine.com/interview/docs/message/kafka/0menu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jaswine.com/interview/docs/message/base/</guid>
-      <description> 消息队列基础 为什么使用消息队列？优缺点？比较一下Kafka，ActiveMQ，RabbitMQ，RocketMQ # 为啥使用 - 业务需要 - 解藕 - 异步 - 削峰  消息队列优缺点:
-    优点 缺点     MQ 1.解藕,异步,削峰 1.系统可用性降低(MQ挂了)
-2.复杂度提高(保证消息按照想象的被消费)
-3.最终一致性    不同消息队列实现的比较
-   特性 ActiveMQ RabbitMQ RocketMQ Kafka     单机吞吐量 万级 万级 10万级 10万级    </description>
+      <guid>https://jaswine.com/interview/docs/message/kafka/0menu/</guid>
+      <description> kafka  kafka  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/message/pulsar/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/message/pulsar/0menu/</guid>
+      <description> pulsar面试题  pulsar面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/message/rabbitmq/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/message/rabbitmq/0menu/</guid>
+      <description> RabbitMQ面试题  RabbitMQ面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/message/rocketmq/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/message/rocketmq/0menu/</guid>
+      <description> RocketMQ面试题  RocketMQ面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/message/theory/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/message/theory/0menu/</guid>
+      <description> 消息队列理论面试题  消息队列理论面试题  如何保证消息不丢失？ 怎么处理重复消费的问题？ 消息积压了怎么处理？   如何保证消息不丢失？ 怎么处理重复消费的问题？ 消息积压了怎么处理？ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/mid/druid/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/mid/druid/0menu/</guid>
+      <description> Druid面试题  Druid面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/mid/mybatis/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/mid/mybatis/0menu/</guid>
+      <description> Mybatis面试题  Mybatis面试题  Mybatis基础   Mybatis基础 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/mid/mybatis/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/mid/mybatis/base/</guid>
+      <description> Mybatis基础  Mybatis基础  应用 原理   应用 Mybatis中#{}和${}区别 |#|$| |:&amp;ndash;|:&amp;ndash;| |预编译|直接传入值| |可以防止SQL注入|不能防止SQL注入| |不能放在order by后面|可以放在order by后面|
+Mybatis传入多个参数
+- #{0},#{1} - @param注解  Mybatis分页查询的原理
+- 使用pagehelp做分页查询 - 本质上就是对sql进行拦截然后重写  原理 Mybatis定义的接口是怎么找到实现的
+使用动态代理技术  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/mid/netty/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/mid/netty/0menu/</guid>
+      <description> Netty面试题  Netty面试题  Netty基础   Netty基础 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/mid/netty/base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/mid/netty/base/</guid>
+      <description>Netty基础面试题  Netty基础面试题  应用   为什么选择Netty
+Netty是怎么实现异步非阻塞的IO的
+Netty的线程模型是什么？如何基于Reactor模型上实现的
+Netty中fashwheeltimer的用法，实现原理，是否出现过调用不够准时，怎么解决这个问题
+Netty的通讯协议是什么样的
+应用 Netty的心跳处理在弱网下怎么办？
+为什么选择Netty</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/neo4j/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/neo4j/0menu/</guid>
+      <description> Neo4j面试题  Neo4j面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/0menu/</guid>
+      <description> Redis面试题  Redis面试题  数据类型 持久化 键 内存 线程模型 事务 集群  分区 缓存   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/cache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/cache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/cluster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/cluster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/datatype/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/datatype/</guid>
+      <description> Redis数据类型面试题  Redis数据类型面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/key/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/key/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/memory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/memory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/partition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/partition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/persistence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/persistence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/thread/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/thread/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/trans/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/trans/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -911,6 +1128,15 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
       
       <guid>https://jaswine.com/interview/docs/search/solr/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/security/web/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/security/web/0menu/</guid>
+      <description> Web安全  Web安全  浏览器安全  同源策略 跨站脚本攻击-XSS 跨站点请求伪造-CSRF 点击劫持  服务器安全  SQL注入 文件上传漏洞 Oauth2 &amp;amp; SSO DDOS  安全运维   浏览器安全 同源策略 跨站脚本攻击-XSS 跨站点请求伪造-CSRF 点击劫持 服务器安全 SQL注入 文件上传漏洞 Oauth2 &amp;amp; SSO DDOS 安全运维 </description>
     </item>
     
     <item>
@@ -1026,6 +1252,24 @@ spring RestTemplate的具体实现</description>
  说说你在SpringMVC用到的注解，作用是什么
 SpringMVC中的Controller是单例还是多例，怎么保证并发的安全
 Spring WebFlow </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/test/jmeter/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/test/jmeter/0menu/</guid>
+      <description> Jmeter面试题  Jmeter面试题  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/test/theory/0menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/test/theory/0menu/</guid>
+      <description> 测试理论  测试理论  </description>
     </item>
     
   </channel>
