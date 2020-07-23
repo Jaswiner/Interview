@@ -207,44 +207,54 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="object超类">Object超类</h1>
 
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/java/se/0menu/">BACK-Java面试题目录</a></strong></p>
+</blockquote>
+
 <!-- TOC -->
 
 <ul>
 <li><a href="#object超类">Object超类</a>
-
-<ul>
-<li><a href="#font-color008b45-size4为什么重写equals方法的同时也要重写hashcode方法font"><font color="#008B45" size=4>为什么重写<code>equals()</code>方法的同时也要重写<code>hashcode()</code>方法？</font></a></li>
-<li><a href="#font-color008b45-size4说活你对object中hashcode和equals方法的理解在什么场景下需要对这两个方法进行重写你是这么重写的font"><font color="#008B45" size=4>说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</font></a></li>
-</ul></li>
+    - <a href="#说活你对object中hashcode和equals方法的理解在什么场景下需要对这两个方法进行重写你是这么重写的">说活你对Object中<code>hashCode()</code>和<code>equals()</code>方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</a>
+    - <a href="#深拷贝和浅拷贝的区别object的clone是深拷贝还是浅拷贝">深拷贝和浅拷贝的区别？Object的clone()是深拷贝还是浅拷贝?</a></li>
 </ul>
 
 <!-- /TOC -->
 
 <hr />
 
-<h2 id="font-color-008b45-size-4-为什么重写-equals-方法的同时也要重写-hashcode-方法-font"><font color="#008B45" size=4>为什么重写<code>equals()</code>方法的同时也要重写<code>hashcode()</code>方法？</font></h2>
+<h3 id="说活你对object中-hashcode-和-equals-方法的理解-在什么场景下需要对这两个方法进行重写-你是这么重写的">说活你对Object中<code>hashCode()</code>和<code>equals()</code>方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</h3>
 
-<pre><code>- 1.equals方法本质就是==，就是比较对象的引用(即内存地址)
-- 2.在map集合中，使用hashcode来进行hash运算，
+<blockquote>
+<p><strong><a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.3.2">🔗「Oracle Doc」JavaSE 8 #Object</a></strong></p>
+</blockquote>
+
+<pre><code>## 方法理解
+
+- hashcode()是生成对象的hash值
+- equals是比较两个对象是否相等(本质就是==，比较对象的引用地址)
+
+## 什么时候重写
+- 重写equals()就要重写hashcode()方法
+
+### 为什么
+- 在基于hash的集合中，是基于equals()来判断对象是否相等的，如果equals()返回true，那么hashcode一定是一样的
+
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-说活你对object中hashcode-和equals-方法的理解-在什么场景下需要对这两个方法进行重写-你是这么重写的-font"><font color="#008B45" size=4>说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</font></h2>
+<p><strong>🔗「思维发散」<a href="https://jaswine.com/blog/interview/docs/java/se/collection/map/hashmap/#hashmap%E6%98%AF%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%A4%E4%B8%AAkey%E6%98%AF%E5%90%A6%E4%B8%BA%E5%90%8C%E4%B8%80%E4%B8%AAkey">Hashmap是怎么判断两个对象是同一对象的</a></strong></p>
 
-<ul>
-<li><p><strong>🔗链接:</strong><a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.3.2">JavaSE 8 #Object</a></p>
+<h3 id="深拷贝和浅拷贝的区别-object的clone-是深拷贝还是浅拷贝">深拷贝和浅拷贝的区别？Object的clone()是深拷贝还是浅拷贝?</h3>
 
-<pre><code>- equals是基于值比较而不是引用(==是比较引用地址)
-- hashCode()主要为HashMap，HashSet这些集合服务
-</code></pre></li>
-</ul>
-
-<p><font color="#008B45" size=4>深拷贝和浅拷贝的区别</font></p>
-
-<pre><code>- 对于基本类型来说，浅拷贝和深拷贝一样，都是对值进行拷贝
+<pre><code>## 深拷贝&amp;浅拷贝
+- 对于基本类型来说，浅拷贝和深拷贝一样，都是对值进行拷贝
 
 - 对于引用类型来说:
 -- 浅拷贝:只是复制了对应的引用，对象没有被拷贝，并且这个对象的其他引用还在
 -- 深拷贝:不只复制了对象的引用，对象本身也被复制了
+
+## Object的clone()
+浅拷贝
 </code></pre>
 </article>
 
@@ -261,8 +271,11 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#object超类">Object超类</a>
 <ul>
-<li><a href="#font-color-008b45-size-4-为什么重写-equals-方法的同时也要重写-hashcode-方法-font"><font color="#008B45" size=4>为什么重写<code>equals()</code>方法的同时也要重写<code>hashcode()</code>方法？</font></a></li>
-<li><a href="#font-color-008b45-size-4-说活你对object中hashcode-和equals-方法的理解-在什么场景下需要对这两个方法进行重写-你是这么重写的-font"><font color="#008B45" size=4>说活你对Object中hashCode()和equals()方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</font></a></li>
+<li>
+<ul>
+<li><a href="#说活你对object中-hashcode-和-equals-方法的理解-在什么场景下需要对这两个方法进行重写-你是这么重写的">说活你对Object中<code>hashCode()</code>和<code>equals()</code>方法的理解，在什么场景下需要对这两个方法进行重写，你是这么重写的</a></li>
+<li><a href="#深拷贝和浅拷贝的区别-object的clone-是深拷贝还是浅拷贝">深拷贝和浅拷贝的区别？Object的clone()是深拷贝还是浅拷贝?</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>

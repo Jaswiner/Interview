@@ -297,6 +297,11 @@
   </url>
   
   <url>
+    <loc>https://jaswine.com/interview/docs/java/se/collection/base/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jaswine.com/interview/docs/java/se/collection/list/arraylist/</loc>
     <priority>0</priority>
   </url>
@@ -323,6 +328,16 @@
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/se/collection/map/hashmap/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/java/se/collection/map/linkedhashmap/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/java/se/collection/map/treemap/</loc>
     <priority>0</priority>
   </url>
   
@@ -643,6 +658,26 @@
   
   <url>
     <loc>https://jaswine.com/interview/docs/spring/framework/data/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/spring/framework/data/jdbc/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/spring/framework/data/jms/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/spring/framework/data/orm/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/spring/framework/data/trans/</loc>
     <priority>0</priority>
   </url>
   

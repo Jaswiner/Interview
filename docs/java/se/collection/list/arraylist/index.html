@@ -207,14 +207,19 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="arraylist面试题">ArrayList面试题</h1>
 
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/java/se/0menu/">BACK-Java面试题目录</a></strong></p>
+</blockquote>
+
 <!-- TOC -->
 
 <ul>
 <li><a href="#arraylist面试题">ArrayList面试题</a>
 
 <ul>
-<li><a href="#font-color008b45-size4arraylistlinkedlist和vector之间的区别他们线程安全吗不安全怎么解决font"><font color="#008B45" size=4>ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</font></a></li>
-<li><a href="#font-color008b45-size4arraylist是如何实现动态扩容的font"><font color="#008B45" size=4>ArrayList是如何实现动态扩容的</font></a></li>
+<li><a href="#arraylistlinkedlist和vector之间的区别他们线程安全吗不安全怎么解决">ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</a></li>
+<li><a href="#arraylist是如何实现动态扩容的">ArrayList是如何实现动态扩容的</a></li>
+<li><a href="#如何在遍历arraylist的时候安全删除其中一个元素">如何在遍历arraylist的时候安全删除其中一个元素</a></li>
 </ul></li>
 </ul>
 
@@ -222,7 +227,7 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="font-color-008b45-size-4-arraylist-linkedlist和vector之间的区别-他们线程安全吗-不安全怎么解决-font"><font color="#008B45" size=4>ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</font></h2>
+<h2 id="arraylist-linkedlist和vector之间的区别-他们线程安全吗-不安全怎么解决">ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</h2>
 
 <ul>
 <li><strong>🔗链接</strong><a href="#">ArrayList为什么线程不安全及解决办法</a></li>
@@ -267,15 +272,24 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 
-<h2 id="font-color-008b45-size-4-arraylist是如何实现动态扩容的-font"><font color="#008B45" size=4>ArrayList是如何实现动态扩容的</font></h2>
+<h2 id="arraylist是如何实现动态扩容的">ArrayList是如何实现动态扩容的</h2>
 
-<ul>
-<li><p><strong>🔗链接</strong><a href="https://blog.jaswine.com/2019/01/24/java18/">源码分析-Java中ArrayList是如何实现数组动态扩容的</a></p>
+<p>// TODO 失效的链接</p>
+
+<blockquote>
+<p><strong><a href="https://blog.jaswine.com/2019/01/24/java18/">🔗「源码分析」-Java中ArrayList是如何实现数组动态扩容的</a></strong></p>
+</blockquote>
 
 <pre><code>- ArrayList的本质是Object[]，所以他本质上就是数组的动态扩容
-- Java底层的数组扩容就是通过数组拷贝完成的
-</code></pre></li>
-</ul>
+- Java底层的数组扩容就是通过数组拷贝完成的，每一次扩容原来的2倍
+</code></pre>
+
+<h2 id="如何在遍历arraylist的时候安全删除其中一个元素">如何在遍历arraylist的时候安全删除其中一个元素</h2>
+
+<pre><code>- 返回ArrayList的Iterator对象，然后使用iterator的remove方法
+- 如果是多线程并发的情况，要对iterator对象加锁
+
+</code></pre>
 </article>
 
       
@@ -291,8 +305,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#arraylist面试题">ArrayList面试题</a>
 <ul>
-<li><a href="#font-color-008b45-size-4-arraylist-linkedlist和vector之间的区别-他们线程安全吗-不安全怎么解决-font"><font color="#008B45" size=4>ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</font></a></li>
-<li><a href="#font-color-008b45-size-4-arraylist是如何实现动态扩容的-font"><font color="#008B45" size=4>ArrayList是如何实现动态扩容的</font></a></li>
+<li><a href="#arraylist-linkedlist和vector之间的区别-他们线程安全吗-不安全怎么解决">ArrayList、LinkedList和Vector之间的区别，他们线程安全吗？不安全怎么解决</a></li>
+<li><a href="#arraylist是如何实现动态扩容的">ArrayList是如何实现动态扩容的</a></li>
+<li><a href="#如何在遍历arraylist的时候安全删除其中一个元素">如何在遍历arraylist的时候安全删除其中一个元素</a></li>
 </ul></li>
 </ul>
 </nav>

@@ -211,14 +211,15 @@ https://github.com/alex-shpak/hugo-book
 <p>⬅️<strong><a href="/interview/docs/java/se/0menu/">BACK-Java面试题目录</a></strong></p>
 </blockquote>
 
+<hr />
+
 <!-- TOC -->
 
 <ul>
 <li><a href="#concurrenthashmap面试题">ConcurrentHashmap面试题</a>
 
 <ul>
-<li><a href="#font-color008b45-size4concurrenthashmap在17和18中有什么区别font"><font color="#008B45" size=4>ConcurrentHashMap在1.7和1.8中有什么区别？</font></a></li>
-<li><a href="#java中concurrenthashmap的并发度是什么">Java中ConcurrentHashMap的并发度是什么？</a></li>
+<li><a href="#concurrenthashmap在17和18中有什么区别">ConcurrentHashMap在1.7和1.8中有什么区别？</a></li>
 </ul></li>
 </ul>
 
@@ -226,17 +227,35 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="font-color-008b45-size-4-concurrenthashmap在1-7和1-8中有什么区别-font"><font color="#008B45" size=4>ConcurrentHashMap在1.7和1.8中有什么区别？</font></h2>
+<h2 id="concurrenthashmap在1-7和1-8中有什么区别">ConcurrentHashMap在1.7和1.8中有什么区别？</h2>
 
-<ul>
-<li><p><strong>🔗链接：</strong><a href="#">「源码」ConcurrentHashMap</a></p>
+<blockquote>
+<p><strong><a href="#">🔗「源码分析」ConcurrentHashMap</a></strong></p>
+</blockquote>
 
-<pre><code>- 使用Synchronized+CAS+Node+Unsafe来替代Segment+HashEntry+Unsafe
-- put()初始化数组大小时1.8不用加锁(使用sizeCtl变量来标记table是不是在初始化，为-1的时候就是正在初始化)
-</code></pre></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">1.7</th>
+<th align="left">1.8</th>
+</tr>
+</thead>
 
-<h2 id="java中concurrenthashmap的并发度是什么">Java中ConcurrentHashMap的并发度是什么？</h2>
+<tbody>
+<tr>
+<td align="left"></td>
+<td align="left">使用Segment+HashEntry+Unsafe实现线程安全</td>
+<td align="left">使用Synchronized+CAS+Node+Unfafe实现线程安全</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">初始化数组大小时候加锁</td>
+<td align="left">使用sizeCtl来标记table是不是在初始化</td>
+</tr>
+</tbody>
+</table>
 </article>
 
       
@@ -252,8 +271,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#concurrenthashmap面试题">ConcurrentHashmap面试题</a>
 <ul>
-<li><a href="#font-color-008b45-size-4-concurrenthashmap在1-7和1-8中有什么区别-font"><font color="#008B45" size=4>ConcurrentHashMap在1.7和1.8中有什么区别？</font></a></li>
-<li><a href="#java中concurrenthashmap的并发度是什么">Java中ConcurrentHashMap的并发度是什么？</a></li>
+<li><a href="#concurrenthashmap在1-7和1-8中有什么区别">ConcurrentHashMap在1.7和1.8中有什么区别？</a></li>
 </ul></li>
 </ul>
 </nav>

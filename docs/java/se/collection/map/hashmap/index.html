@@ -207,15 +207,21 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="hashmap面试题">Hashmap面试题</h1>
 
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/java/se/0menu/">BACK-Java面试题目录</a></strong></p>
+</blockquote>
+
 <!-- TOC -->
 
 <ul>
 <li><a href="#hashmap面试题">Hashmap面试题</a>
 
 <ul>
-<li><a href="#font-color008b45-size4hashmap底层原理是什么存储方式默认容量是什么怎么实现扩容的font"><font color="#008B45" size=4>HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</font></a></li>
-<li><a href="#font-color008b45-size4hashmap中是如何进行hash运算的这么做的好处有什么好处font"><font color="#008B45" size=4>HashMap中是如何进行hash运算的？这么做的好处有什么好处？</font></a></li>
-<li><a href="#font-color008b45-size4hashmap是线程安全的吗为什么解决办法是什么原理是什么font"><font color="#008B45" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></a></li>
+<li><a href="#hashmap底层原理是什么存储方式默认容量是什么怎么实现扩容的">HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</a></li>
+<li><a href="#jdk18中相较jdk17对hashmap做了哪些优化这样做有什么好处">JDK1.8中相较JDK1.7对Hashmap做了哪些优化？这样做有什么好处</a></li>
+<li><a href="#hashmap是线程安全的吗为什么解决办法是什么原理是什么">HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</a></li>
+<li><a href="#hashmap和hashtable之间有什么不同之处">HashMap和Hashtable之间有什么不同之处?</a></li>
+<li><a href="#hashmap是如何判断两个key是否为同一个key">Hashmap是如何判断两个key是否为同一个key</a></li>
 </ul></li>
 </ul>
 
@@ -223,36 +229,63 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="font-color-008b45-size-4-hashmap底层原理是什么-存储方式-默认容量是什么-怎么实现扩容的-font"><font color="#008B45" size=4>HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</font></h2>
+<h2 id="hashmap底层原理是什么-存储方式-默认容量是什么-怎么实现扩容的">HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</h2>
 
-<ul>
-<li><p><strong>🔗链接:</strong> <a href="https://jaswine.com/source/java/docs/collection/map/hashmap/">Hashmap#put-源码分析</a></p>
+<blockquote>
+<p><strong><a href="https://jaswine.com/source/java/docs/collection/map/hashmap/">🔗Hashmap#put-源码分析</a></strong></p>
+</blockquote>
 
 <pre><code># 存储方式
-- Java8中使用位桶(数组)+链表/红黑树实现
+- Java8中使用位桶(数组，长度为16)+链表/红黑树实现
 - 链表长度超过阈值(8)时转成红黑树(减少查找时间)
 
-# 底层原理与扩容
-1.作为容器，HashMap主要是实现对容器内元素的增删改查功能，这些和她的底层数据结构分不开的
+# 底层原理
+## PUT方法
+- 1.先判断是否要扩容
+- 2.计算key的hashcode，如果没有重复就插入，重复就覆盖
+- 2.1.如果链表的长度大于8则转成红黑树
+- 3.判断此时的hashmap是不是要扩容
+- 4.结束
 
-2.put()的时候，会先进行hash()计算
 
-3.hash()计算先进行高位计算，将hashcode无符号右移16位后和hashcode进行异或位运算(^)后，本质上保留高位，将高位和地位进行了混合
+# 默认容量
+- 默认的hash表大小为16
+- 默认链表长度为8，超过这个数值就转换成为红黑树
 
-4.hash()运算后生成值和数组的长度-1进行位与(&amp;)运算，然后得到在数组中的位置
+# 扩容
+## 什么时候扩容(JDK1.8)
+- hash碰撞写入链表的长度超过了8 &amp;&amp; table的长度不小于64
+- 也就是说，当发生hash冲突的时候默认先扩容，扩到table长度大于等于64的时候再转换成为红黑树
 
-</code></pre></li>
-</ul>
+## 如何扩容(JDK1.8)
+- 1.先扩大hash表的大小为原来的两倍
+- 2.重新计算hash值插入到新的hash表中
 
-<h2 id="font-color-008b45-size-4-hashmap中是如何进行hash运算的-这么做的好处有什么好处-font"><font color="#008B45" size=4>HashMap中是如何进行hash运算的？这么做的好处有什么好处？</font></h2>
+</code></pre>
 
-<h2 id="font-color-008b45-size-4-hashmap是线程安全的吗-为什么-解决办法是什么-原理是什么-font"><font color="#008B45" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></h2>
+<h2 id="jdk1-8中相较jdk1-7对hashmap做了哪些优化-这样做有什么好处">JDK1.8中相较JDK1.7对Hashmap做了哪些优化？这样做有什么好处</h2>
 
-<ul>
-<li><strong>🔗链接：</strong><a href="#">源码分析-Collections.synchronizedMap()</a></li>
-<li><strong>🔗链接：</strong><a href="#">源码分析-Hashtable</a></li>
+<pre><code>## hash方法优化
+- 原来要经过四次扰动，现在就一次扰动
 
-<li><p><strong>🔗链接：</strong><a href="#">源码分析-ConcurrentHashMap</a></p>
+## 链表存储变成链表\红黑树存储
+- 链表遍历的时间复杂度是O(n)，转成红黑树是O(logn)
+
+
+## 扩容方法优化
+- 
+
+</code></pre>
+
+<h2 id="hashmap是线程安全的吗-为什么-解决办法是什么-原理是什么">HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</h2>
+
+<blockquote>
+<p><strong><a href="#">🔗源码分析-Collections.synchronizedMap()</a></strong></p>
+
+<p><strong><a href="#">🔗源码分析-Hashtable</a></strong></p>
+
+<p><strong><a href="#">🔗源码分析-ConcurrentHashMap</a></strong></p>
+</blockquote>
 
 <pre><code># 线程安全吗
 - 线程不安全
@@ -263,16 +296,15 @@ https://github.com/alex-shpak/hugo-book
 # 解决办法
 - 使用Collections.synchronizedMap(new HashMap(...))
 - 使用并发包中的ConcurrentHashMap
-- 使用Hashtable
+- 使用Hashtable(不推荐)
 
 # 原理(具体参见上面的链接)
 - 第一种加锁
 - 第二种分段锁
 - 点三种加锁
-</code></pre></li>
-</ul>
+</code></pre>
 
-<h2 id="font-color-008b45-size-4-hashmap和hashtable之间有什么不同之处-font"><font color="#008B45" size=4>HashMap和Hashtable之间有什么不同之处</font></h2>
+<h2 id="hashmap和hashtable之间有什么不同之处">HashMap和Hashtable之间有什么不同之处?</h2>
 
 <table>
 <thead>
@@ -309,6 +341,16 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
+
+<h2 id="hashmap是如何判断两个key是否为同一个key">Hashmap是如何判断两个key是否为同一个key</h2>
+
+<pre><code>## 判断重复
+- 1.key的hash值是否与集合中的对象相同(不同则放到集合中,相同进入下面步骤)
+- 2.判断key是否和集合中的对象equals相等(相同则是同一key，不等放到集合中)
+
+## 原理
+对象相等hashcode一定相同，hashcode相同对象不一定相等，所以要用equals方法来判断是否相等，所有重写equals方法要重写hashcode方法(hash冲突)
+</code></pre>
 </article>
 
       
@@ -324,10 +366,11 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#hashmap面试题">Hashmap面试题</a>
 <ul>
-<li><a href="#font-color-008b45-size-4-hashmap底层原理是什么-存储方式-默认容量是什么-怎么实现扩容的-font"><font color="#008B45" size=4>HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</font></a></li>
-<li><a href="#font-color-008b45-size-4-hashmap中是如何进行hash运算的-这么做的好处有什么好处-font"><font color="#008B45" size=4>HashMap中是如何进行hash运算的？这么做的好处有什么好处？</font></a></li>
-<li><a href="#font-color-008b45-size-4-hashmap是线程安全的吗-为什么-解决办法是什么-原理是什么-font"><font color="#008B45" size=4>HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</font></a></li>
-<li><a href="#font-color-008b45-size-4-hashmap和hashtable之间有什么不同之处-font"><font color="#008B45" size=4>HashMap和Hashtable之间有什么不同之处</font></a></li>
+<li><a href="#hashmap底层原理是什么-存储方式-默认容量是什么-怎么实现扩容的">HashMap底层原理是什么？存储方式，默认容量是什么？怎么实现扩容的？</a></li>
+<li><a href="#jdk1-8中相较jdk1-7对hashmap做了哪些优化-这样做有什么好处">JDK1.8中相较JDK1.7对Hashmap做了哪些优化？这样做有什么好处</a></li>
+<li><a href="#hashmap是线程安全的吗-为什么-解决办法是什么-原理是什么">HashMap是线程安全的吗？为什么？解决办法是什么？原理是什么？</a></li>
+<li><a href="#hashmap和hashtable之间有什么不同之处">HashMap和Hashtable之间有什么不同之处?</a></li>
+<li><a href="#hashmap是如何判断两个key是否为同一个key">Hashmap是如何判断两个key是否为同一个key</a></li>
 </ul></li>
 </ul>
 </nav>

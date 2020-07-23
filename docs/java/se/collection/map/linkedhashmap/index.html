@@ -11,7 +11,7 @@
 <title>
   
     
-    Binary
+    Linkedhashmap
   
  | 面试题</title>
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2finterview\2f docs\2f base\2f algo\2ftree\2f binary\2f "] {
+  nav ul a[href$="\2finterview\2f docs\2fjava\2fse\2f collection\2fmap\2flinkedhashmap\2f "] {
       color: #004ed0;
   }
   </style>
@@ -197,7 +197,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    Binary
+    Linkedhashmap
   
 </strong>
 </header>
@@ -205,21 +205,40 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="二叉树面试题">二叉树面试题</h1>
+<h1 id="linkedhashmap面试题">LinkedHashMap面试题</h1>
 
 <blockquote>
-<p>⬅️<strong><a href="/interview/docs/base/algo/0menu/">BACK-&lt;数据结构与算法&gt;面试题目录</a></strong></p>
+<p>⬅️<strong><a href="/interview/docs/java/se/0menu/">BACK-Java面试题目录</a></strong>
+<!-- TOC --></p>
 </blockquote>
 
-<!-- TOC -->
+<ul>
+<li><a href="#linkedhashmap面试题">LinkedHashMap面试题</a>
 
 <ul>
-<li><a href="#二叉树面试题">二叉树面试题</a></li>
+<li><a href="#linkedhashmap底层数据结构是什么他有什么特点">LinkedHashmap底层数据结构是什么？他有什么特点</a></li>
+<li><a href="#linkedhashmap是怎么保持插入的顺序的">LinkedHashmap是怎么保持插入的顺序的</a></li>
+</ul></li>
 </ul>
 
 <!-- /TOC -->
 
-<hr />
+<h2 id="linkedhashmap底层数据结构是什么-他有什么特点">LinkedHashmap底层数据结构是什么？他有什么特点</h2>
+
+<pre><code>## 底层数据结构
+- LinkedHashmap继承自Hashmap，所以他的底层结构就是和Hashmap相同的
+
+## 特点
+- 插入有序
+
+</code></pre>
+
+<h2 id="linkedhashmap是怎么保持插入的顺序的">LinkedHashmap是怎么保持插入的顺序的</h2>
+
+<pre><code>## 维护顺序
+- 维护了一个双向链表来维护对象的顺序
+
+</code></pre>
 </article>
 
       
@@ -233,7 +252,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#二叉树面试题">二叉树面试题</a></li>
+<li><a href="#linkedhashmap面试题">LinkedHashMap面试题</a>
+<ul>
+<li><a href="#linkedhashmap底层数据结构是什么-他有什么特点">LinkedHashmap底层数据结构是什么？他有什么特点</a></li>
+<li><a href="#linkedhashmap是怎么保持插入的顺序的">LinkedHashmap是怎么保持插入的顺序的</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>

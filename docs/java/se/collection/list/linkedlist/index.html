@@ -203,7 +203,50 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="linkedlist面试题">LinkedList面试题</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/java/se/0menu/">BACK-Java面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#linkedlist面试题">LinkedList面试题</a>
+
+<ul>
+<li><a href="#linkedlist底层数据结构是什么样子的他有什么特性">LinkedList底层数据结构是什么样子的？他有什么特性</a></li>
+<li><a href="#linkedlist线程不安全的本质是什么">LinkedList线程不安全的本质是什么？</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="linkedlist底层数据结构是什么样子的-他有什么特性">LinkedList底层数据结构是什么样子的？他有什么特性</h2>
+
+<pre><code>
+## 底层数据结构
+
+- JDK1.6之前是循环链表，之后为双向链表
+
+## 特性
+
+- 申请的内存不要连续
+- 插入和删除时间复杂度为O(1)
+
+</code></pre>
+
+<h2 id="linkedlist线程不安全的本质是什么">LinkedList线程不安全的本质是什么？</h2>
+
+<pre><code>## 线程不安全的本质
+- 在多线程并发操作的时候，链表有成环的风险，所以是不安全的
+
+</code></pre>
+</article>
 
       
 
@@ -213,6 +256,18 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#linkedlist面试题">LinkedList面试题</a>
+<ul>
+<li><a href="#linkedlist底层数据结构是什么样子的-他有什么特性">LinkedList底层数据结构是什么样子的？他有什么特性</a></li>
+<li><a href="#linkedlist线程不安全的本质是什么">LinkedList线程不安全的本质是什么？</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

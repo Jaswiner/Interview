@@ -207,15 +207,19 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="nio面试题">NIO面试题</h1>
 
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/java/se/0menu/">BACK-Java面试题目录</a></strong></p>
+</blockquote>
+
 <!-- TOC -->
 
 <ul>
 <li><a href="#nio面试题">NIO面试题</a>
 
 <ul>
-<li><a href="#font-color008b45-size4java是怎么实现nio的重要的类是那些功能是什么font"><font color="#008B45" size=4>Java是怎么实现NIO的，重要的类是那些？功能是什么？</font></a></li>
-<li><a href="#font-color008b45-size4java中nio的原理是什么font"><font color="#008B45" size=4>Java中NIO的原理是什么？</font></a></li>
-<li><a href="#font-color008b45-size4你对nio是怎么理解的java中的nio是怎么实现的nio和aiobio的区别是什么font"><font color="#008B45" size=4>你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？</font></a></li>
+<li><a href="#java是怎么实现nio的重要的类是那些功能是什么">Java是怎么实现NIO的，重要的类是那些？功能是什么？</a></li>
+<li><a href="#你对nio是怎么理解的java中的nio是怎么实现的nio和aiobio的区别是什么">你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？</a></li>
+<li><a href="#什么是零拷贝">什么是零拷贝</a></li>
 </ul></li>
 </ul>
 
@@ -223,11 +227,27 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="font-color-008b45-size-4-java是怎么实现nio的-重要的类是那些-功能是什么-font"><font color="#008B45" size=4>Java是怎么实现NIO的，重要的类是那些？功能是什么？</font></h2>
+<p>对于IO的知识，汇聚了一遍Blog，地址为</p>
 
-<h2 id="font-color-008b45-size-4-java中nio的原理是什么-font"><font color="#008B45" size=4>Java中NIO的原理是什么？</font></h2>
+<blockquote>
+<p><strong><a href="https://jaswine.com/blog/posts/io/">🔗「大白话」计算机世界的I/O</a></strong></p>
+</blockquote>
 
-<h2 id="font-color-008b45-size-4-你对nio是怎么理解的-java中的nio是怎么实现的-nio和aio-bio的区别是什么-font"><font color="#008B45" size=4>你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？</font></h2>
+<hr />
+
+<h2 id="java是怎么实现nio的-重要的类是那些-功能是什么">Java是怎么实现NIO的，重要的类是那些？功能是什么？</h2>
+
+<pre><code>## 实现原理
+本质上是调用了操作系统的selector函数，创建了一个容器来管理io
+
+## 重要的类
+- Selector
+- Channel
+- Buffer
+
+</code></pre>
+
+<h2 id="你对nio是怎么理解的-java中的nio是怎么实现的-nio和aio-bio的区别是什么">你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？</h2>
 
 <pre><code># NIO
 - 使用缓冲区和通道的概念来实现处理数据
@@ -245,6 +265,8 @@ https://github.com/alex-shpak/hugo-book
 # Tips
 - JDK1.7中NIO中新增了4个异步通道
 </code></pre>
+
+<h2 id="什么是零拷贝">什么是零拷贝</h2>
 </article>
 
       
@@ -260,9 +282,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#nio面试题">NIO面试题</a>
 <ul>
-<li><a href="#font-color-008b45-size-4-java是怎么实现nio的-重要的类是那些-功能是什么-font"><font color="#008B45" size=4>Java是怎么实现NIO的，重要的类是那些？功能是什么？</font></a></li>
-<li><a href="#font-color-008b45-size-4-java中nio的原理是什么-font"><font color="#008B45" size=4>Java中NIO的原理是什么？</font></a></li>
-<li><a href="#font-color-008b45-size-4-你对nio是怎么理解的-java中的nio是怎么实现的-nio和aio-bio的区别是什么-font"><font color="#008B45" size=4>你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？</font></a></li>
+<li><a href="#java是怎么实现nio的-重要的类是那些-功能是什么">Java是怎么实现NIO的，重要的类是那些？功能是什么？</a></li>
+<li><a href="#你对nio是怎么理解的-java中的nio是怎么实现的-nio和aio-bio的区别是什么">你对NIO是怎么理解的，Java中的NIO是怎么实现的？NIO和AIO,BIO的区别是什么？</a></li>
+<li><a href="#什么是零拷贝">什么是零拷贝</a></li>
 </ul></li>
 </ul>
 </nav>

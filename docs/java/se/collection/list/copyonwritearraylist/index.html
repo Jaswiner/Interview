@@ -203,7 +203,49 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="copyonwritearraylist面试题">CopyONWriteArrayList面试题</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/java/se/0menu/">BACK-Java面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#copyonwritearraylist面试题">CopyONWriteArrayList面试题</a>
+
+<ul>
+<li><a href="#copyonwritearraylist有什么特性是如何实现这个特性的">CopyONWriteArrayList有什么特性？是如何实现这个特性的</a></li>
+<li><a href="#copyonwritearraylist有什么优缺点">CopyONWriteArrayList有什么优缺点</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="copyonwritearraylist有什么特性-是如何实现这个特性的">CopyONWriteArrayList有什么特性？是如何实现这个特性的</h2>
+
+<pre><code>## 特性
+- 线程安全的，在读的时候不加锁，但是在写的时候加锁
+
+## 原理
+- 当要修改数据的时候，将原来的数据copy一份，在新的数据上进行修改，最后再把指针指到新数据上
+
+</code></pre>
+
+<h2 id="copyonwritearraylist有什么优缺点">CopyONWriteArrayList有什么优缺点</h2>
+
+<pre><code>## 优点
+- 线程安全，锁粒度变小
+
+## 缺点
+- 占用空间
+- 不能保证数据实时一致性，只能保证最终一致性
+</code></pre>
+</article>
 
       
 
@@ -213,6 +255,18 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#copyonwritearraylist面试题">CopyONWriteArrayList面试题</a>
+<ul>
+<li><a href="#copyonwritearraylist有什么特性-是如何实现这个特性的">CopyONWriteArrayList有什么特性？是如何实现这个特性的</a></li>
+<li><a href="#copyonwritearraylist有什么优缺点">CopyONWriteArrayList有什么优缺点</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

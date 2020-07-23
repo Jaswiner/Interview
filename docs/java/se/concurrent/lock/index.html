@@ -217,15 +217,19 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#java中锁面试题">Java中锁面试题</a>
 
 <ul>
-<li><a href="#font-color008b45-size4说说你对锁的相关名词的理解font"><font color="#008B45" size=4>说说你对锁的相关名词的理解</font></a></li>
-<li><a href="#font-color008b45-size4单例模式的双检锁是什么font"><font color="#008B45" size=4>单例模式的双检锁是什么?</font></a></li>
+<li><a href="#引入锁之后带来哪些问题本质是什么">引入锁之后带来哪些问题？本质是什么？</a></li>
+<li><a href="#说说你对锁的相关名词的理解">说说你对锁的相关名词的理解</a></li>
+<li><a href="#单例模式的双检锁是什么">单例模式的双检锁是什么?</a></li>
 <li><a href="#死锁产生的条件是什么如何避免死锁">死锁产生的条件是什么？如何避免死锁？</a></li>
-<li><a href="#font-color008b45-size4说说reentrantlock和synchronized的异同吧font"><font color="#008B45" size=4>说说ReentrantLock和synchronized的异同吧</font></a></li>
-<li><a href="#font-color008b45-size4lock和synchronized的区别font"><font color="#008B45" size=4>Lock和synchronized的区别</font></a></li>
-<li><a href="#font-color008b45-size4说说降低锁竞争的方法font"><font color="#008B45" size=4>说说降低锁竞争的方法</font></a></li>
-<li><a href="#font-color008b45-size4有哪些无锁的数据结构他们的实现原理是什么font"><font color="#008B45" size=4>有哪些无锁的数据结构，他们的实现原理是什么？</font></a></li>
-<li><a href="#font-color008b45-size4cas机制是什么怎么解决aba问题font"><font color="#008B45" size=4>cas机制是什么？怎么解决ABA问题</font></a></li>
-<li><a href="#font-color008b45-size4用过读写锁吗原理是什么一般在什么场景下使用font"><font color="#008B45" size=4>用过读写锁吗？原理是什么，一般在什么场景下使用</font></a></li>
+<li><a href="#synchronized在jdk16后得到了优化是如何优化的">synchronized在jdk1.6后得到了优化？是如何优化的？</a></li>
+<li><a href="#锁膨胀过程">锁膨胀过程?</a></li>
+<li><a href="#说说reentrantlock和synchronized的异同吧">说说ReentrantLock和synchronized的异同吧</a></li>
+<li><a href="#lock和synchronized的区别">Lock和synchronized的区别</a></li>
+<li><a href="#说说降低锁竞争的方法">说说降低锁竞争的方法</a></li>
+<li><a href="#有哪些无锁的数据结构他们的实现原理是什么">有哪些无锁的数据结构，他们的实现原理是什么？</a></li>
+<li><a href="#cas机制是什么怎么解决aba问题">cas机制是什么？怎么解决ABA问题</a></li>
+<li><a href="#用过读写锁吗原理是什么一般在什么场景下使用">用过读写锁吗？原理是什么，一般在什么场景下使用</a></li>
+<li><a href="#单例模式怎么实现线程安全">单例模式怎么实现线程安全</a></li>
 </ul></li>
 </ul>
 
@@ -233,7 +237,16 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="font-color-008b45-size-4-说说你对锁的相关名词的理解-font"><font color="#008B45" size=4>说说你对锁的相关名词的理解</font></h2>
+<h2 id="引入锁之后带来哪些问题-本质是什么">引入锁之后带来哪些问题？本质是什么？</h2>
+
+<pre><code>## 死锁
+
+## 优先级倒置
+
+## 饥饿锁
+</code></pre>
+
+<h2 id="说说你对锁的相关名词的理解">说说你对锁的相关名词的理解</h2>
 
 <pre><code># 自旋锁
 - 当线程A占用锁，线程B拿不到锁的时候就被挂起(阻塞)，自旋锁是线程B不放弃CPU的时间片，在原地一直尝试获取锁
@@ -269,7 +282,7 @@ https://github.com/alex-shpak/hugo-book
 ---使用版本号机制或者CAS算法实现
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-单例模式的双检锁是什么-font"><font color="#008B45" size=4>单例模式的双检锁是什么?</font></h2>
+<h2 id="单例模式的双检锁是什么">单例模式的双检锁是什么?</h2>
 
 <p>Java中的ReadWriteLock是什么？</p>
 
@@ -291,7 +304,21 @@ https://github.com/alex-shpak/hugo-book
 - 
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-说说reentrantlock和synchronized的异同吧-font"><font color="#008B45" size=4>说说ReentrantLock和synchronized的异同吧</font></h2>
+<h2 id="synchronized在jdk1-6后得到了优化-是如何优化的">synchronized在jdk1.6后得到了优化？是如何优化的？</h2>
+
+<pre><code>
+</code></pre>
+
+<h2 id="锁膨胀过程">锁膨胀过程?</h2>
+
+<pre><code>锁有4种状态:
+
+无锁 &gt; 偏向锁 &gt; 轻量级锁 &gt; 重量级锁
+
+只可以向上膨胀，不可以锁降级。当一个对象没有没有被锁定(同步操作)的时候是没有锁的，对象头中锁偏向锁标记为‘0’标志位是‘01’,当对象上锁的时候，无锁先膨胀成偏向锁，对象头中偏向锁标记为'1'，锁标记为'01',线程id为持有锁的线程id，每一次访问该对象的时候只要检验一下线程的id和对象头的线程id是否一致就可以了(适用单线程频繁访问)。当有多个线程访问对象的时候，存在锁竞争，偏向锁膨胀为轻量级锁，锁标记为‘00’，对象头中记录持有当前对象锁的线程id，当对象处在轻量级锁的时候对于对象的修改使用CAS操作来保证数据的准确，这样做可以在锁竞争低的时候不会频繁的加锁解锁操作。当锁竞争还是非常激烈的时候，锁会膨胀成为重量级锁，锁标记为‘10’，对于对象的访问都要加锁解锁操作。
+</code></pre>
+
+<h2 id="说说reentrantlock和synchronized的异同吧">说说ReentrantLock和synchronized的异同吧</h2>
 
 <pre><code># 同
 - 都是协调多线程对象共享对象和变量的访问(同步锁)
@@ -307,7 +334,7 @@ https://github.com/alex-shpak/hugo-book
 - 底层实现不一样， synchronized是同步阻塞，使用的是悲观并发策略，lock是同步非阻塞，采用的是乐观并发策略
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-lock和synchronized的区别-font"><font color="#008B45" size=4>Lock和synchronized的区别</font></h2>
+<h2 id="lock和synchronized的区别">Lock和synchronized的区别</h2>
 
 <table>
 <thead>
@@ -357,16 +384,23 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 
-<h2 id="font-color-008b45-size-4-说说降低锁竞争的方法-font"><font color="#008B45" size=4>说说降低锁竞争的方法</font></h2>
+<h2 id="说说降低锁竞争的方法">说说降低锁竞争的方法</h2>
 
 <pre><code>- 减少锁持有时间
 - 降低锁的请求频率
 - 使用带有协调机制的独占锁
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-有哪些无锁的数据结构-他们的实现原理是什么-font"><font color="#008B45" size=4>有哪些无锁的数据结构，他们的实现原理是什么？</font></h2>
+<h2 id="有哪些无锁的数据结构-他们的实现原理是什么">有哪些无锁的数据结构，他们的实现原理是什么？</h2>
 
-<h2 id="font-color-008b45-size-4-cas机制是什么-怎么解决aba问题-font"><font color="#008B45" size=4>cas机制是什么？怎么解决ABA问题</font></h2>
+<pre><code># 相关数据结构
+JUC中atomic包中都是锁无关的数据结构
+
+# 实现原理
+CAS算法
+</code></pre>
+
+<h2 id="cas机制是什么-怎么解决aba问题">cas机制是什么？怎么解决ABA问题</h2>
 
 <pre><code># 机制
 cas(compare ans swap)
@@ -382,13 +416,18 @@ cas(compare ans swap)
 - J.U.C中原子类都是使用cas实现的
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-用过读写锁吗-原理是什么-一般在什么场景下使用-font"><font color="#008B45" size=4>用过读写锁吗？原理是什么，一般在什么场景下使用</font></h2>
+<h2 id="用过读写锁吗-原理是什么-一般在什么场景下使用">用过读写锁吗？原理是什么，一般在什么场景下使用</h2>
 
 <pre><code># 原理
 
 
 # 使用场景
 - 读多写少
+</code></pre>
+
+<h2 id="单例模式怎么实现线程安全">单例模式怎么实现线程安全</h2>
+
+<pre><code>- DCL(Double Check Lock)
 </code></pre>
 </article>
 
@@ -405,15 +444,19 @@ cas(compare ans swap)
 <ul>
 <li><a href="#java中锁面试题">Java中锁面试题</a>
 <ul>
-<li><a href="#font-color-008b45-size-4-说说你对锁的相关名词的理解-font"><font color="#008B45" size=4>说说你对锁的相关名词的理解</font></a></li>
-<li><a href="#font-color-008b45-size-4-单例模式的双检锁是什么-font"><font color="#008B45" size=4>单例模式的双检锁是什么?</font></a></li>
+<li><a href="#引入锁之后带来哪些问题-本质是什么">引入锁之后带来哪些问题？本质是什么？</a></li>
+<li><a href="#说说你对锁的相关名词的理解">说说你对锁的相关名词的理解</a></li>
+<li><a href="#单例模式的双检锁是什么">单例模式的双检锁是什么?</a></li>
 <li><a href="#死锁产生的条件是什么-如何避免死锁">死锁产生的条件是什么？如何避免死锁？</a></li>
-<li><a href="#font-color-008b45-size-4-说说reentrantlock和synchronized的异同吧-font"><font color="#008B45" size=4>说说ReentrantLock和synchronized的异同吧</font></a></li>
-<li><a href="#font-color-008b45-size-4-lock和synchronized的区别-font"><font color="#008B45" size=4>Lock和synchronized的区别</font></a></li>
-<li><a href="#font-color-008b45-size-4-说说降低锁竞争的方法-font"><font color="#008B45" size=4>说说降低锁竞争的方法</font></a></li>
-<li><a href="#font-color-008b45-size-4-有哪些无锁的数据结构-他们的实现原理是什么-font"><font color="#008B45" size=4>有哪些无锁的数据结构，他们的实现原理是什么？</font></a></li>
-<li><a href="#font-color-008b45-size-4-cas机制是什么-怎么解决aba问题-font"><font color="#008B45" size=4>cas机制是什么？怎么解决ABA问题</font></a></li>
-<li><a href="#font-color-008b45-size-4-用过读写锁吗-原理是什么-一般在什么场景下使用-font"><font color="#008B45" size=4>用过读写锁吗？原理是什么，一般在什么场景下使用</font></a></li>
+<li><a href="#synchronized在jdk1-6后得到了优化-是如何优化的">synchronized在jdk1.6后得到了优化？是如何优化的？</a></li>
+<li><a href="#锁膨胀过程">锁膨胀过程?</a></li>
+<li><a href="#说说reentrantlock和synchronized的异同吧">说说ReentrantLock和synchronized的异同吧</a></li>
+<li><a href="#lock和synchronized的区别">Lock和synchronized的区别</a></li>
+<li><a href="#说说降低锁竞争的方法">说说降低锁竞争的方法</a></li>
+<li><a href="#有哪些无锁的数据结构-他们的实现原理是什么">有哪些无锁的数据结构，他们的实现原理是什么？</a></li>
+<li><a href="#cas机制是什么-怎么解决aba问题">cas机制是什么？怎么解决ABA问题</a></li>
+<li><a href="#用过读写锁吗-原理是什么-一般在什么场景下使用">用过读写锁吗？原理是什么，一般在什么场景下使用</a></li>
+<li><a href="#单例模式怎么实现线程安全">单例模式怎么实现线程安全</a></li>
 </ul></li>
 </ul>
 </nav>

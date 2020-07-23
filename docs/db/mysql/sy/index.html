@@ -213,11 +213,10 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#mysql中的索引">MySQL中的索引</a>
 
 <ul>
-<li><a href="#font-color008b45-size4mysql索引的底层原理是什么font"><font color="#008B45" size=4>MySQL索引的底层原理是什么？</font></a></li>
-<li><a href="#font-color008b45-size4mysql中都有什么索引有什么区别font"><font color="#008B45" size=4>MySQL中都有什么索引？有什么区别？</font></a></li>
-<li><a href="#font-color008b45-size4如何进行索引优化font"><font color="#008B45" size=4>如何进行索引优化？</font></a></li>
-<li><a href="#font-color008b45-size4说说数据库的索引都有哪些类型font"><font color="#008B45" size=4>说说数据库的索引都有哪些类型</font></a></li>
-<li><a href="#font-color008b45-size4说说你对数据库索引的理解你在项目开发中是如何使用索引的使用索引一定可以提高查询的性能吗font"><font color="#008B45" size=4>说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？</font></a></li>
+<li><a href="#mysql索引的底层原理是什么">MySQL索引的底层原理是什么？</a></li>
+<li><a href="#如何进行索引优化">如何进行索引优化？</a></li>
+<li><a href="#mysql的索引都有哪些类型他们的特点是什么底层的数据结构是什么">MySQL的索引都有哪些类型，他们的特点是什么，底层的数据结构是什么</a></li>
+<li><a href="#说说你对数据库索引的理解你在项目开发中是如何使用索引的使用索引一定可以提高查询的性能吗">说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？</a></li>
 </ul></li>
 </ul>
 
@@ -225,19 +224,18 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="font-color-008b45-size-4-mysql索引的底层原理是什么-font"><font color="#008B45" size=4>MySQL索引的底层原理是什么？</font></h2>
+<h2 id="mysql索引的底层原理是什么">MySQL索引的底层原理是什么？</h2>
 
-<h2 id="font-color-008b45-size-4-mysql中都有什么索引-有什么区别-font"><font color="#008B45" size=4>MySQL中都有什么索引？有什么区别？</font></h2>
+<h2 id="如何进行索引优化">如何进行索引优化？</h2>
 
-<h2 id="font-color-008b45-size-4-如何进行索引优化-font"><font color="#008B45" size=4>如何进行索引优化？</font></h2>
-
-<h2 id="font-color-008b45-size-4-说说数据库的索引都有哪些类型-font"><font color="#008B45" size=4>说说数据库的索引都有哪些类型</font></h2>
+<h2 id="mysql的索引都有哪些类型-他们的特点是什么-底层的数据结构是什么">MySQL的索引都有哪些类型，他们的特点是什么，底层的数据结构是什么</h2>
 
 <table>
 <thead>
 <tr>
 <th align="left">索引名</th>
 <th align="left">特点</th>
+<th align="left">数据结构</th>
 </tr>
 </thead>
 
@@ -245,31 +243,34 @@ https://github.com/alex-shpak/hugo-book
 <tr>
 <td align="left">UNIQUE(唯一索引)</td>
 <td align="left">不可以出现相同的值，可以有null</td>
+<td align="left"></td>
 </tr>
 
 <tr>
 <td align="left">INDEX(普通索引)</td>
 <td align="left">允许出现相同的索引内容</td>
+<td align="left"></td>
 </tr>
 
 <tr>
 <td align="left">PROMARY KEY(主键索引)</td>
 <td align="left">不允许出现相同的值</td>
+<td align="left"></td>
 </tr>
 
 <tr>
 <td align="left">FULLTEXT INDEX(全文索引)</td>
 <td align="left">对全文进行索引，效率很差</td>
+<td align="left"></td>
 </tr>
 
 <tr>
 <td align="left">组合索引</td>
 <td align="left">实质上是将多个字段建到一个索引里，列值的组合必须唯一</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
-
-<p>Tips：</p>
 
 <pre><code>CREATE INDEX 方式只能创建‘普通索引’和‘唯一索引’
 
@@ -277,7 +278,7 @@ https://github.com/alex-shpak/hugo-book
 ALTER TABLE [table_name] ADD INDEX [inedx_name](列1,列2,列3); 
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-说说你对数据库索引的理解-你在项目开发中是如何使用索引的-使用索引一定可以提高查询的性能吗-font"><font color="#008B45" size=4>说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？</font></h2>
+<h2 id="说说你对数据库索引的理解-你在项目开发中是如何使用索引的-使用索引一定可以提高查询的性能吗">说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？</h2>
 
 <pre><code># 索引理解
 - MySQL索引的本质是B+树
@@ -311,11 +312,10 @@ alter table [table_name] add [index_type] [index_name] [字段名]
 <ul>
 <li><a href="#mysql中的索引">MySQL中的索引</a>
 <ul>
-<li><a href="#font-color-008b45-size-4-mysql索引的底层原理是什么-font"><font color="#008B45" size=4>MySQL索引的底层原理是什么？</font></a></li>
-<li><a href="#font-color-008b45-size-4-mysql中都有什么索引-有什么区别-font"><font color="#008B45" size=4>MySQL中都有什么索引？有什么区别？</font></a></li>
-<li><a href="#font-color-008b45-size-4-如何进行索引优化-font"><font color="#008B45" size=4>如何进行索引优化？</font></a></li>
-<li><a href="#font-color-008b45-size-4-说说数据库的索引都有哪些类型-font"><font color="#008B45" size=4>说说数据库的索引都有哪些类型</font></a></li>
-<li><a href="#font-color-008b45-size-4-说说你对数据库索引的理解-你在项目开发中是如何使用索引的-使用索引一定可以提高查询的性能吗-font"><font color="#008B45" size=4>说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？</font></a></li>
+<li><a href="#mysql索引的底层原理是什么">MySQL索引的底层原理是什么？</a></li>
+<li><a href="#如何进行索引优化">如何进行索引优化？</a></li>
+<li><a href="#mysql的索引都有哪些类型-他们的特点是什么-底层的数据结构是什么">MySQL的索引都有哪些类型，他们的特点是什么，底层的数据结构是什么</a></li>
+<li><a href="#说说你对数据库索引的理解-你在项目开发中是如何使用索引的-使用索引一定可以提高查询的性能吗">说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？</a></li>
 </ul></li>
 </ul>
 </nav>
