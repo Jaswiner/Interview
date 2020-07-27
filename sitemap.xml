@@ -37,16 +37,6 @@
   </url>
   
   <url>
-    <loc>https://jaswine.com/interview/docs/spring/springcloud/</loc>
-    <lastmod>2019-04-29T09:34:26+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jaswine.com/interview/docs/spring/springboot/</loc>
-    <lastmod>2019-04-29T09:34:17+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jaswine.com/interview/docs/arch/cache/</loc>
     <lastmod>2019-04-29T09:34:04+08:00</lastmod>
   </url>
@@ -687,7 +677,12 @@
   </url>
   
   <url>
-    <loc>https://jaswine.com/interview/docs/spring/framework/web/</loc>
+    <loc>https://jaswine.com/interview/docs/spring/framework/webflux/web/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/spring/framework/webmvc/web/</loc>
     <priority>0</priority>
   </url>
   

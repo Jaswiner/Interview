@@ -207,6 +207,10 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="spring-bean模块面试题">Spring Bean模块面试题</h1>
 
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/spring/framework/0menu/">BACK-Spring FrameWork面试题目录</a></strong></p>
+</blockquote>
+
 <!-- TOC -->
 
 <ul>
@@ -215,7 +219,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#spring中bean的生命周期是什么样的">Spring中Bean的生命周期是什么样的？</a></li>
 <li><a href="#什么是bean的作用域有什么用如何定义的">什么是Bean的作用域？有什么用？如何定义的?</a></li>
-<li><a href="#spring中bean为什么默认是单例的有什么好处为什么">Spring中Bean为什么默认是单例的？有什么好处？为什么？</a></li>
+<li><a href="#spring中bean为什么默认是单例的有什么优缺点">Spring中Bean为什么默认是单例的？有什么优缺点</a></li>
 <li><a href="#spring中bean的自动装配是什么意思">Spring中Bean的自动装配是什么意思？</a></li>
 </ul></li>
 </ul>
@@ -225,6 +229,9 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="spring中bean的生命周期是什么样的">Spring中Bean的生命周期是什么样的？</h2>
 
 <pre><code>- 1.实例化Bean
+-- BeanFactory容器在用户向容器请求一个bean的时候才会初始化
+-- ApplicationContext在容器初始化的时候就会实例化所有bean
+
 -- 容器通过获取BeanDefinition对象来对Bean进行实例化
 -- 实例化的对象被抱在BeanWrapper对象中，这个Wrapper提供了设置对象的的接口，避免使用反射来设置属性(因为反射很慢)
 
@@ -248,9 +255,30 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="什么是bean的作用域-有什么用-如何定义的">什么是Bean的作用域？有什么用？如何定义的?</h2>
 
-<h2 id="spring中bean为什么默认是单例的-有什么好处-为什么">Spring中Bean为什么默认是单例的？有什么好处？为什么？</h2>
+<pre><code>## 作用域
+
+
+## 作用
+
+## 如何定义
+
+</code></pre>
+
+<h2 id="spring中bean为什么默认是单例的-有什么优缺点">Spring中Bean为什么默认是单例的？有什么优缺点</h2>
+
+<pre><code>## 优点
+- 减少重复创建对象，开销较大
+- 较少GC
+
+## 缺点
+- 线程不安全，并发使用对象的时候会存在线程不安全的情况
+
+</code></pre>
 
 <h2 id="spring中bean的自动装配是什么意思">Spring中Bean的自动装配是什么意思？</h2>
+
+<pre><code>
+</code></pre>
 </article>
 
       
@@ -268,7 +296,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#spring中bean的生命周期是什么样的">Spring中Bean的生命周期是什么样的？</a></li>
 <li><a href="#什么是bean的作用域-有什么用-如何定义的">什么是Bean的作用域？有什么用？如何定义的?</a></li>
-<li><a href="#spring中bean为什么默认是单例的-有什么好处-为什么">Spring中Bean为什么默认是单例的？有什么好处？为什么？</a></li>
+<li><a href="#spring中bean为什么默认是单例的-有什么优缺点">Spring中Bean为什么默认是单例的？有什么优缺点</a></li>
 <li><a href="#spring中bean的自动装配是什么意思">Spring中Bean的自动装配是什么意思？</a></li>
 </ul></li>
 </ul>

@@ -11,7 +11,7 @@
 <title>
   
     
-    Trans
+    Web
   
  | 面试题</title>
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2finterview\2f docs\2fspring\2f framework\2f data\2ftrans\2f "] {
+  nav ul a[href$="\2finterview\2f docs\2fspring\2f framework\2fwebflux\2fweb\2f "] {
       color: #004ed0;
   }
   </style>
@@ -197,7 +197,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    Trans
+    Web
   
 </strong>
 </header>
@@ -205,89 +205,29 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="spring事务面试题">Spring事务面试题</h1>
+<h1 id="spring-web">Spring Web</h1>
 
-<blockquote>
-<p>⬅️<strong><a href="/interview/docs/spring/framework/0menu/">BACK-Spring Framwork面试题目录</a></strong></p>
-</blockquote>
+<h2 id="springmvc">SpringMVC</h2>
 
-<!-- TOC -->
+<p><font color="#9932CC" size=4>SpringMVC的运行原理和启动流程是什么样子的</font></p>
 
-<ul>
-<li><a href="#spring事务面试题">Spring事务面试题</a>
+<pre><code># 启动流程
 
-<ul>
-<li><a href="#说说你对spring事务的理解">说说你对spring事务的理解</a></li>
-<li><a href="#spring是如何管理事务的实现原理是什么">spring是如何管理事务的？实现原理是什么？</a></li>
-<li><a href="#spring中有哪些事务传播机制">spring中有哪些事务传播机制</a></li>
-</ul></li>
-</ul>
+# 运行原理
+- 请求到达DispatchServlet，根据请求的相关信息到HandlerMapping中查找到具体的Handler(Controller)
 
-<!-- /TOC -->
-
-<hr />
-
-<h2 id="说说你对spring事务的理解">说说你对spring事务的理解</h2>
-
-<pre><code>spring不是事务的实现者，但是他提供了事务的统一管理接口
-
+- Controller调用具体的业务逻辑后将结果返给DispatcherServlet，最后返给客户端
 </code></pre>
 
-<h2 id="spring是如何管理事务的-实现原理是什么">spring是如何管理事务的？实现原理是什么？</h2>
+<p><font color="#9932CC" size=4>DispatchServlet初始化过程</font></p>
 
-<pre><code>## 管理事务
+<pre><code></code></pre>
 
-## 实现原理
+<p><font color="#9932CC" size=4>说说你在SpringMVC用到的注解，作用是什么</font></p>
 
-</code></pre>
+<p><font color="#9932CC" size=4>SpringMVC中的Controller是单例还是多例，怎么保证并发的安全</font></p>
 
-<h2 id="spring中有哪些事务传播机制">spring中有哪些事务传播机制</h2>
-
-<table>
-<thead>
-<tr>
-<th align="left">传播机制</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">PROPAGATION_REQUIRED</td>
-<td align="left">支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择</td>
-</tr>
-
-<tr>
-<td align="left">PROPAGATION_SUPPORTS</td>
-<td align="left">支持当前事务，如果当前没有事务，就以非事务方式执行</td>
-</tr>
-
-<tr>
-<td align="left">PROPAGATION_MANDATORY</td>
-<td align="left">支持当前事务，如果当前没有事务，就抛出异常</td>
-</tr>
-
-<tr>
-<td align="left">PROPAGATION_REQUIRES_NEW</td>
-<td align="left">新建事务，如果当前存在事务，把当前事务挂起</td>
-</tr>
-
-<tr>
-<td align="left">PROPAGATION_NOT_SUPPORTED</td>
-<td align="left">以非事务方式执行操作，如果当前存在事务，就把当前事务挂起</td>
-</tr>
-
-<tr>
-<td align="left">PROPAGATION_NEVER</td>
-<td align="left">以非事务方式执行，如果当前存在事务，则抛出异常</td>
-</tr>
-
-<tr>
-<td align="left">PROPAGATION_NESTED</td>
-<td align="left">如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则进行与PROPAGATION_REQUIRED类似的操作</td>
-</tr>
-</tbody>
-</table>
+<h2 id="spring-webflow">Spring WebFlow</h2>
 </article>
 
       
@@ -301,11 +241,10 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#spring事务面试题">Spring事务面试题</a>
+<li><a href="#spring-web">Spring Web</a>
 <ul>
-<li><a href="#说说你对spring事务的理解">说说你对spring事务的理解</a></li>
-<li><a href="#spring是如何管理事务的-实现原理是什么">spring是如何管理事务的？实现原理是什么？</a></li>
-<li><a href="#spring中有哪些事务传播机制">spring中有哪些事务传播机制</a></li>
+<li><a href="#springmvc">SpringMVC</a></li>
+<li><a href="#spring-webflow">Spring WebFlow</a></li>
 </ul></li>
 </ul>
 </nav>
