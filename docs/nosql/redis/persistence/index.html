@@ -203,7 +203,59 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="redis持久化">Redis持久化</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/nosql/redis/0menu/">BACK-Redis面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#redis持久化">Redis持久化</a>
+
+<ul>
+<li><a href="#redis的持久化机制有哪些原理是什么优缺点是什么">Redis的持久化机制有哪些？原理是什么?优缺点是什么？</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="redis的持久化机制有哪些-原理是什么-优缺点是什么">Redis的持久化机制有哪些？原理是什么?优缺点是什么？</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">持久化机制</th>
+<th align="left">原理</th>
+<th align="left">优点</th>
+<th align="left">缺点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">RDB</td>
+<td align="left">一定时间内将数据以快照的形式写到dump.rdb文件中</td>
+<td align="left">性能较好</td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">AOF</td>
+<td align="left">Redis执行写命令将命令记录在单独的日志文件中</td>
+<td align="left">数据安全<br></td>
+<td align="left">文件较大，恢复慢</td>
+</tr>
+</tbody>
+</table>
+
+<p>Tips:两个都配置的话优先加载AOF</p>
+</article>
 
       
 
@@ -213,6 +265,17 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#redis持久化">Redis持久化</a>
+<ul>
+<li><a href="#redis的持久化机制有哪些-原理是什么-优缺点是什么">Redis的持久化机制有哪些？原理是什么?优缺点是什么？</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

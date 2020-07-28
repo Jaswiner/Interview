@@ -1078,7 +1078,7 @@ Netty的通讯协议是什么样的
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/nosql/redis/0menu/</guid>
-      <description> Redis面试题  Redis面试题  数据类型 持久化 键 内存 线程模型 事务 集群  分区 缓存   </description>
+      <description> Redis面试题  Redis面试题  数据类型 持久化 键(Key) 内存(Value) 线程模型 事务 集群  分区 缓存异常 分布式问题   </description>
     </item>
     
     <item>
@@ -1087,7 +1087,11 @@ Netty的通讯协议是什么样的
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/nosql/redis/cache/</guid>
-      <description></description>
+      <description> Redis作为缓存服务器异常解决方案  ⬅️BACK-Redis面试题目录
+  Redis作为缓存服务器异常解决方案  🔥 什么是缓存雪崩？怎么解决？ 🔥 什么是缓存穿透？怎么解决？ 🔥 什么是缓存击穿？怎么解决？   ❤️❤️❤️❤️❤️❤️❤️
+🔗 Redis作为缓存服务器异常解决方案汇总 &amp;ndash; Jaswine
+❤️❤️❤️❤️❤️❤️❤️
+🔥 什么是缓存雪崩？怎么解决？ # 缓存雪崩 缓存雪崩是指缓存同一时间大面积的失效，所以，后面的请求都会落到数据库上，造成数据库短时间内承受大量请求而崩掉。 # 解决方案 - 缓存数据过期时间设置成随机  🔥 什么是缓存穿透？怎么解决？ # 缓存穿透 缓存穿透是指缓存和数据库中都没有的数据，导致所有的请求都落到数据库上，造成数据库短时间内承受大量请求而崩掉。 # 解决方案 - 1.布隆过滤器  🔥 什么是缓存击穿？怎么解决？ # 缓存击穿 一个key到期后，由于并发的操作落在数据库上从而导致数据库宕机 # 解决方案 - 1.key永不过期(看业务场景) - 2.加互斥锁  </description>
     </item>
     
     <item>
@@ -1096,7 +1100,8 @@ Netty的通讯协议是什么样的
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/nosql/redis/cluster/</guid>
-      <description></description>
+      <description> Redis集群  ⬅️BACK-Redis面试题目录
+  Redis集群  Redis中哨兵模式是什么？怎么使用？实现原理是什么？   Redis中哨兵模式是什么？怎么使用？实现原理是什么？ # 哨兵模式 # 使用 # 实现原理  </description>
     </item>
     
     <item>
@@ -1105,7 +1110,17 @@ Netty的通讯协议是什么样的
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/nosql/redis/datatype/</guid>
-      <description> Redis数据类型面试题  Redis数据类型面试题  </description>
+      <description> Redis数据类型面试题  ⬅️BACK-Redis面试题目录
+  Redis数据类型面试题  Redis有哪些数据类型？都适用于什么场景   Redis有哪些数据类型？都适用于什么场景    数据类型 应用场景     STRING 简单的K，V缓存   LIST 存储列表型的数据结构   SET 无序集合，支持交并集、差集操作   ZSET 去重且可以排序   HASH 结构化的数据    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/nosql/redis/distributed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/nosql/redis/distributed/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -1114,7 +1129,9 @@ Netty的通讯协议是什么样的
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/nosql/redis/key/</guid>
-      <description></description>
+      <description> Redis中的键  ⬅️BACK-Redis面试题目录
+  Redis中的键  Redis中有哪些键的过期策略？优缺点是什么？   Redis中有哪些键的过期策略？优缺点是什么？    策略 描述 优点 缺点     定时过期 每个键有个定时器，到时过期 立即清除，内存友好 耗费CPU资源   惰性过期 只有当访问这个键的时候才会校验它是否过期 内存不友好，实际过期还未清理 CPU友好   定期过期 一段时间来扫描key来清除 折中方案 折中方案     Tips:
+ Redis中同时使用了惰性过期和定期过期策略   </description>
     </item>
     
     <item>
@@ -1123,7 +1140,8 @@ Netty的通讯协议是什么样的
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/nosql/redis/memory/</guid>
-      <description></description>
+      <description> Redis中内存(Value)  ⬅️BACK-Redis面试题目录
+  Redis中内存(Value)  什么是Redis内存淘汰策略？都有哪些策略？   什么是Redis内存淘汰策略？都有哪些策略？  Redis内存淘汰策略指的是Redis用作缓存的内存不足，怎么处理已有的内存的策略     淘汰策略 描述     noeviction 内存不足，直接抛异常   allkeys-lru 移除最近最少使用的key   allkeys-random 随机移除   volatile-lru 在设置了过期时间的key，移除最近最少使用的   volatile-random 在设置了过期时间的key，随机移除   volatile-ttl 在设置了过期时间的key，移除最近快要过期的    </description>
     </item>
     
     <item>
@@ -1141,7 +1159,9 @@ Netty的通讯协议是什么样的
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/nosql/redis/persistence/</guid>
-      <description></description>
+      <description>Redis持久化  ⬅️BACK-Redis面试题目录
+  Redis持久化  Redis的持久化机制有哪些？原理是什么?优缺点是什么？   Redis的持久化机制有哪些？原理是什么?优缺点是什么？    持久化机制 原理 优点 缺点     RDB 一定时间内将数据以快照的形式写到dump.rdb文件中 性能较好    AOF Redis执行写命令将命令记录在单独的日志文件中 数据安全
+ 文件较大，恢复慢    Tips:两个都配置的话优先加载AOF</description>
     </item>
     
     <item>
@@ -1150,7 +1170,8 @@ Netty的通讯协议是什么样的
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/nosql/redis/thread/</guid>
-      <description></description>
+      <description> Redis中的线程模型  ⬅️BACK-Redis面试题目录
+  Redis中的线程模型  Redis是单线程还是多线程？ 这样做有什么好处？为什么那么快？   Redis是单线程还是多线程？ 这样做有什么好处？为什么那么快？ # 线程模型 - 在Redis 6 之前是单线程的 - 在Redis 6 中是多线程 # 好处(单线程) - 省去线程切换的时间 - 不存在并发带来的加锁解锁操作 # 为什么快 - 底层的IO模型是非阻塞的IO(实际使用OS中提供的epoll函数) - 自己实现的事件框架，io的操作都成了事件  </description>
     </item>
     
     <item>
@@ -1159,7 +1180,8 @@ Netty的通讯协议是什么样的
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/nosql/redis/trans/</guid>
-      <description></description>
+      <description> Redis事务  ⬅️BACK-Redis面试题目录
+  Redis事务  </description>
     </item>
     
     <item>

@@ -203,7 +203,43 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="redis中的线程模型">Redis中的线程模型</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/nosql/redis/0menu/">BACK-Redis面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#redis中的线程模型">Redis中的线程模型</a>
+
+<ul>
+<li><a href="#redis是单线程还是多线程-这样做有什么好处为什么那么快">Redis是单线程还是多线程？ 这样做有什么好处？为什么那么快？</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="redis是单线程还是多线程-这样做有什么好处-为什么那么快">Redis是单线程还是多线程？ 这样做有什么好处？为什么那么快？</h2>
+
+<pre><code># 线程模型
+- 在Redis 6 之前是单线程的
+- 在Redis 6 中是多线程
+
+# 好处(单线程)
+- 省去线程切换的时间
+- 不存在并发带来的加锁解锁操作
+
+# 为什么快
+- 底层的IO模型是非阻塞的IO(实际使用OS中提供的epoll函数)
+- 自己实现的事件框架，io的操作都成了事件
+</code></pre>
+</article>
 
       
 
@@ -213,6 +249,17 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#redis中的线程模型">Redis中的线程模型</a>
+<ul>
+<li><a href="#redis是单线程还是多线程-这样做有什么好处-为什么那么快">Redis是单线程还是多线程？ 这样做有什么好处？为什么那么快？</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

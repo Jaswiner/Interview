@@ -562,6 +562,11 @@
   </url>
   
   <url>
+    <loc>https://jaswine.com/interview/docs/nosql/redis/distributed/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jaswine.com/interview/docs/nosql/redis/key/</loc>
     <priority>0</priority>
   </url>

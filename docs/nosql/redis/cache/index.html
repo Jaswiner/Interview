@@ -203,7 +203,70 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="redis作为缓存服务器异常解决方案">Redis作为缓存服务器异常解决方案</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/nosql/redis/0menu/">BACK-Redis面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#redis作为缓存服务器异常解决方案">Redis作为缓存服务器异常解决方案</a>
+
+<ul>
+<li><a href="#🔥-什么是缓存雪崩怎么解决">🔥 什么是缓存雪崩？怎么解决？</a></li>
+<li><a href="#🔥-什么是缓存穿透怎么解决">🔥 什么是缓存穿透？怎么解决？</a></li>
+<li><a href="#🔥-什么是缓存击穿怎么解决">🔥 什么是缓存击穿？怎么解决？</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<p>❤️❤️❤️❤️❤️❤️❤️</p>
+
+<p><strong><a href="#">🔗 Redis作为缓存服务器异常解决方案汇总 &ndash; Jaswine</a></strong></p>
+
+<p>❤️❤️❤️❤️❤️❤️❤️</p>
+
+<h2 id="什么是缓存雪崩-怎么解决">🔥 什么是缓存雪崩？怎么解决？</h2>
+
+<pre><code># 缓存雪崩
+缓存雪崩是指缓存同一时间大面积的失效，所以，后面的请求都会落到数据库上，造成数据库短时间内承受大量请求而崩掉。
+
+
+# 解决方案
+
+- 缓存数据过期时间设置成随机
+
+</code></pre>
+
+<h2 id="什么是缓存穿透-怎么解决">🔥 什么是缓存穿透？怎么解决？</h2>
+
+<pre><code># 缓存穿透
+
+缓存穿透是指缓存和数据库中都没有的数据，导致所有的请求都落到数据库上，造成数据库短时间内承受大量请求而崩掉。
+
+# 解决方案
+- 1.布隆过滤器
+</code></pre>
+
+<h2 id="什么是缓存击穿-怎么解决">🔥 什么是缓存击穿？怎么解决？</h2>
+
+<pre><code># 缓存击穿
+
+一个key到期后，由于并发的操作落在数据库上从而导致数据库宕机
+
+# 解决方案
+- 1.key永不过期(看业务场景)
+- 2.加互斥锁
+
+</code></pre>
+</article>
 
       
 
@@ -213,6 +276,19 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#redis作为缓存服务器异常解决方案">Redis作为缓存服务器异常解决方案</a>
+<ul>
+<li><a href="#什么是缓存雪崩-怎么解决">🔥 什么是缓存雪崩？怎么解决？</a></li>
+<li><a href="#什么是缓存穿透-怎么解决">🔥 什么是缓存穿透？怎么解决？</a></li>
+<li><a href="#什么是缓存击穿-怎么解决">🔥 什么是缓存击穿？怎么解决？</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

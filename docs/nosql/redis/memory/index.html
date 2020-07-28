@@ -203,7 +203,75 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="redis中内存-value">Redis中内存(Value)</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/nosql/redis/0menu/">BACK-Redis面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#redis中内存value">Redis中内存(Value)</a>
+
+<ul>
+<li><a href="#什么是redis内存淘汰策略都有哪些策略">什么是Redis内存淘汰策略？都有哪些策略？</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="什么是redis内存淘汰策略-都有哪些策略">什么是Redis内存淘汰策略？都有哪些策略？</h2>
+
+<ul>
+<li>Redis内存淘汰策略指的是Redis用作缓存的内存不足，怎么处理已有的内存的策略</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">淘汰策略</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">noeviction</td>
+<td align="left">内存不足，直接抛异常</td>
+</tr>
+
+<tr>
+<td align="left">allkeys-lru</td>
+<td align="left">移除最近最少使用的key</td>
+</tr>
+
+<tr>
+<td align="left">allkeys-random</td>
+<td align="left">随机移除</td>
+</tr>
+
+<tr>
+<td align="left">volatile-lru</td>
+<td align="left">在设置了过期时间的key，移除最近最少使用的</td>
+</tr>
+
+<tr>
+<td align="left">volatile-random</td>
+<td align="left">在设置了过期时间的key，随机移除</td>
+</tr>
+
+<tr>
+<td align="left">volatile-ttl</td>
+<td align="left">在设置了过期时间的key，移除最近快要过期的</td>
+</tr>
+</tbody>
+</table>
+</article>
 
       
 
@@ -213,6 +281,17 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#redis中内存-value">Redis中内存(Value)</a>
+<ul>
+<li><a href="#什么是redis内存淘汰策略-都有哪些策略">什么是Redis内存淘汰策略？都有哪些策略？</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

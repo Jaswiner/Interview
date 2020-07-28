@@ -203,7 +203,72 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="redis中的键">Redis中的键</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/nosql/redis/0menu/">BACK-Redis面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#redis中的键">Redis中的键</a>
+
+<ul>
+<li><a href="#redis中有哪些键的过期策略优缺点是什么">Redis中有哪些键的过期策略？优缺点是什么？</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="redis中有哪些键的过期策略-优缺点是什么">Redis中有哪些键的过期策略？优缺点是什么？</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">策略</th>
+<th align="left">描述</th>
+<th align="left">优点</th>
+<th align="left">缺点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">定时过期</td>
+<td align="left">每个键有个定时器，到时过期</td>
+<td align="left">立即清除，内存友好</td>
+<td align="left">耗费CPU资源</td>
+</tr>
+
+<tr>
+<td align="left">惰性过期</td>
+<td align="left">只有当访问这个键的时候才会校验它是否过期</td>
+<td align="left">内存不友好，实际过期还未清理</td>
+<td align="left">CPU友好</td>
+</tr>
+
+<tr>
+<td align="left">定期过期</td>
+<td align="left">一段时间来扫描key来清除</td>
+<td align="left">折中方案</td>
+<td align="left">折中方案</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><strong>Tips:</strong></p>
+
+<ul>
+<li>Redis中同时使用了惰性过期和定期过期策略</li>
+</ul>
+</blockquote>
+</article>
 
       
 
@@ -213,6 +278,17 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#redis中的键">Redis中的键</a>
+<ul>
+<li><a href="#redis中有哪些键的过期策略-优缺点是什么">Redis中有哪些键的过期策略？优缺点是什么？</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>
