@@ -219,8 +219,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#java线程池中submit-和-execute方法有什么区别">Java线程池中submit() 和 execute()方法有什么区别？</a></li>
 <li><a href="#如果你提交任务时线程池队列已满会时发会生什么">如果你提交任务时，线程池队列已满。会时发会生什么？</a></li>
-<li><a href="#font-color008b45-size4说说java中常用的线程池模式以及不同线程池的使用场景font"><font color="#008B45" size=4>说说Java中常用的线程池模式以及不同线程池的使用场景</font></a></li>
-<li><a href="#font-color008b45-size4线程池关闭的方式有哪些各自的区别是什么font"><font color="#008B45" size=4>线程池关闭的方式有哪些？各自的区别是什么？</font></a></li>
+<li><a href="#java中常用的线程池模式以及不同线程池的使用场景">Java中常用的线程池模式以及不同线程池的使用场景</a></li>
+<li><a href="#线程池关闭的方式有哪些各自的区别是什么">线程池关闭的方式有哪些？各自的区别是什么？</a></li>
 </ul></li>
 </ul>
 
@@ -230,21 +230,107 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="java线程池中submit-和-execute-方法有什么区别">Java线程池中submit() 和 execute()方法有什么区别？</h2>
 
-<h2 id="如果你提交任务时-线程池队列已满-会时发会生什么">如果你提交任务时，线程池队列已满。会时发会生什么？</h2>
+<pre><code># execute()
+- 只能提交一个Runable对象
+- 返回值是void
+- 主线程无法捕捉到异常
 
-<h2 id="font-color-008b45-size-4-说说java中常用的线程池模式以及不同线程池的使用场景-font"><font color="#008B45" size=4>说说Java中常用的线程池模式以及不同线程池的使用场景</font></h2>
-
-<pre><code>
+# submit()
+- 可以提交Callable对象，Runable对象和Runable绑定result对象
+- 可以有返回值
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-线程池关闭的方式有哪些-各自的区别是什么-font"><font color="#008B45" size=4>线程池关闭的方式有哪些？各自的区别是什么？</font></h2>
+<h2 id="如果你提交任务时-线程池队列已满-会时发会生什么">如果你提交任务时，线程池队列已满。会时发会生什么？</h2>
+
+<p>依据我们传入的拒绝策略来返回结果</p>
+
+<p>JDK提供了四种策略</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">策略</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">ThreadPoolExecutor.AbortPolicy</td>
+<td align="left">❤默认策略。<BR>丢弃任务并抛出RejectedExecutionException异常</td>
+</tr>
+
+<tr>
+<td align="left">ThreadPoolExecutor.DiscardPolicy</td>
+<td align="left">也是丢弃任务，但是不抛出异常</td>
+</tr>
+
+<tr>
+<td align="left">ThreadPoolExecutor.DiscardOldestPolicy</td>
+<td align="left">丢弃队列最前面的任务，然后重新尝试执行任务（重复此过程）</td>
+</tr>
+
+<tr>
+<td align="left">ThreadPoolExecutor.CallerRunsPolicy</td>
+<td align="left">由调用线程处理该任务</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="java中常用的线程池模式以及不同线程池的使用场景">Java中常用的线程池模式以及不同线程池的使用场景</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">线程池名称</th>
+<th align="left">特点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>newSingleThreadExecutor</code></td>
+<td align="left">只有一个线程，保证任务按照顺序完成</td>
+</tr>
+
+<tr>
+<td align="left"><code>newFixedThreadPool</code></td>
+<td align="left">线程池大小固定，线程数可控</td>
+</tr>
+
+<tr>
+<td align="left"><code>newCachedThreadPool</code></td>
+<td align="left">线程池大小不固定，线程数不可控</td>
+</tr>
+
+<tr>
+<td align="left"><code>newScheduleThreadPool</code></td>
+<td align="left">按照周期来执行任务，线程池大小不固定</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="线程池关闭的方式有哪些-各自的区别是什么">线程池关闭的方式有哪些？各自的区别是什么？</h2>
 
 <pre><code># 方式
 - shutdown()
 - shutdownNow()
 
 # 区别
-- 
+## shutdown()
+1.调用之后不允许继续往线程池内继续添加线程;
+2、线程池的状态变为SHUTDOWN状态;
+3、所有在调用shutdown()方法之前提交到ExecutorSrvice的任务都会执行;
+4、一旦所有线程结束执行当前任务，ExecutorService才会真正关闭。
+
+## shutdownNow()
+1、该方法返回尚未执行的 task 的 List;
+2、线程池的状态变为STOP状态;
+3、阻止所有正在等待启动的任务, 并且停止当前正在执行的任务。
+
+# 总结
+一个优雅的停掉，完成未完成的。
+一个粗鲁的停掉，告诉你什么未完成，并且当前在做的也停掉
 </code></pre>
 </article>
 
@@ -263,8 +349,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#java线程池中submit-和-execute-方法有什么区别">Java线程池中submit() 和 execute()方法有什么区别？</a></li>
 <li><a href="#如果你提交任务时-线程池队列已满-会时发会生什么">如果你提交任务时，线程池队列已满。会时发会生什么？</a></li>
-<li><a href="#font-color-008b45-size-4-说说java中常用的线程池模式以及不同线程池的使用场景-font"><font color="#008B45" size=4>说说Java中常用的线程池模式以及不同线程池的使用场景</font></a></li>
-<li><a href="#font-color-008b45-size-4-线程池关闭的方式有哪些-各自的区别是什么-font"><font color="#008B45" size=4>线程池关闭的方式有哪些？各自的区别是什么？</font></a></li>
+<li><a href="#java中常用的线程池模式以及不同线程池的使用场景">Java中常用的线程池模式以及不同线程池的使用场景</a></li>
+<li><a href="#线程池关闭的方式有哪些-各自的区别是什么">线程池关闭的方式有哪些？各自的区别是什么？</a></li>
 </ul></li>
 </ul>
 </nav>

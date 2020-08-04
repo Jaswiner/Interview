@@ -203,7 +203,99 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="jvm内存分区">JVM内存分区</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/java/vm/0menu/">BACK-JVM面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#jvm内存分区">JVM内存分区</a>
+
+<ul>
+<li><a href="#jmm内存模型是什么样的">JMM内存模型是什么样的？</a></li>
+<li><a href="#jvm堆内存是怎么分代的都放得是什么">jvm堆内存是怎么分代的?都放得是什么？</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="jmm内存模型是什么样的">JMM内存模型是什么样的？</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">线程私有</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">程序计算器</td>
+<td align="left">是</td>
+<td align="left">记录程序执行的代码行号等信息</td>
+</tr>
+
+<tr>
+<td align="left">虚拟机栈</td>
+<td align="left">是</td>
+<td align="left">方法入栈，局部变量保存</td>
+</tr>
+
+<tr>
+<td align="left">原生方法栈</td>
+<td align="left">是</td>
+<td align="left">native方法栈，和虚拟机栈相同</td>
+</tr>
+
+<tr>
+<td align="left">堆</td>
+<td align="left">否</td>
+<td align="left">对象存放的地方</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="jvm堆内存是怎么分代的-都放得是什么">jvm堆内存是怎么分代的?都放得是什么？</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">代</th>
+<th align="left">特征</th>
+<th align="left">存放对象</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">新生代</td>
+<td align="left">有一个eden和两个survivor区</td>
+<td align="left">所有新对象都在这里分配</td>
+</tr>
+
+<tr>
+<td align="left">老年代</td>
+<td align="left">新生代对象存活够久就会放到老年代</td>
+<td align="left">新生代存活的对象，新生代分配不了的大对象</td>
+</tr>
+
+<tr>
+<td align="left">永久代(1.7方法区)/元数据(1.8)</td>
+<td align="left">1.7和堆内存连续，老年代GC永久代就GC<br>元空间和堆内存不连续，存在直接内存中</td>
+<td align="left">class信息</td>
+</tr>
+</tbody>
+</table>
+</article>
 
       
 
@@ -213,6 +305,18 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#jvm内存分区">JVM内存分区</a>
+<ul>
+<li><a href="#jmm内存模型是什么样的">JMM内存模型是什么样的？</a></li>
+<li><a href="#jvm堆内存是怎么分代的-都放得是什么">jvm堆内存是怎么分代的?都放得是什么？</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

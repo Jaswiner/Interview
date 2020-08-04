@@ -207,13 +207,18 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="https">HTTPS</h1>
 
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/base/net/0menu/">BACK-计算机网络面试题目录</a></strong></p>
+</blockquote>
+
 <!-- TOC -->
 
 <ul>
 <li><a href="#https">HTTPS</a>
 
 <ul>
-<li><a href="#font-color008b45-size4https加密方式是什么讲讲整个加密和解密的流程font"><font color="#008B45" size=4>HTTPS加密方式是什么？讲讲整个加密和解密的流程</font></a></li>
+<li><a href="#https加密方式是什么讲讲整个加密和解密的流程">HTTPS加密方式是什么？讲讲整个加密和解密的流程</a></li>
+<li><a href="#http和https三次握手有什么区别">HTTP和HTTPS三次握手有什么区别</a></li>
 </ul></li>
 </ul>
 
@@ -221,9 +226,29 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="font-color-008b45-size-4-https加密方式是什么-讲讲整个加密和解密的流程-font"><font color="#008B45" size=4>HTTPS加密方式是什么？讲讲整个加密和解密的流程</font></h2>
+<h2 id="https加密方式是什么-讲讲整个加密和解密的流程">HTTPS加密方式是什么？讲讲整个加密和解密的流程</h2>
 
-<h2 id="font-color-9932cc-size-4-http和https三次握手有什么区别-font"><font color="#9932CC" size=4>HTTP和HTTPS三次握手有什么区别</font></h2>
+<pre><code># 加密方式
+- 对称加密
+- 非对称加密
+
+# 加密过程
+- client请求server获取证书公钥
+- client解析证书
+- 生成随机值，用公钥加密随机值生成秘钥
+- client将秘钥发送给server
+- server用私钥解密得到随机值
+- 加密信息和随机值然后传给client
+
+
+
+# 解密过程
+
+</code></pre>
+
+<h2 id="http和https三次握手有什么区别">HTTP和HTTPS三次握手有什么区别</h2>
+
+<pre><code></code></pre>
 </article>
 
       
@@ -239,8 +264,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#https">HTTPS</a>
 <ul>
-<li><a href="#font-color-008b45-size-4-https加密方式是什么-讲讲整个加密和解密的流程-font"><font color="#008B45" size=4>HTTPS加密方式是什么？讲讲整个加密和解密的流程</font></a></li>
-<li><a href="#font-color-9932cc-size-4-http和https三次握手有什么区别-font"><font color="#9932CC" size=4>HTTP和HTTPS三次握手有什么区别</font></a></li>
+<li><a href="#https加密方式是什么-讲讲整个加密和解密的流程">HTTPS加密方式是什么？讲讲整个加密和解密的流程</a></li>
+<li><a href="#http和https三次握手有什么区别">HTTP和HTTPS三次握手有什么区别</a></li>
 </ul></li>
 </ul>
 </nav>

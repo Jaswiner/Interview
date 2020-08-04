@@ -217,18 +217,18 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#烂大街的多线程基础题">烂大街的多线程基础题</a>
 
 <ul>
-<li><a href="#font-color008b45-size4java中开启线程的方式有哪些font"><font color="#008B45" size=4>Java中开启线程的方式有哪些？</font></a></li>
-<li><a href="#font-color008b45-size4java中线程的生命周期是怎么样的每个阶段的特征是什么样的状态是怎么转换的font"><font color="#008B45" size=4>Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？</font></a></li>
-<li><a href="#font-color008b45-size4一个线程两次调用start方法会怎么样font"><font color="#008B45" size=4>一个线程两次调用start()方法会怎么样</font></a></li>
-<li><a href="#font-color008b45-size4java多线程中调用wait-和-sleep方法有什么不同font"><font color="#008B45" size=4>Java多线程中调用wait() 和 sleep()方法有什么不同？</font></a></li>
-<li><a href="#font-color008b45-size4讲讲java同步机制的wait和notifyfont"><font color="#008B45" size=4>讲讲Java同步机制的wait和notify</font></a></li>
-<li><a href="#font-color008b45-size4java中的fork-join框架是什么font"><font color="#008B45" size=4>Java中的fork join框架是什么？</font></a></li>
-<li><a href="#font-color008b45-size4你知道停止一个线程有哪些方法他们之间都有什么区别font"><font color="#008B45" size=4>你知道停止一个线程有哪些方法，他们之间都有什么区别</font></a></li>
-<li><a href="#font-color008b45-size4threadlocal用过吗用途是什么原理是什么使用的时候有什么注意的吗font"><font color="#008B45" size=4>ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</font></a></li>
-<li><a href="#font-color008b45-size4什么是线程安全线程不安全的根源是什么java是怎么解决的font"><font color="#008B45" size=4>什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</font></a></li>
-<li><a href="#font-color008b45-size4volatile的原理作用能代替锁吗font"><font color="#008B45" size=4>volatile的原理，作用，能代替锁吗？</font></a></li>
-<li><a href="#font-color008b45-size4jdk16对synchronized进行了怎么的优化font"><font color="#008B45" size=4>JDK1.6对synchronized进行了怎么的优化</font></a></li>
-<li><a href="#font-color008b45-size4synchronized的原理是什么一般用在什么地方修饰静态和非静态方法有什么区别font"><font color="#008B45" size=4>synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</font></a></li>
+<li><a href="#java中开启线程的方式有哪些">Java中开启线程的方式有哪些？</a></li>
+<li><a href="#java中线程的生命周期是怎么样的每个阶段的特征是什么样的状态是怎么转换的">Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？</a></li>
+<li><a href="#一个线程两次调用start方法会怎么样">一个线程两次调用start()方法会怎么样</a></li>
+<li><a href="#java多线程中调用wait-和-sleep方法有什么不同">Java多线程中调用wait() 和 sleep()方法有什么不同？</a></li>
+<li><a href="#讲讲java同步机制的wait和notify">讲讲Java同步机制的wait和notify</a></li>
+<li><a href="#java中的fork-join框架是什么">Java中的fork join框架是什么？</a></li>
+<li><a href="#如果同步块内的线程抛出异常会发生什么">如果同步块内的线程抛出异常会发生什么？</a></li>
+<li><a href="#thread类中的yield方法有什么作用">Thread类中的yield方法有什么作用？</a></li>
+<li><a href="#为什么wait和notify方法要在同步块中调用">为什么wait和notify方法要在同步块中调用？</a></li>
+<li><a href="#你知道停止一个线程有哪些方法他们之间都有什么区别">你知道停止一个线程有哪些方法，他们之间都有什么区别</a></li>
+<li><a href="#threadlocal用过吗用途是什么原理是什么使用的时候有什么注意的吗">ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</a></li>
+<li><a href="#什么是线程安全线程不安全的根源是什么java是怎么解决的">什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</a></li>
 </ul></li>
 </ul>
 
@@ -236,19 +236,23 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="font-color-008b45-size-4-java中开启线程的方式有哪些-font"><font color="#008B45" size=4>Java中开启线程的方式有哪些？</font></h2>
+<h2 id="java中开启线程的方式有哪些">Java中开启线程的方式有哪些？</h2>
 
-<h2 id="font-color-008b45-size-4-java中线程的生命周期是怎么样的-每个阶段的特征是什么样的-状态是怎么转换的-font"><font color="#008B45" size=4>Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？</font></h2>
+<pre><code># 开启线程的方式
+- 继承Thread，重写run
+- 实现Runnable接口，实现run方法
+</code></pre>
+
+<h2 id="java中线程的生命周期是怎么样的-每个阶段的特征是什么样的-状态是怎么转换的">Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？</h2>
 
 <p><img src="https://cdn.jaswine.com/Web/Interview/java/thread.jpg" alt="" /></p>
 
-<h2 id="font-color-008b45-size-4-一个线程两次调用start-方法会怎么样-font"><font color="#008B45" size=4>一个线程两次调用start()方法会怎么样</font></h2>
+<h2 id="一个线程两次调用start-方法会怎么样">一个线程两次调用start()方法会怎么样</h2>
 
 <pre><code>- 会抛出IllegalThreadStateException错误
-
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-java多线程中调用wait-和-sleep-方法有什么不同-font"><font color="#008B45" size=4>Java多线程中调用wait() 和 sleep()方法有什么不同？</font></h2>
+<h2 id="java多线程中调用wait-和-sleep-方法有什么不同">Java多线程中调用wait() 和 sleep()方法有什么不同？</h2>
 
 <table>
 <thead>
@@ -281,21 +285,35 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 
-<h2 id="font-color-008b45-size-4-讲讲java同步机制的wait和notify-font"><font color="#008B45" size=4>讲讲Java同步机制的wait和notify</font></h2>
+<h2 id="讲讲java同步机制的wait和notify">讲讲Java同步机制的wait和notify</h2>
 
 <pre><code>- wait和notify配合synchronized使用实现线程间的同步
 - 简单的来说就是管程(或者说是监视器)
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-java中的fork-join框架是什么-font"><font color="#008B45" size=4>Java中的fork join框架是什么？</font></h2>
+<h2 id="java中的fork-join框架是什么">Java中的fork join框架是什么？</h2>
 
-<p>47) 如果同步块内的线程抛出异常会发生什么？</p>
+<pre><code>- ForkJoinTask
+- ForkJoinPool
+</code></pre>
 
-<p>Thread类中的yield方法有什么作用？</p>
+<h2 id="如果同步块内的线程抛出异常会发生什么">如果同步块内的线程抛出异常会发生什么？</h2>
 
-<p>21) 为什么wait和notify方法要在同步块中调用？</p>
+<pre><code>- 释放锁
+</code></pre>
 
-<h2 id="font-color-008b45-size-4-你知道停止一个线程有哪些方法-他们之间都有什么区别-font"><font color="#008B45" size=4>你知道停止一个线程有哪些方法，他们之间都有什么区别</font></h2>
+<h2 id="thread类中的yield方法有什么作用">Thread类中的yield方法有什么作用？</h2>
+
+<pre><code>让出当前线程的CPU占用，当前线程变成可运行状态
+</code></pre>
+
+<h2 id="为什么wait和notify方法要在同步块中调用">为什么wait和notify方法要在同步块中调用？</h2>
+
+<pre><code>- 当同步代码块中线程调用wait方法的时候会释放锁进入到等待队列中
+- 当线程执行notify方法时候，将所有等待队列中的线程唤醒
+</code></pre>
+
+<h2 id="你知道停止一个线程有哪些方法-他们之间都有什么区别">你知道停止一个线程有哪些方法，他们之间都有什么区别</h2>
 
 <pre><code># 方法
 - Thread.stop()
@@ -307,74 +325,34 @@ https://github.com/alex-shpak/hugo-book
 - interrupt()执行后不会立马终止线程，会设置一个中断标记位
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-threadlocal用过吗-用途是什么-原理是什么-使用的时候有什么注意的吗-font"><font color="#008B45" size=4>ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</font></h2>
+<h2 id="threadlocal用过吗-用途是什么-原理是什么-使用的时候有什么注意的吗">ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</h2>
 
 <pre><code># 用途
-- 
+- 相当于线程的私有变量
 
 # 原理
+- Thread中有内部类ThreadLocalMap，
 
 # 注意事项
 - initialValue()是为了让子类重写的，默认是null。如果get()后又remove()则可能调用一下此方法
-- remove()
+- 最后要回收，remove()
 </code></pre>
 
-<h2 id="font-color-008b45-size-4-什么是线程安全-线程不安全的根源是什么-java是怎么解决的-font"><font color="#008B45" size=4>什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</font></h2>
+<h2 id="什么是线程安全-线程不安全的根源是什么-java是怎么解决的">什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</h2>
 
 <pre><code># 线程安全
 - 一个方法或者实例在多线程环境下使用不会出现问题，这个问题本质上就是共有数据在被并发修改的产生脏写的问题
-</code></pre>
 
-<ul>
-<li><p><strong>不安全的根源</strong></p>
 
-<ul>
-<li>线程并发原子性</li>
-<li>线程并发可见性</li>
-<li>线程并发有序性</li>
-</ul></li>
+## 不安全的根源
+- 线程并发原子性
+- 线程并发可见性
+- 线程并发有序性
 
-<li><p><strong>Java的解决办法</strong></p>
+## Java的解决办法
+- Java使用JMM保证了多线程并发的情况下线程之间的有序性和可见性
+- 使用锁来解决原子性问题
 
-<ul>
-<li>Java使用JMM保证了多线程并发的情况下线程之间的有序性和可见性</li>
-<li>使用锁来解决原子性问题</li>
-</ul></li>
-</ul>
-
-<h2 id="font-color-008b45-size-4-volatile的原理-作用-能代替锁吗-font"><font color="#008B45" size=4>volatile的原理，作用，能代替锁吗？</font></h2>
-
-<pre><code># 作用
-- 可以保证多线程情况下的有序性和可见性，不能保证原子性
-    -- 有序性是通过禁止指令重排完成的
-    -- 可见性是happen-before完成的
-- 相当于轻量级的synchronized
-- 使用volatile修饰的变量单次读写可以保持原子性，但是不能多次不能
-
-# 原理
-- volatile变量被修改的时候，必须强制刷新到主存中(保证线程之间的可见性)
-- JMM会对volatile变量限制重排序,是基于JMM的happen-before实现的(保证有序性)
-- JVM底层是采用内存屏障来实现的happen-before的
-
-# 结论：不能代替锁
-- 只保证了可见性，没有保证原子性(多线程i++会出错)
-</code></pre>
-
-<h2 id="font-color-008b45-size-4-jdk1-6对synchronized进行了怎么的优化-font"><font color="#008B45" size=4>JDK1.6对synchronized进行了怎么的优化</font></h2>
-
-<pre><code>- 引入四种锁状态(无锁，偏向锁，轻量级锁，重量级锁)，向上膨胀
-</code></pre>
-
-<h2 id="font-color-008b45-size-4-synchronized的原理是什么-一般用在什么地方-修饰静态和非静态方法有什么区别-font"><font color="#008B45" size=4>synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</font></h2>
-
-<pre><code># 使用
-- 修饰实例方法，作用于当前实例加锁，进入同步代码前要获得当前实例的锁
-- 修饰静态方法，作用于当前类对象加锁，进入同步代码前要获得当前类对象的锁
-- 修饰代码块，指定加锁对象，对给定对象加锁，进入同步代码库前要获得给定对象的锁
-
-# 原理
-- 在同步代码块中：在代码块开始的时候使用monitorenter来获得monitor对象锁，在代码块结束的时候使用monitorexit指令来释放monitor对象锁。
-- 在同步方法中：在字节码层面，没有特别的指令来实现被synchronized修饰的方法，而是在class文件中对该方法的access_flag字段中的synchronized标志位置1，表示该方法是同步方法，并使用调用该方法的对象或者该方法所在的class在JVM的内部对象表示class作为锁对象
 </code></pre>
 </article>
 
@@ -391,18 +369,18 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#烂大街的多线程基础题">烂大街的多线程基础题</a>
 <ul>
-<li><a href="#font-color-008b45-size-4-java中开启线程的方式有哪些-font"><font color="#008B45" size=4>Java中开启线程的方式有哪些？</font></a></li>
-<li><a href="#font-color-008b45-size-4-java中线程的生命周期是怎么样的-每个阶段的特征是什么样的-状态是怎么转换的-font"><font color="#008B45" size=4>Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？</font></a></li>
-<li><a href="#font-color-008b45-size-4-一个线程两次调用start-方法会怎么样-font"><font color="#008B45" size=4>一个线程两次调用start()方法会怎么样</font></a></li>
-<li><a href="#font-color-008b45-size-4-java多线程中调用wait-和-sleep-方法有什么不同-font"><font color="#008B45" size=4>Java多线程中调用wait() 和 sleep()方法有什么不同？</font></a></li>
-<li><a href="#font-color-008b45-size-4-讲讲java同步机制的wait和notify-font"><font color="#008B45" size=4>讲讲Java同步机制的wait和notify</font></a></li>
-<li><a href="#font-color-008b45-size-4-java中的fork-join框架是什么-font"><font color="#008B45" size=4>Java中的fork join框架是什么？</font></a></li>
-<li><a href="#font-color-008b45-size-4-你知道停止一个线程有哪些方法-他们之间都有什么区别-font"><font color="#008B45" size=4>你知道停止一个线程有哪些方法，他们之间都有什么区别</font></a></li>
-<li><a href="#font-color-008b45-size-4-threadlocal用过吗-用途是什么-原理是什么-使用的时候有什么注意的吗-font"><font color="#008B45" size=4>ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</font></a></li>
-<li><a href="#font-color-008b45-size-4-什么是线程安全-线程不安全的根源是什么-java是怎么解决的-font"><font color="#008B45" size=4>什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</font></a></li>
-<li><a href="#font-color-008b45-size-4-volatile的原理-作用-能代替锁吗-font"><font color="#008B45" size=4>volatile的原理，作用，能代替锁吗？</font></a></li>
-<li><a href="#font-color-008b45-size-4-jdk1-6对synchronized进行了怎么的优化-font"><font color="#008B45" size=4>JDK1.6对synchronized进行了怎么的优化</font></a></li>
-<li><a href="#font-color-008b45-size-4-synchronized的原理是什么-一般用在什么地方-修饰静态和非静态方法有什么区别-font"><font color="#008B45" size=4>synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)</font></a></li>
+<li><a href="#java中开启线程的方式有哪些">Java中开启线程的方式有哪些？</a></li>
+<li><a href="#java中线程的生命周期是怎么样的-每个阶段的特征是什么样的-状态是怎么转换的">Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？</a></li>
+<li><a href="#一个线程两次调用start-方法会怎么样">一个线程两次调用start()方法会怎么样</a></li>
+<li><a href="#java多线程中调用wait-和-sleep-方法有什么不同">Java多线程中调用wait() 和 sleep()方法有什么不同？</a></li>
+<li><a href="#讲讲java同步机制的wait和notify">讲讲Java同步机制的wait和notify</a></li>
+<li><a href="#java中的fork-join框架是什么">Java中的fork join框架是什么？</a></li>
+<li><a href="#如果同步块内的线程抛出异常会发生什么">如果同步块内的线程抛出异常会发生什么？</a></li>
+<li><a href="#thread类中的yield方法有什么作用">Thread类中的yield方法有什么作用？</a></li>
+<li><a href="#为什么wait和notify方法要在同步块中调用">为什么wait和notify方法要在同步块中调用？</a></li>
+<li><a href="#你知道停止一个线程有哪些方法-他们之间都有什么区别">你知道停止一个线程有哪些方法，他们之间都有什么区别</a></li>
+<li><a href="#threadlocal用过吗-用途是什么-原理是什么-使用的时候有什么注意的吗">ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？</a></li>
+<li><a href="#什么是线程安全-线程不安全的根源是什么-java是怎么解决的">什么是线程安全？线程不安全的根源是什么？Java是怎么解决的</a></li>
 </ul></li>
 </ul>
 </nav>

@@ -219,9 +219,10 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#引入锁之后带来哪些问题本质是什么">引入锁之后带来哪些问题？本质是什么？</a></li>
 <li><a href="#说说你对锁的相关名词的理解">说说你对锁的相关名词的理解</a></li>
-<li><a href="#单例模式的双检锁是什么">单例模式的双检锁是什么?</a></li>
+<li><a href="#单例模式的双检锁是什么为什么对象要用volatile修饰">单例模式的双检锁是什么?为什么对象要用volatile修饰？</a></li>
+<li><a href="#java中的readwritelock是什么">Java中的ReadWriteLock是什么？</a></li>
+<li><a href="#java中活锁和死锁有什么区别">Java中活锁和死锁有什么区别？</a></li>
 <li><a href="#死锁产生的条件是什么如何避免死锁">死锁产生的条件是什么？如何避免死锁？</a></li>
-<li><a href="#synchronized在jdk16后得到了优化是如何优化的">synchronized在jdk1.6后得到了优化？是如何优化的？</a></li>
 <li><a href="#锁膨胀过程">锁膨胀过程?</a></li>
 <li><a href="#说说reentrantlock和synchronized的异同吧">说说ReentrantLock和synchronized的异同吧</a></li>
 <li><a href="#lock和synchronized的区别">Lock和synchronized的区别</a></li>
@@ -229,7 +230,6 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#有哪些无锁的数据结构他们的实现原理是什么">有哪些无锁的数据结构，他们的实现原理是什么？</a></li>
 <li><a href="#cas机制是什么怎么解决aba问题">cas机制是什么？怎么解决ABA问题</a></li>
 <li><a href="#用过读写锁吗原理是什么一般在什么场景下使用">用过读写锁吗？原理是什么，一般在什么场景下使用</a></li>
-<li><a href="#单例模式怎么实现线程安全">单例模式怎么实现线程安全</a></li>
 </ul></li>
 </ul>
 
@@ -261,8 +261,6 @@ https://github.com/alex-shpak/hugo-book
 -- 轻量级锁--&gt;当锁是偏向锁的时候，被另一个线程访问，偏向锁会升级为轻量级锁，其他线程通过自旋的方式尝试获取锁，不会阻塞，提高性能
 -- 重量级锁--&gt;当一个锁是轻量级锁的时候，另外一个线程通过自旋的方式到一定次数的时候还没有获得锁就会进入到阻塞的，这个轻量级锁就会膨胀为重量级锁，其他线程拿不到锁就会进入阻塞
 
-# 分段锁
-- 
 
 # 共享锁 / 独享锁
 - 共享锁--&gt;锁被多个线程共有
@@ -282,13 +280,33 @@ https://github.com/alex-shpak/hugo-book
 ---使用版本号机制或者CAS算法实现
 </code></pre>
 
-<h2 id="单例模式的双检锁是什么">单例模式的双检锁是什么?</h2>
+<h2 id="单例模式的双检锁是什么-为什么对象要用volatile修饰">单例模式的双检锁是什么?为什么对象要用volatile修饰？</h2>
 
-<p>Java中的ReadWriteLock是什么？</p>
+<pre><code>- DCL(Double Check Lock)
 
-<p>32） Java中synchronized 和 ReentrantLock 有什么不同？</p>
+# 原理
+- 多线程并发访问创建对象的方法，线程之间切换，可能创建多个对象
+- 使用synchronized关键字给方法上锁，保证创建对象的方法只有一个人线程能进入
 
-<p>28) Java中活锁和死锁有什么区别？</p>
+# volatile
+- 防止指令重排
+</code></pre>
+
+<h2 id="java中的readwritelock是什么">Java中的ReadWriteLock是什么？</h2>
+
+<pre><code># 读写锁
+- 读的时候可以多线程可以获得锁，写的时候只有一个线程可以拥有锁
+
+</code></pre>
+
+<h2 id="java中活锁和死锁有什么区别">Java中活锁和死锁有什么区别？</h2>
+
+<pre><code># 活锁
+- 由于某些条件没有满足，所有一直尝试，一直失败
+
+# 死锁
+- 一直拿不到资源，所以只能等待
+</code></pre>
 
 <h2 id="死锁产生的条件是什么-如何避免死锁">死锁产生的条件是什么？如何避免死锁？</h2>
 
@@ -301,12 +319,6 @@ https://github.com/alex-shpak/hugo-book
 # 解决死锁
 - 一次申请所有锁资源，申请不到就不占有
 - 如果申请不到锁资源，主动释放自己身上的锁资源
-- 
-</code></pre>
-
-<h2 id="synchronized在jdk1-6后得到了优化-是如何优化的">synchronized在jdk1.6后得到了优化？是如何优化的？</h2>
-
-<pre><code>
 </code></pre>
 
 <h2 id="锁膨胀过程">锁膨胀过程?</h2>
@@ -424,11 +436,6 @@ cas(compare ans swap)
 # 使用场景
 - 读多写少
 </code></pre>
-
-<h2 id="单例模式怎么实现线程安全">单例模式怎么实现线程安全</h2>
-
-<pre><code>- DCL(Double Check Lock)
-</code></pre>
 </article>
 
       
@@ -446,9 +453,10 @@ cas(compare ans swap)
 <ul>
 <li><a href="#引入锁之后带来哪些问题-本质是什么">引入锁之后带来哪些问题？本质是什么？</a></li>
 <li><a href="#说说你对锁的相关名词的理解">说说你对锁的相关名词的理解</a></li>
-<li><a href="#单例模式的双检锁是什么">单例模式的双检锁是什么?</a></li>
+<li><a href="#单例模式的双检锁是什么-为什么对象要用volatile修饰">单例模式的双检锁是什么?为什么对象要用volatile修饰？</a></li>
+<li><a href="#java中的readwritelock是什么">Java中的ReadWriteLock是什么？</a></li>
+<li><a href="#java中活锁和死锁有什么区别">Java中活锁和死锁有什么区别？</a></li>
 <li><a href="#死锁产生的条件是什么-如何避免死锁">死锁产生的条件是什么？如何避免死锁？</a></li>
-<li><a href="#synchronized在jdk1-6后得到了优化-是如何优化的">synchronized在jdk1.6后得到了优化？是如何优化的？</a></li>
 <li><a href="#锁膨胀过程">锁膨胀过程?</a></li>
 <li><a href="#说说reentrantlock和synchronized的异同吧">说说ReentrantLock和synchronized的异同吧</a></li>
 <li><a href="#lock和synchronized的区别">Lock和synchronized的区别</a></li>
@@ -456,7 +464,6 @@ cas(compare ans swap)
 <li><a href="#有哪些无锁的数据结构-他们的实现原理是什么">有哪些无锁的数据结构，他们的实现原理是什么？</a></li>
 <li><a href="#cas机制是什么-怎么解决aba问题">cas机制是什么？怎么解决ABA问题</a></li>
 <li><a href="#用过读写锁吗-原理是什么-一般在什么场景下使用">用过读写锁吗？原理是什么，一般在什么场景下使用</a></li>
-<li><a href="#单例模式怎么实现线程安全">单例模式怎么实现线程安全</a></li>
 </ul></li>
 </ul>
 </nav>

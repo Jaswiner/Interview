@@ -265,7 +265,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/base/net/application/https/</guid>
-      <description> HTTPS  HTTPS  HTTPS加密方式是什么？讲讲整个加密和解密的流程   HTTPS加密方式是什么？讲讲整个加密和解密的流程 HTTP和HTTPS三次握手有什么区别 </description>
+      <description> HTTPS  ⬅️BACK-计算机网络面试题目录
+  HTTPS  HTTPS加密方式是什么？讲讲整个加密和解密的流程 HTTP和HTTPS三次握手有什么区别   HTTPS加密方式是什么？讲讲整个加密和解密的流程 # 加密方式 - 对称加密 - 非对称加密 # 加密过程 - client请求server获取证书公钥 - client解析证书 - 生成随机值，用公钥加密随机值生成秘钥 - client将秘钥发送给server - server用私钥解密得到随机值 - 加密信息和随机值然后传给client # 解密过程  HTTP和HTTPS三次握手有什么区别  </description>
     </item>
     
     <item>
@@ -321,8 +322,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/base/net/transport/tcp/</guid>
-      <description> TCP网络协议面试题  关于TCP的详细可以看这里 🔗TCP-计算机网络协议
-  TCP网络协议面试题  TCP三次握手和四次握手的流程，为什么断开连接要四次，如果握手只有两次会出现什么 TCP中KeepAlive作用是什么？是怎么实现的？怎么使用？ 什么是TCP粘包？怎么解决？   TCP三次握手和四次握手的流程，为什么断开连接要四次，如果握手只有两次会出现什么 # 三次握手 - 1.客户端发送SYN=1的包和seq=x的版本好信息，进入SYN_SEND状态 - 2.服务端发回确认包SYN=1，ACK=1，将自己的ISN序列号放到seq=y中，同时发送ACKnum=x+1，服务端进入SYN_RCVD状态 - 3.客户端收到包，SYN=0，ACK=1，ACKnum=y+1，客户端进入到ESTABLISHED阶段 # 四次挥手 - 1.客户端发送FIN=1，seq=x数据到服务端，进入FIN_WAIT_1状态 - 2.服务端收到包，发送ACK=1，ACKnum=x+1，服务端进入CLOSE_WAIT状态，客户端接收到包进入到FIN_WAIT_2状态 - 3.服务端发送FIN=1，seq=y给客户端，进入到LAST_ACK，等待客户端的ACK - 4.客户端接收到服务端的关闭请求，发送一个ACK并等待服务端确认，最后进入到CLOSED状态 # 两次握手弊端 - 不能确认第二次握手的有效性 - 三次握手可以保证C/S两端的存活状态  TCP中KeepAlive作用是什么？是怎么实现的？怎么使用？ 什么是TCP粘包？怎么解决？ </description>
+      <description> TCP网络协议面试题  ⬅️BACK-计算机网络面试题目录
+  TCP网络协议面试题  TCP三次握手和四次握手的流程，为什么断开连接要四次，如果握手只有两次会出现什么 TCP中KeepAlive作用是什么？是怎么实现的？怎么使用？ 什么是TCP粘包？怎么解决？   TCP三次握手和四次握手的流程，为什么断开连接要四次，如果握手只有两次会出现什么 # 三次握手 - 1.客户端发送SYN=1的包和seq=x的版本好信息，进入SYN_SEND状态 - 2.服务端发回确认包SYN=1，ACK=1，将自己的ISN序列号放到seq=y中，同时发送ACKnum=x+1，服务端进入SYN_RCVD状态 - 3.客户端收到包，SYN=0，ACK=1，ACKnum=y+1，客户端进入到ESTABLISHED阶段 # 四次挥手 - 1.客户端发送FIN=1，seq=x数据到服务端，进入FIN_WAIT_1状态 - 2.服务端收到包，发送ACK=1，ACKnum=x+1，服务端进入CLOSE_WAIT状态，客户端接收到包进入到FIN_WAIT_2状态 - 3.服务端发送FIN=1，seq=y给客户端，进入到LAST_ACK，等待客户端的ACK - 4.客户端接收到服务端的关闭请求，发送一个ACK并等待服务端确认，最后进入到CLOSED状态 # 两次握手弊端 - 不能确认第二次握手的有效性 - 三次握手可以保证C/S两端的存活状态  TCP中KeepAlive作用是什么？是怎么实现的？怎么使用？ 什么是TCP粘包？怎么解决？ # 什么是粘包 # 解决方案  </description>
     </item>
     
     <item>
@@ -397,7 +398,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/db/mysql/sy/</guid>
-      <description> MySQL中的索引  MySQL中的索引  MySQL索引的底层原理是什么？ 如何进行索引优化？ MySQL的索引都有哪些类型，他们的特点是什么，底层的数据结构是什么 说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？   MySQL索引的底层原理是什么？ 如何进行索引优化？ MySQL的索引都有哪些类型，他们的特点是什么，底层的数据结构是什么    索引名 特点 数据结构     UNIQUE(唯一索引) 不可以出现相同的值，可以有null    INDEX(普通索引) 允许出现相同的索引内容    PROMARY KEY(主键索引) 不允许出现相同的值    FULLTEXT INDEX(全文索引) 对全文进行索引，效率很差    组合索引 实质上是将多个字段建到一个索引里，列值的组合必须唯一     CREATE INDEX 方式只能创建‘普通索引’和‘唯一索引’ 组合索引的创建方式为： ALTER TABLE [table_name] ADD INDEX [inedx_name](列1,列2,列3);  说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？ # 索引理解 - MySQL索引的本质是B+树 # 如何使用 - 不同索引类型添加方式不一样，不过都是雷同的 alter table [table_name] add [index_type] [index_name] [字段名] # 不能，要正确的建立索引 # Tips：索引建立的几大原则 - 最左前缀匹配原则，MySQL一直向右匹配知道遇到查询范围(&amp;gt;,&amp;lt;,between,like)停止匹配 - in和=可以乱序 - 选择区分度比较高的列作为索引 - 索引列不参加计算 - 尽量扩展索引，不新建索引  </description>
+      <description> MySQL中的索引  ⬅️BACK-MySQL面试题目录
+  MySQL中的索引  说说你对MySQL索引的全局理解 MySQL的索引都有哪些类型，他们的特点是什么，底层的数据结构是什么 如何进行索引优化？ 说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？   说说你对MySQL索引的全局理解 ## 数据结构角度 - B+树索引 O(lgn) - hash索引 O(1) 只有Memory存储引擎支持hash索引 - FULLTEXT索引 ## 物理角度 - 聚集索引 - 非聚集索引 ## 逻辑角度 - 主键索引: 特殊的唯一索引，不可以有空值 - 唯一索引:不可以有相同的值 - 普通索引:允许相同的索引内容 - 组合索引:多列组合的索引，组合值必须唯一 - 全文索引:对全文进行索引  MySQL的索引都有哪些类型，他们的特点是什么，底层的数据结构是什么    索引名 特点 数据结构     UNIQUE(唯一索引) 不可以出现相同的值，可以有null    INDEX(普通索引) 允许出现相同的索引内容    PROMARY KEY(主键索引) 不允许出现相同的值    FULLTEXT INDEX(全文索引) 对全文进行索引，效率很差    组合索引 实质上是将多个字段建到一个索引里，列值的组合必须唯一     如何进行索引优化？ 说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？ # 索引理解 - MySQL索引的本质是B+树 # 如何使用 - 不同索引类型添加方式不一样，不过都是雷同的 alter table [table_name] add [index_type] [index_name] [字段名] # 不能，要正确的建立索引 # Tips：索引建立的几大原则 - 最左前缀匹配原则，MySQL一直向右匹配知道遇到查询范围(&amp;gt;,&amp;lt;,between,like)停止匹配 - in和=可以乱序 - 选择区分度比较高的列作为索引 - 索引列不参加计算 - 尽量扩展索引，不新建索引  </description>
     </item>
     
     <item>
@@ -469,7 +471,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/se/0menu/</guid>
-      <description> Java知识分类  Java知识分类  基础  运算符 Object类 String系  新特性  Java5新特性 Java6新特性 Java7新特性 Java8新特性  Lambda Stream DateTime API Optional  Java9新特性 Java10新特性 Java11新特性 Java12新特性  面向对象思想  抽象 继承 封装 多态  I/O  BIO NIO AIO  集合  Java集合基础面试题 List  ArrayList LinkedList Vector CopyOnWriteArrayList  Set  HashSet LinkedHashSet SortedSet TreeSet  Queue Map  Hashmap LinkedHashMap TreeMap ConcurrentHashmap   多线程/并发  烂大街的多线程基础题 线程池 JUC 锁 多线程案例  异常 高级特性  反射 注解 泛型    基础 运算符 Object类 String系 新特性 Java5新特性 Java6新特性 Java7新特性 Java8新特性 Lambda Stream DateTime API Optional Java9新特性 Java10新特性 Java11新特性 Java12新特性 面向对象思想 抽象 继承 封装 多态 I/O BIO NIO AIO 集合 Java集合基础面试题 List ArrayList LinkedList Vector CopyOnWriteArrayList Set HashSet LinkedHashSet SortedSet TreeSet Queue Map Hashmap LinkedHashMap TreeMap ConcurrentHashmap 多线程/并发 烂大街的多线程基础题 线程池 JUC 锁 多线程案例 异常 高级特性 反射 注解 泛型 </description>
+      <description> Java知识分类  Java知识分类  基础  运算符 Object类 String系  新特性  Java5新特性 Java6新特性 Java7新特性 Java8新特性  Lambda Stream DateTime API Optional  Java9新特性 Java10新特性 Java11新特性 Java12新特性  面向对象思想  抽象 继承 封装 多态  I/O  BIO NIO AIO  集合  Java集合基础面试题 List  ArrayList LinkedList Vector CopyOnWriteArrayList  Set  HashSet LinkedHashSet SortedSet TreeSet  Queue Map  Hashmap LinkedHashMap TreeMap ConcurrentHashmap   多线程/并发  多线程基础题 volatile关键词 synchronized关键词 线程池 JUC 锁 多线程案例  异常 高级特性  反射 注解 泛型    基础 运算符 Object类 String系 新特性 Java5新特性 Java6新特性 Java7新特性 Java8新特性 Lambda Stream DateTime API Optional Java9新特性 Java10新特性 Java11新特性 Java12新特性 面向对象思想 抽象 继承 封装 多态 I/O BIO NIO AIO 集合 Java集合基础面试题 List ArrayList LinkedList Vector CopyOnWriteArrayList Set HashSet LinkedHashSet SortedSet TreeSet Queue Map Hashmap LinkedHashMap TreeMap ConcurrentHashmap 多线程/并发 多线程基础题 volatile关键词 synchronized关键词 线程池 JUC 锁 多线程案例 异常 高级特性 反射 注解 泛型 </description>
     </item>
     
     <item>
@@ -655,7 +657,7 @@
       
       <guid>https://jaswine.com/interview/docs/java/se/concurrent/base/</guid>
       <description>烂大街的多线程基础题  ⬅️BACK-Java面试题目录
-  烂大街的多线程基础题  Java中开启线程的方式有哪些？ Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？ 一个线程两次调用start()方法会怎么样 Java多线程中调用wait() 和 sleep()方法有什么不同？ 讲讲Java同步机制的wait和notify Java中的fork join框架是什么？ 你知道停止一个线程有哪些方法，他们之间都有什么区别 ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？ 什么是线程安全？线程不安全的根源是什么？Java是怎么解决的 volatile的原理，作用，能代替锁吗？ JDK1.6对synchronized进行了怎么的优化 synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别)   Java中开启线程的方式有哪些？ Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？ 一个线程两次调用start()方法会怎么样 - 会抛出IllegalThreadStateException错误  Java多线程中调用wait() 和 sleep()方法有什么不同？    wait sleep     Object的方法 Thread的方法   执行的时候释放锁 执行的时候不释放锁   只能在同步方法和同步块中使用 可以在任何地方使用   无需捕捉异常 需要捕捉异常    讲讲Java同步机制的wait和notify - wait和notify配合synchronized使用实现线程间的同步 - 简单的来说就是管程(或者说是监视器)  Java中的fork join框架是什么？ 47) 如果同步块内的线程抛出异常会发生什么？</description>
+  烂大街的多线程基础题  Java中开启线程的方式有哪些？ Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？ 一个线程两次调用start()方法会怎么样 Java多线程中调用wait() 和 sleep()方法有什么不同？ 讲讲Java同步机制的wait和notify Java中的fork join框架是什么？ 如果同步块内的线程抛出异常会发生什么？ Thread类中的yield方法有什么作用？ 为什么wait和notify方法要在同步块中调用？ 你知道停止一个线程有哪些方法，他们之间都有什么区别 ThreadLocal用过吗？用途是什么，原理是什么，使用的时候有什么注意的吗？ 什么是线程安全？线程不安全的根源是什么？Java是怎么解决的   Java中开启线程的方式有哪些？ # 开启线程的方式 - 继承Thread，重写run - 实现Runnable接口，实现run方法  Java中线程的生命周期是怎么样的？每个阶段的特征是什么样的？状态是怎么转换的？ 一个线程两次调用start()方法会怎么样 - 会抛出IllegalThreadStateException错误  Java多线程中调用wait() 和 sleep()方法有什么不同？    wait sleep     Object的方法 Thread的方法   执行的时候释放锁 执行的时候不释放锁   只能在同步方法和同步块中使用 可以在任何地方使用   无需捕捉异常 需要捕捉异常    讲讲Java同步机制的wait和notify - wait和notify配合synchronized使用实现线程间的同步 - 简单的来说就是管程(或者说是监视器)  Java中的fork join框架是什么？ - ForkJoinTask - ForkJoinPool  如果同步块内的线程抛出异常会发生什么？ - 释放锁  Thread类中的yield方法有什么作用？ 让出当前线程的CPU占用，当前线程变成可运行状态  为什么wait和notify方法要在同步块中调用？ - 当同步代码块中线程调用wait方法的时候会释放锁进入到等待队列中 - 当线程执行notify方法时候，将所有等待队列中的线程唤醒  你知道停止一个线程有哪些方法，他们之间都有什么区别 # 方法 - Thread.</description>
     </item>
     
     <item>
@@ -692,7 +694,7 @@ AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占
       
       <guid>https://jaswine.com/interview/docs/java/se/concurrent/lock/</guid>
       <description>Java中锁面试题  ⬅️BACK-Java面试题目录
-  Java中锁面试题  引入锁之后带来哪些问题？本质是什么？ 说说你对锁的相关名词的理解 单例模式的双检锁是什么? 死锁产生的条件是什么？如何避免死锁？ synchronized在jdk1.6后得到了优化？是如何优化的？ 锁膨胀过程? 说说ReentrantLock和synchronized的异同吧 Lock和synchronized的区别 说说降低锁竞争的方法 有哪些无锁的数据结构，他们的实现原理是什么？ cas机制是什么？怎么解决ABA问题 用过读写锁吗？原理是什么，一般在什么场景下使用 单例模式怎么实现线程安全   引入锁之后带来哪些问题？本质是什么？ ## 死锁 ## 优先级倒置 ## 饥饿锁  说说你对锁的相关名词的理解 # 自旋锁 - 当线程A占用锁，线程B拿不到锁的时候就被挂起(阻塞)，自旋锁是线程B不放弃CPU的时间片，在原地一直尝试获取锁 # 无锁 / 偏向锁 / 轻量级锁 / 重量级锁 - 这是锁的四种状态，在对象头中使用字段来标记 - 四种状态随着竞争的情况升级，不可降级 - 这四种状态都不是Java语言中的锁，而是JVM为了提高锁的获取效率而做的优化 -- 无锁--&amp;gt;对象没有被锁定 -- 偏向锁--&amp;gt;一段同步代码被线程所访问，那么线程自动获取锁 -- 轻量级锁--&amp;gt;当锁是偏向锁的时候，被另一个线程访问，偏向锁会升级为轻量级锁，其他线程通过自旋的方式尝试获取锁，不会阻塞，提高性能 -- 重量级锁--&amp;gt;当一个锁是轻量级锁的时候，另外一个线程通过自旋的方式到一定次数的时候还没有获得锁就会进入到阻塞的，这个轻量级锁就会膨胀为重量级锁，其他线程拿不到锁就会进入阻塞 # 分段锁 - # 共享锁 / 独享锁 - 共享锁--&amp;gt;锁被多个线程共有 - 独享锁--&amp;gt;锁只可以同时被一个线程占用 # 可重入锁 / 不可重入锁 - 可重入锁--&amp;gt;可重复可递归调用的锁，外层使用了内层还可以使用 - 不可重入锁--&amp;gt;不可重复递归调用，重复使用就会发生死锁 # 公平锁 / 非公平锁 - 公平锁--&amp;gt;多个线程按照申请锁的顺序来获得锁 - 非公平锁--&amp;gt;多个线程不是按照申请锁的顺序来获得锁，可能会饥饿现象 # 悲观锁 / 乐观锁 - 悲观锁--&amp;gt;认为每次去拿数据的时候数据都会被别人修改 - 乐观锁--&amp;gt;在拿数据的时候乐观的认为没有人去修改，但是在修改数据的时候会去验证一下数据有没有被修改 ---使用版本号机制或者CAS算法实现  单例模式的双检锁是什么?</description>
+  Java中锁面试题  引入锁之后带来哪些问题？本质是什么？ 说说你对锁的相关名词的理解 单例模式的双检锁是什么?为什么对象要用volatile修饰？ Java中的ReadWriteLock是什么？ Java中活锁和死锁有什么区别？ 死锁产生的条件是什么？如何避免死锁？ 锁膨胀过程? 说说ReentrantLock和synchronized的异同吧 Lock和synchronized的区别 说说降低锁竞争的方法 有哪些无锁的数据结构，他们的实现原理是什么？ cas机制是什么？怎么解决ABA问题 用过读写锁吗？原理是什么，一般在什么场景下使用   引入锁之后带来哪些问题？本质是什么？ ## 死锁 ## 优先级倒置 ## 饥饿锁  说说你对锁的相关名词的理解 # 自旋锁 - 当线程A占用锁，线程B拿不到锁的时候就被挂起(阻塞)，自旋锁是线程B不放弃CPU的时间片，在原地一直尝试获取锁 # 无锁 / 偏向锁 / 轻量级锁 / 重量级锁 - 这是锁的四种状态，在对象头中使用字段来标记 - 四种状态随着竞争的情况升级，不可降级 - 这四种状态都不是Java语言中的锁，而是JVM为了提高锁的获取效率而做的优化 -- 无锁--&amp;gt;对象没有被锁定 -- 偏向锁--&amp;gt;一段同步代码被线程所访问，那么线程自动获取锁 -- 轻量级锁--&amp;gt;当锁是偏向锁的时候，被另一个线程访问，偏向锁会升级为轻量级锁，其他线程通过自旋的方式尝试获取锁，不会阻塞，提高性能 -- 重量级锁--&amp;gt;当一个锁是轻量级锁的时候，另外一个线程通过自旋的方式到一定次数的时候还没有获得锁就会进入到阻塞的，这个轻量级锁就会膨胀为重量级锁，其他线程拿不到锁就会进入阻塞 # 共享锁 / 独享锁 - 共享锁--&amp;gt;锁被多个线程共有 - 独享锁--&amp;gt;锁只可以同时被一个线程占用 # 可重入锁 / 不可重入锁 - 可重入锁--&amp;gt;可重复可递归调用的锁，外层使用了内层还可以使用 - 不可重入锁--&amp;gt;不可重复递归调用，重复使用就会发生死锁 # 公平锁 / 非公平锁 - 公平锁--&amp;gt;多个线程按照申请锁的顺序来获得锁 - 非公平锁--&amp;gt;多个线程不是按照申请锁的顺序来获得锁，可能会饥饿现象 # 悲观锁 / 乐观锁 - 悲观锁--&amp;gt;认为每次去拿数据的时候数据都会被别人修改 - 乐观锁--&amp;gt;在拿数据的时候乐观的认为没有人去修改，但是在修改数据的时候会去验证一下数据有没有被修改 ---使用版本号机制或者CAS算法实现  单例模式的双检锁是什么?</description>
     </item>
     
     <item>
@@ -701,8 +703,30 @@ AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/se/concurrent/pool/</guid>
-      <description> Java线程池面试题  ⬅️BACK-Java面试题目录
-  Java线程池面试题  Java线程池中submit() 和 execute()方法有什么区别？ 如果你提交任务时，线程池队列已满。会时发会生什么？ 说说Java中常用的线程池模式以及不同线程池的使用场景 线程池关闭的方式有哪些？各自的区别是什么？   Java线程池中submit() 和 execute()方法有什么区别？ 如果你提交任务时，线程池队列已满。会时发会生什么？ 说说Java中常用的线程池模式以及不同线程池的使用场景   线程池关闭的方式有哪些？各自的区别是什么？ # 方式 - shutdown() - shutdownNow() # 区别 -  </description>
+      <description>Java线程池面试题  ⬅️BACK-Java面试题目录
+  Java线程池面试题  Java线程池中submit() 和 execute()方法有什么区别？ 如果你提交任务时，线程池队列已满。会时发会生什么？ Java中常用的线程池模式以及不同线程池的使用场景 线程池关闭的方式有哪些？各自的区别是什么？   Java线程池中submit() 和 execute()方法有什么区别？ # execute() - 只能提交一个Runable对象 - 返回值是void - 主线程无法捕捉到异常 # submit() - 可以提交Callable对象，Runable对象和Runable绑定result对象 - 可以有返回值  如果你提交任务时，线程池队列已满。会时发会生什么？ 依据我们传入的拒绝策略来返回结果
+JDK提供了四种策略
+   策略 描述     ThreadPoolExecutor.AbortPolicy ❤默认策略。丢弃任务并抛出RejectedExecutionException异常   ThreadPoolExecutor.DiscardPolicy 也是丢弃任务，但是不抛出异常   ThreadPoolExecutor.DiscardOldestPolicy 丢弃队列最前面的任务，然后重新尝试执行任务（重复此过程）   ThreadPoolExecutor.CallerRunsPolicy 由调用线程处理该任务    Java中常用的线程池模式以及不同线程池的使用场景    线程池名称 特点     newSingleThreadExecutor 只有一个线程，保证任务按照顺序完成   newFixedThreadPool 线程池大小固定，线程数可控   newCachedThreadPool 线程池大小不固定，线程数不可控   newScheduleThreadPool 按照周期来执行任务，线程池大小不固定    线程池关闭的方式有哪些？各自的区别是什么？ # 方式 - shutdown() - shutdownNow() # 区别 ## shutdown() 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/concurrent/synchronized/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/concurrent/synchronized/</guid>
+      <description> synchronized关键字  ⬅️BACK-Java面试题目录
+  synchronized关键字  synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别) JDK1.6对synchronized进行了怎么的优化   synchronized的原理是什么？一般用在什么地方？(修饰静态和非静态方法有什么区别) # 使用 - 修饰实例方法，作用于当前实例加锁，进入同步代码前要获得当前实例的锁 - 修饰静态方法，作用于当前类对象加锁，进入同步代码前要获得当前类对象的锁 - 修饰代码块，指定加锁对象，对给定对象加锁，进入同步代码库前要获得给定对象的锁 # 原理 - 在同步代码块中：在代码块开始的时候使用monitorenter来获得monitor对象锁，在代码块结束的时候使用monitorexit指令来释放monitor对象锁。 - 在同步方法中：在字节码层面，没有特别的指令来实现被synchronized修饰的方法，而是在class文件中对该方法的access_flag字段中的synchronized标志位置1，表示该方法是同步方法，并使用调用该方法的对象或者该方法所在的class在JVM的内部对象表示class作为锁对象  JDK1.6对synchronized进行了怎么的优化 - 引入四种锁状态(无锁，偏向锁，轻量级锁，重量级锁)，向上膨胀  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://jaswine.com/interview/docs/java/se/concurrent/volatile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jaswine.com/interview/docs/java/se/concurrent/volatile/</guid>
+      <description> volatile关键字  ⬅️BACK-Java面试题目录
+  volatile关键字  volatile的原理，作用，能代替锁吗？   volatile的原理，作用，能代替锁吗？ # 作用 - 可以保证多线程情况下的有序性和可见性，不能保证原子性 -- 有序性是通过禁止指令重排完成的 -- 可见性是happen-before完成的 - 相当于轻量级的synchronized - 使用volatile修饰的变量单次读写可以保持原子性，但是不能多次不能 # 原理 - volatile变量被修改的时候，必须强制刷新到主存中(保证线程之间的可见性) - JMM会对volatile变量限制重排序,是基于JMM的happen-before实现的(保证有序性) - JVM底层是采用内存屏障来实现的happen-before的 # 结论：不能代替锁 - 只保证了可见性，没有保证原子性(多线程i++会出错)  </description>
     </item>
     
     <item>
@@ -829,7 +853,7 @@ AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/vm/0menu/</guid>
-      <description> JVM知识分类  JVM知识分类  JMM  运行时内存 对象及其生命周期  GC  GC算法 GC收集器  类文件及其加载  类文件结构 类加载  JVM调优  JVM参数  高并发  高并发    JMM 运行时内存 对象及其生命周期 GC GC算法 GC收集器 类文件及其加载 类文件结构 类加载 JVM调优 JVM参数 高并发 高并发 </description>
+      <description> JVM知识分类 JMM  运行时内存 对象创建及其内存分配  GC  GC算法 GC收集器  类文件及其加载  类文件结构 类加载  JVM调优 高并发 </description>
     </item>
     
     <item>
@@ -838,7 +862,8 @@ AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/vm/class/file/</guid>
-      <description></description>
+      <description> 类文件结构  ⬅️BACK-JVM面试题目录
+  类文件结构  </description>
     </item>
     
     <item>
@@ -847,42 +872,8 @@ AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/vm/class/load/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jaswine.com/interview/docs/java/vm/classload/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/vm/classload/</guid>
-      <description> 类加载 类加载的步骤是什么
-加载--&amp;gt;验证--&amp;gt;准备--&amp;gt;解析--&amp;gt;初始化--&amp;gt;使用--&amp;gt;卸载  Class.forName()和classloader的区别
-- Class.forName()将class文件加载到虚拟机中到初始化的工作 - classloader只是将class文件加载到jvm中  说说你了解的类加载器，以及他们工作的原理
-# 类加载器 - 启动类加载器(Bootstrap ClassLoader) - 扩展类加载器(ExtClassLoader) - 应用类家再起(AppClassLoader) # 原理  可以打破双亲委派吗？是怎么打破的？
-# 可以打破双亲委派双亲委派 - SPI就是打破双亲委派 # 怎么打破  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jaswine.com/interview/docs/java/vm/concurrent/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/vm/concurrent/</guid>
-      <description> 高并发 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jaswine.com/interview/docs/java/vm/gc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/vm/gc/</guid>
-      <description>垃圾回收(GC) 说说你知道的GC算法和对应的原理是什么？都有缺点
-   算法 原理 缺点     标记-清除 先对对象进行标记然后回收 内存碎片太多   标记-复制-清除 将存活的对象复制到一块空内存上，然后清除原来的内存 空间浪费   标记-压缩-清除 将存活的对象移动到一个地方，然后指针之后的全部删除    分代收集 对对象进行分代然后不同的代使用不同的回收算法     JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代
-# 流程 1.触发GC - 内存不够使用 - 主动触发GC，System.gc() 2.标记 - 找出所有对象的 3.复制 | 压缩 - 复制算法就是将存活的对象复制到一个空的内存块 - 压缩(整理)算法计算出存活对象的新地址然后移动对象的地方 3.清理 - 将之前标记的dead的对象回收了 # 如何晋升老年代 - 大对象直接进入老年代 - 几次Minor GC还存活的对象  说说你对Minor GC和Full GC的理解
-Minor GC
- 定义：新生代(包括Eden和Survivor)垃圾搜集叫做 Minor GC 触发条件：</description>
+      <description> 类加载  ⬅️BACK-JVM面试题目录
+  类加载  类加载的步骤是什么 Class.forName()和classloader的区别 说说你了解的类加载器，以及他们工作的原理 可以打破双亲委派吗？是怎么打破的？   类加载的步骤是什么 加载--&amp;gt;验证--&amp;gt;准备--&amp;gt;解析--&amp;gt;初始化--&amp;gt;使用--&amp;gt;卸载  Class.forName()和classloader的区别 - Class.forName()将class文件加载到虚拟机中到初始化的工作 - classloader只是将class文件加载到jvm中  说说你了解的类加载器，以及他们工作的原理 # 类加载器 - 启动类加载器(Bootstrap ClassLoader) - 扩展类加载器(ExtClassLoader) - 应用类家再起(AppClassLoader) # 原理  可以打破双亲委派吗？是怎么打破的？ # 可以打破双亲委派双亲委派 - SPI就是打破双亲委派 # 怎么打破  </description>
     </item>
     
     <item>
@@ -891,7 +882,7 @@ Minor GC
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/vm/gc/algo/</guid>
-      <description></description>
+      <description> GC算法  ⬅️BACK-JVM面试题目录   GC算法  说说你知道的GC算法和对应的原理是什么？都有缺点   说说你知道的GC算法和对应的原理是什么？都有缺点    算法 原理 缺点     标记-清除 先对对象进行标记然后回收 内存碎片太多   标记-复制-清除 将存活的对象复制到一块空内存上，然后清除原来的内存 空间浪费   标记-压缩-清除 将存活的对象移动到一个地方，然后指针之后的全部删除 空间浪费   分代收集 对对象进行分代然后不同的代使用不同的回收算法     </description>
     </item>
     
     <item>
@@ -900,19 +891,8 @@ Minor GC
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/vm/gc/machine/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jaswine.com/interview/docs/java/vm/jmm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/vm/jmm/</guid>
-      <description>Java虚拟机内存模型 内存模型和分代 简单说说JVM中内存的分配情况吧
-Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的行号指示器) - 虚拟机栈(局部变量，方法信息) - 本地方法栈(JNI方法) # 线程共有 - 堆内存(对象存放的地方) - 方法区(已被虚拟机加载的类信息，常量，静态变量) -- 运行时常量池(方法区的一部分) # 特别 - 直接内存(非JVM内存规范中的一部分)  OOM和排查 什么时候会发生内存溢出(OOM)？
-# 程序计数器 - 不会发生OOM错误 # 虚拟机栈 &amp;amp; 本地方法栈 - 虚拟机扩展栈的时候无法获取到足够的空间就会抛出OOM的错误 # 堆内存 - 对象数量达到堆内存的最大值的时候出现OOM错误 # 方法区 &amp;amp; 运行时常量池 - 产生大量的类信息大于了方法区的最大值  Java内存为什么分成新生代，老年代，持久代？是怎么划分的呢？怎么回收的呢？新生代中为什么要分为Eden和Survivor
-# 为什么分代 - 为了优化GC性能(Java中每个对象的生命周期不一样，所以不同对象要分类以便更好的回收) # 怎么划分 - 新生代(Young Generation) - 分成三个部分：Eden，From Survivor ，To Survivor，比例是8:1:1 - 保持一个Survivor为空 - 年老代(Tenured Generation) - 多次GC都没有被GC的会进入年老带 - 新生代没有空间了会直接进入年老代 - 永久代(Permanent Generation) - 对应运行时内存的“方法区”，一般不会被GC，JVM退出才销毁 # 怎么回收 - 新生代 - 因为生命周期很短，GC吞吐量很高，适合使用复制算法来GC，这样保证来复制的数据量最小 - 年老代 - 因为对象的存活时间很长，所以要移动大量的对象，效率很低，所以年老代适合使用标记-清除算法 # 为什么分为Eden和Survivor  你对JVM内存中重排序，内存屏障，happen-before，主内存，工作内存是怎么理解的</description>
+      <description>GC收集器  ⬅️BACK-JVM面试题目录
+  GC收集器  JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代？ 说说你对Minor GC和Full GC的理解 说说你知道的集中垃圾收集器，各自的优缺点? 说说每一个GC的工作原理是什么?   JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代？ # GC流程 1.触发GC - 内存不够使用 - 主动触发GC，System.gc() 2.标记 - 找出所有对象的 3.复制 | 压缩 - 复制算法就是将存活的对象复制到一个空的内存块 - 压缩(整理)算法计算出存活对象的新地址然后移动对象的地方 3.清理 - 将之前标记的dead的对象回收了 # 如何晋升老年代 - 大对象直接进入老年代 - 几次Minor GC还存活的对象 - 新生代GC，对象头中记录对象的粉黛年龄，每个垃圾回收器对于分代年龄进入老年代大小不一样 - 除了CMS分代年龄为6晋升，别的都是15  说说你对Minor GC和Full GC的理解 **Minor GC** - 定义：新生代(包括Eden和Survivor)垃圾搜集叫做 Minor GC - 触发条件： - 新生代中Eden区满了就会出发Minor GC - GC过程： - Eden和其中一个Survivor区中存活对象会被复制(标记-复制算法)到另一个Survivor中 - 交换指针 **Full GC** - 定义：对整个堆进行垃圾搜集 - 触发条件： - System.</description>
     </item>
     
     <item>
@@ -921,7 +901,9 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/vm/jmm/mem/</guid>
-      <description></description>
+      <description> JVM内存分区  ⬅️BACK-JVM面试题目录
+  JVM内存分区  JMM内存模型是什么样的？ jvm堆内存是怎么分代的?都放得是什么？   JMM内存模型是什么样的？    名称 线程私有 作用     程序计算器 是 记录程序执行的代码行号等信息   虚拟机栈 是 方法入栈，局部变量保存   原生方法栈 是 native方法栈，和虚拟机栈相同   堆 否 对象存放的地方    jvm堆内存是怎么分代的?都放得是什么？    代 特征 存放对象     新生代 有一个eden和两个survivor区 所有新对象都在这里分配   老年代 新生代对象存活够久就会放到老年代 新生代存活的对象，新生代分配不了的大对象   永久代(1.7方法区)/元数据(1.8) 1.7和堆内存连续，老年代GC永久代就GC
+元空间和堆内存不连续，存在直接内存中 class信息    </description>
     </item>
     
     <item>
@@ -930,37 +912,8 @@ Java8之前： # 线程私有 - 程序计数器(当前线程执行字节码的�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/java/vm/jmm/object/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jaswine.com/interview/docs/java/vm/object/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/vm/object/</guid>
-      <description> 对象解析 说说你对Java对象组成的理解
-- Java对象内部由三个部分组成:对象头，实例数据，对齐填充字节 # 对象头 - 对象头包括如下部分: -- MarkWord:记录了对象的锁，GC等等的信息 -- 指向类的指针 -- 数组的长度(数组对象才有) # 实例数据 - 实例数据就是我们在代码中看到的属性和值 # 填充字节 - 对齐填充字节:因为JVM中对象的是8bit的整数倍，所有要有相关的字节来填充  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jaswine.com/interview/docs/java/vm/params/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/vm/params/</guid>
-      <description>Jvm参数 说说你知道的JVM参数</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jaswine.com/interview/docs/java/vm/tools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jaswine.com/interview/docs/java/vm/tools/</guid>
-      <description> 实例 如何Java内存泄漏的问题进行调查和定位
- 使用jps -l 查询所有的JVM进程 使用jstat &amp;lt;对应进程id&amp;gt;监控当前进程的情况 使用jmap来看内存分布快照 把内存堆dump下来然后使用MAT来分析内存  __
-# 1. # 2.使用jstat 使用jmap和jstack  </description>
+      <description> 对象及其生命周期  ⬅️BACK-JVM面试题目录
+  对象及其生命周期  说说你对Java对象组成的理解 new Object()的过程是什么样子的？   说说你对Java对象组成的理解 - Java对象内部由三个部分组成:对象头，实例数据，对齐填充字节 # 对象头 - 对象头包括如下部分: -- MarkWord:记录了对象的锁，GC等等的信息 -- 指向类的指针 -- 数组的长度(数组对象才有) # 实例数据 - 实例数据就是我们在代码中看到的属性和值 # 填充字节 - 对齐填充字节:因为JVM中对象的是8bit的整数倍，所有要有相关的字节来填充  new Object()的过程是什么样子的？ - 1.开辟内存 - 2.初始化 - 3.引用和对象建立关系  </description>
     </item>
     
     <item>
@@ -1111,7 +1064,7 @@ Netty的通讯协议是什么样的
       
       <guid>https://jaswine.com/interview/docs/nosql/redis/datatype/</guid>
       <description> Redis数据类型面试题  ⬅️BACK-Redis面试题目录
-  Redis数据类型面试题  Redis有哪些数据类型？都适用于什么场景   Redis有哪些数据类型？都适用于什么场景    数据类型 应用场景     STRING 简单的K，V缓存   LIST 存储列表型的数据结构   SET 无序集合，支持交并集、差集操作   ZSET 去重且可以排序   HASH 结构化的数据    </description>
+  Redis数据类型面试题  Redis有哪些数据类型？都适用于什么场景   Redis有哪些数据类型？都适用于什么场景    数据类型 应用场景     STRING 简单的K，V缓存   LIST 存储列表型的数据结构   SET 无序集合，支持交并集、差集操作   ZSET 去重且可以排序   HASH 结构化的数据,如对象    </description>
     </item>
     
     <item>
@@ -1235,7 +1188,7 @@ Netty的通讯协议是什么样的
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jaswine.com/interview/docs/spring/framework/0menu/</guid>
-      <description> Spring FrameWork 知识点  Spring FrameWork 知识点  Spring 核心  IOC  IOC容器 Bean 注解  AOP  Spring WebMVC Spring WebFlux Spring Data  JDBC JMS ORM 事务  Spring Security Spring 设计模式   Spring 核心 IOC IOC容器 Bean 注解 AOP Spring WebMVC Spring WebFlux Spring Data JDBC JMS ORM 事务 Spring Security Spring 设计模式 </description>
+      <description> Spring FrameWork 知识点  Spring 核心  IOC  IOC容器 Bean 注解  AOP  Spring WebMVC Spring WebFlux Spring Data  JDBC JMS ORM 事务  Spring Security Spring 设计模式  </description>
     </item>
     
     <item>

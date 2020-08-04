@@ -11,7 +11,7 @@
 <title>
   
     
-    Algo
+    Volatile
   
  | 面试题</title>
 
@@ -52,7 +52,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2finterview\2f docs\2fjava\2fvm\2fgc\2f algo\2f "] {
+  nav ul a[href$="\2finterview\2f docs\2fjava\2fse\2f concurrent\2fvolatile\2f "] {
       color: #004ed0;
   }
   </style>
@@ -197,7 +197,7 @@ https://github.com/alex-shpak/hugo-book
   <strong>
   
     
-    Algo
+    Volatile
   
 </strong>
 </header>
@@ -205,18 +205,19 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h1 id="gc算法">GC算法</h1>
+<h1 id="volatile关键字">volatile关键字</h1>
 
 <blockquote>
-<p>⬅️<strong><a href="/interview/docs/java/vm/0menu/">BACK-JVM面试题目录</a></strong>
-<!-- TOC --></p>
+<p>⬅️<strong><a href="/interview/docs/java/se/0menu/">BACK-Java面试题目录</a></strong></p>
 </blockquote>
 
-<ul>
-<li><a href="#gc算法">GC算法</a>
+<!-- TOC -->
 
 <ul>
-<li><a href="#说说你知道的gc算法和对应的原理是什么都有缺点">说说你知道的GC算法和对应的原理是什么？都有缺点</a></li>
+<li><a href="#volatile关键字">volatile关键字</a>
+
+<ul>
+<li><a href="#volatile的原理作用能代替锁吗">volatile的原理，作用，能代替锁吗？</a></li>
 </ul></li>
 </ul>
 
@@ -224,43 +225,23 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="说说你知道的gc算法和对应的原理是什么-都有缺点">说说你知道的GC算法和对应的原理是什么？都有缺点</h2>
+<h2 id="volatile的原理-作用-能代替锁吗">volatile的原理，作用，能代替锁吗？</h2>
 
-<table>
-<thead>
-<tr>
-<th align="left">算法</th>
-<th align="left">原理</th>
-<th align="left">缺点</th>
-</tr>
-</thead>
+<pre><code># 作用
+- 可以保证多线程情况下的有序性和可见性，不能保证原子性
+    -- 有序性是通过禁止指令重排完成的
+    -- 可见性是happen-before完成的
+- 相当于轻量级的synchronized
+- 使用volatile修饰的变量单次读写可以保持原子性，但是不能多次不能
 
-<tbody>
-<tr>
-<td align="left">标记-清除</td>
-<td align="left">先对对象进行标记然后回收</td>
-<td align="left">内存碎片太多</td>
-</tr>
+# 原理
+- volatile变量被修改的时候，必须强制刷新到主存中(保证线程之间的可见性)
+- JMM会对volatile变量限制重排序,是基于JMM的happen-before实现的(保证有序性)
+- JVM底层是采用内存屏障来实现的happen-before的
 
-<tr>
-<td align="left">标记-复制-清除</td>
-<td align="left">将存活的对象复制到一块空内存上，然后清除原来的内存</td>
-<td align="left">空间浪费</td>
-</tr>
-
-<tr>
-<td align="left">标记-压缩-清除</td>
-<td align="left">将存活的对象移动到一个地方，然后指针之后的全部删除</td>
-<td align="left">空间浪费</td>
-</tr>
-
-<tr>
-<td align="left">分代收集</td>
-<td align="left">对对象进行分代然后不同的代使用不同的回收算法</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# 结论：不能代替锁
+- 只保证了可见性，没有保证原子性(多线程i++会出错)
+</code></pre>
 </article>
 
       
@@ -274,9 +255,9 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#gc算法">GC算法</a>
+<li><a href="#volatile关键字">volatile关键字</a>
 <ul>
-<li><a href="#说说你知道的gc算法和对应的原理是什么-都有缺点">说说你知道的GC算法和对应的原理是什么？都有缺点</a></li>
+<li><a href="#volatile的原理-作用-能代替锁吗">volatile的原理，作用，能代替锁吗？</a></li>
 </ul></li>
 </ul>
 </nav>

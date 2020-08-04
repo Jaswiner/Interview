@@ -362,6 +362,16 @@
   </url>
   
   <url>
+    <loc>https://jaswine.com/interview/docs/java/se/concurrent/synchronized/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jaswine.com/interview/docs/java/se/concurrent/volatile/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jaswine.com/interview/docs/java/se/features/8/datetime/</loc>
     <priority>0</priority>
   </url>
@@ -432,21 +442,6 @@
   </url>
   
   <url>
-    <loc>https://jaswine.com/interview/docs/java/vm/classload/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaswine.com/interview/docs/java/vm/concurrent/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaswine.com/interview/docs/java/vm/gc/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://jaswine.com/interview/docs/java/vm/gc/algo/</loc>
     <priority>0</priority>
   </url>
@@ -457,32 +452,12 @@
   </url>
   
   <url>
-    <loc>https://jaswine.com/interview/docs/java/vm/jmm/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://jaswine.com/interview/docs/java/vm/jmm/mem/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jaswine.com/interview/docs/java/vm/jmm/object/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaswine.com/interview/docs/java/vm/object/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaswine.com/interview/docs/java/vm/params/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jaswine.com/interview/docs/java/vm/tools/</loc>
     <priority>0</priority>
   </url>
   

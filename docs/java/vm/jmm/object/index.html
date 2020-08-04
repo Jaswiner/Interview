@@ -203,7 +203,53 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="对象及其生命周期">对象及其生命周期</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/java/vm/0menu/">BACK-JVM面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#对象及其生命周期">对象及其生命周期</a>
+
+<ul>
+<li><a href="#说说你对java对象组成的理解">说说你对Java对象组成的理解</a></li>
+<li><a href="#new-object的过程是什么样子的">new Object()的过程是什么样子的？</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="说说你对java对象组成的理解">说说你对Java对象组成的理解</h2>
+
+<pre><code>- Java对象内部由三个部分组成:对象头，实例数据，对齐填充字节
+
+# 对象头
+- 对象头包括如下部分:
+-- MarkWord:记录了对象的锁，GC等等的信息
+-- 指向类的指针
+-- 数组的长度(数组对象才有)
+
+# 实例数据
+- 实例数据就是我们在代码中看到的属性和值
+
+# 填充字节
+- 对齐填充字节:因为JVM中对象的是8bit的整数倍，所有要有相关的字节来填充
+</code></pre>
+
+<h2 id="new-object-的过程是什么样子的">new Object()的过程是什么样子的？</h2>
+
+<pre><code>- 1.开辟内存
+- 2.初始化
+- 3.引用和对象建立关系
+</code></pre>
+</article>
 
       
 
@@ -213,6 +259,18 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#对象及其生命周期">对象及其生命周期</a>
+<ul>
+<li><a href="#说说你对java对象组成的理解">说说你对Java对象组成的理解</a></li>
+<li><a href="#new-object-的过程是什么样子的">new Object()的过程是什么样子的？</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

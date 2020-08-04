@@ -207,15 +207,19 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="mysql中的索引">MySQL中的索引</h1>
 
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/db/mysql/0menu/">BACK-MySQL面试题目录</a></strong></p>
+</blockquote>
+
 <!-- TOC -->
 
 <ul>
 <li><a href="#mysql中的索引">MySQL中的索引</a>
 
 <ul>
-<li><a href="#mysql索引的底层原理是什么">MySQL索引的底层原理是什么？</a></li>
-<li><a href="#如何进行索引优化">如何进行索引优化？</a></li>
+<li><a href="#说说你对mysql索引的全局理解">说说你对MySQL索引的全局理解</a></li>
 <li><a href="#mysql的索引都有哪些类型他们的特点是什么底层的数据结构是什么">MySQL的索引都有哪些类型，他们的特点是什么，底层的数据结构是什么</a></li>
+<li><a href="#如何进行索引优化">如何进行索引优化？</a></li>
 <li><a href="#说说你对数据库索引的理解你在项目开发中是如何使用索引的使用索引一定可以提高查询的性能吗">说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？</a></li>
 </ul></li>
 </ul>
@@ -224,9 +228,25 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="mysql索引的底层原理是什么">MySQL索引的底层原理是什么？</h2>
+<h2 id="说说你对mysql索引的全局理解">说说你对MySQL索引的全局理解</h2>
 
-<h2 id="如何进行索引优化">如何进行索引优化？</h2>
+<pre><code>## 数据结构角度
+- B+树索引 O(lgn)
+- hash索引 O(1) 只有Memory存储引擎支持hash索引
+- FULLTEXT索引
+
+## 物理角度
+- 聚集索引
+- 非聚集索引
+
+## 逻辑角度
+- 主键索引: 特殊的唯一索引，不可以有空值
+- 唯一索引:不可以有相同的值
+- 普通索引:允许相同的索引内容
+- 组合索引:多列组合的索引，组合值必须唯一
+- 全文索引:对全文进行索引
+
+</code></pre>
 
 <h2 id="mysql的索引都有哪些类型-他们的特点是什么-底层的数据结构是什么">MySQL的索引都有哪些类型，他们的特点是什么，底层的数据结构是什么</h2>
 
@@ -272,11 +292,7 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 
-<pre><code>CREATE INDEX 方式只能创建‘普通索引’和‘唯一索引’
-
-组合索引的创建方式为：
-ALTER TABLE [table_name] ADD INDEX [inedx_name](列1,列2,列3); 
-</code></pre>
+<h2 id="如何进行索引优化">如何进行索引优化？</h2>
 
 <h2 id="说说你对数据库索引的理解-你在项目开发中是如何使用索引的-使用索引一定可以提高查询的性能吗">说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？</h2>
 
@@ -312,9 +328,9 @@ alter table [table_name] add [index_type] [index_name] [字段名]
 <ul>
 <li><a href="#mysql中的索引">MySQL中的索引</a>
 <ul>
-<li><a href="#mysql索引的底层原理是什么">MySQL索引的底层原理是什么？</a></li>
-<li><a href="#如何进行索引优化">如何进行索引优化？</a></li>
+<li><a href="#说说你对mysql索引的全局理解">说说你对MySQL索引的全局理解</a></li>
 <li><a href="#mysql的索引都有哪些类型-他们的特点是什么-底层的数据结构是什么">MySQL的索引都有哪些类型，他们的特点是什么，底层的数据结构是什么</a></li>
+<li><a href="#如何进行索引优化">如何进行索引优化？</a></li>
 <li><a href="#说说你对数据库索引的理解-你在项目开发中是如何使用索引的-使用索引一定可以提高查询的性能吗">说说你对数据库索引的理解，你在项目开发中是如何使用索引的，使用索引一定可以提高查询的性能吗？</a></li>
 </ul></li>
 </ul>

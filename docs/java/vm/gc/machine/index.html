@@ -203,7 +203,150 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="gc收集器">GC收集器</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/java/vm/0menu/">BACK-JVM面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#gc收集器">GC收集器</a>
+
+<ul>
+<li><a href="#jvm中一次完整的gc流程是怎么样的对象如何晋升到老年代">JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代？</a></li>
+<li><a href="#说说你对minor-gc和full-gc的理解">说说你对Minor GC和Full GC的理解</a></li>
+<li><a href="#说说你知道的集中垃圾收集器各自的优缺点">说说你知道的集中垃圾收集器，各自的优缺点?</a></li>
+<li><a href="#说说每一个gc的工作原理是什么">说说每一个GC的工作原理是什么?</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<hr />
+
+<h2 id="jvm中一次完整的gc流程是怎么样的-对象如何晋升到老年代">JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代？</h2>
+
+<pre><code># GC流程
+1.触发GC
+- 内存不够使用
+- 主动触发GC，System.gc()
+
+2.标记
+- 找出所有对象的
+
+3.复制 | 压缩
+- 复制算法就是将存活的对象复制到一个空的内存块
+- 压缩(整理)算法计算出存活对象的新地址然后移动对象的地方
+
+3.清理
+- 将之前标记的dead的对象回收了
+
+# 如何晋升老年代
+- 大对象直接进入老年代
+- 几次Minor GC还存活的对象
+    - 新生代GC，对象头中记录对象的粉黛年龄，每个垃圾回收器对于分代年龄进入老年代大小不一样
+    - 除了CMS分代年龄为6晋升，别的都是15
+
+</code></pre>
+
+<h2 id="说说你对minor-gc和full-gc的理解">说说你对Minor GC和Full GC的理解</h2>
+
+<pre><code class="language-PLANT">**Minor GC**
+
+- 定义：新生代(包括Eden和Survivor)垃圾搜集叫做 Minor GC
+- 触发条件：
+    - 新生代中Eden区满了就会出发Minor GC
+
+- GC过程：
+    - Eden和其中一个Survivor区中存活对象会被复制(标记-复制算法)到另一个Survivor中
+    - 交换指针
+
+**Full GC**
+
+- 定义：对整个堆进行垃圾搜集
+
+- 触发条件：
+    - System.gc()
+    - 触发young GC的时候，如果发现统计数据说之前young GC平均晋升大小比目前的old gen剩余空间大，则直接触发Full GC
+    - 如果有永久代，分配空间的时候发现永久代没有空间的时候会Full GC(JDK1.8之后没有永久代)
+
+- GC过程：
+</code></pre>
+
+<h2 id="说说你知道的集中垃圾收集器-各自的优缺点">说说你知道的集中垃圾收集器，各自的优缺点?</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">优点</th>
+<th align="left">缺点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Serial GC</td>
+<td align="left">简单</td>
+<td align="left">他工作别的都要停下来</td>
+</tr>
+
+<tr>
+<td align="left">ParNew GC</td>
+<td align="left">本质上多线程的Serial</td>
+<td align="left">他工作别的都要停下来，只是多个线程来清理垃圾</td>
+</tr>
+
+<tr>
+<td align="left">Parallel GC</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">Serial Old收集器</td>
+<td align="left">简单</td>
+<td align="left">他工作别的都要停下来</td>
+</tr>
+
+<tr>
+<td align="left">Parallel Old收集器</td>
+<td align="left">本质上多线程的Serial</td>
+<td align="left">他工作别的都要停下来，只是多个线程来清理垃圾</td>
+</tr>
+
+<tr>
+<td align="left">CMS收集器</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">G1收集器</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="说说每一个gc的工作原理是什么">说说每一个GC的工作原理是什么?</h2>
+</article>
 
       
 
@@ -213,6 +356,20 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#gc收集器">GC收集器</a>
+<ul>
+<li><a href="#jvm中一次完整的gc流程是怎么样的-对象如何晋升到老年代">JVM中一次完整的GC流程是怎么样的，对象如何晋升到老年代？</a></li>
+<li><a href="#说说你对minor-gc和full-gc的理解">说说你对Minor GC和Full GC的理解</a></li>
+<li><a href="#说说你知道的集中垃圾收集器-各自的优缺点">说说你知道的集中垃圾收集器，各自的优缺点?</a></li>
+<li><a href="#说说每一个gc的工作原理是什么">说说每一个GC的工作原理是什么?</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

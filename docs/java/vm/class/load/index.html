@@ -203,7 +203,58 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="类加载">类加载</h1>
+
+<blockquote>
+<p>⬅️<strong><a href="/interview/docs/java/vm/0menu/">BACK-JVM面试题目录</a></strong></p>
+</blockquote>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#类加载">类加载</a>
+
+<ul>
+<li><a href="#类加载的步骤是什么">类加载的步骤是什么</a></li>
+<li><a href="#classforname和classloader的区别">Class.forName()和classloader的区别</a></li>
+<li><a href="#说说你了解的类加载器以及他们工作的原理font">说说你了解的类加载器，以及他们工作的原理</font></a></li>
+<li><a href="#可以打破双亲委派吗是怎么打破的font">可以打破双亲委派吗？是怎么打破的？</font></a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<h2 id="类加载的步骤是什么">类加载的步骤是什么</h2>
+
+<pre><code>加载--&gt;验证--&gt;准备--&gt;解析--&gt;初始化--&gt;使用--&gt;卸载
+</code></pre>
+
+<h2 id="class-forname-和classloader的区别">Class.forName()和classloader的区别</h2>
+
+<pre><code>- Class.forName()将class文件加载到虚拟机中到初始化的工作
+- classloader只是将class文件加载到jvm中
+</code></pre>
+
+<h2 id="说说你了解的类加载器-以及他们工作的原理-font">说说你了解的类加载器，以及他们工作的原理</font></h2>
+
+<pre><code># 类加载器
+- 启动类加载器(Bootstrap ClassLoader)
+- 扩展类加载器(ExtClassLoader)
+- 应用类家再起(AppClassLoader)
+
+# 原理
+</code></pre>
+
+<h2 id="可以打破双亲委派吗-是怎么打破的-font">可以打破双亲委派吗？是怎么打破的？</font></h2>
+
+<pre><code># 可以打破双亲委派双亲委派
+- SPI就是打破双亲委派
+
+# 怎么打破
+</code></pre>
+</article>
 
       
 
@@ -213,6 +264,20 @@ https://github.com/alex-shpak/hugo-book
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#类加载">类加载</a>
+<ul>
+<li><a href="#类加载的步骤是什么">类加载的步骤是什么</a></li>
+<li><a href="#class-forname-和classloader的区别">Class.forName()和classloader的区别</a></li>
+<li><a href="#说说你了解的类加载器-以及他们工作的原理-font">说说你了解的类加载器，以及他们工作的原理</font></a></li>
+<li><a href="#可以打破双亲委派吗-是怎么打破的-font">可以打破双亲委派吗？是怎么打破的？</font></a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

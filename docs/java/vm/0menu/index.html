@@ -207,70 +207,30 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="jvm知识分类">JVM知识分类</h1>
 
-<!-- TOC -->
-
-<ul>
-<li><a href="#jvm知识分类">JVM知识分类</a>
-
-<ul>
-<li><a href="#jmm"><strong>JMM</strong></a>
-
-<ul>
-<li><a href="#运行时内存"><a href="#">运行时内存</a></a></li>
-<li><a href="#对象及其生命周期-relref-docsjavavmobjectmd-"><a href="/interview/docs/java/vm/object/">对象及其生命周期</a></a></li>
-</ul></li>
-<li><a href="#gc"><strong>GC</strong></a>
-
-<ul>
-<li><a href="#gc算法"><a href="#">GC算法</a></a></li>
-<li><a href="#gc收集器-relref-docsjavavmgcmd-"><a href="/interview/docs/java/vm/gc/">GC收集器</a></a></li>
-</ul></li>
-<li><a href="#类文件及其加载"><strong>类文件及其加载</strong></a>
-
-<ul>
-<li><a href="#类文件结构"><a href="#">类文件结构</a></a></li>
-<li><a href="#类加载-relref-docsjavavmclassloadmd-"><a href="/interview/docs/java/vm/classload/">类加载</a></a></li>
-</ul></li>
-<li><a href="#jvm调优"><strong>JVM调优</strong></a>
-
-<ul>
-<li><a href="#jvm参数-relref-docsjavavmparamsmd-"><a href="/interview/docs/java/vm/params/">JVM参数</a></a></li>
-</ul></li>
-<li><a href="#高并发"><strong>高并发</strong></a>
-
-<ul>
-<li><a href="#高并发-relref-docsjavavmconcurrentmd-"><a href="/interview/docs/java/vm/concurrent/">高并发</a></a></li>
-</ul></li>
-</ul></li>
-</ul>
-
-<!-- /TOC -->
-
 <h2 id="jmm"><strong>JMM</strong></h2>
 
-<h3 id="运行时内存"><a href="#">运行时内存</a></h3>
-
-<h3 id="对象及其生命周期-hahahugoshortcode-s5-hbhb"><a href="/interview/docs/java/vm/object/">对象及其生命周期</a></h3>
+<ul>
+<li><a href="/interview/docs/java/vm/jmm/mem/">运行时内存</a></li>
+<li><a href="/interview/docs/java/vm/jmm/object/">对象创建及其内存分配</a></li>
+</ul>
 
 <h2 id="gc"><strong>GC</strong></h2>
 
-<h3 id="gc算法"><a href="#">GC算法</a></h3>
-
-<h3 id="gc收集器-hahahugoshortcode-s6-hbhb"><a href="/interview/docs/java/vm/gc/">GC收集器</a></h3>
+<ul>
+<li><a href="/interview/docs/java/vm/gc/algo/">GC算法</a></li>
+<li><a href="/interview/docs/java/vm/gc/machine/">GC收集器</a></li>
+</ul>
 
 <h2 id="类文件及其加载"><strong>类文件及其加载</strong></h2>
 
-<h3 id="类文件结构"><a href="#">类文件结构</a></h3>
-
-<h3 id="类加载-hahahugoshortcode-s7-hbhb"><a href="/interview/docs/java/vm/classload/">类加载</a></h3>
+<ul>
+<li><a href="/interview/docs/java/vm/class/file/">类文件结构</a></li>
+<li><a href="/interview/docs/java/vm/class/load/">类加载</a></li>
+</ul>
 
 <h2 id="jvm调优"><strong>JVM调优</strong></h2>
 
-<h3 id="jvm参数-hahahugoshortcode-s8-hbhb"><a href="/interview/docs/java/vm/params/">JVM参数</a></h3>
-
 <h2 id="高并发"><strong>高并发</strong></h2>
-
-<h3 id="高并发-hahahugoshortcode-s9-hbhb"><a href="/interview/docs/java/vm/concurrent/">高并发</a></h3>
 </article>
 
       
@@ -286,29 +246,11 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#jvm知识分类">JVM知识分类</a>
 <ul>
-<li><a href="#jmm"><strong>JMM</strong></a>
-<ul>
-<li><a href="#运行时内存"><a href="#">运行时内存</a></a></li>
-<li><a href="#对象及其生命周期-hahahugoshortcode-s5-hbhb"><a href="HAHAHUGOSHORTCODE-s5-HBHB">对象及其生命周期</a></a></li>
-</ul></li>
-<li><a href="#gc"><strong>GC</strong></a>
-<ul>
-<li><a href="#gc算法"><a href="#">GC算法</a></a></li>
-<li><a href="#gc收集器-hahahugoshortcode-s6-hbhb"><a href="HAHAHUGOSHORTCODE-s6-HBHB">GC收集器</a></a></li>
-</ul></li>
-<li><a href="#类文件及其加载"><strong>类文件及其加载</strong></a>
-<ul>
-<li><a href="#类文件结构"><a href="#">类文件结构</a></a></li>
-<li><a href="#类加载-hahahugoshortcode-s7-hbhb"><a href="HAHAHUGOSHORTCODE-s7-HBHB">类加载</a></a></li>
-</ul></li>
-<li><a href="#jvm调优"><strong>JVM调优</strong></a>
-<ul>
-<li><a href="#jvm参数-hahahugoshortcode-s8-hbhb"><a href="HAHAHUGOSHORTCODE-s8-HBHB">JVM参数</a></a></li>
-</ul></li>
-<li><a href="#高并发"><strong>高并发</strong></a>
-<ul>
-<li><a href="#高并发-hahahugoshortcode-s9-hbhb"><a href="HAHAHUGOSHORTCODE-s9-HBHB">高并发</a></a></li>
-</ul></li>
+<li><a href="#jmm"><strong>JMM</strong></a></li>
+<li><a href="#gc"><strong>GC</strong></a></li>
+<li><a href="#类文件及其加载"><strong>类文件及其加载</strong></a></li>
+<li><a href="#jvm调优"><strong>JVM调优</strong></a></li>
+<li><a href="#高并发"><strong>高并发</strong></a></li>
 </ul></li>
 </ul>
 </nav>
